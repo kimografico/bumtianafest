@@ -1,12 +1,16 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from './Badge';
-import { Clock, MapPin, Sparkles, Users, Calendar } from 'lucide-react';
+import { Badge } from '../../components/basics/Badge';
+import { Clock, MapPin, Users } from 'lucide-react';
 
 const meta: Meta<typeof Badge> = {
   title: 'Básicos/Tags & Badges',
   component: Badge,
   tags: ['autodocs'],
+  args: {
+    variant: 'category',
+    children: 'Familiar Compartido',
+  },
   argTypes: {
     variant: {
       control: 'select',
@@ -57,22 +61,9 @@ export const RangoEdad: Story = {
   },
 };
 
-export const CatalogoDeBadges: Story = {
-  render: () => (
-    <div className="flex flex-wrap gap-3 items-center p-6 bg-slate-50/50 rounded-2xl">
-      <Badge variant="category">Espacio Infantil</Badge>
-      <Badge variant="category">Crianza Consciente</Badge>
-      <Badge variant="time" icon={<Clock className="w-3.5 h-3.5 text-blue-600" />}>
-        16:30h - 18:00h
-      </Badge>
-      <Badge variant="location" icon={<MapPin className="w-3.5 h-3.5 text-blue-600" />}>
-        Plaça de la Vila
-      </Badge>
-      <Badge variant="highlight">MÁS POPULAR</Badge>
-      <Badge variant="age" icon={<Users className="w-3.5 h-3.5 text-amber-700" />}>
-        Adolescentes (11-16)
-      </Badge>
-      <Badge variant="status">Plazas disponibles</Badge>
-    </div>
-  ),
+export const Estado: Story = {
+  args: {
+    variant: 'status',
+    children: 'Plazas disponibles',
+  },
 };

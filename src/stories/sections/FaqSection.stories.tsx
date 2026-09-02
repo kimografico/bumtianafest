@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TwoLBSection } from './TwoLBSection';
+import { FaqSection } from '../../components/FaqSection';
 
-const meta: Meta<typeof TwoLBSection> = {
-  title: 'Secciones/TwoLBSection',
-  component: TwoLBSection,
+const meta: Meta<typeof FaqSection> = {
+  title: 'Secciones/FaqSection',
+  component: FaqSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof TwoLBSection> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof TwoLBSection>;
+type Story = StoryObj<typeof FaqSection>;
 
-export const PresentacionFundacion: Story = {
+export const PreguntasFrecuentes: Story = {
   args: {
     lang: 'es',
   },

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { VenuesSection } from './VenuesSection';
+import { ConceptSection } from '../../components/ConceptSection';
 
-const meta: Meta<typeof VenuesSection> = {
-  title: 'Secciones/VenuesSection',
-  component: VenuesSection,
+const meta: Meta<typeof ConceptSection> = {
+  title: 'Secciones/ConceptSection',
+  component: ConceptSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof VenuesSection> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof VenuesSection>;
+type Story = StoryObj<typeof ConceptSection>;
 
-export const LocalizacionesEquipamientos: Story = {
+export const PorDefecto: Story = {
   args: {
     lang: 'es',
   },

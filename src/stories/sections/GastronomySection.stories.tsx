@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Hero } from './Hero';
+import { GastronomySection } from '../../components/GastronomySection';
 
-const meta: Meta<typeof Hero> = {
-  title: 'Secciones/Hero',
-  component: Hero,
+const meta: Meta<typeof GastronomySection> = {
+  title: 'Secciones/GastronomySection',
+  component: GastronomySection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -15,15 +15,14 @@ const meta: Meta<typeof Hero> = {
     lang: {
       control: 'radio',
       options: ['es', 'ca'],
-      description: 'Idioma actual (por defecto Castellano)',
     },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof Hero>;
+type Story = StoryObj<typeof GastronomySection>;
 
-export const PrincipalCompleto: Story = {
+export const GastronomiaLocal: Story = {
   args: {
     lang: 'es',
   },

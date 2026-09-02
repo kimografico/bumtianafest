@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FaqSection } from './FaqSection';
+import { HeroCarousel } from '../../components/HeroCarousel';
 
-const meta: Meta<typeof FaqSection> = {
-  title: 'Secciones/FaqSection',
-  component: FaqSection,
+const meta: Meta<typeof HeroCarousel> = {
+  title: 'Componentes/HeroCarousel',
+  component: HeroCarousel,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof FaqSection> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof FaqSection>;
+type Story = StoryObj<typeof HeroCarousel>;
 
-export const DudasFrecuentes: Story = {
+export const PorDefecto: Story = {
   args: {
     lang: 'es',
   },

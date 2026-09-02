@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ConceptSection } from './ConceptSection';
+import { Footer } from '../../components/Footer';
 
-const meta: Meta<typeof ConceptSection> = {
-  title: 'Secciones/ConceptSection',
-  component: ConceptSection,
+const meta: Meta<typeof Footer> = {
+  title: 'Navegación/Footer',
+  component: Footer,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof ConceptSection> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ConceptSection>;
+type Story = StoryObj<typeof Footer>;
 
-export const CuatroTarjetasConcepto: Story = {
+export const Principal: Story = {
   args: {
     lang: 'es',
   },

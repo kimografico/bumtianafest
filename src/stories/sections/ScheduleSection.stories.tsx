@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PartnersCarousel } from './PartnersCarousel';
+import { ScheduleSection } from '../../components/ScheduleSection';
 
-const meta: Meta<typeof PartnersCarousel> = {
-  title: 'Componentes/PartnersCarousel',
-  component: PartnersCarousel,
+const meta: Meta<typeof ScheduleSection> = {
+  title: 'Secciones/ScheduleSection',
+  component: ScheduleSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof PartnersCarousel> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof PartnersCarousel>;
+type Story = StoryObj<typeof ScheduleSection>;
 
-export const CintaColaboradores: Story = {
+export const CronogramaCompleto: Story = {
   args: {
     lang: 'es',
   },

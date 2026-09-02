@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Footer } from './Footer';
+import { Hero } from '../../components/Hero';
 
-const meta: Meta<typeof Footer> = {
-  title: 'Navegación/Footer',
-  component: Footer,
+const meta: Meta<typeof Hero> = {
+  title: 'Secciones/Hero',
+  component: Hero,
   parameters: {
     layout: 'fullscreen',
   },
@@ -15,14 +15,15 @@ const meta: Meta<typeof Footer> = {
     lang: {
       control: 'radio',
       options: ['es', 'ca'],
+      description: 'Idioma del festival',
     },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof Footer>;
+type Story = StoryObj<typeof Hero>;
 
-export const PieDePaginaCompleto: Story = {
+export const Principal: Story = {
   args: {
     lang: 'es',
   },

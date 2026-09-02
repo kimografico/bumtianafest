@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { WorkshopDetailPage } from './WorkshopDetailPage';
-import { WORKSHOPS_DATA } from '../data/content';
+import { WorkshopDetailPage } from '../../components/WorkshopDetailPage';
+import { WORKSHOPS_DATA } from '../../data/content';
 
 const meta: Meta<typeof WorkshopDetailPage> = {
   title: 'Páginas/WorkshopDetailPage',
@@ -11,6 +11,7 @@ const meta: Meta<typeof WorkshopDetailPage> = {
   tags: ['autodocs'],
   args: {
     lang: 'es',
+    workshopId: 'jardineria',
   },
   argTypes: {
     lang: {
@@ -23,8 +24,8 @@ const meta: Meta<typeof WorkshopDetailPage> = {
       options: WORKSHOPS_DATA.map((w) => w.id),
       description: 'ID del taller',
     },
-    onBack: { action: 'clickedBack' },
-    onSelectWorkshop: { action: 'selectedWorkshop' },
+    onBack: { action: 'onBack' },
+    onSelectWorkshop: { action: 'onSelectWorkshop' },
   },
 };
 

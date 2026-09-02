@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { HeroCarousel } from './HeroCarousel';
+import { TwoLBSection } from '../../components/TwoLBSection';
 
-const meta: Meta<typeof HeroCarousel> = {
-  title: 'Componentes/HeroCarousel',
-  component: HeroCarousel,
+const meta: Meta<typeof TwoLBSection> = {
+  title: 'Secciones/TwoLBSection',
+  component: TwoLBSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof HeroCarousel> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof HeroCarousel>;
+type Story = StoryObj<typeof TwoLBSection>;
 
-export const CarruselVisualPrincipal: Story = {
+export const Fundacion: Story = {
   args: {
     lang: 'es',
   },

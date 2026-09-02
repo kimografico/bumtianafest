@@ -2,40 +2,38 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="BUM Tiana Fest/Guía de Componentes" />
 
-# 🎪 BUM Tiana Fest — Sistema de Diseño y Catálogo de Componentes
+# 🎪 BUM Tiana Fest — Catálogo de Componentes
 
-Bienvenido al Storybook oficial del festival **BUM Tiana Fest**. 
+Bienvenido al Storybook oficial de **BUM Tiana Fest**.
 
-Este catálogo está estructurado por niveles de abstracción con configuración por defecto en **Castellano** y variantes funcionales específicas.
-
----
-
-### 🧱 1. Básicos (UI Foundations & Atoms)
-Componentes elementales y bloques atómicos reutilizables:
-- **Botones**: Botón principal CTA con icono, botón secundario, botón de retorno (*back*), y botones de filtro activo/inactivo.
-- **Tags & Badges**: Etiquetas para franjas de edad, categorías pedagógicas, horarios monoespaciados, ubicaciones y badge *MÁS POPULAR*.
-- **Selector de Idioma**: Conmutador de idiomas (`CA` / `ES`) con estado visual interactivo.
-- **Barra de Filtros**: Barra de navegación por categorías con contador de actividades.
-- **Cards**: Fichas individuales para ponentes, talleres con imagen, localizaciones municipales, restaurantes colaboradores y concepto BUM.
-- **Timeline Item**: Fila de cronograma con indicador circular en línea continua, horarios y ubicación.
-- **Bloque de Tarifa**: Ficha de precios estándar y ficha destacada con checklist de accesos.
-- **Accordion**: Preguntas frecuentes con animación de apertura y chevron rotativo.
+Todos los componentes y vistas se han estructurado limpiamente en la carpeta `src/stories/` siguiendo el estándar CSF3 con props tipadas (`args`), idioma por defecto en **Castellano** y sin código renderizado falseado.
 
 ---
 
-### 📐 2. Secciones Principales
-Bloques estructurales de la landing page del festival:
+### 🧱 1. Básicos (`Básicos/...`)
+- **Botones** (`Button`): Principal CTA con icono, secundario, contorno, botón volver y filtros de estado.
+- **Tags & Badges** (`Badge`): Categoría, horario, localización, badge *MÁS POPULAR*, rango de edad y estado.
+- **Selector de Idioma** (`LanguageSelector`): Conmutador de idiomas (`ES` / `CA`).
+- **Barra de Filtros** (`FilterBar`): Navegación por categorías con contadores numéricos y filtros por franjas del día.
+- **Accordion** (`AccordionItem`): Bloque de pregunta frecuente con estado abierto/cerrado e insignias.
+- **Timeline Item** (`TimelineItem`): Fila de cronograma con indicador de línea continua, horarios y localización.
+- **Bloque de Tarifa** (`PricingCard`): Tarjeta estándar, destacada con anillo visual o infantil.
+- **Speaker Card** (`SpeakerCard`): Ficha de ponente con retrato circular, especialidad, sinopsis y enlaces.
+- **Workshop Card** (`WorkshopCard`): Ficha de taller práctico con cabecera fotográfica, franja de edad y ubicación.
+
+---
+
+### 📐 2. Secciones (`Secciones/...`)
 - `Hero`, `ConceptSection`, `SpeakersSection`, `WorkshopsSection`, `ScheduleSection`, `VenuesSection`, `GastronomySection`, `PricingSection`, `TwoLBSection`, `FaqSection`.
 
 ---
 
-### 📄 3. Páginas de Detalle
-Vistas completas de navegación con biografía, requerimientos y actividades vinculadas:
-- `SpeakerDetailPage`: Detalle de ponente (ej. Armando Bastida, Lule Soler).
-- `WorkshopDetailPage`: Detalle de taller pedagógico (ej. Huerto Urbano, Beats DJ, Videoclips & IA).
+### 📄 3. Páginas (`Páginas/...`)
+- `SpeakerDetailPage` (Detalle de ponente: Armando Bastida, Lule Soler, Nutrición Infantil).
+- `WorkshopDetailPage` (Detalle de taller: Huerto Urbano, Beats DJ, Videoclips & IA).
 
 ---
 
-### 🧭 4. Navegación & Componentes Dinámicos
+### 🧭 4. Navegación & Componentes
 - `Navbar` y `Footer`.
 - `HeroCarousel` y `PartnersCarousel`.

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SpeakersSection } from './SpeakersSection';
+import { PricingSection } from '../../components/PricingSection';
 
-const meta: Meta<typeof SpeakersSection> = {
-  title: 'Secciones/SpeakersSection',
-  component: SpeakersSection,
+const meta: Meta<typeof PricingSection> = {
+  title: 'Secciones/PricingSection',
+  component: PricingSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -16,14 +16,13 @@ const meta: Meta<typeof SpeakersSection> = {
       control: 'radio',
       options: ['es', 'ca'],
     },
-    onSelectSpeaker: { action: 'selectedSpeaker' },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof SpeakersSection>;
+type Story = StoryObj<typeof PricingSection>;
 
-export const CuadriculaCompleta: Story = {
+export const TablaDeTarifas: Story = {
   args: {
     lang: 'es',
   },

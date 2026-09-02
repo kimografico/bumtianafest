@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { WorkshopsSection } from './WorkshopsSection';
+import { WorkshopsSection } from '../../components/WorkshopsSection';
 
 const meta: Meta<typeof WorkshopsSection> = {
   title: 'Secciones/WorkshopsSection',
@@ -16,14 +16,14 @@ const meta: Meta<typeof WorkshopsSection> = {
       control: 'radio',
       options: ['es', 'ca'],
     },
-    onSelectWorkshop: { action: 'selectedWorkshop' },
+    onSelectWorkshop: { action: 'onSelectWorkshop' },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof WorkshopsSection>;
 
-export const TodosLosTalleres: Story = {
+export const CatalogoTalleres: Story = {
   args: {
     lang: 'es',
   },

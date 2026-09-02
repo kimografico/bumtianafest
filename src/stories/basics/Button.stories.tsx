@@ -1,12 +1,17 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
-import { ArrowRight, ArrowLeft, Ticket, Sparkles, Filter } from 'lucide-react';
+import { Button } from '../../components/basics/Button';
+import { Ticket, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const meta: Meta<typeof Button> = {
   title: 'Básicos/Botones',
   component: Button,
   tags: ['autodocs'],
+  args: {
+    variant: 'primary',
+    size: 'md',
+    children: 'Comprar Entradas',
+  },
   argTypes: {
     variant: {
       control: 'select',
@@ -57,6 +62,14 @@ export const Secundario: Story = {
   },
 };
 
+export const Contorno: Story = {
+  args: {
+    variant: 'outline',
+    size: 'md',
+    children: 'Ver Programa Completo',
+  },
+};
+
 export const BotonVolver: Story = {
   args: {
     variant: 'back',
@@ -82,32 +95,4 @@ export const FiltroInactivo: Story = {
     isActive: false,
     children: 'Infantil (3-10 años)',
   },
-};
-
-export const CatalogoDeBotones: Story = {
-  render: () => (
-    <div className="flex flex-wrap gap-4 items-center p-6 bg-slate-50/50 rounded-2xl">
-      <Button variant="primary" size="lg" icon={<Ticket className="w-5 h-5" />} iconPosition="left">
-        Comprar Entrada
-      </Button>
-      <Button variant="primary" size="md" icon={<ArrowRight className="w-4 h-4" />}>
-        Ver Detalles
-      </Button>
-      <Button variant="secondary" size="md">
-        Secundario
-      </Button>
-      <Button variant="outline" size="md">
-        Contorno
-      </Button>
-      <Button variant="back" icon={<ArrowLeft className="w-4 h-4" />} iconPosition="left">
-        Volver
-      </Button>
-      <Button variant="filter" isActive={true}>
-        Activo (12)
-      </Button>
-      <Button variant="filter" isActive={false}>
-        Inactivo
-      </Button>
-    </div>
-  ),
 };

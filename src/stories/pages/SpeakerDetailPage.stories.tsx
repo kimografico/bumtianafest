@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SpeakerDetailPage } from './SpeakerDetailPage';
-import { SPEAKERS_DATA } from '../data/content';
+import { SpeakerDetailPage } from '../../components/SpeakerDetailPage';
+import { SPEAKERS_DATA } from '../../data/content';
 
 const meta: Meta<typeof SpeakerDetailPage> = {
   title: 'Páginas/SpeakerDetailPage',
@@ -11,6 +11,7 @@ const meta: Meta<typeof SpeakerDetailPage> = {
   tags: ['autodocs'],
   args: {
     lang: 'es',
+    speakerId: 'armando-bastida',
   },
   argTypes: {
     lang: {
@@ -23,8 +24,8 @@ const meta: Meta<typeof SpeakerDetailPage> = {
       options: SPEAKERS_DATA.map((s) => s.id),
       description: 'ID de la persona ponente',
     },
-    onBack: { action: 'clickedBack' },
-    onSelectSpeaker: { action: 'selectedSpeaker' },
+    onBack: { action: 'onBack' },
+    onSelectSpeaker: { action: 'onSelectSpeaker' },
   },
 };
 

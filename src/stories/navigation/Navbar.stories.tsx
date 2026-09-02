@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Navbar } from './Navbar';
+import { Navbar } from '../../components/Navbar';
 
 const meta: Meta<typeof Navbar> = {
   title: 'Navegación/Navbar',
@@ -15,25 +15,18 @@ const meta: Meta<typeof Navbar> = {
     lang: {
       control: 'radio',
       options: ['es', 'ca'],
-      description: 'Idioma actual del festival (por defecto Castellano)',
+      description: 'Idioma actual del festival',
     },
     setLang: { action: 'setLang' },
-    onNavigateHome: { action: 'navigatedHome' },
+    onNavigateHome: { action: 'onNavigateHome' },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Navbar>;
 
-export const PrincipalFlotante: Story = {
+export const Principal: Story = {
   args: {
     lang: 'es',
-  },
-};
-
-export const EnPaginaDeDetalle: Story = {
-  args: {
-    lang: 'es',
-    onNavigateHome: () => console.log('Volviendo al inicio desde detalle'),
   },
 };
