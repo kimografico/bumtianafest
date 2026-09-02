@@ -2,16 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { GastronomySection } from './GastronomySection';
 
 const meta: Meta<typeof GastronomySection> = {
-  title: 'Sections/GastronomySection',
+  title: 'Secciones/GastronomySection',
   component: GastronomySection,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
     },
   },
 };
@@ -19,13 +22,7 @@ const meta: Meta<typeof GastronomySection> = {
 export default meta;
 type Story = StoryObj<typeof GastronomySection>;
 
-export const Catalan: Story = {
-  args: {
-    lang: 'ca',
-  },
-};
-
-export const Spanish: Story = {
+export const ComidaFamiliarYRestaurantes: Story = {
   args: {
     lang: 'es',
   },

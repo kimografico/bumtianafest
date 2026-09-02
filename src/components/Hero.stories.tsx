@@ -2,17 +2,20 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from './Hero';
 
 const meta: Meta<typeof Hero> = {
-  title: 'Sections/Hero',
+  title: 'Secciones/Hero',
   component: Hero,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
-      description: 'Idioma actual (Català / Castellano)',
+      options: ['es', 'ca'],
+      description: 'Idioma actual (por defecto Castellano)',
     },
   },
 };
@@ -20,13 +23,7 @@ const meta: Meta<typeof Hero> = {
 export default meta;
 type Story = StoryObj<typeof Hero>;
 
-export const Catalan: Story = {
-  args: {
-    lang: 'ca',
-  },
-};
-
-export const Spanish: Story = {
+export const PrincipalCompleto: Story = {
   args: {
     lang: 'es',
   },

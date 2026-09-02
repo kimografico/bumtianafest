@@ -2,16 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { FaqSection } from './FaqSection';
 
 const meta: Meta<typeof FaqSection> = {
-  title: 'Sections/FaqSection',
+  title: 'Secciones/FaqSection',
   component: FaqSection,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
     },
   },
 };
@@ -19,13 +22,7 @@ const meta: Meta<typeof FaqSection> = {
 export default meta;
 type Story = StoryObj<typeof FaqSection>;
 
-export const Catalan: Story = {
-  args: {
-    lang: 'ca',
-  },
-};
-
-export const Spanish: Story = {
+export const DudasFrecuentes: Story = {
   args: {
     lang: 'es',
   },

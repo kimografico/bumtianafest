@@ -2,16 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { PartnersCarousel } from './PartnersCarousel';
 
 const meta: Meta<typeof PartnersCarousel> = {
-  title: 'Components/PartnersCarousel',
+  title: 'Componentes/PartnersCarousel',
   component: PartnersCarousel,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
     },
   },
 };
@@ -19,13 +22,7 @@ const meta: Meta<typeof PartnersCarousel> = {
 export default meta;
 type Story = StoryObj<typeof PartnersCarousel>;
 
-export const Catalan: Story = {
-  args: {
-    lang: 'ca',
-  },
-};
-
-export const Spanish: Story = {
+export const CintaColaboradores: Story = {
   args: {
     lang: 'es',
   },

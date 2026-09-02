@@ -2,17 +2,20 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Navbar } from './Navbar';
 
 const meta: Meta<typeof Navbar> = {
-  title: 'Navigation/Navbar',
+  title: 'Navegación/Navbar',
   component: Navbar,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
-      description: 'Idioma actual (Català / Castellano)',
+      options: ['es', 'ca'],
+      description: 'Idioma actual del festival (por defecto Castellano)',
     },
     setLang: { action: 'setLang' },
     onNavigateHome: { action: 'navigatedHome' },
@@ -22,14 +25,15 @@ const meta: Meta<typeof Navbar> = {
 export default meta;
 type Story = StoryObj<typeof Navbar>;
 
-export const Catalan: Story = {
+export const PrincipalFlotante: Story = {
   args: {
-    lang: 'ca',
+    lang: 'es',
   },
 };
 
-export const Spanish: Story = {
+export const EnPaginaDeDetalle: Story = {
   args: {
     lang: 'es',
+    onNavigateHome: () => console.log('Volviendo al inicio desde detalle'),
   },
 };

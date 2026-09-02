@@ -3,21 +3,25 @@ import { SpeakerDetailPage } from './SpeakerDetailPage';
 import { SPEAKERS_DATA } from '../data/content';
 
 const meta: Meta<typeof SpeakerDetailPage> = {
-  title: 'Pages/SpeakerDetailPage',
+  title: 'Páginas/SpeakerDetailPage',
   component: SpeakerDetailPage,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
+      description: 'Idioma del festival',
     },
     speakerId: {
       control: 'select',
       options: SPEAKERS_DATA.map((s) => s.id),
-      description: 'ID de la persona ponent',
+      description: 'ID de la persona ponente',
     },
     onBack: { action: 'clickedBack' },
     onSelectSpeaker: { action: 'selectedSpeaker' },
@@ -27,23 +31,23 @@ const meta: Meta<typeof SpeakerDetailPage> = {
 export default meta;
 type Story = StoryObj<typeof SpeakerDetailPage>;
 
-export const ArmandoBastidaCatalan: Story = {
-  args: {
-    speakerId: 'armando-bastida',
-    lang: 'ca',
-  },
-};
-
-export const ArmandoBastidaSpanish: Story = {
+export const ArmandoBastida: Story = {
   args: {
     speakerId: 'armando-bastida',
     lang: 'es',
   },
 };
 
-export const MiriamTirado: Story = {
+export const LuleSoler: Story = {
   args: {
-    speakerId: 'miriam-tirado',
-    lang: 'ca',
+    speakerId: 'lule-soler',
+    lang: 'es',
+  },
+};
+
+export const NutricioInfantil: Story = {
+  args: {
+    speakerId: 'nutricio-infantil',
+    lang: 'es',
   },
 };

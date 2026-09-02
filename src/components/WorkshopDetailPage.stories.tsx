@@ -3,16 +3,20 @@ import { WorkshopDetailPage } from './WorkshopDetailPage';
 import { WORKSHOPS_DATA } from '../data/content';
 
 const meta: Meta<typeof WorkshopDetailPage> = {
-  title: 'Pages/WorkshopDetailPage',
+  title: 'Páginas/WorkshopDetailPage',
   component: WorkshopDetailPage,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
+      description: 'Idioma del festival',
     },
     workshopId: {
       control: 'select',
@@ -27,23 +31,23 @@ const meta: Meta<typeof WorkshopDetailPage> = {
 export default meta;
 type Story = StoryObj<typeof WorkshopDetailPage>;
 
-export const GardeningWorkshopCatalan: Story = {
-  args: {
-    workshopId: 'jardineria',
-    lang: 'ca',
-  },
-};
-
-export const GardeningWorkshopSpanish: Story = {
+export const TallerHuertoUrbano: Story = {
   args: {
     workshopId: 'jardineria',
     lang: 'es',
   },
 };
 
-export const DJWorkshop: Story = {
+export const TallerProduccionDJ: Story = {
   args: {
     workshopId: 'beats-dj',
-    lang: 'ca',
+    lang: 'es',
+  },
+};
+
+export const TallerVideoclipsConIA: Story = {
+  args: {
+    workshopId: 'videoclips-ia',
+    lang: 'es',
   },
 };

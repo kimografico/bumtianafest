@@ -1,20 +1,41 @@
 import { Meta } from '@storybook/blocks';
 
-<Meta title="BUM Tiana Fest/Benvinguda" />
+<Meta title="BUM Tiana Fest/Guía de Componentes" />
 
-# 🎪 BUM Tiana Fest 2026 — Storybook de Components
+# 🎪 BUM Tiana Fest — Sistema de Diseño y Catálogo de Componentes
 
-Benvinguts al catàleg interactiu de components de **BUM Tiana Fest 2026**.
+Bienvenido al Storybook oficial del festival **BUM Tiana Fest**. 
 
-Aquest Storybook permet explorar, provar i desenvolupar tots els components de la interfície de manera aïllada:
-
-- **Navigation**: Barra de navegació principal (`Navbar`) i peu de pàgina (`Footer`).
-- **Sections**: Seccions de la pàgina principal (`Hero`, `ConceptSection`, `SpeakersSection`, `WorkshopsSection`, `ScheduleSection`, `VenuesSection`, `GastronomySection`, `PricingSection`, `TwoLBSection`, `FaqSection`).
-- **Pages / Views**: Pàgines de detall per a ponents (`SpeakerDetailPage`) i tallers pedagògics (`WorkshopDetailPage`).
-- **Components**: Carrusels dinàmics (`HeroCarousel`, `PartnersCarousel`).
+Este catálogo está estructurado por niveles de abstracción con configuración por defecto en **Castellano** y variantes funcionales específicas.
 
 ---
 
-### Scripts disponibles:
-- `npm run storybook`: Arrenca el servidor de desenvolupament de Storybook al port `6006`.
-- `npm run build-storybook`: Compila la documentació estàtica per a desplegar a qualsevol servidor web.
+### 🧱 1. Básicos (UI Foundations & Atoms)
+Componentes elementales y bloques atómicos reutilizables:
+- **Botones**: Botón principal CTA con icono, botón secundario, botón de retorno (*back*), y botones de filtro activo/inactivo.
+- **Tags & Badges**: Etiquetas para franjas de edad, categorías pedagógicas, horarios monoespaciados, ubicaciones y badge *MÁS POPULAR*.
+- **Selector de Idioma**: Conmutador de idiomas (`CA` / `ES`) con estado visual interactivo.
+- **Barra de Filtros**: Barra de navegación por categorías con contador de actividades.
+- **Cards**: Fichas individuales para ponentes, talleres con imagen, localizaciones municipales, restaurantes colaboradores y concepto BUM.
+- **Timeline Item**: Fila de cronograma con indicador circular en línea continua, horarios y ubicación.
+- **Bloque de Tarifa**: Ficha de precios estándar y ficha destacada con checklist de accesos.
+- **Accordion**: Preguntas frecuentes con animación de apertura y chevron rotativo.
+
+---
+
+### 📐 2. Secciones Principales
+Bloques estructurales de la landing page del festival:
+- `Hero`, `ConceptSection`, `SpeakersSection`, `WorkshopsSection`, `ScheduleSection`, `VenuesSection`, `GastronomySection`, `PricingSection`, `TwoLBSection`, `FaqSection`.
+
+---
+
+### 📄 3. Páginas de Detalle
+Vistas completas de navegación con biografía, requerimientos y actividades vinculadas:
+- `SpeakerDetailPage`: Detalle de ponente (ej. Armando Bastida, Lule Soler).
+- `WorkshopDetailPage`: Detalle de taller pedagógico (ej. Huerto Urbano, Beats DJ, Videoclips & IA).
+
+---
+
+### 🧭 4. Navegación & Componentes Dinámicos
+- `Navbar` y `Footer`.
+- `HeroCarousel` y `PartnersCarousel`.

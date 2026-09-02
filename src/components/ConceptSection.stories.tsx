@@ -2,16 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ConceptSection } from './ConceptSection';
 
 const meta: Meta<typeof ConceptSection> = {
-  title: 'Sections/ConceptSection',
+  title: 'Secciones/ConceptSection',
   component: ConceptSection,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    lang: 'es',
+  },
   argTypes: {
     lang: {
       control: 'radio',
-      options: ['ca', 'es'],
+      options: ['es', 'ca'],
     },
   },
 };
@@ -19,13 +22,7 @@ const meta: Meta<typeof ConceptSection> = {
 export default meta;
 type Story = StoryObj<typeof ConceptSection>;
 
-export const Catalan: Story = {
-  args: {
-    lang: 'ca',
-  },
-};
-
-export const Spanish: Story = {
+export const CuatroTarjetasConcepto: Story = {
   args: {
     lang: 'es',
   },
