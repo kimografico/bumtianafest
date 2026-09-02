@@ -3,6 +3,18 @@ import '../src/index.css';
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: [
+          'BUM Tiana Fest',
+          'Básicos',
+          'Componentes',
+          'Secciones',
+          'Páginas',
+          'Navegación',
+        ],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
