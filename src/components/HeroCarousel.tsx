@@ -10,63 +10,93 @@ interface HeroCarouselProps {
 export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
   const slides = [
     {
-      image: FESTIVAL_IMAGES.hero,
+      image: FESTIVAL_IMAGES.carouselSlide1,
+      tag: {
+        ca: 'Plaça de la Vila',
+        es: 'Plaça de la Vila',
+      },
+      title: {
+        ca: 'El cor obert del festival a Tiana',
+        es: 'El corazón abierto del festival en Tiana',
+      },
+      desc: {
+        ca: 'Terrasses, colors i ambient acollidor per trobar-se amb la família i amics.',
+        es: 'Terrazas, colores y ambiente acogedor para encontrarse en familia y con amigos.',
+      },
+    },
+    {
+      image: FESTIVAL_IMAGES.carouselSlide2,
+      tag: {
+        ca: 'El Casal de Tiana',
+        es: 'El Casal de Tiana',
+      },
+      title: {
+        ca: 'Contacontes i espectacles familiars',
+        es: 'Cuentacuentos y espectáculos familiares',
+      },
+      desc: {
+        ca: 'Arts escèniques, narracions a l\'aire lliure i catifes de joc sota els arbres.',
+        es: 'Artes escénicas, narraciones al aire libre y alfombras de juego bajo los árboles.',
+      },
+    },
+    {
+      image: FESTIVAL_IMAGES.carouselSlide3,
+      tag: {
+        ca: 'Nits d\'Estiu & Màgia',
+        es: 'Noches de Verano & Magia',
+      },
+      title: {
+        ca: 'Un sostre daurat de microbombetes a la vila',
+        es: 'Un techo dorado de microbombillas en el pueblo',
+      },
+      desc: {
+        ca: 'Il·luminació càlida, parades artesanes i vetllades inoblidables per a tothom.',
+        es: 'Iluminación cálida, paradas artesanas y veladas inolvidables para todos.',
+      },
+    },
+    {
+      image: FESTIVAL_IMAGES.carouselSlide4,
+      tag: {
+        ca: 'Gastronomia & Comunitat',
+        es: 'Gastronomía & Comunidad',
+      },
+      title: {
+        ca: 'El gran dinar popular de germanor',
+        es: 'La gran comida popular comunitaria',
+      },
+      desc: {
+        ca: 'Taula compartida a la plaça, paelles tradicionals i convivència entre generacions.',
+        es: 'Mesa compartida en la plaza, paellas tradicionales y convivencia entre generaciones.',
+      },
+    },
+    {
+      image: FESTIVAL_IMAGES.carouselSlide5,
+      tag: {
+        ca: 'Patrimoni & Poble',
+        es: 'Patrimonio & Pueblo',
+      },
+      title: {
+        ca: 'Tiana: Vila de cultura, natura i convivència',
+        es: 'Tiana: Pueblo de cultura, naturaleza y convivencia',
+      },
+      desc: {
+        ca: 'L\'Ajuntament neoclàssic i la història dels nostres carrers al peu de la serralada.',
+        es: 'El Ayuntamiento neoclásico y la historia de nuestras calles al pie de la cordillera.',
+      },
+    },
+    {
+      image: FESTIVAL_IMAGES.carouselSlide6,
       tag: {
         ca: 'BUM Tiana Fest 2026',
         es: 'BUM Tiana Fest 2026',
       },
       title: {
-        ca: 'Un dia sencer de creativitat i família',
-        es: 'Un día entero de creatividad y familia',
+        ca: 'Celebrant la infància i la comunitat',
+        es: 'Celebrando la infancia y la comunidad',
       },
       desc: {
-        ca: 'Tallers, xerrades, jocs i arts escèniques als carrers de Tiana.',
-        es: 'Talleres, charlas, juegos y artes escénicas en las calles de Tiana.',
-      },
-    },
-    {
-      image: FESTIVAL_IMAGES.workshop,
-      tag: {
-        ca: 'Tallers Didàctics',
-        es: 'Talleres Didácticos',
-      },
-      title: {
-        ca: 'Aprenentatge compartit entre grans i petits',
-        es: 'Aprendizaje compartido entre grandes y pequeños',
-      },
-      desc: {
-        ca: 'Art, cuina, natura, robòtica i tecnologia creativa.',
-        es: 'Arte, cocina, naturaleza, robótica y tecnología creativa.',
-      },
-    },
-    {
-      image: FESTIVAL_IMAGES.village,
-      tag: {
-        ca: 'Localitzacions de Tiana',
-        es: 'Localizaciones de Tiana',
-      },
-      title: {
-        ca: 'El poble com a gran espai comunitari',
-        es: 'El pueblo como gran espacio comunitario',
-      },
-      desc: {
-        ca: 'Espais emblemàtics i equipaments municipals a Tiana.',
-        es: 'Espacios emblemáticos y equipamientos municipales en Tiana.',
-      },
-    },
-    {
-      image: FESTIVAL_IMAGES.music,
-      tag: {
-        ca: 'Música & Arts Escèniques',
-        es: 'Música & Artes Escénicas',
-      },
-      title: {
-        ca: 'DJ Vermut i Espectacle Teatral',
-        es: 'DJ Vermut y Espectáculo Teatral',
-      },
-      desc: {
-        ca: 'Música familiar a l\'aire lliure i gran espectacle escènic de cloenda a la Sala Albéniz.',
-        es: 'Música familiar al aire libre y gran espectáculo escénico de clausura en la Sala Albéniz.',
+        ca: 'Un dia sencer d\'experiències, creativitat i espais de trobada per a tota la família.',
+        es: 'Un día entero de experiencias, creatividad y espacios de encuentro para toda la familia.',
       },
     },
   ];
