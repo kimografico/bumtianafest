@@ -25,16 +25,12 @@ export const PartnersCarousel: React.FC<PartnersCarouselProps> = ({ lang }) => {
       logo: FESTIVAL_LOGOS.casino,
     },
     {
-      name: 'Espai Eco',
+      name: 'Espai Ecològic',
       logo: FESTIVAL_LOGOS.espaiEco,
     },
     {
-      name: 'Medi Verd',
-      logo: FESTIVAL_LOGOS.mediVerd,
-    },
-    {
-      name: 'REON',
-      logo: FESTIVAL_LOGOS.reon,
+      name: 'Floristeria Verd És Bo',
+      logo: FESTIVAL_LOGOS.verdEsBo,
     },
     {
       name: 'Tiriti Pizzeria',

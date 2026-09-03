@@ -97,7 +97,10 @@ export interface ScheduleItem {
     ca: string;
     es: string;
   };
-  badge?: string;
+  badge?: {
+    ca: string;
+    es: string;
+  };
 }
 
 export interface RestaurantPartner {
@@ -117,365 +120,95 @@ export const WORKSHOPS_DATA: Workshop[] = [
   {
     id: 'jardineria',
     title: {
-      ca: 'Taller de Jardineria & Cura de la Natura',
-      es: 'Taller de Jardinería & Cuidado de la Naturaleza'
+      ca: 'Taller de Jardineria & Cura de la Natura: Repoblació de la Serralada de Marina',
+      es: 'Taller de Jardinería & Cuidado de la Naturaleza: Repoblación de la Serralada de Marina'
     },
     category: 'compartit',
-    instructor: 'Arnau & Albert',
-    location: 'Garden Tiana / Espai Verd Can Riera',
+    instructor: 'Arnau & Albert (Educadors Ambientals)',
+    location: 'Garden Tiana / Can Riera',
     shortDesc: {
-      ca: 'Sembrar, trasplantar i cuidar plantes en espais comuns del poble.',
-      es: 'Sembrar, trasplantar y cuidar plantas en espacios comunes del pueblo.'
+      ca: 'Plantació de plançons i creació de bombes de llavors per recuperar el Parc de la Serralada de Marina després de l\'incendi.',
+      es: 'Plantación de plantones y bombas de semillas para recuperar el Parc de la Serralada de Marina tras el incendio.'
     },
     fullDesc: {
-      ca: 'Activitat lúdica i educativa on infants i adults aprenen sobre el cicle de vida de les plantes i la cura del medi ambient. Es treballarà en un espai municipal per plantar plançons i testos que romandran al poble.',
-      es: 'Actividad lúdica y educativa donde peques y adultos aprenden sobre el ciclo de vida de las plantas y el cuidado del medio ambiente. Se trabajará en un espacio municipal plantando plantones que quedarán en el pueblo.'
+      ca: 'Activitat lúdica i de consciència ecològica centrada en la repoblació activa del Parc de la Serralada de Marina de Tiana després d\'un incendi anterior. Els infants i les seves famílies aprendran a elaborar bombes de llavors d\'espècies autòctones mediterrànies (pins, alzines, romaní) i trasplantaran petits plançons que ajudaran a regenerar la massa forestal del nostre entorn natural.',
+      es: 'Actividad lúdica y de conciencia ecológica centrada en la repoblación activa del Parc de la Serralada de Marina de Tiana tras un incendio anterior. Los peques y sus familias aprenderán a elaborar bombas de semillas de especies autóctonas mediterráneas (pinos, encinas, romero) y trasplantarán pequeños plantones que ayudarán a regenerar la masa forestal de nuestro entorno.'
     },
-    ageRange: '4 - 14 anys (en família)',
-    duration: '10:00 - 13:00 (3 hores)',
+    ageRange: 'Primera infància i famílies (2 a 8 anys)',
+    duration: '10:00 - 12:00 (2 hores)',
     materials: {
-      ca: 'Estris adaptats, terra ecològica, llavors autòctones i testos reciclats.',
-      es: 'Herramientas adaptadas, tierra ecológica, semillas autóctonas y macetas recicladas.'
+      ca: 'Terra vegetal ecològica, argila per a boles nendo dango, llavors autòctones del Maresme i plançons forestals.',
+      es: 'Tierra vegetal ecológica, arcilla para bolas nendo dango, semillas autóctonas del Maresme y plantones forestales.'
     },
     pedagogicalValues: {
-      ca: ['Connexió amb la natura', 'Responsabilitat ambiental', 'Orgull de cuidar espais públics de Tiana'],
-      es: ['Conexión con la naturaleza', 'Responsabilidad ambiental', 'Orgullo de cuidar espacios públicos de Tiana']
+      ca: ['Estimació i cura del bosc de Tiana', 'Comprensió de la regeneració post-incendi', 'Participació activa comunitària'],
+      es: ['Amor y cuidado del bosque de Tiana', 'Comprensión de la regeneración post-incendio', 'Participación activa comunitaria']
     },
-    tag: 'Natura & Sostenibilitat',
+    tag: 'Natura & Repoblació',
     iconName: 'Sprout',
     featured: true
   },
   {
-    id: 'cuina',
-    title: {
-      ca: 'Taller de Cuina Pedagògica en Família',
-      es: 'Taller de Cocina Pedagógica en Familia'
-    },
-    category: 'compartit',
-    instructor: 'Núria Cuinets',
-    location: 'El Casal de Tiana',
-    shortDesc: {
-      ca: 'Lectura de receptes, càlcul d\'ingredients i creació culinària compartida.',
-      es: 'Lectura de recetas, cálculo de ingredientes y creación culinaria compartida.'
-    },
-    fullDesc: {
-      ca: 'Comencem llegint les receptes, calculem ingredients, quantitats i busquem els estris necessaris. Fem pedagogia a la cuina: cooperació, hàbits saludables i el plaer de cuinar plegats sense presses.',
-      es: 'Empezamos leyendo recetas, calculamos cantidades y preparamos utensilios. Hacemos pedagogía en la cocina: cooperación, hábitos saludables y el placer de cocinar juntos.'
-    },
-    ageRange: 'A partir de 5 anys + Adults',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Ingredients frescos locals, davantals ecològics i estris adaptats.',
-      es: 'Ingredientes frescos locales, delantales ecológicos y utensilios adaptados.'
-    },
-    pedagogicalValues: {
-      ca: ['Treball en equip', 'Autonomia infantil', 'Alimentació conscient'],
-      es: ['Trabajo en equipo', 'Autonomía infantil', 'Alimentación consciente']
-    },
-    tag: 'Gastronomia & Hàbits',
-    iconName: 'Utensils',
-    featured: true
-  },
-  {
-    id: 'videoclips-ia',
-    title: {
-      ca: 'Taller de Videoclips & IA Creativa',
-      es: 'Taller de Videoclips & IA Creativa'
-    },
-    category: 'adolescents',
-    instructor: 'Xavi Vinyasa',
-    location: 'Can Reón / Sala Multimèdia',
-    shortDesc: {
-      ca: 'Creació de conceptes audiovisuals, animacions i videoclips utilitzant eines d\'IA ètiques i creatives.',
-      es: 'Creación de conceptos audiovisuales, animaciones y videoclips con IA creativa y ética.'
-    },
-    fullDesc: {
-      ca: 'La indústria musical evoluciona i els joves són els nous creadors. En aquest taller aprendrem el brífing visual, generació d\'escenes i personatges artístics, sincronització amb música i postproducció professional per narrar les nostres pròpies històries.',
-      es: 'La industria musical evoluciona y la juventud lidera la creación visual. Aprenderemos briefing visual, diseño de escenas con IA, sincronización con audio y montaje para contar historias impactantes.'
-    },
-    ageRange: '11 - 17 anys (Joves i adolescents)',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Ordinadors, tauletes gràfiques i programari audiovisual assistit.',
-      es: 'Ordenadores, tabletas gráficas y software audiovisual asistido.'
-    },
-    pedagogicalValues: {
-      ca: ['Ús crític i artístic de la tecnologia', 'Narrativa audiovisual', 'Expressió personal'],
-      es: ['Uso crítico y artístico de la tecnología', 'Narrativa audiovisual', 'Expresión personal']
-    },
-    tag: 'Tecnologia Creativa',
-    iconName: 'Video',
-    featured: true
-  },
-  {
-    id: 'mural-graffiti',
-    title: {
-      ca: 'Taller de Pintura Mural & Art Urbà',
-      es: 'Taller de Pintura Mural & Arte Urbano'
-    },
-    category: 'adolescents',
-    instructor: 'Mario Tarragó',
-    location: 'L\'Escorxador (Pati Exterior)',
-    shortDesc: {
-      ca: 'Disseny col·lectiu i pintura d\'un mural comunitari amb pintures ecològiques.',
-      es: 'Diseño colectivo y pintura de un mural comunitario con pinturas ecológicas.'
-    },
-    fullDesc: {
-      ca: 'Creació d\'un mural participatiu en un espai emblemàtic de Tiana. Aprenentatge de tècniques de composició, barreja de colors, ús d\'esprais amb base d\'aigua no tòxics i cooperació en gran format.',
-      es: 'Creación de un mural participativo en Tiana. Aprendizaje de composición, mezcla de colores y sprays de base al agua no tóxicos fomentando el trabajo en equipo.'
-    },
-    ageRange: '10 - 17 anys + Famílies',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Pintures ecològiques a l\'aigua, corrons, pinzells i proteccions.',
-      es: 'Pinturas ecológicas al agua, rodillos, pinceles y protecciones.'
-    },
-    pedagogicalValues: {
-      ca: ['Transformació de l\'espai públic', 'Expressió gràfica', 'Treball cooperatiu'],
-      es: ['Transformación del espacio público', 'Expresión gráfica', 'Trabajo cooperativo']
-    },
-    tag: 'Arts Plàstiques',
-    iconName: 'Palette'
-  },
-  {
-    id: 'musica-instruments',
-    title: {
-      ca: 'Taller de Música, Guitarra & Piano',
-      es: 'Taller de Música, Guitarra & Piano'
-    },
-    category: 'compartit',
-    instructor: 'Roger & Marçal',
-    location: 'Can Riera (Aules de Música)',
-    shortDesc: {
-      ca: 'Descobriment rítmic i melòdic tocant instruments en conjunt pares i fills.',
-      es: 'Descubrimiento rítmico y melódico tocando instrumentos padres e hijos.'
-    },
-    fullDesc: {
-      ca: 'Una aproximació vivencial a la música sense necessitat de coneixements previs. Guitarra, teclats i percussions en un ambient lúdic on crear la nostra primera peça familiar.',
-      es: 'Una aproximación vivencial a la música sin necesidad de conocimientos previos. Guitarra, teclados y percusión para crear una melodía conjunta en familia.'
-    },
-    ageRange: '6 - 15 anys + Adults',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Instruments acústics, teclats, petites percussions.',
-      es: 'Instrumentos acústicos, teclados, pequeñas percusiones.'
-    },
-    pedagogicalValues: {
-      ca: ['Escolta activa', 'Sincronització rítmica', 'Vincle afectiu a través de la música'],
-      es: ['Escucha activa', 'Sincronización rítmica', 'Vínculo afectivo a través de la música']
-    },
-    tag: 'Música & So',
-    iconName: 'Music'
-  },
-  {
-    id: 'titelles',
-    title: {
-      ca: 'Taller de Titelles & Creació de Personatges',
-      es: 'Taller de Títeres & Creación de Personajes'
-    },
-    category: 'infantil',
-    instructor: 'Glòria Arrufat',
-    location: 'Biblioteca Can Manyer / Can Matas',
-    shortDesc: {
-      ca: 'Construcció de titelles amb materials reciclats i posada en escena de petites històries.',
-      es: 'Construcción de títeres con materiales reciclados y dramatización de pequeñas historias.'
-    },
-    fullDesc: {
-      ca: 'Donem vida a objectes inanimats. A través de retalls, fustes i elements naturals, cada infant i acompanyant donarà caràcter i veu al seu propi personatge teatral.',
-      es: 'Damos vida a objetos cotidianos. Mediante recortes, telas y elementos naturales, peques y familias crearán su títere y representarán una historia entrañable.'
-    },
-    ageRange: '3 - 8 anys (amb acompanyant)',
-    duration: '10:00 - 12:30',
-    materials: {
-      ca: 'Teixits, mitjons reciclats, cartró, coles naturals i guarniments.',
-      es: 'Tejidos, calcetines reciclados, cartón, colas naturales y adornos.'
-    },
-    pedagogicalValues: {
-      ca: ['Imaginació simbòlica', 'Motricitat fina', 'Comunicació emocional'],
-      es: ['Imaginación simbólica', 'Motricidad fina', 'Comunicación emocional']
-    },
-    tag: 'Artesania & Joc',
-    iconName: 'Smile'
-  },
-  {
-    id: 'teatre-adolescents',
-    title: {
-      ca: 'Taller de Teatre & Expressió Escènica',
-      es: 'Taller de Teatro & Expresión Escénica'
-    },
-    category: 'adolescents',
-    instructor: 'Joan Arqué',
-    location: 'Sala Albéniz (Escenari Principal)',
-    shortDesc: {
-      ca: 'Jocs d\'improvisació, moviment i presència escènica per a joves.',
-      es: 'Juegos de improvisación, movimiento y presencia escénica para jóvenes.'
-    },
-    fullDesc: {
-      ca: 'Espai dinàmic per alliberar la vergonya, treballar la confiança en el grup, la veu i el llenguatge corporal a través de dinàmiques teatrals professionals adaptades.',
-      es: 'Espacio dinámico para ganar seguridad, desinhibirse, proyectar la voz y trabajar el lenguaje corporal a través de dinámicas teatrales profesionales.'
-    },
-    ageRange: '12 - 18 anys',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Roba còmoda i espai d\'escenari.',
-      es: 'Ropa cómoda y espacio escénico.'
-    },
-    pedagogicalValues: {
-      ca: ['Seguretat personal', 'Empatia', 'Expressió corporal'],
-      es: ['Seguridad personal', 'Empatía', 'Expresión corporal']
-    },
-    tag: 'Arts Escèniques',
-    iconName: 'Theater'
-  },
-  {
-    id: 'clown',
-    title: {
-      ca: 'Taller de Clown & Humor en Família',
-      es: 'Taller de Clown & Humor en Familia'
-    },
-    category: 'compartit',
-    instructor: 'Oriol Liñán & Maus',
-    location: 'Pati de L\'Escorxador',
-    shortDesc: {
-      ca: 'El nas vermell com a eina per riure\'s d\'un mateix i connectar amb la tendresa.',
-      es: 'La nariz roja como herramienta para reírse de uno mismo y conectar con la ternura.'
-    },
-    fullDesc: {
-      ca: 'El clown permet als adults recuperar la mirada innocent de la infància i als nens veure els pares jugar sense judici. Riures compartits, caigudes còmiques i complicitat pura.',
-      es: 'El clown ayuda a los adultos a recuperar la mirada inocente de la infancia y a los peques a ver a sus padres jugar sin filtros. Risas, complicidad y juego libre.'
-    },
-    ageRange: 'Totes les edats (Familiar)',
-    duration: '10:00 - 12:30',
-    materials: {
-      ca: 'Nassos vermells, atrezzo divertit i barrets.',
-      es: 'Narices rojas, atrezzo divertido y sombreros.'
-    },
-    pedagogicalValues: {
-      ca: ['Gestió de l\'error sense vergonya', 'Humor terapèutic', 'Vincle alegre'],
-      es: ['Gestión del error sin vergüenza', 'Humor terapéutico', 'Vínculo alegre']
-    },
-    tag: 'Humor & Expressió',
-    iconName: 'Sparkles'
-  },
-  {
     id: 'vestuari',
     title: {
-      ca: 'Taller de Vestuari, Caracterització & Indumentària',
-      es: 'Taller de Vestuario, Caracterización & Indumentaria'
+      ca: 'Taller de Vestuari Sostenible & Reutilització Creativa',
+      es: 'Taller de Vestuario Sostenible & Reutilización Creativa'
     },
     category: 'compartit',
     instructor: 'Aina & Roseta',
     location: 'Can Riera',
     shortDesc: {
-      ca: 'Disseny de disfresses i caracterització teatral per transformar-se en personatges.',
-      es: 'Diseño de disfraces y caracterización teatral para transformarse en personajes.'
+      ca: 'Creació de disfresses enginyoses a partir de capses de cartró, retalls de roba usada i materials quotidians reciclats.',
+      es: 'Creación de disfraces ingeniosos a partir de cajas de cartón, retales de tela usada y materiales cotidianos reciclados.'
     },
     fullDesc: {
-      ca: 'Descobrim els secrets de la sastreria teatral i el maquillatge artístic. Pares i infants idearan peces originals utilitzant robes, complements i pintacares respectuosos amb la pell.',
-      es: 'Descubrimos los secretos de la sastrería teatral y el maquillaje artístico. Pequeños y mayores idearán prendas únicas combinando telas y complementos creativos.'
+      ca: 'Un espai de joc i manualitat basat en la reutilització sense necessitat de disfresses sofisticades ni consumistes. Amb caixes de cartró, tubs de paper, retalls de teles usades i elements quotidians, transformarem allò que tenim a l\'abast en ales, barrets, màscares i complements sorprenents per despertar la imaginació pura dels més petits.',
+      es: 'Un espacio de juego y manualidad basado en la reutilización sin necesidad de disfraces sofisticados ni consumistas. Con cajas de cartón, tubos de papel, retales de telas usadas y elementos cotidianos, transformaremos lo que tenemos a mano en alas, sombreros, máscaras y complementos sorprendentes para despertar la imaginación pura.'
     },
-    ageRange: '4 - 12 anys + Famílies',
-    duration: '10:00 - 13:00',
+    ageRange: 'Primera infància i famílies (2 a 8 anys)',
+    duration: '10:00 - 12:00 (2 hores)',
     materials: {
-      ca: 'Retalls tèxtils reciclats, maquillatges hipoal·lèrgics, màscares.',
-      es: 'Retales textiles reciclados, maquillajes hipoalergénicos, máscaras.'
+      ca: 'Cartró reciclat, retalls tèxtils reutilitzats, coles naturals no tòxiques i pintures a l\'aigua.',
+      es: 'Cartón reciclado, retales textiles reutilizados, colas naturales no tóxicas y pinturas al agua.'
     },
     pedagogicalValues: {
-      ca: ['Creativitat tèxtil', 'Joc de rol', 'Desinhibició'],
-      es: ['Creatividad textil', 'Juego de rol', 'Desinhibición']
+      ca: ['Consum conscient i sostenibilitat', 'Joc simbòlic sense artificis', 'Imaginació lliure'],
+      es: ['Consumo consciente y sostenibilidad', 'Juego simbólico sin artificios', 'Imaginación libre']
     },
-    tag: 'Caracterització & Moda',
-    iconName: 'Shirt'
+    tag: 'Reutilització & Creació',
+    iconName: 'Shirt',
+    featured: true
   },
   {
-    id: 'beats-dj',
+    id: 'teatre-expressio',
     title: {
-      ca: 'Taller de DJ, Beats & Producció Musical',
-      es: 'Taller de DJ, Beats & Producción Musical'
-    },
-    category: 'adolescents',
-    instructor: 'Carlos Cuenca',
-    location: 'Espai Musical Can Reón',
-    shortDesc: {
-      ca: 'Crea les teves pròpies bases rítmiques, mescles amb taula de DJ i enregistrament de loops.',
-      es: 'Crea tus propias bases rítmicas, mezclas con mesa de DJ y grabación de loops.'
-    },
-    fullDesc: {
-      ca: 'Introducció al món del beatmaking, síntesi de sons urbans i mescla en directe amb equips professionals de DJ. Una experiència immersiva sonora per a joves apassionats pel ritme.',
-      es: 'Introducción al mundo del beatmaking, síntesis de sonido urbano y mezcla en directo con controladoras profesionales. Experiencia inmersiva sonora para jóvenes.'
-    },
-    ageRange: '11 - 18 anys',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Controladores DJ, sintetitzadors, auriculars i estacions de loop.',
-      es: 'Controladoras DJ, sintetizadores, auriculares y estaciones de loop.'
-    },
-    pedagogicalValues: {
-      ca: ['Cultura del ritme', 'Producció digital', 'Concentració'],
-      es: ['Cultura del ritmo', 'Producción digital', 'Concentración']
-    },
-    tag: 'Música Electrònica & DJ',
-    iconName: 'Headphones'
-  },
-  {
-    id: 'ioga-mindful',
-    title: {
-      ca: 'Ioga en Família & Body and Mind',
-      es: 'Yoga en Familia & Body and Mind'
+      ca: 'Taller de Teatre & Expressió Corporal per a la Primera Infància',
+      es: 'Taller de Teatro & Expresión Corporal para la Primera Infancia'
     },
     category: 'compartit',
-    instructor: 'Sílvia Sayol, Elsa & P10',
-    location: 'Jardins de Can Matas / El Casal',
+    instructor: 'Joan Arqué & Equip Artístic 2LB',
+    location: 'Sala Albéniz (Escenari Municipal)',
     shortDesc: {
-      ca: 'Postures a dues bandes, respiració conscient i massatges relaxants entre pares i fills.',
-      es: 'Posturas acompasadas, respiración consciente y masajes relajantes entre padres e hijos.'
+      ca: 'Jocs d\'improvisació, dinàmiques de moviment, contes vivencials i expressió teatral per a la primera infància.',
+      es: 'Juegos de improvisación, dinámicas de movimiento, cuentos vivenciales y expresión teatral para la primera infancia.'
     },
     fullDesc: {
-      ca: 'Sessió de relaxació activa per desacelerar el ritme frenètic de la setmana. A través d\'estiraments conjunts i dinàmiques de contacte corporal reforçarem la calma i el benestar.',
-      es: 'Sesión de relajación activa para frenar las prisas del día a día. Mediante estiramientos compartidos y respiración reforzaremos la calma y el vínculo afectivo.'
+      ca: 'Adaptat exclusivament per als més petits i els seus acompanyants, aquest taller proposa jocs motrius, contes vivencials i exploració de l\'espai escènic per expressar emocions, desinhibir-se i gaudir del teatre en família en un entorn càlid i segur.',
+      es: 'Adaptado exclusivamente para los más pequeños y sus acompañantes, este taller propone juegos motrices, cuentos vivenciales y exploración del espacio escénico para expresar emociones, desinhibirse y disfrutar del teatro en familia en un entorno cálido y seguro.'
     },
-    ageRange: 'A partir de 4 anys + Famílies',
-    duration: '10:30 - 12:00',
+    ageRange: 'Primera infància (2 a 8 anys + acompanyant)',
+    duration: '10:00 - 12:00 (2 hores)',
     materials: {
-      ca: 'Esterilles de ioga i música ambiental.',
-      es: 'Esterillas de yoga y música ambiental.'
+      ca: 'Atrezzo suau, robes de colors i espai escènic adaptat.',
+      es: 'Atrezzo suave, telas de colores y espacio escénico adaptado.'
     },
     pedagogicalValues: {
-      ca: ['Gestió de l\'estrès', 'Presència plena', 'Calma compartida'],
-      es: ['Gestión del estrés', 'Presencia plena', 'Calma compartida']
+      ca: ['Expressió emocional', 'Desinhibició i confiança', 'Vincle afectiu a través del joc escènic'],
+      es: ['Expresión emocional', 'Desinhibición y confianza', 'Vínculo afectivo a través del juego escénico']
     },
-    tag: 'Benestar & Salut',
-    iconName: 'Heart'
-  },
-  {
-    id: 'escriptura-guions',
-    title: {
-      ca: 'Taller d\'Escriptura & Guions per a Cinema i Xarxes',
-      es: 'Taller de Escritura & Guiones para Cine y Redes'
-    },
-    category: 'adolescents',
-    instructor: 'Equip Audiovisual 2LB',
-    location: 'Biblioteca Can Manyer',
-    shortDesc: {
-      ca: 'Escriu idees per a curts, videoclips, pel·lícules o contingut digital amb estructura narrativa.',
-      es: 'Escribe ideas para cortos, videoclips o contenido digital con sólida estructura narrativa.'
-    },
-    fullDesc: {
-      ca: 'Com es passa d\'una idea al paper? Creació de diàlegs, escaletes i disseny d\'estils per a històries visuals.',
-      es: '¿Cómo pasar de una chispa a un guion real? Creación de diálogos, escaletas y formatos narrativos visuales.'
-    },
-    ageRange: '12 - 18 anys',
-    duration: '10:00 - 13:00',
-    materials: {
-      ca: 'Plantilles de guió, quaderns d\'escriptor.',
-      es: 'Plantillas de guion, cuadernos de escritor.'
-    },
-    pedagogicalValues: {
-      ca: ['Escriptura creativa', 'Pensament estructurat', 'Veu pròpia'],
-      es: ['Escritura creativa', 'Pensamiento estructurado', 'Voz propia']
-    },
-    tag: 'Literatura & Guió',
-    iconName: 'PenTool'
+    tag: 'Arts Escèniques',
+    iconName: 'Theater',
+    featured: true
   }
 ];
 
@@ -484,109 +217,99 @@ export const SPEAKERS_DATA: Speaker[] = [
     id: 'armando-bastida',
     name: 'Armando Bastida',
     role: {
-      ca: 'Infermer Pediàtric, Escriptor & Divulgador de Criança',
-      es: 'Enfermero Pediátrico, Escritor & Divulgador de Crianza'
+      ca: 'Infermer Pediàtric, Escriptor & Divulgador',
+      es: 'Enfermero Pediátrico, Escritor & Divulgador'
     },
     organization: 'Criar con Sentido Común',
     website: 'https://www.armandobastida.com/',
     bio: {
-      ca: 'Referent internacional en criança respectuosa, infermer pediàtric amb més de dues dècades d\'experiència, autor de best-sellers com "Criar con el corazón" o "Educar sin miedo". Fundador de la comunitat "Criar con Sentido Común" que acompanya milers de famílies.',
-      es: 'Referente nacional e internacional en crianza respetuosa, enfermero pediátrico con más de 20 años de experiencia, autor de éxitos editoriales como "Criar con el corazón" o "Educar sin miedo", y fundador de "Criar con Sentido Común".'
+      ca: 'Referent internacional en criança respectuosa, infermer pediàtric amb més de dues dècades d\'experiència, autor de best-sellers com "Criar con el corazón" o "Educar sin miedo". Fundador de la comunitat "Crianza con Sentido Común" que acompanya milers de famílies.',
+      es: 'Referente internacional en crianza respetuosa, enfermero pediátrico con más de 20 años de experiencia, autor de éxitos como "Criar con el corazón" o "Educar sin miedo", y fundador de "Crianza con Sentido Común".'
     },
     talkTitle: {
-      ca: 'Criança amb el Cor: Vincles, Límits i Acompanyament Emocional',
-      es: 'Crianza con el Corazón: Vínculos, Límites y Acompañamiento Emocional'
+      ca: 'Criar amb sentit comú',
+      es: 'Criar con sentido común'
     },
     talkDescription: {
-      ca: 'Una trobada propera, pràctica i plena d\'empatia on Armando Bastida abordarà els reptes reals de la paternitat i maternitat actual: com establir límits sense crits, comprendre el desenvolupament infantil i reforçar la connexió familiar en el dia a dia.',
-      es: 'Un encuentro cercano, práctico y lleno de empatía donde Armando Bastida abordará los desafíos reales de la crianza: límites sin gritos, comprensión emocional y fortalecimiento del vínculo diario.'
+      ca: 'Una trobada propera, pràctica i plena d\'empatia on Armando Bastida abordarà els reptes reals de la primera infància sota el lema "Crianza con sentido común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
+      es: 'Un encuentro cercano, práctico y lleno de empatía donde Armando Bastida abordará los desafíos reales de la primera infancia bajo el lema "Crianza con sentido común": desmontar mitos, reducir la culpa parental y reforzar la conexión familiar en el día a día.'
     },
-    time: '12:00h - 13:30h',
+    time: '17:00h - 18:30h',
     location: 'Sala Petita d\'El Casal de Tiana',
     highlights: {
       ca: [
         'Acompanyament emocional des de la primera infància',
-        'Com establir límits segurs sense recórrer al càstig',
+        'Com establir límits segurs sense recórrer al càstig ni a la culpa',
         'Torn obert de preguntes directes amb Armando Bastida',
         'Signatura de llibres en finalitzar la xerrada'
       ],
       es: [
         'Acompañamiento emocional desde la primera infancia',
-        'Cómo establecer límites seguros sin castigos',
+        'Cómo establecer límites seguros sin recurrir al castigo ni a la culpa',
         'Turno abierto de preguntas directas con Armando Bastida',
         'Firma de libros al finalizar la charla'
       ]
     }
   },
   {
-    id: 'lule-soler',
-    name: 'Lule Soler',
+    id: 'laia-ferrer',
+    name: 'Laia Ferrer',
     role: {
-      ca: 'Especialista en Adolescència & Entorn Digital',
-      es: 'Especialista en Adolescencia & Entorno Digital'
+      ca: 'Pedagoga & Especialista en Criança Conscient',
+      es: 'Pedagoga & Especialista en Crianza Consciente'
     },
+    organization: 'Ateneus & Pedagogia Familiar',
     bio: {
-      ca: 'Pedagoga i terapeuta familiar especialitzada en la transició a l\'adolescència, hàbits digitals i benestar juvenil.',
-      es: 'Pedagoga y terapeuta familiar especializada en la transición a la adolescencia, hábitos digitales y bienestar juvenil.'
+      ca: 'Pedagoga i terapeuta familiar dedicada a l\'acompanyament respectuós a la primera infància, la gestió de rebequeries i la creació de vincles d\'apego segurs en el nucli familiar.',
+      es: 'Pedagoga y terapeuta familiar dedicada al acompañamiento respetuoso en la primera infancia, la gestión de rabietas y la creación de vínculos de apego seguros en la familia.'
     },
     talkTitle: {
-      ca: 'Adolescència & Pantalles: Conviure amb la Tecnologia sense Conflictes',
-      es: 'Adolescencia & Pantallas: Convivir con la Tecnología sin Conflictos'
+      ca: 'Límits sense Crits: Acompanyament Emocional a la Primera Infància',
+      es: 'Límites sin Gritos: Acompañamiento Emocional en la Primera Infancia'
     },
     talkDescription: {
-      ca: 'Pautes clares per a mares i pares per gestionar el temps de pantalla, l\'ús de mòbils i les xarxes socials, evitant l\'aïllament i fomentant la confiança mútua.',
-      es: 'Pautas claras para madres y padres sobre cómo gestionar pantallas, móviles y redes sociales evitando el aislamiento y fomentando el diálogo.'
+      ca: 'Pautes clares per a mares i pares sobre com establir límits ferms i amorosos des de la calma, acompanyant la frustració i entenent el desenvolupament maduratiu de l\'infant sense recórrer als crits ni als càstigs.',
+      es: 'Pautas claras para madres y padres sobre cómo establecer límites firmes y amorosos desde la calma, acompañando la frustración y comprendiendo el desarrollo madurativo del peque sin gritos ni castigos.'
     },
-    time: '10:30h - 11:45h',
+    time: '16:00h - 17:00h',
     location: 'Sala Petita d\'El Casal de Tiana',
     highlights: {
       ca: [
-        'Acords familiars sobre pantalles i horaris',
-        'Com detectar senyals d\'ansietat o dependència digital',
-        'Fomentar activitats alternatives enriquidores'
+        'Com actuar davant de rebequeries i moments de tensió quotidiana',
+        'Diferència entre el límit respectuós i l\'autoritarisme',
+        'Foment de la cooperació familiar des de la calma',
+        'Torn obert de preguntes i resolució de casos reals'
       ],
       es: [
-        'Acuerdos familiares sobre pantallas y horarios',
-        'Cómo detectar señales de sobreexposición digital',
-        'Fomentar alternativas enriquecedoras en familia'
-      ]
-    }
-  },
-  {
-    id: 'nutricio-infantil',
-    name: 'Taula de Salut & Nutrició',
-    role: {
-      ca: 'Nutricionistes & Professionals Sanitaris Locals',
-      es: 'Nutricionistas & Profesionales Sanitarios Locales'
-    },
-    bio: {
-      ca: 'Equip de professionals de salut de Tiana i el Maresme dedicats a la divulgació d\'hàbits alimentaris conscients.',
-      es: 'Equipo de profesionales de salud de Tiana y el Maresme dedicados a la divulgación de hábitos alimentarios conscientes.'
-    },
-    talkTitle: {
-      ca: 'Nutrició Saludable en les Etapes de Creixement',
-      es: 'Nutrición Saludable en las Etapas de Crecimiento'
-    },
-    talkDescription: {
-      ca: 'Idees pràctiques per a esmorzars, berenars i àpats equilibrats que agradin a petits i grans, defugint ultraprocessats.',
-      es: 'Ideas prácticas para desayunos, meriendas y platos equilibrados y apetecibles evitando ultraprocesados.'
-    },
-    time: '10:00h - 10:45h',
-    location: 'Espai Ecològic Tiana',
-    highlights: {
-      ca: [
-        'Receptes ràpides i nutritives per al dia a dia escolar',
-        'Resolució de dubtes sobre al·lèrgies i selecció de productes locals'
-      ],
-      es: [
-        'Recetas rápidas y nutritivas para el día a día escolar',
-        'Resolución de dudas y selección de productos de proximidad'
+        'Cómo actuar ante rabietas y momentos de tensión cotidiana',
+        'Diferencia entre el límite respetuoso y el autoritarismo',
+        'Fomento de la cooperación familiar desde la calma',
+        'Turno abierto de preguntas y resolución de casos reales'
       ]
     }
   }
 ];
 
 export const VENUES_DATA: Venue[] = [
+  {
+    id: 'placa-vila',
+    name: 'Plaça de la Vila',
+    type: {
+      ca: 'Cor del Festival & Punt d\'Acollida',
+      es: 'Corazón del Festival & Punto de Acogida'
+    },
+    address: 'Plaça de la Vila, 08391 Tiana',
+    description: {
+      ca: 'Punt central d\'acollida de famílies, recollida de polseres i itineraris, espai de trobada i jocs populars tradicionals.',
+      es: 'Punto central de acogida de familias, recogida de pulseras e itinerarios, espacio de encuentro y juegos populares tradicionales.'
+    },
+    activities: {
+      ca: ['Acollida i Entrega de Polseres (09:30h)', 'Jocs Populars Tradicionals (11:00h - 14:00h)', 'Punt d\'Informació Oficial'],
+      es: ['Acogida y Entrega de Pulseras (09:30h)', 'Juegos Populares Tradicionales (11:00h - 14:00h)', 'Punto de Información Oficial']
+    },
+    walkingFromCenter: '0 min (Punt Central)',
+    coordinates: { lat: 41.4827, lng: 2.2701 }
+  },
   {
     id: 'sala-albeniz',
     name: 'Sala Albéniz',
@@ -596,12 +319,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Carrer de Sant Domènec, 1, 08391 Tiana',
     description: {
-      ca: 'Emblemàtic teatre municipal on tindrà lloc l\'espectacle teatral infantil de la tarda i el gran concert final "The Mortimers Karaoke en Família".',
-      es: 'Emblemático teatro municipal donde tendrá lugar el espectáculo teatral infantil de la tarde y el concierto final "The Mortimers Karaoke en Familia".'
+      ca: 'Emblemàtic teatre municipal on tindrà lloc el taller de teatre i expressió matinal i el gran espectacle familiar de cloenda.',
+      es: 'Emblemático teatro municipal donde tendrá lugar el taller de teatro matinal y el gran espectáculo familiar de clausura.'
     },
     activities: {
-      ca: ['Teatre Infantil (16:00h)', 'Concert Final La Family Mortimers (17:30h)'],
-      es: ['Teatro Infantil (16:00h)', 'Concierto Final La Family Mortimers (17:30h)']
+      ca: ['Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)', 'Espectacle Familiar de Cloenda (19:00h)'],
+      es: ['Taller Teatro & Expresión Primera Infancia (10:00h - 12:00h)', 'Espectáculo Familiar de Clausura (19:00h)']
     },
     walkingFromCenter: '1 min a peu (Plaça de la Vila)',
     coordinates: { lat: 41.4828, lng: 2.2701 }
@@ -615,12 +338,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Avinguda Isaac Albéniz, 12, 08391 Tiana',
     description: {
-      ca: 'Cor de les xerrades i ponències de criança (inclosa la ponència principal d\'Armando Bastida a la Sala Petita) i taller de Cuina Pedagògica.',
-      es: 'Corazón de las charlas de crianza (incluida la ponencia de Armando Bastida en la Sala Petita) y taller de Cocina Pedagógica.'
+      ca: 'Cor de les xerrades magistrals de criança: ponències de Laia Ferrer (16:00h) i d\'Armando Bastida (17:00h) a la Sala Petita.',
+      es: 'Corazón de las charlas magistrales de crianza: ponencias de Laia Ferrer (16:00h) y de Armando Bastida (17:00h) en la Sala Petita.'
     },
     activities: {
-      ca: ['Xerrades de Criança i Adolescència', 'Taller de Cuina Pedagògica', 'Espai Dinar Popular'],
-      es: ['Charlas de Crianza y Adolescencia', 'Taller de Cocina Pedagógica', 'Espacio Comida Popular']
+      ca: ['Xerrada Laia Ferrer: Límits sense Crits (16:00h)', 'Xerrada Armando Bastida: Criança amb Sentit Comú (17:00h)'],
+      es: ['Charla Laia Ferrer: Límites sin Gritos (16:00h)', 'Charla Armando Bastida: Crianza con Sentido Común (17:00h)']
     },
     walkingFromCenter: '2 min a peu',
     coordinates: { lat: 41.4822, lng: 2.2694 }
@@ -629,17 +352,17 @@ export const VENUES_DATA: Venue[] = [
     id: 'can-riera',
     name: 'Can Riera',
     type: {
-      ca: 'Centre Cívic & Aules Polivalents',
-      es: 'Centro Cívico & Aulas Polivalentes'
+      ca: 'Centre Cívic & Espais Educatius',
+      es: 'Centro Cívico & Espacios Educativos'
     },
     address: 'Carrer Can Riera, 4, 08391 Tiana',
     description: {
-      ca: 'Espai acollidor dedicat als tallers artístics i musicals matinals (Vestuari & Caracterització, Instruments & Harmonia).',
-      es: 'Espacio acogedor dedicado a los talleres artísticos y musicales de la mañana.'
+      ca: 'Espai dedicat als tallers matinals de Jardineria & Repoblació de la Serralada de Marina i Vestuari Sostenible & Reutilització.',
+      es: 'Espacio dedicado a los talleres matinales de Jardinería & Repoblación de la Serralada de Marina y Vestuario Sostenible & Reutilización.'
     },
     activities: {
-      ca: ['Taller de Música & Instruments', 'Taller de Vestuari & Caracterització'],
-      es: ['Taller de Música & Instrumentos', 'Taller de Vestuario & Caracterización']
+      ca: ['Taller de Jardineria & Repoblació (10:00h - 12:00h)', 'Taller de Vestuari Reutilitzat (10:00h - 12:00h)'],
+      es: ['Taller de Jardinería & Repoblación (10:00h - 12:00h)', 'Taller de Vestuario Reutilizado (10:00h - 12:00h)']
     },
     walkingFromCenter: '3 min a peu',
     coordinates: { lat: 41.4835, lng: 2.2685 }
@@ -648,55 +371,36 @@ export const VENUES_DATA: Venue[] = [
     id: 'lescorxador',
     name: 'L\'Escorxador',
     type: {
-      ca: 'Espai Jove & Arts Plàstiques',
-      es: 'Espacio Joven & Artes Plásticas'
+      ca: 'Espai Polivalent Municipal',
+      es: 'Espacio Polivalente Municipal'
     },
     address: 'Passeig de la Vilesa, s/n, 08391 Tiana',
     description: {
-      ca: 'Recinte històric reformat per a activitats a l\'aire lliure: gran taller de pintura mural i espai de Clown.',
-      es: 'Recinto histórico acondicionado para actividades al aire libre: pintura mural y clown.'
+      ca: 'Recinte històric municipal condicionat per a activitats familiars i espais d\'ombra i descans.',
+      es: 'Recinto histórico municipal acondicionado para actividades familiares y espacios de sombra y descanso.'
     },
     activities: {
-      ca: ['Pintura Mural & Graffiti Ecològic', 'Taller de Clown & Expressió'],
-      es: ['Pintura Mural & Graffiti Ecológico', 'Taller de Clown & Expresión']
+      ca: ['Pati i Espai d\'Ombra', 'Zona d\'Aparcament de Cotxets'],
+      es: ['Patio y Espacio de Sombra', 'Zona de Aparcamiento de Carritos']
     },
     walkingFromCenter: '4 min a peu',
     coordinates: { lat: 41.4815, lng: 2.2712 }
   },
   {
-    id: 'can-reon',
-    name: 'Can Reón',
-    type: {
-      ca: 'Espai d\'Art & Innovació',
-      es: 'Espacio de Arte & Innovación'
-    },
-    address: 'Camí de Can Reón, 08391 Tiana',
-    description: {
-      ca: 'Instal·lació multidisciplinària envoltada de vinyes on es desenvoluparan els tallers tecnològics i de producció sonora per a joves.',
-      es: 'Instalación multidisciplinar entre viñas donde se realizarán los talleres tecnológicos y sonoros para jóvenes.'
-    },
-    activities: {
-      ca: ['Taller Videoclips + IA', 'Taller de DJ & Beatmaking'],
-      es: ['Taller Videoclips + IA', 'Taller de DJ & Beatmaking']
-    },
-    walkingFromCenter: '6 min a peu',
-    coordinates: { lat: 41.4851, lng: 2.2678 }
-  },
-  {
     id: 'barbar-tubbies',
-    name: 'Bàrbar & Tubbies',
+    name: 'Bàrbar & Parc dels Teletubbies',
     type: {
-      ca: 'Terrassa & Zona Lúdica Vermut',
-      es: 'Terraza & Zona Lúdica Vermut'
+      ca: 'Terrassa, Parc Infantil & DJ Vermut',
+      es: 'Terraza, Parque Infantil & DJ Vermut'
     },
-    address: 'Plaça de la Vila / Nucli Antic, 08391 Tiana',
+    address: 'Plaça de la Vila & Parc dels Teletubbies, 08391 Tiana',
     description: {
-      ca: 'Punt de trobada central a l\'aire lliure: DJ sessions durant tot el dia, jocs populars tradicionals de fusta per a infants i espai vermut familiar.',
-      es: 'Punto de encuentro al aire libre: DJ sessions todo el día, juegos populares tradicionales de madera y vermut familiar.'
+      ca: 'Espai a l\'aire lliure que uneix la terrassa de Bàrbar amb el Parc dels Teletubbies: DJ Vermut familiar (12:00 - 14:00h) i jocs populars.',
+      es: 'Espacio al aire libre que une la terraza de Bàrbar con el Parque de los Teletubbies: DJ Vermut familiar (12:00 - 14:00h) y juegos populares.'
     },
     activities: {
-      ca: ['DJ Sessions Vermut (Xavi Vinyasa)', 'Jocs Populars i Tradicionals', 'Punt de trobada i refrigeri'],
-      es: ['DJ Sessions Vermut', 'Juegos Populares Tradicionales', 'Punto de encuentro y refrigerio']
+      ca: ['Jocs Populars Tradicionals (11:00h - 14:00h)', 'DJ Vermut Familiar (12:00h - 14:00h)', 'Espai Gastronòmic de Proximitat'],
+      es: ['Juegos Populares Tradicionales (11:00h - 14:00h)', 'DJ Vermut Familiar (12:00h - 14:00h)', 'Espacio Gastronómico de Proximidad']
     },
     walkingFromCenter: '0 min (Centre del poble)',
     coordinates: { lat: 41.4826, lng: 2.2700 }
@@ -711,93 +415,148 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
       es: 'Apertura de Puertas & Acogida de Familias'
     },
     category: 'tot-el-dia',
-    location: 'Plaça de la Vila / Punts d\'informació',
+    location: 'Plaça de la Vila',
     description: {
-      ca: 'Recollida de polseres, mapa d\'itineraris i programa imprès del BUM FEST.',
-      es: 'Recogida de pulseras, mapa de itinerarios y programa impreso del BUM FEST.'
+      ca: 'Recollida de polseres, mapa d\'itineraris i benvinguda al BUM TIANA FEST.',
+      es: 'Recogida de pulseras, mapa de itinerarios y bienvenida a BUM TIANA FEST.'
     }
   },
   {
-    time: '10:00 - 13:00',
+    time: '10:00 - 12:00',
     title: {
-      ca: 'Tallers Didàctics Matinals (Simultanis)',
-      es: 'Tallers Didácticos Matinales (Simultáneos)'
+      ca: 'Taller de Jardineria & Repoblació de la Serralada de Marina',
+      es: 'Taller de Jardinería & Repoblación de la Serralada de Marina'
     },
     category: 'tallers',
-    location: 'Can Riera, L\'Escorxador, El Casal, Can Reón, Biblioteca',
+    location: 'Garden Tiana / Can Riera',
     description: {
-      ca: 'Jardineria, Cuina, Videoclips amb IA, Graffiti, Música & Instruments, Titelles, Teatre, DJ & Beats, Ioga familiar.',
-      es: 'Jardinería, Cocina, Videoclips con IA, Graffiti, Música, Títeres, Teatro, DJ y Yoga familiar.'
+      ca: 'Creació de bombes de llavors i plantació per a la recuperació ambiental del parc després de l\'incendi.',
+      es: 'Creación de bombas de semillas y plantación para la recuperación ambiental del parque tras el incendio.'
     },
-    badge: 'Infants + Joves + Famílies'
+    badge: {
+      ca: 'Taller',
+      es: 'Taller'
+    }
   },
   {
-    time: '10:00 - 13:30',
+    time: '10:00 - 12:00',
     title: {
-      ca: 'Cicle de Xerrades & Taules Rodones de Criança',
-      es: 'Ciclo de Charlas & Mesas Redondas de Crianza'
+      ca: 'Taller de Vestuari Sostenible & Reutilització Creativa',
+      es: 'Taller de Vestuario Sostenible & Reutilización Creativa'
     },
-    category: 'xerrades',
-    location: 'Sala Petita d\'El Casal de Tiana & Espai Ecològic',
+    category: 'tallers',
+    location: 'Can Riera',
     description: {
-      ca: 'Taula de Nutrició (10h), Adolescència & Pantalles amb Lule Soler (10:30h) i Criança amb el Cor amb Armando Bastida (12:00h).',
-      es: 'Mesa de Nutrición (10h), Adolescencia & Pantallas con Lule Soler (10:30h) y Crianza con el Corazón con Armando Bastida (12:00h).'
+      ca: 'Disfresses enginyoses amb caixes de cartró, retalls de roba i elements reciclats.',
+      es: 'Disfraces ingeniosos con cajas de cartón, retales de tela y elementos reciclados.'
     },
-    badge: 'Xerrades de Criança'
+    badge: {
+      ca: 'Taller',
+      es: 'Taller'
+    }
   },
   {
-    time: '11:00 - 19:00',
+    time: '10:00 - 12:00',
     title: {
-      ca: 'Jocs Populars Tradicionals & Zona Lúdica',
-      es: 'Juegos Populares Tradicionales & Zona Lúdica'
+      ca: 'Taller de Teatre & Expressió Corporal per a la Primera Infància',
+      es: 'Taller de Teatro & Expresión Corporal para la Primera Infancia'
+    },
+    category: 'tallers',
+    location: 'Sala Albéniz',
+    description: {
+      ca: 'Jocs de moviment, expressió d\'emocions i contes escènics compartits amb les famílies.',
+      es: 'Juegos de movimiento, expresión de emociones y cuentos escénicos compartidos con las familias.'
+    },
+    badge: {
+      ca: 'Taller',
+      es: 'Taller'
+    }
+  },
+  {
+    time: '11:00 - 14:00',
+    title: {
+      ca: 'Jocs Populars Tradicionals en Família',
+      es: 'Juegos Populares Tradicionales en Familia'
     },
     category: 'tot-el-dia',
-    location: 'Espai Bàrbar / Tubbies / Plaça',
+    location: 'Plaça de la Vila / Bàrbar & Parc dels Teletubbies',
     description: {
-      ca: 'Monitors dinamitzant jocs de carrer cooperatius i fusta tradicional durant tota la jornada.',
-      es: 'Monitores dinamizando juegos de calle cooperativos y madera tradicional durante toda la jornada.'
+      ca: 'Jocs tradicionals de fusta, cooperació i carrer lliure dinamitzats per a la primera infància.',
+      es: 'Juegos tradicionales de madera, cooperación y calle dinamizados para la primera infancia.'
+    }
+  },
+  {
+    time: '12:00 - 14:00',
+    title: {
+      ca: 'DJ Vermut Familiar en el Bàrbar & Parc dels Teletubbies',
+      es: 'DJ Vermut Familiar en el Bàrbar & Parc dels Teletubbies'
+    },
+    category: 'gastronomia',
+    location: 'Bàrbar & Parc dels Teletubbies',
+    description: {
+      ca: 'Música familiar, ritmes alegres i trobada vermutera a l\'aire lliure als establiments locals de Tiana.',
+      es: 'Música familiar, ritmos alegres y encuentro vermutero al aire libre en los locales de Tiana.'
     }
   },
   {
     time: '14:00 - 16:00',
     title: {
-      ca: 'DJ Vermut & Dinar Popular de Proximitat',
-      es: 'DJ Vermut & Comida Popular de Proximidad'
+      ca: 'Descans & Dinar Popular de Proximitat',
+      es: 'Descanso & Comida Popular de Proximidad'
     },
     category: 'gastronomia',
     location: 'Xarxa de Restaurants i Terrasses de Tiana',
     description: {
-      ca: 'Sessió DJ amb Xavi Vinyasa i tiquets gastronòmics especials als establiments del poble: El Casal, Bàrbar, El Casino, Avi Mingo i Tiriti.',
-      es: 'Sesión DJ con Xavi Vinyasa y tickets gastronómicos especiales en locales del pueblo: El Casal, Bàrbar, El Casino, Avi Mingo y Tiriti.'
-    },
-    badge: 'Comerç Local de Tiana'
+      ca: 'Pausa per dinar i agafar forces a la xarxa d\'establiments gastronòmics de Tiana amb menús especials.',
+      es: 'Pausa para comer y reponer fuerzas en la red de establecimientos de Tiana con menús especiales.'
+    }
   },
   {
     time: '16:00 - 17:00',
     title: {
-      ca: 'Espectacle Teatral Infantil & Familiar',
-      es: 'Espectáculo Teatral Infantil & Familiar'
+      ca: 'Xerrada: Laia Ferrer - "Límits sense Crits"',
+      es: 'Charla: Laia Ferrer - "Límites sin Gritos"'
     },
-    category: 'espectacle',
-    location: 'Sala Albéniz',
+    category: 'xerrades',
+    location: 'Sala Petita d\'El Casal de Tiana',
     description: {
-      ca: 'Representació d\'arts escèniques i clown de primer nivell per a petits i grans a l\'històric teatre municipal.',
-      es: 'Representación de artes escénicas y clown para peques y grandes en el histórico teatro municipal.'
+      ca: 'Acompanyament emocional a la primera infància i pautes per gestionar moments difícils amb respecte i fermesa.',
+      es: 'Acompañamiento emocional en la primera infancia y pautas para gestionar momentos difíciles con respeto y firmeza.'
+    },
+    badge: {
+      ca: 'Xerrada',
+      es: 'Charla'
     }
   },
   {
-    time: '17:30 - 19:00',
+    time: '17:00 - 18:30',
     title: {
-      ca: 'Gran Concert Final: "La Family MORTIMERS" Karaoke en Família',
-      es: 'Gran Concierto Final: "La Family MORTIMERS" Karaoke en Familia'
+      ca: 'Xerrada: Armando Bastida - "Criar amb sentit comú"',
+      es: 'Charla: Armando Bastida - "Criar con sentido común"'
+    },
+    category: 'xerrades',
+    location: 'Sala Petita d\'El Casal de Tiana',
+    description: {
+      ca: 'Claus de la criança respectuosa, desmuntar mites i reduir la culpa per gaudir de la infància amb sentit comú.',
+      es: 'Claves de la crianza respetuosa, desmontar mitos y reducir la culpa para disfrutar de la infancia con sentido común.'
+    },
+    badge: {
+      ca: 'Xerrada',
+      es: 'Charla'
+    }
+  },
+  {
+    time: '19:00 - 20:00',
+    title: {
+      ca: 'Espectacle Teatral Infantil & Familiar de Cloenda',
+      es: 'Espectáculo Teatral Infantil & Familiar de Clausura'
     },
     category: 'espectacle',
     location: 'Sala Albéniz',
     description: {
-      ca: 'Concert interactiu i festa de cloenda on pares, mares, infants i joves pugen a l\'escenari a cantar i ballar junts els grans clàssics del pop-rock.',
-      es: 'Concierto interactivo y fiesta de clausura donde familias enteras suben al escenario a cantar y bailar los grandes clásicos.'
-    },
-    badge: 'Fi de Festa'
+      ca: 'Gran espectacle escènic familiar per tancar una jornada inoblidable plena d\'art, rialles i comunitat.',
+      es: 'Gran espectáculo escénico familiar para cerrar una jornada inolvidable llena de arte, risas y comunidad.'
+    }
   }
 ];
 
@@ -856,6 +615,28 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     },
     address: 'Carrer de Matas',
     websiteUrl: 'https://www.google.com/search?q=Avi+Mingo+Tiana+restaurant'
+  },
+  {
+    id: 'verdEsBo',
+    name: 'Floristeria Verd És Bo',
+    type: 'Plantes, flors & decoració botànica',
+    specialOffer: {
+      ca: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUM Fest.',
+      es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUM Fest.'
+    },
+    address: 'Carrer de Lola Anglada, Tiana',
+    websiteUrl: 'https://www.google.com/search?q=Floristeria+Verd+Es+Bo+Tiana'
+  },
+  {
+    id: 'espaiEco',
+    name: 'Espai Ecològic',
+    type: 'Alimentació bio, artesanal & proximitat',
+    specialOffer: {
+      ca: 'Snacks saludables, fruita ecològica de temporada i productes locals per a les famílies.',
+      es: 'Snacks saludables, fruta ecológica de temporada y productos locales para las familias.'
+    },
+    address: 'Carrer de Sant Valentí, Tiana',
+    websiteUrl: 'https://www.google.com/search?q=Espai+Ecologic+Tiana'
   }
 ];
 
@@ -867,45 +648,45 @@ export const PRICING_DATA = {
       {
         name: 'Bono Tallers Matí',
         price: '30€',
-        period: 'per infant / jove + acompanyant adult',
-        description: 'Accés lliure als tallers didàctics matinals escollits i a les xerrades de criança.',
+        period: 'per infant (primera infància) + acompanyant adult',
+        description: 'Accés lliure als tallers didàctics matinals escollits i a la zona de jocs populars.',
         features: [
-          'Material complet inclòs',
+          'Material complet inclòs per als tallers',
           'Tallers compartits amb adult sense cost extra',
-          'Accés a la ponència d\'Armando Bastida i Lule Soler',
-          'Dret a espai de jocs populars'
+          'Jardineria & Repoblació, Vestuari Reutilitzat i Teatre',
+          'Dret a espai de jocs populars tradicionals'
         ],
         highlighted: false
       },
       {
-        name: 'Bono Complet (Tallers + 2 Actuacions)',
+        name: 'Bono Complet (Tallers + Xerrades + Espectacle)',
         price: '60€',
-        period: 'Pack integral de dia complet',
-        description: 'L\'experiència sencera del BUM Fest per viure el poble des del matí fins a la nit.',
+        period: 'Pack integral de dia complet per a tota la família',
+        description: 'L\'experiència sencera del BUM Fest per viure el poble des del matí fins a la cloenda.',
         features: [
-          'Tots els tallers didàctics escollits',
-          'Xerrades d\'Armando Bastida i experts',
-          'Entrada Teatre Infantil (Sala Albéniz)',
-          'Entrada Gran Concert Final La Family Mortimers',
+          'Tots els tallers didàctics matinals (10 a 12h)',
+          'Xerrades magistrals de Laia Ferrer i Armando Bastida',
+          'Entrada a l\'Espectacle Teatral Familiar (Sala Albéniz)',
+          'Espai DJ Vermut i jocs tradicionals',
           'Descompte en tiquets gastronòmics del poble'
         ],
         highlighted: true,
         tag: 'Més recomanat'
       },
       {
-        name: 'Bono Actuacions',
+        name: 'Bono Xerrades & Espectacle',
         price: '20€ / 25€',
-        period: '1 actuació (20€) · 2 actuacions (25€)',
-        description: 'Per a qui vulgui gaudir exclusivament de la programació d\'arts escèniques a la Sala Albéniz.',
+        period: '1 sessió (20€) · Totes les sessions de tarda (25€)',
+        description: 'Per a qui vulgui gaudir de les ponències de criança a El Casal i l\'espectacle escènic.',
         features: [
-          'Entrada numerada a la Sala Albéniz',
-          'Teatre infantil de tarda',
-          'Concert Karaoke en família The Mortimers'
+          'Entrada a les xerrades de Laia Ferrer i Armando Bastida',
+          'Entrada numerada a l\'Espectacle de Cloenda a la Sala Albéniz',
+          'Accés a la zona vermut i dinamització de carrer'
         ],
         highlighted: false
       }
     ],
-    subsidyNote: 'El BUM TIANA FEST compta amb el finançament públic de l\'Ajuntament de Tiana i la Generalitat de Catalunya, cobrint la gran majoria de la producció artística per afavorir les tarifes comunitàries.'
+    subsidyNote: 'El BUM TIANA FEST compta amb el suport de l\'Ajuntament de Tiana i la Generalitat de Catalunya, cobrint la gran majoria de la producció artística per afavorir les tarifes comunitàries.'
   },
   es: {
     title: 'Tarifas & Acceso Popular',
@@ -914,40 +695,40 @@ export const PRICING_DATA = {
       {
         name: 'Bono Talleres Mañana',
         price: '30€',
-        period: 'por peque / joven + acompañante adulto',
-        description: 'Acceso libre a los talleres didácticos de la mañana y a las charlas de crianza.',
+        period: 'por peque (primera infancia) + acompañante adulto',
+        description: 'Acceso libre a los talleres didácticos de la mañana y a la zona de juegos populares.',
         features: [
-          'Material completo incluido',
+          'Material completo incluido para los talleres',
           'Talleres compartidos con adulto sin coste extra',
-          'Acceso a la ponencia de Armando Bastida y Lule Soler',
-          'Zona de juegos tradicionales'
+          'Jardinería & Repoblación, Vestuario Reutilizado y Teatro',
+          'Zona de juegos populares tradicionales'
         ],
         highlighted: false
       },
       {
-        name: 'Bono Completo (Talleres + 2 Actuaciones)',
+        name: 'Bono Completo (Talleres + Charlas + Espectáculo)',
         price: '60€',
-        period: 'Pack integral de día completo',
+        period: 'Pack integral de día completo para toda la familia',
         description: 'La experiencia completa de BUM Fest para disfrutar de Tiana de la mañana a la noche.',
         features: [
-          'Todos los talleres didácticos elegidos',
-          'Charlas de Armando Bastida y expertos',
-          'Entrada Teatro Infantil (Sala Albéniz)',
-          'Entrada Gran Concierto Final La Family Mortimers',
+          'Todos los talleres didácticos matinales (10 a 12h)',
+          'Charlas magistrales de Laia Ferrer y Armando Bastida',
+          'Entrada al Espectáculo Teatral Familiar (Sala Albéniz)',
+          'Espacio DJ Vermut y juegos tradicionales',
           'Descuentos en tickets gastronómicos locales'
         ],
         highlighted: true,
         tag: 'Más recomendado'
       },
       {
-        name: 'Bono Actuaciones',
+        name: 'Bono Charlas & Espectáculo',
         price: '20€ / 25€',
-        period: '1 actuación (20€) · 2 actuaciones (25€)',
-        description: 'Para quienes deseen asistir exclusivamente a la programación escénica en la Sala Albéniz.',
+        period: '1 sesión (20€) · Todas las sesiones de tarde (25€)',
+        description: 'Para quienes deseen asistir a las ponencias de crianza en El Casal y al espectáculo escénico.',
         features: [
-          'Entrada numerada en la Sala Albéniz',
-          'Teatro infantil de tarde',
-          'Concierto Karaoke en familia The Mortimers'
+          'Entrada a las charlas de Laia Ferrer y Armando Bastida',
+          'Entrada numerada al Espectáculo de Clausura en la Sala Albéniz',
+          'Acceso a la zona vermut y dinamización de calle'
         ],
         highlighted: false
       }
@@ -963,8 +744,8 @@ export const FAQ_DATA = [
       es: '¿Cómo funcionan los talleres? ¿Deben quedarse los padres?'
     },
     a: {
-      ca: 'Sí! L\'essència del BUM FEST és precisament l\'aprenentatge compartit: cada infant o adolescent participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
-      es: '¡Sí! La esencia de BUM FEST es el aprendizaje compartido: cada niño o adolescente participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
+      ca: 'Sí! L\'essència del BUM FEST és precisament l\'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
+      es: '¡Sí! La esencia de BUM FEST es el aprendizaje compartido en la primera infancia: cada peque participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
     }
   },
   {
@@ -983,8 +764,8 @@ export const FAQ_DATA = [
       es: '¿Se requiere reserva previa para las charlas de crianza?'
     },
     a: {
-      ca: 'L\'aforament de les aules i sales d\'El Casal és limitat per garantir la comoditat i proximitat de la sessió. Els assistents amb Bono del BUM Fest tindran accés per ordre d\'arribada.',
-      es: 'El aforo de las salas de El Casal es limitado para asegurar cercanía. Los asistentes con Bono del BUM Fest tendrán acceso por orden de llegada.'
+      ca: 'L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la comoditat i proximitat de la sessió amb Laia Ferrer i Armando Bastida. Els assistents amb Bono del BUM Fest tindran accés per ordre d\'arribada.',
+      es: 'El aforo de la Sala Petita de El Casal es limitado para asegurar cercanía con Laia Ferrer y Armando Bastida. Los asistentes con Bono de BUM Fest tendrán acceso por orden de llegada.'
     }
   },
   {
@@ -993,7 +774,7 @@ export const FAQ_DATA = [
       es: '¿Los espacios están adaptados para carritos y movilidad reducida?'
     },
     a: {
-      ca: 'Sí, tots els espais municipals seleccionats (Sala Albéniz, El Casal, Can Riera, etc.) disposen d\'accessos adaptats i zones d\'aparcament de cotxets.',
+      ca: 'Sí, tots els espais municipals seleccionats (Plaça de la Vila, Sala Albéniz, El Casal, Can Riera, etc.) disposen d\'accessos adaptats i zones d\'aparcament de cotxets.',
       es: 'Sí, todos los recintos municipales cuentan con accesibilidad adaptada y zonas habilitadas para carritos.'
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Utensils, Music, MapPin, ExternalLink, Ticket, CheckCircle2 } from 'lucide-react';
+import { Store, Music, MapPin, ExternalLink, Ticket, CheckCircle2 } from 'lucide-react';
 import { Language, RESTAURANTS_DATA } from '../data/content';
 import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 
@@ -20,7 +20,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         'DJ Vermut com a acompanyament: A la Plaça de la Vila, Xavi Vinyasa posarà música i ambient distès per acompanyar el vermut i la sobretaula en família.',
       ],
       restaurantsTitle: 'Establiments Col·laboradors de Tiana',
-      visitWebsite: 'Veure lloc web / menú',
+      visitWebsite: 'Veure lloc web / contacte',
     },
     es: {
       title: 'Comida Familiar & DJ',
@@ -33,7 +33,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         'DJ Vermut como acompañamiento: En la Plaça de la Vila, Xavi Vinyasa pondrá música y ambiente distendido para acompañar el vermut y la sobremesa en familia.',
       ],
       restaurantsTitle: 'Establecimientos Colaboradores de Tiana',
-      visitWebsite: 'Ver sitio web / menú',
+      visitWebsite: 'Ver sitio web / contacto',
     },
   }[lang];
 
@@ -49,6 +49,10 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         return FESTIVAL_IMAGES.restoTiriti;
       case 'aviMingo':
         return FESTIVAL_IMAGES.restoAviMingo;
+      case 'verdEsBo':
+        return FESTIVAL_IMAGES.restoVerdEsBo;
+      case 'espaiEco':
+        return FESTIVAL_IMAGES.restoEspaiEco;
       default:
         return FESTIVAL_IMAGES.restoCasal;
     }
@@ -64,6 +68,10 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         return FESTIVAL_LOGOS.casino;
       case 'tiriti':
         return FESTIVAL_LOGOS.tirati;
+      case 'espaiEco':
+        return FESTIVAL_LOGOS.espaiEco;
+      case 'verdEsBo':
+        return FESTIVAL_LOGOS.verdEsBo;
       default:
         return null;
     }
@@ -127,7 +135,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         {/* Restaurants Grid with the same horizontal card format as Workshops */}
         <div className="space-y-6">
           <div className="flex items-center gap-2.5">
-            <Utensils className="w-5 h-5 text-teal-400" />
+            <Store className="w-5 h-5 text-teal-400" />
             <h3 className="text-xl sm:text-2xl font-extrabold text-white">
               {t.restaurantsTitle}
             </h3>

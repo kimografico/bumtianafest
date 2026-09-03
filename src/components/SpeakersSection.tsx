@@ -29,12 +29,10 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
     switch (id) {
       case 'armando-bastida':
         return FESTIVAL_IMAGES.armandoBastida;
-      case 'lule-soler':
-        return FESTIVAL_IMAGES.luleSoler;
-      case 'nutricio-infantil':
-        return FESTIVAL_IMAGES.nutritionTeam;
+      case 'laia-ferrer':
+        return FESTIVAL_IMAGES.laiaFerrer;
       default:
-        return FESTIVAL_IMAGES.armandoBastida;
+        return FESTIVAL_IMAGES.laiaFerrer;
     }
   };
 
@@ -52,8 +50,8 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
           </p>
         </div>
 
-        {/* Speakers Grid with Round Portrait Frame */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Speakers Grid with Round Portrait Frame (2 Speakers) */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
           {SPEAKERS_DATA.map((speaker) => (
             <div
               key={speaker.id}

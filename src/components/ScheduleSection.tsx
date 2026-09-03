@@ -14,7 +14,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
     { id: 'tallers', label: { ca: 'Tallers Matinals', es: 'Talleres Mañana' } },
     { id: 'xerrades', label: { ca: 'Xerrades', es: 'Charlas' } },
     { id: 'gastronomia', label: { ca: 'Gastronomia & Vermut', es: 'Gastronomía & Vermut' } },
-    { id: 'espectacle', label: { ca: 'Espectacles & Concert', es: 'Espectáculos & Concierto' } },
+    { id: 'espectacle', label: { ca: 'Espectacles & Teatre', es: 'Espectáculos & Teatro' } },
   ];
 
   const filteredSchedule = SCHEDULE_DATA.filter((item) => {
@@ -25,11 +25,11 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
   const t = {
     ca: {
       title: 'Horaris del Festival',
-      subtitle: 'Una jornada completa des de les 09:30h del matí fins a les 19:00h del vespre.',
+      subtitle: 'Una jornada completa des de les 10:00h del matí fins a les 20:00h del vespre.',
     },
     es: {
       title: 'Horarios del Festival',
-      subtitle: 'Una jornada completa desde las 09:30h de la mañana hasta las 19:00h de la tarde.',
+      subtitle: 'Una jornada completa desde las 10:00h de la mañana hasta las 20:00h de la tarde.',
     },
   }[lang];
 
@@ -87,7 +87,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
 
                   {item.badge && (
                     <span className="text-xs font-bold text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-100 shadow-2xs">
-                      {item.badge}
+                      {item.badge[lang]}
                     </span>
                   )}
                 </div>

@@ -15,27 +15,18 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   lang,
   onSelectWorkshop,
 }) => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'infantil' | 'adolescents' | 'compartit'>('all');
+  const [activeFilter, setActiveFilter] = useState<string>('all');
 
   const filteredWorkshops = WORKSHOPS_DATA.filter((w) => {
     if (activeFilter === 'all') return true;
-    return w.category === activeFilter;
+    return w.id === activeFilter;
   });
 
   const getWorkshopImage = (id: string) => {
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
-      case 'cuina': return FESTIVAL_IMAGES.cooking;
-      case 'videoclips-ia': return FESTIVAL_IMAGES.videoclips;
-      case 'mural-graffiti': return FESTIVAL_IMAGES.mural;
-      case 'musica-instruments': return FESTIVAL_IMAGES.instruments;
-      case 'titelles': return FESTIVAL_IMAGES.puppets;
-      case 'teatre-adolescents': return FESTIVAL_IMAGES.theater;
-      case 'clown': return FESTIVAL_IMAGES.clown;
       case 'vestuari': return FESTIVAL_IMAGES.costumes;
-      case 'beats-dj': return FESTIVAL_IMAGES.dj;
-      case 'ioga-mindful': return FESTIVAL_IMAGES.yoga;
-      case 'escriptura-guions': return FESTIVAL_IMAGES.writing;
+      case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
       default: return FESTIVAL_IMAGES.workshop;
     }
   };
@@ -43,20 +34,20 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   const t = {
     ca: {
       title: 'Programació de Tallers',
-      subtitle: 'Espais pràctics i creatius durant tot el matí (10:00h a 13:00h) guiats per especialistes.',
-      filterAll: 'Tots els tallers',
-      filterShared: 'Familiar Compartit',
-      filterKids: 'Infantil (3-10 anys)',
-      filterTeens: 'Joves & Adolescents',
+      subtitle: 'Espais pràctics i creatius durant el matí (10:00h a 12:00h) dedicats a la primera infància i les seves famílies.',
+      filterAll: 'Tots els tallers (3)',
+      filterJardineria: 'Jardineria & Natura',
+      filterVestuari: 'Vestuari Reutilitzat',
+      filterTeatre: 'Teatre & Expressió',
       viewDetails: 'Més detalls',
     },
     es: {
       title: 'Programación de Talleres',
-      subtitle: 'Espacios prácticos y creativos durante toda la mañana (10:00h a 13:00h) guiados por especialistas.',
-      filterAll: 'Todos los talleres',
-      filterShared: 'Familiar Compartido',
-      filterKids: 'Infantil (3-10 años)',
-      filterTeens: 'Jóvenes & Adolescentes',
+      subtitle: 'Espacios prácticos y creativos durante la mañana (10:00h a 12:00h) dedicados a la primera infancia y sus familias.',
+      filterAll: 'Todos los talleres (3)',
+      filterJardineria: 'Jardinería & Naturaleza',
+      filterVestuari: 'Vestuario Reutilizado',
+      filterTeatre: 'Teatro & Expresión',
       viewDetails: 'Más detalles',
     },
   }[lang];
@@ -79,13 +70,13 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
         <div className="flex flex-wrap gap-2 sm:gap-3 mb-12">
           {[
             { id: 'all', label: t.filterAll },
-            { id: 'compartit', label: t.filterShared },
-            { id: 'infantil', label: t.filterKids },
-            { id: 'adolescents', label: t.filterTeens },
+            { id: 'jardineria', label: t.filterJardineria },
+            { id: 'vestuari', label: t.filterVestuari },
+            { id: 'teatre-expressio', label: t.filterTeatre },
           ].map((filter) => (
             <button
               key={filter.id}
-              onClick={() => setActiveFilter(filter.id as any)}
+              onClick={() => setActiveFilter(filter.id)}
               className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
                 activeFilter === filter.id
                   ? 'bg-blue-900 text-white shadow-md shadow-blue-900/20'
@@ -114,11 +105,6 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
-                <div className="absolute top-3.5 left-3.5">
-                  <span className="text-[11px] font-extrabold px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-blue-900 border border-white shadow-xs uppercase tracking-wider">
-                    {workshop.ageRange}
-                  </span>
-                </div>
               </div>
 
               {/* Right Column: Workshop Details */}

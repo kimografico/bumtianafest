@@ -61,12 +61,12 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
         es: 'Música & Artes Escénicas',
       },
       title: {
-        ca: 'Concerts i espectacles en viu',
-        es: 'Conciertos y espectáculos en vivo',
+        ca: 'DJ Vermut i Espectacle Teatral',
+        es: 'DJ Vermut y Espectáculo Teatral',
       },
       desc: {
-        ca: 'Teatre infantil i gran concert final a la Sala Albéniz.',
-        es: 'Teatro infantil y gran concierto final en la Sala Albéniz.',
+        ca: 'Música familiar a l\'aire lliure i gran espectacle escènic de cloenda a la Sala Albéniz.',
+        es: 'Música familiar al aire libre y gran espectáculo escénico de clausura en la Sala Albéniz.',
       },
     },
   ];

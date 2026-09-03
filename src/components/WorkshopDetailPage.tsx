@@ -40,17 +40,8 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
   const getWorkshopImage = (id: string) => {
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
-      case 'cuina': return FESTIVAL_IMAGES.cooking;
-      case 'videoclips-ia': return FESTIVAL_IMAGES.videoclips;
-      case 'mural-graffiti': return FESTIVAL_IMAGES.mural;
-      case 'musica-instruments': return FESTIVAL_IMAGES.instruments;
-      case 'titelles': return FESTIVAL_IMAGES.puppets;
-      case 'teatre-adolescents': return FESTIVAL_IMAGES.theater;
-      case 'clown': return FESTIVAL_IMAGES.clown;
       case 'vestuari': return FESTIVAL_IMAGES.costumes;
-      case 'beats-dj': return FESTIVAL_IMAGES.dj;
-      case 'ioga-mindful': return FESTIVAL_IMAGES.yoga;
-      case 'escriptura-guions': return FESTIVAL_IMAGES.writing;
+      case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
       default: return FESTIVAL_IMAGES.workshop;
     }
   };

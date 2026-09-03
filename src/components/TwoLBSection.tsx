@@ -47,7 +47,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
             {/* Left Image */}
             <div className="lg:col-span-5 h-72 sm:h-96 lg:h-full relative overflow-hidden">
               <img
-                src={FESTIVAL_IMAGES.music}
+                src={FESTIVAL_IMAGES.twoLbVision}
                 alt="2LB Produccions a Tiana"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

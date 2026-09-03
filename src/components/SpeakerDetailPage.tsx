@@ -97,9 +97,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                 src={
                   speaker.id === 'armando-bastida'
                     ? FESTIVAL_IMAGES.armandoBastida
-                    : speaker.id === 'lule-soler'
-                    ? FESTIVAL_IMAGES.luleSoler
-                    : FESTIVAL_IMAGES.nutritionTeam
+                    : FESTIVAL_IMAGES.laiaFerrer
                 }
                 alt={speaker.name}
                 className="w-full h-full object-cover"
