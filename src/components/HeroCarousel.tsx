@@ -87,8 +87,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
     {
       image: FESTIVAL_IMAGES.carouselSlide6,
       tag: {
-        ca: 'BUM Tiana Fest 2026',
-        es: 'BUM Tiana Fest 2026',
+        ca: 'BUM Tiana FEST 2026',
+        es: 'BUM Tiana FEST 2026',
       },
       title: {
         ca: 'Celebrant la infància i la comunitat',

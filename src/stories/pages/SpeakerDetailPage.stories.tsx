@@ -39,10 +39,10 @@ export const ArmandoBastida: Story = {
   },
 };
 
-export const LuleSoler: Story = {
+export const LaiaFerrer: Story = {
   args: {
-    speakerId: 'lule-soler',
-    lang: 'es',
+    speakerId: 'laia-ferrer',
+    lang: 'ca',
   },
 };
 

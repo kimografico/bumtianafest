@@ -14,14 +14,14 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
       location: 'Tiana, Barcelona',
       linksTitle: 'Navegació',
       organizers: 'Organitzen 2LB Produccions juntament amb l\'Ajuntament de Tiana',
-      rights: '© 2026 BUM TIANA FEST · Tots els drets reservats.',
+      rights: '© 2026 BUM Tiana FEST · Tots els drets reservats.',
     },
     es: {
       tagline: 'Festival de Artes, Talleres y Comunidad Familiar en Tiana (Maresme).',
       location: 'Tiana, Barcelona',
       linksTitle: 'Navegación',
       organizers: 'Organizan 2LB Produccions junto con el Ayuntamiento de Tiana',
-      rights: '© 2026 BUM TIANA FEST · Todos los derechos reservados.',
+      rights: '© 2026 BUM Tiana FEST · Todos los derechos reservados.',
     },
   }[lang];
 
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           <div className="md:col-span-7 lg:col-span-8 space-y-5">
             <div className="flex items-baseline gap-2">
               <span className="font-extrabold text-2xl text-white tracking-tight">
-                BUM TIANA FEST
+                BUM Tiana FEST
               </span>
               <span className="text-xs font-bold text-blue-400">
                 2026
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         {/* Bottom copyright statement */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © 2026 BUM TIANA FEST · {lang === 'ca' ? 'Tots els drets reservats.' : 'Todos los derechos reservados.'} · {lang === 'ca' ? 'Disseny web: ' : 'Diseño web: '}
+            © 2026 BUM Tiana FEST · {lang === 'ca' ? 'Tots els drets reservats.' : 'Todos los derechos reservados.'} · {lang === 'ca' ? 'Disseny web: ' : 'Diseño web: '}
             <a
               href="https://kimografico.com"
               target="_blank"

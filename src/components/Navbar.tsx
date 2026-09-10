@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-baseline gap-2 text-left cursor-pointer group"
           >
             <span className="font-extrabold text-xl sm:text-2xl text-blue-950 tracking-tight group-hover:text-blue-700 transition">
-              BUM TIANA
+              BUM Tiana FEST
             </span>
             <span className="text-xs font-bold text-blue-600">
               2026

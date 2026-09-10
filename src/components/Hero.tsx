@@ -9,11 +9,11 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ lang }) => {
   const t = {
     ca: {
-      title: 'BUM TIANA FEST',
+      title: 'BUM Tiana FEST',
       year: '2026',
       subtitle: 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.',
       welcomeText: [
-        'Benvingudes i benvinguts al BUM TIANA FEST 2026',
+        'Benvingudes i benvinguts al BUM Tiana FEST 2026',
         'Un festival didàctic per a les famílies de Tiana i dels voltants.',
         'Unes jornades diferents on les famílies de Tiana i dels voltants podran',
         'gaudir d’un dia ple d’activitats on destaquen, tallers,',
@@ -24,11 +24,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
       ctaVenues: 'Localitzacions',
     },
     es: {
-      title: 'BUM TIANA FEST',
+      title: 'BUM Tiana FEST',
       year: '2026',
       subtitle: 'Un día entero en Tiana para compartir aprendizajes, talleres didácticos, charlas de crianza y música en familia.',
       welcomeText: [
-        'Benvingudes i benvinguts al BUM TIANA FEST 2026',
+        'Benvingudes i benvinguts al BUM Tiana FEST 2026',
         'Un festival didáctico para las familias de Tiana y alrededores.',
         'Unas jornadas diferentes donde las familias de Tiana y los alrededores podrán',
         'disfrutar de un día lleno de actividades donde destacan, talleres,',

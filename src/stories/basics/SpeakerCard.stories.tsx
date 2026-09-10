@@ -38,15 +38,15 @@ export const ArmandoBastida: Story = {
   },
 };
 
-export const LuleSoler: Story = {
+export const LaiaFerrer: Story = {
   args: {
-    name: 'Lule Soler',
-    role: 'Psicopedagoga & Especialista en Apego',
-    topicTitle: 'Límites sin Gritos: Gestión Emocional en Casa',
+    name: 'Laia Ferrer',
+    role: 'Médica Especialista en Pediatría',
+    topicTitle: 'Neurodesarrollo, lenguaje y pantallas',
     topicDescription:
-      'Herramientas prácticas para acompañar rabietas, desacuerdos y momentos de tensión desde la calma y la firmeza amorosa.',
-    time: '12:00h - 13:30h',
-    location: 'Sala Albéniz de Tiana',
-    image: FESTIVAL_IMAGES.luleSoler,
+      '¿Qué consecuencias tiene el uso o abuso de pantallas en la etapa de los 0 a los 3 años? Una detección precoz y una correcta estimulación psicomotora marcan la diferencia para el futuro de esa criatura.',
+    time: '16:00h - 17:00h',
+    location: "Sala Petita d'El Casal de Tiana",
+    image: FESTIVAL_IMAGES.laiaFerrer,
   },
 };

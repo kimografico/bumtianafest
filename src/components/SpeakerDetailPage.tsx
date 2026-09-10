@@ -47,7 +47,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       venueCard: 'Com arribar a l’espai de la xerrada',
       openMaps: 'Obrir a Google Maps',
       otherTitle: 'Altres xerrades de criança i família',
-      accessNote: 'Accés inclòs amb qualsevol dels Bonos del BUM Fest. Aforament limitat per ordre d’arribada.',
+      accessNote: 'Accés inclòs amb qualsevol dels Bonos del BUM Tiana FEST. Aforament limitat per ordre d’arribada.',
     },
     es: {
       back: 'Volver a la programación',
@@ -61,7 +61,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       venueCard: 'Cómo llegar al espacio de la charla',
       openMaps: 'Abrir en Google Maps',
       otherTitle: 'Otras charlas de crianza y familia',
-      accessNote: 'Acceso incluido con cualquiera de los Bonos de BUM Fest. Aforo limitado por orden de llegada.',
+      accessNote: 'Acceso incluido con cualquiera de los Bonos de BUM Tiana FEST. Aforo limitado por orden de llegada.',
     },
   }[lang];
 

@@ -255,36 +255,36 @@ export const SPEAKERS_DATA: Speaker[] = [
     id: 'laia-ferrer',
     name: 'Laia Ferrer',
     role: {
-      ca: 'Pedagoga & Especialista en Criança Conscient',
-      es: 'Pedagoga & Especialista en Crianza Consciente'
+      ca: 'Metgessa Especialista en Pediatria',
+      es: 'Médica Especialista en Pediatría'
     },
-    organization: 'Ateneus & Pedagogia Familiar',
+    organization: "Centre d'Atenció Primària (CAP)",
     bio: {
-      ca: 'Pedagoga i terapeuta familiar dedicada a l\'acompanyament respectuós a la primera infància, la gestió de rebequeries i la creació de vincles d\'apego segurs en el nucli familiar.',
-      es: 'Pedagoga y terapeuta familiar dedicada al acompañamiento respetuoso en la primera infancia, la gestión de rabietas y la creación de vínculos de apego seguros en la familia.'
+      ca: "Llicenciada en medicina i cirurgia per la Universitat Autònoma de Barcelona. Especialista en Pediatria. Actualment treballa en un Centre d'Atenció Primària.",
+      es: "Licenciada en medicina y cirugía por la Universidad Autónoma de Barcelona. Especialista en Pediatría. Actualmente trabaja en un Centro de Atención Primaria."
     },
     talkTitle: {
-      ca: 'Límits sense Crits: Acompanyament Emocional a la Primera Infància',
-      es: 'Límites sin Gritos: Acompañamiento Emocional en la Primera Infancia'
+      ca: 'Neurodesenvolupament, llenguatge i pantalles',
+      es: 'Neurodesarrollo, lenguaje y pantallas'
     },
     talkDescription: {
-      ca: 'Pautes clares per a mares i pares sobre com establir límits ferms i amorosos des de la calma, acompanyant la frustració i entenent el desenvolupament maduratiu de l\'infant sense recórrer als crits ni als càstigs.',
-      es: 'Pautas claras para madres y padres sobre cómo establecer límites firmes y amorosos desde la calma, acompañando la frustración y comprendiendo el desarrollo madurativo del peque sin gritos ni castigos.'
+      ca: "Quines conseqüències té l'ús o abús de pantalles en l'etapa dels 0 als 3 anys? Sovint podem pensar que allò que fem amb els més petits de casa no tindrà tant d'impacte perquè no se'n recordaran, però és justament al contrari. Els primers anys de vida són claus pel neurodesenvolupament dels infants. Una detecció precoç i una correcta estimulació psico-motora marquen la diferència pel futur d'aquella criatura.",
+      es: "¿Qué consecuencias tiene el uso o abuso de pantallas en la etapa de los 0 a los 3 años? A menudo solemos pensar que lo que hacemos con los más pequeños de casa no tendrá tanto impacto porque no se acordarán, pero es justamente al contrario. Los primeros años de vida son clave para el neurodesarrollo de los niños. Una detección precoz y una correcta estimulación psicomotora marcan la diferencia para el futuro de esa criatura."
     },
     time: '16:00h - 17:00h',
-    location: 'Sala Petita d\'El Casal de Tiana',
+    location: "Sala Petita d'El Casal de Tiana",
     highlights: {
       ca: [
-        'Com actuar davant de rebequeries i moments de tensió quotidiana',
-        'Diferència entre el límit respectuós i l\'autoritarisme',
-        'Foment de la cooperació familiar des de la calma',
-        'Torn obert de preguntes i resolució de casos reals'
+        "Conseqüències de l'ús o abús de pantalles en l'etapa dels 0 als 3 anys",
+        "Els primers anys com a clau fonamental pel neurodesenvolupament infantil",
+        "La importància d'una detecció precoç i una correcta estimulació psico-motora",
+        "Torn obert de preguntes i recomanacions pràctiques per a famílies"
       ],
       es: [
-        'Cómo actuar ante rabietas y momentos de tensión cotidiana',
-        'Diferencia entre el límite respetuoso y el autoritarismo',
-        'Fomento de la cooperación familiar desde la calma',
-        'Turno abierto de preguntas y resolución de casos reales'
+        "Consecuencias del uso o abuso de pantallas en la etapa de 0 a 3 años",
+        "Los primeros años como clave fundamental para el neurodesarrollo infantil",
+        "La importancia de una detección precoz y una correcta estimulación psicomotora",
+        "Turno abierto de preguntas y recomendaciones prácticas para familias"
       ]
     }
   }
@@ -342,8 +342,8 @@ export const VENUES_DATA: Venue[] = [
       es: 'Corazón de las charlas magistrales de crianza: ponencias de Laia Ferrer (16:00h) y de Armando Bastida (17:00h) en la Sala Petita.'
     },
     activities: {
-      ca: ['Xerrada Laia Ferrer: Límits sense Crits (16:00h)', 'Xerrada Armando Bastida: Criança amb Sentit Comú (17:00h)'],
-      es: ['Charla Laia Ferrer: Límites sin Gritos (16:00h)', 'Charla Armando Bastida: Crianza con Sentido Común (17:00h)']
+      ca: ['Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)', 'Xerrada Armando Bastida: Criança amb Sentit Comú (17:00h)'],
+      es: ['Charla Laia Ferrer: Neurodesarrollo, lenguaje y pantallas (16:00h)', 'Charla Armando Bastida: Crianza con Sentido Común (17:00h)']
     },
     walkingFromCenter: '2 min a peu',
     coordinates: { lat: 41.4822, lng: 2.2694 }
@@ -417,8 +417,8 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     category: 'tot-el-dia',
     location: 'Plaça de la Vila',
     description: {
-      ca: 'Recollida de polseres, mapa d\'itineraris i benvinguda al BUM TIANA FEST.',
-      es: 'Recogida de pulseras, mapa de itinerarios y bienvenida a BUM TIANA FEST.'
+      ca: 'Recollida de polseres, mapa d\'itineraris i benvinguda al BUM Tiana FEST.',
+      es: 'Recogida de pulseras, mapa de itinerarios y bienvenida a BUM Tiana FEST.'
     }
   },
   {
@@ -514,14 +514,14 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
   {
     time: '16:00 - 17:00',
     title: {
-      ca: 'Xerrada: Laia Ferrer - "Límits sense Crits"',
-      es: 'Charla: Laia Ferrer - "Límites sin Gritos"'
+      ca: 'Xerrada: Laia Ferrer - "Neurodesenvolupament, llenguatge i pantalles"',
+      es: 'Charla: Laia Ferrer - "Neurodesarrollo, lenguaje y pantallas"'
     },
     category: 'xerrades',
-    location: 'Sala Petita d\'El Casal de Tiana',
+    location: "Sala Petita d'El Casal de Tiana",
     description: {
-      ca: 'Acompanyament emocional a la primera infància i pautes per gestionar moments difícils amb respecte i fermesa.',
-      es: 'Acompañamiento emocional en la primera infancia y pautas para gestionar momentos difíciles con respeto y firmeza.'
+      ca: "Impacte de l'ús i abús de pantalles en l'etapa dels 0 als 3 anys, claus del neurodesenvolupament infantil i estimulació psico-motora.",
+      es: "Impacto del uso y abuso de pantallas en la etapa de 0 a 3 años, claves del neurodesarrollo infantil y estimulación psicomotora."
     },
     badge: {
       ca: 'Xerrada',
@@ -566,8 +566,8 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: 'El Casal de Tiana',
     type: 'Cuina tradicional i menú familiar',
     specialOffer: {
-      ca: 'Tiquet menú BUM Fest amb fideuà, opció vegetariana i postres casolanes.',
-      es: 'Ticket menú BUM Fest con fideuá, opción vegetariana y postres caseros.'
+      ca: 'Tiquet menú BUM Tiana FEST amb fideuà, opció vegetariana i postres casolanes.',
+      es: 'Ticket menú BUM Tiana FEST con fideuá, opción vegetariana y postres caseros.'
     },
     address: 'Av. Isaac Albéniz, 12',
     websiteUrl: 'https://www.google.com/search?q=El+Casal+de+Tiana+restaurant'
@@ -621,8 +621,8 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: 'Floristeria Verd És Bo',
     type: 'Plantes, flors & decoració botànica',
     specialOffer: {
-      ca: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUM Fest.',
-      es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUM Fest.'
+      ca: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUM Tiana FEST.',
+      es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUM Tiana FEST.'
     },
     address: 'Carrer de Lola Anglada, Tiana',
     websiteUrl: 'https://www.google.com/search?q=Floristeria+Verd+Es+Bo+Tiana'
@@ -643,7 +643,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
 export const PRICING_DATA = {
   ca: {
     title: 'Tarifes & Accés Popular',
-    subtitle: 'Preus assequibles gràcies al cofinançament de l\'Ajuntament de Tiana per fer del BUM FEST una festa accessible a tothom.',
+    subtitle: 'Preus assequibles gràcies al cofinançament de l\'Ajuntament de Tiana per fer del BUM Tiana FEST una festa accessible a tothom.',
     packs: [
       {
         name: 'Bono Tallers Matí',
@@ -662,7 +662,7 @@ export const PRICING_DATA = {
         name: 'Bono Complet (Tallers + Xerrades + Espectacle)',
         price: '60€',
         period: 'Pack integral de dia complet per a tota la família',
-        description: 'L\'experiència sencera del BUM Fest per viure el poble des del matí fins a la cloenda.',
+        description: 'L\'experiència sencera del BUM Tiana FEST per viure el poble des del matí fins a la cloenda.',
         features: [
           'Tots els tallers didàctics matinals (10 a 12h)',
           'Xerrades magistrals de Laia Ferrer i Armando Bastida',
@@ -686,11 +686,11 @@ export const PRICING_DATA = {
         highlighted: false
       }
     ],
-    subsidyNote: 'El BUM TIANA FEST compta amb el suport de l\'Ajuntament de Tiana i la Generalitat de Catalunya, cobrint la gran majoria de la producció artística per afavorir les tarifes comunitàries.'
+    subsidyNote: 'El BUM Tiana FEST compta amb el suport de l\'Ajuntament de Tiana i la Generalitat de Catalunya, cobrint la gran majoria de la producció artística per afavorir les tarifes comunitàries.'
   },
   es: {
     title: 'Tarifas & Acceso Popular',
-    subtitle: 'Precios asequibles gracias a la cofinanciación del Ajuntament de Tiana para hacer de BUM FEST un festival accesible a todas las familias.',
+    subtitle: 'Precios asequibles gracias a la cofinanciación del Ajuntament de Tiana para hacer de BUM Tiana FEST un festival accesible a todas las familias.',
     packs: [
       {
         name: 'Bono Talleres Mañana',
@@ -709,7 +709,7 @@ export const PRICING_DATA = {
         name: 'Bono Completo (Talleres + Charlas + Espectáculo)',
         price: '60€',
         period: 'Pack integral de día completo para toda la familia',
-        description: 'La experiencia completa de BUM Fest para disfrutar de Tiana de la mañana a la noche.',
+        description: 'La experiencia completa de BUM Tiana FEST para disfrutar de Tiana de la mañana a la noche.',
         features: [
           'Todos los talleres didácticos matinales (10 a 12h)',
           'Charlas magistrales de Laia Ferrer y Armando Bastida',
@@ -733,7 +733,7 @@ export const PRICING_DATA = {
         highlighted: false
       }
     ],
-    subsidyNote: 'BUM TIANA FEST cuenta con financiación pública del Ajuntament de Tiana para garantizar una cultura y educación accesible.'
+    subsidyNote: 'BUM Tiana FEST cuenta con financiación pública del Ajuntament de Tiana para garantizar una cultura y educación accesible.'
   }
 };
 
@@ -744,8 +744,8 @@ export const FAQ_DATA = [
       es: '¿Cómo funcionan los talleres? ¿Deben quedarse los padres?'
     },
     a: {
-      ca: 'Sí! L\'essència del BUM FEST és precisament l\'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
-      es: '¡Sí! La esencia de BUM FEST es el aprendizaje compartido en la primera infancia: cada peque participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
+      ca: 'Sí! L\'essència del BUM Tiana FEST és precisament l\'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
+      es: '¡Sí! La esencia de BUM Tiana FEST es el aprendizaje compartido en la primera infancia: cada peque participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
     }
   },
   {
@@ -764,8 +764,8 @@ export const FAQ_DATA = [
       es: '¿Se requiere reserva previa para las charlas de crianza?'
     },
     a: {
-      ca: 'L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la comoditat i proximitat de la sessió amb Laia Ferrer i Armando Bastida. Els assistents amb Bono del BUM Fest tindran accés per ordre d\'arribada.',
-      es: 'El aforo de la Sala Petita de El Casal es limitado para asegurar cercanía con Laia Ferrer y Armando Bastida. Los asistentes con Bono de BUM Fest tendrán acceso por orden de llegada.'
+      ca: 'L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la comoditat i proximitat de la sessió amb Laia Ferrer i Armando Bastida. Els assistents amb Bono del BUM Tiana FEST tindran accés per ordre d\'arribada.',
+      es: 'El aforo de la Sala Petita de El Casal es limitado para asegurar cercanía con Laia Ferrer y Armando Bastida. Los asistentes con Bono de BUM Tiana FEST tendrán acceso por orden de llegada.'
     }
   },
   {
