@@ -10,7 +10,7 @@ interface HeroCarouselProps {
 export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
   const slides = [
     {
-      image: FESTIVAL_IMAGES.carouselSlide1,
+      image: FESTIVAL_IMAGES.hero,
       tag: {
         ca: 'Plaça de la Vila',
         es: 'Plaça de la Vila',
@@ -25,7 +25,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
       },
     },
     {
-      image: FESTIVAL_IMAGES.carouselSlide2,
+      image: FESTIVAL_IMAGES.workshop,
       tag: {
         ca: 'El Casal de Tiana',
         es: 'El Casal de Tiana',
@@ -40,7 +40,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
       },
     },
     {
-      image: FESTIVAL_IMAGES.carouselSlide3,
+      image: FESTIVAL_IMAGES.music,
       tag: {
         ca: 'Nits d\'Estiu & Màgia',
         es: 'Noches de Verano & Magia',
@@ -55,7 +55,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
       },
     },
     {
-      image: FESTIVAL_IMAGES.carouselSlide4,
+      image: FESTIVAL_IMAGES.cooking,
       tag: {
         ca: 'Gastronomia & Comunitat',
         es: 'Gastronomía & Comunidad',
@@ -70,7 +70,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
       },
     },
     {
-      image: FESTIVAL_IMAGES.carouselSlide5,
+      image: FESTIVAL_IMAGES.village,
       tag: {
         ca: 'Patrimoni & Poble',
         es: 'Patrimonio & Pueblo',
@@ -85,7 +85,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
       },
     },
     {
-      image: FESTIVAL_IMAGES.carouselSlide6,
+      image: FESTIVAL_IMAGES.festival,
       tag: {
         ca: 'BUM Tiana FEST 2026',
         es: 'BUM Tiana FEST 2026',

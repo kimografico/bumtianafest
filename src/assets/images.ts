@@ -66,20 +66,13 @@ export const FESTIVAL_LOGOS = {
 export const FESTIVAL_IMAGES = {
   // Corporate asset
   familiaMadera: familiaMaderaImg,
-  // 6 Carousel Photos from carrusel folder
-  carouselSlide1: carrusel1,
-  carouselSlide2: carrusel2,
-  carouselSlide3: carrusel3,
-  carouselSlide4: carrusel4,
-  carouselSlide5: carrusel5,
-  carouselSlide6: carrusel6,
-
   // Main scenes & fallbacks (pointing to the authentic carrusel photos)
   hero: carrusel1,
   workshop: carrusel2,
   village: carrusel5,
   music: carrusel3,
   cooking: carrusel4,
+  festival: carrusel6,
   
   // Specific Workshop Images (Local Real Photos)
   gardening: wsGardening,

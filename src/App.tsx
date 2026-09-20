@@ -1,7 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Language } from './data/content';
 import { Navbar } from './components/Navbar';
-import { HeroCarousel } from './components/HeroCarousel';
 import { Hero } from './components/Hero';
 import { ConceptSection } from './components/ConceptSection';
 import { WorkshopsSection } from './components/WorkshopsSection';
@@ -136,10 +135,7 @@ export default function App() {
           </Suspense>
         ) : (
           <>
-            {/* 1. Full-width Image Carousel */}
-            <HeroCarousel lang={lang} />
-
-            {/* 2. Clean Hero Section with Corporate Image FamiliaMadera */}
+            {/* 1. Clean Hero Section with Corporate Image FamiliaMadera */}
             <Hero lang={lang} />
 
             {/* 3. Concepte & Objectius */}

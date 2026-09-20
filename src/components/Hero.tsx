@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Language } from '../data/content';
-import { FESTIVAL_IMAGES } from '../assets/images';
+import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 
 interface HeroProps {
   lang: Language;
@@ -48,11 +48,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         {t.title} {t.year} - {t.subtitle}
       </h1>
 
-      {/* Mobile Title (visible first on mobile only) */}
-      <div aria-hidden="true" className="block lg:hidden mb-6 text-center sm:text-left">
-        <p className="text-4xl sm:text-6xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
-          {t.title} <span className="text-[#88643B]">{t.year}</span>
-        </p>
+      {/* Mobile Logo (visible first on mobile only) */}
+      <div className="block lg:hidden mb-6">
+        <img
+          src={FESTIVAL_LOGOS.bumFest}
+          alt={t.title + ' ' + t.year}
+          className="w-full h-auto object-contain"
+          referrerPolicy="no-referrer"
+        />
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
@@ -60,11 +63,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         {/* Text & 3 Action Buttons (order-2 on mobile, order-1 on desktop) */}
         <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 sm:space-y-8">
           <div className="space-y-4">
-            {/* Desktop Title (hidden on mobile) */}
-            <div aria-hidden="true" className="hidden lg:block">
-              <p className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
-                {t.title} <span className="text-[#88643B]">{t.year}</span>
-              </p>
+            {/* Desktop Logo (hidden on mobile) */}
+            <div className="hidden lg:block">
+              <img
+                src={FESTIVAL_LOGOS.bumFest}
+                alt={t.title + ' ' + t.year}
+                className="h-20 xl:h-24 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <p className="text-lg sm:text-2xl text-[#181816] font-medium leading-relaxed max-w-2xl text-center sm:text-left">
               {t.subtitle}
