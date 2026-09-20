@@ -48,16 +48,13 @@ export const PartnersCarousel: React.FC<PartnersCarouselProps> = ({ lang }) => {
   const title = lang === 'ca' ? 'Amb el suport i la col·laboració de:' : 'Con el apoyo y la colaboración de:';
 
   return (
-    <section className="py-12 bg-[#0C478D] border-y border-[#B0814D]/30 overflow-hidden relative">
+    <section className="py-12 bg-[#0C478D] border-y border-[#88643B]/30 overflow-hidden relative">
       
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2.5">
-          <span className="w-2 h-2 rounded-full bg-[#B0814D] shrink-0" />
-          <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#EFEEE0]/90">
-            {title}
-          </h3>
-        </div>
+        <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#EFEEE0]/90">
+          {title}
+        </h3>
       </div>
 
       {/* Simplified Infinite Logo Stream */}
@@ -79,6 +76,8 @@ export const PartnersCarousel: React.FC<PartnersCarouselProps> = ({ lang }) => {
                 alt={item.name}
                 className="h-14 sm:h-20 md:h-24 w-auto max-w-[200px] sm:max-w-[280px] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm brightness-105"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

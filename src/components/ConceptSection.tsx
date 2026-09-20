@@ -45,7 +45,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
       />
       
       {/* Soft ambient background glow in secondary corporate color */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B0814D]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#88643B]/25 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#083266]/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -64,7 +64,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           
           {/* Card 1: Por que el nombre BUM (BUMFEST26 SVG Logo in true colors) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
               <img 
                 src={FESTIVAL_LOGOS.bumFest} 
@@ -80,7 +80,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
           </div>
 
           {/* Card 2: A quien va dirigido */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
               <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
                 <Target className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />
@@ -93,10 +93,10 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
           </div>
 
           {/* Card 3: Aprenentatge Compartit */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-[#B0814D]/15 flex items-center justify-center">
-                <Users className="w-6 h-6 text-[#B0814D]" strokeWidth={2.2} />
+              <div className="w-11 h-11 rounded-2xl bg-[#88643B]/15 flex items-center justify-center">
+                <Users className="w-6 h-6 text-[#88643B]" strokeWidth={2.2} />
               </div>
             </div>
             <div className="space-y-2">
@@ -106,7 +106,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
           </div>
 
           {/* Card 4: Tiana com a gran espai comunitari */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
               <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
                 <Heart className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />

@@ -38,7 +38,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   }[lang];
 
   return (
-    <section id="tallers" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
+    <section id="tallers" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
@@ -57,7 +57,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
             <div
               key={workshop.id}
               onClick={() => onSelectWorkshop(workshop.id)}
-              className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
+              className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
             >
               {/* Left Column: Workshop Image */}
               <div className="sm:w-2/5 min-h-[200px] sm:min-h-full relative overflow-hidden shrink-0">
@@ -67,6 +67,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   referrerPolicy="no-referrer"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -75,7 +76,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                 <div className="space-y-3">
                   
                   {/* Instructor */}
-                  <div className="text-xs text-[#B0814D] font-bold">
+                  <div className="text-xs text-[#88643B] font-bold">
                     {workshop.instructor}
                   </div>
 
@@ -90,8 +91,8 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                   </p>
 
                   {/* Location */}
-                  <div className="pt-2 border-t border-[#B0814D]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
-                    <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
+                  <div className="pt-2 border-t border-[#88643B]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
+                    <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
                     <span className="truncate">{workshop.location}</span>
                   </div>
 
@@ -99,7 +100,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
 
                 {/* Action Button */}
                 <div className="pt-2">
-                  <button className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#B0814D]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
+                  <button className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
                     <span>{t.viewDetails}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>

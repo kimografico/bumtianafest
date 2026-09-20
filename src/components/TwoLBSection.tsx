@@ -27,7 +27,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
+    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
@@ -41,7 +41,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
         </div>
 
         {/* Highlight Vision Card with Interspersed Image */}
-        <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 shadow-xl overflow-hidden mb-12">
+        <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
           <div className="grid lg:grid-cols-12 gap-0 items-center">
             
             {/* Left Image */}
@@ -78,23 +78,25 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
           {TEAM_DATA.map((member, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all space-y-6 shadow-md flex flex-col justify-between"
+              className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all space-y-6 shadow-md flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-5">
-                  <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#B0814D]/50 shadow-md shrink-0 bg-[#EFEEE0] ring-2 ring-[#0C478D]/20">
+                  <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#88643B]/50 shadow-md shrink-0 bg-[#EFEEE0] ring-2 ring-[#0C478D]/20">
                     <img
                       src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
                       alt={member.name}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div>
                     <h3 className="font-extrabold text-2xl text-[#181816]">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-bold text-[#B0814D] uppercase tracking-wider">
+                    <p className="text-xs font-bold text-[#88643B] uppercase tracking-wider">
                       {member.role[lang]}
                     </p>
                     <span className="text-[11px] font-semibold text-[#66665D]">

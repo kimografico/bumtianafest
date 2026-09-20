@@ -92,7 +92,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#B0814D]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
           <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
           <span>{t.back}</span>
@@ -100,7 +100,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       </div>
 
       {/* Main Detail Header Card */}
-      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 shadow-xl overflow-hidden mb-12">
+      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
         
         {/* Banner image */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
@@ -123,10 +123,10 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         </div>
 
         {/* Quick specs grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#B0814D]/25 bg-white">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-[#B0814D]" />
+              <Users className="w-3.5 h-3.5 text-[#88643B]" />
               <span>{t.age}</span>
             </div>
             <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.ageRange}</p>
@@ -134,7 +134,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#B0814D]" />
+              <Clock className="w-3.5 h-3.5 text-[#88643B]" />
               <span>{t.duration}</span>
             </div>
             <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.duration}</p>
@@ -142,7 +142,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
+              <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
               <span>{t.location}</span>
             </div>
             <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.location}</p>
@@ -150,7 +150,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#B0814D]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#88643B]" />
               <span>{t.instructor}</span>
             </div>
             <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.instructor}</p>
@@ -173,7 +173,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             <h3 className="text-lg font-bold text-[#181816]">{t.values}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {workshop.pedagogicalValues[lang].map((val, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-[#B0814D]/20 shadow-2xs">
+                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-[#88643B]/20 shadow-2xs">
                   <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-[#181816]">{val}</span>
                 </div>
@@ -184,7 +184,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           {/* Materials */}
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-[#181816]">{t.materials}</h3>
-            <div className="p-4 rounded-2xl bg-white border border-[#B0814D]/20 flex items-start gap-3 shadow-2xs">
+            <div className="p-4 rounded-2xl bg-white border border-[#88643B]/20 flex items-start gap-3 shadow-2xs">
               <Package className="w-5 h-5 text-[#0C478D] shrink-0 mt-0.5" />
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed">
                 {workshop.materials[lang]}
@@ -193,13 +193,13 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           </div>
 
           {/* Location & Google Maps Card */}
-          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#B0814D]/30">
+          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
                   <span className="text-white">{venue.address}</span>
                 </p>
               </div>
@@ -214,7 +214,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               >
                 <Navigation className="w-4 h-4 text-[#0C478D]" />
                 <span>{t.openMaps}</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#B0814D]" />
+                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
               </a>
             </div>
             
@@ -224,7 +224,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           </div>
 
           {/* How to participate note */}
-          <div className="p-5 rounded-2xl bg-white border border-[#B0814D]/25 space-y-1.5 shadow-2xs">
+          <div className="p-5 rounded-2xl bg-white border border-[#88643B]/25 space-y-1.5 shadow-2xs">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#0C478D]">{t.participate}</h4>
             <p className="text-xs sm:text-sm text-[#4A4A43]">{t.participateDesc}</p>
           </div>
@@ -240,9 +240,9 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             <div
               key={other.id}
               onClick={() => onSelectWorkshop(other.id)}
-              className="p-5 rounded-3xl bg-[#FAF9F3] border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+              className="p-5 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
-              <div className="text-[11px] font-bold text-[#B0814D] uppercase">{other.ageRange}</div>
+              <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.ageRange}</div>
               <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
                 {other.title[lang]}
               </h4>

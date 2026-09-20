@@ -4,9 +4,9 @@
   --color-primary: #0C478D;
   --color-primary-dark: #083266;
   --color-primary-light: #185EAC;
-  --color-secondary: #B0814D;
-  --color-secondary-dark: #91683A;
-  --color-secondary-light: #C99C67;
+  --color-secondary: #88643B;
+  --color-secondary-dark: #6E502F;
+  --color-secondary-light: #C19463;
   --color-festbg: #EFEEE0;
   --color-festcard: #F8F7EE;
   --color-festtext: #181816;
@@ -48,7 +48,7 @@ html {
   background: #EFEEE0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B0814D;
+  background: #88643B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

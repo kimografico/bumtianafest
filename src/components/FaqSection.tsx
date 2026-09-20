@@ -21,7 +21,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section className="py-16 sm:py-24 bg-transparent border-b border-[#B0814D]/25 relative">
+    <section className="py-16 sm:py-24 bg-transparent border-b border-[#88643B]/25 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
@@ -42,11 +42,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
               <div
                 key={idx}
                 className={`rounded-3xl bg-[#FAF9F3]/90 backdrop-blur-xl border overflow-hidden transition-all shadow-sm ${
-                  isOpen ? 'border-[#0C478D] ring-2 ring-[#0C478D]/15' : 'border-[#B0814D]/30 hover:border-[#B0814D]'
+                  isOpen ? 'border-[#0C478D] ring-2 ring-[#0C478D]/15' : 'border-[#88643B]/30 hover:border-[#88643B]'
                 }`}
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
+                  id={`faq-question-${idx}`}
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#181816] hover:text-[#0C478D] transition cursor-pointer"
                 >
                   <span className="flex items-center gap-3">
@@ -61,7 +64,12 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#4A4A43] leading-relaxed border-t border-[#B0814D]/20 bg-white/40">
+                  <div
+                    id={`faq-answer-${idx}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${idx}`}
+                    className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#4A4A43] leading-relaxed border-t border-[#88643B]/20 bg-white/40"
+                  >
                     {faq.a[lang]}
                   </div>
                 )}

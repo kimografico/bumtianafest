@@ -29,11 +29,11 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group ${className}`}
+      className={`p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group ${className}`}
     >
       <div className="space-y-5">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#B0814D]/40 shadow-md shrink-0 bg-[#EFEEE0] group-hover:border-[#0C478D] group-hover:scale-105 transition">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#88643B]/40 shadow-md shrink-0 bg-[#EFEEE0] group-hover:border-[#0C478D] group-hover:scale-105 transition">
             <img
               src={image}
               alt={name}
@@ -45,7 +45,7 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
             <h3 className="font-extrabold text-xl text-[#181816] group-hover:text-[#0C478D] transition">
               {name}
             </h3>
-            <p className="text-xs font-bold text-[#B0814D]">{role}</p>
+            <p className="text-xs font-bold text-[#88643B]">{role}</p>
           </div>
         </div>
 
@@ -58,19 +58,19 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 pt-2 border-t border-[#B0814D]/20 text-xs text-[#66665D] font-medium">
+        <div className="flex flex-col gap-2 pt-2 border-t border-[#88643B]/20 text-xs text-[#66665D] font-medium">
           <div className="flex items-center gap-2">
-            <Clock className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
+            <Clock className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
             <span>{time}</span>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
+            <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
             <span>{location}</span>
           </div>
         </div>
       </div>
 
-      <div className="pt-2 flex items-center text-xs font-bold text-[#0C478D] group-hover:text-[#B0814D] transition gap-1.5">
+      <div className="pt-2 flex items-center text-xs font-bold text-[#0C478D] group-hover:text-[#88643B] transition gap-1.5">
         <span>{ctaText}</span>
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </div>

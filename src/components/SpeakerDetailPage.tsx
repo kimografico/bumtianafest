@@ -78,7 +78,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#B0814D]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
           <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
           <span>{t.back}</span>
@@ -86,13 +86,13 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       </div>
 
       {/* Main Speaker Card */}
-      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 shadow-xl overflow-hidden mb-12">
+      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
         
         {/* Header Profile Zone */}
-        <div className="p-6 sm:p-10 border-b border-[#B0814D]/30 bg-[#0C478D] text-white">
+        <div className="p-6 sm:p-10 border-b border-[#88643B]/30 bg-[#0C478D] text-white">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-xl shrink-0 bg-[#EFEEE0] ring-4 ring-[#B0814D]/30">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-xl shrink-0 bg-[#EFEEE0] ring-4 ring-[#88643B]/30">
               <img
                 src={
                   speaker.id === 'armando-bastida'
@@ -106,7 +106,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             </div>
 
             <div className="space-y-1.5 flex-grow">
-              <div className="inline-block px-3 py-1 rounded-full bg-[#B0814D] text-white text-[11px] font-bold uppercase tracking-wider shadow-xs">
+              <div className="inline-block px-3 py-1 rounded-full bg-[#88643B] text-white text-[11px] font-bold uppercase tracking-wider shadow-xs">
                 {speaker.role[lang]}
               </div>
               <h1 className="text-2xl sm:text-4xl font-extrabold text-white font-display">
@@ -138,18 +138,18 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
         <div className="p-6 sm:p-10 space-y-8">
           
           {/* Talk Title & Schedule Banner */}
-          <div className="p-6 rounded-3xl bg-white border border-[#B0814D]/25 space-y-4 shadow-xs">
+          <div className="p-6 rounded-3xl bg-white border border-[#88643B]/25 space-y-4 shadow-xs">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span className="text-xs font-bold uppercase tracking-wider text-[#0C478D]">
                 {t.talkTitle}
               </span>
               <div className="flex items-center gap-4 text-xs font-bold text-[#181816]">
-                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded-full border border-[#B0814D]/20 shadow-2xs">
-                  <Clock className="w-3.5 h-3.5 text-[#B0814D]" />
+                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded-full border border-[#88643B]/20 shadow-2xs">
+                  <Clock className="w-3.5 h-3.5 text-[#88643B]" />
                   {speaker.time}
                 </span>
-                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded-full border border-[#B0814D]/20 shadow-2xs">
-                  <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
+                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded-full border border-[#88643B]/20 shadow-2xs">
+                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
                   {speaker.location}
                 </span>
               </div>
@@ -169,7 +169,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             <h3 className="text-lg font-bold text-[#181816]">{t.highlightsTitle}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {speaker.highlights[lang].map((highlight, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#B0814D]/20 shadow-2xs">
+                <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#88643B]/20 shadow-2xs">
                   <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-[#181816]">{highlight}</span>
                 </div>
@@ -180,19 +180,19 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           {/* Speaker Biography */}
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-[#181816]">{t.bioTitle}</h3>
-            <div className="p-6 rounded-3xl bg-white border border-[#B0814D]/20 shadow-2xs text-sm sm:text-base text-[#3A3A34] leading-relaxed">
+            <div className="p-6 rounded-3xl bg-white border border-[#88643B]/20 shadow-2xs text-sm sm:text-base text-[#3A3A34] leading-relaxed">
               {speaker.bio[lang]}
             </div>
           </div>
 
           {/* Location & Google Maps Card */}
-          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#B0814D]/30">
+          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
                   <span className="text-white">{venue.address}</span>
                 </p>
               </div>
@@ -207,7 +207,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
               >
                 <Navigation className="w-4 h-4 text-[#0C478D]" />
                 <span>{t.openMaps}</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#B0814D]" />
+                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
               </a>
             </div>
             
@@ -217,7 +217,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           </div>
 
           {/* Access Note */}
-          <div className="p-4 rounded-2xl bg-white border border-[#B0814D]/20 text-xs text-[#4A4A43]">
+          <div className="p-4 rounded-2xl bg-white border border-[#88643B]/20 text-xs text-[#4A4A43]">
             {t.accessNote}
           </div>
 
@@ -233,9 +233,9 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
               <div
                 key={other.id}
                 onClick={() => onSelectSpeaker(other.id)}
-                className="p-6 rounded-3xl bg-[#FAF9F3] border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+                className="p-6 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
               >
-                <div className="text-[11px] font-bold text-[#B0814D] uppercase">{other.role[lang]}</div>
+                <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.role[lang]}</div>
                 <h4 className="font-bold text-lg text-[#181816] group-hover:text-[#0C478D] transition">
                   {other.name}
                 </h4>

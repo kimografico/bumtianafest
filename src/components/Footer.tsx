@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <footer className="bg-[#082850] text-[#EFEEE0]/80 pt-16 pb-12 border-t border-[#B0814D]/30 relative">
+    <footer className="bg-[#082850] text-[#EFEEE0]/80 pt-16 pb-12 border-t border-[#C19463]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Main Footer Grid with 2 columns */}
@@ -48,13 +48,13 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </p>
 
             <div className="text-xs text-[#EFEEE0]/90 flex items-center gap-1.5 font-medium">
-              <MapPin className="w-4 h-4 text-[#B0814D]" />
+              <MapPin className="w-4 h-4 text-[#C19463]" />
               <span>{t.location}</span>
             </div>
 
             {/* Unified Organization & Collaboration */}
             <div className="pt-2 space-y-4">
-              <p className="text-xs sm:text-sm text-[#B0814D] font-bold max-w-xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C19463] font-bold max-w-xl leading-relaxed">
                 {t.organizers}
               </p>
 
@@ -77,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 </a>
 
                 {/* Plus sign divider */}
-                <span className="text-xl sm:text-2xl font-bold text-[#B0814D] select-none -mx-2 sm:-mx-3" aria-hidden="true">
+                <span className="text-xl sm:text-2xl font-bold text-[#C19463] select-none -mx-2 sm:-mx-3" aria-hidden="true">
                   +
                 </span>
 
@@ -135,13 +135,13 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 {t.linksTitle}
               </h4>
               <ul className="space-y-2.5 text-xs text-[#EFEEE0]/70">
-                <li><a href="#concepte" className="hover:text-[#B0814D] transition">El Concepte</a></li>
-                <li><a href="#tallers" className="hover:text-[#B0814D] transition">Tallers Didàctics</a></li>
-                <li><a href="#xerrades" className="hover:text-[#B0814D] transition">Xerrades de Criança</a></li>
-                <li><a href="#programa" className="hover:text-[#B0814D] transition">Horaris</a></li>
-                <li><a href="#espais" className="hover:text-[#B0814D] transition">Localitzacions</a></li>
-                <li><a href="#faq" className="hover:text-[#B0814D] transition">Preguntes Freqüents</a></li>
-                <li><a href="#organitzacio" className="hover:text-[#B0814D] transition">2LB Produccions</a></li>
+                <li><a href="#concepte" className="hover:text-[#C19463] transition">El Concepte</a></li>
+                <li><a href="#tallers" className="hover:text-[#C19463] transition">Tallers Didàctics</a></li>
+                <li><a href="#xerrades" className="hover:text-[#C19463] transition">Xerrades de Criança</a></li>
+                <li><a href="#programa" className="hover:text-[#C19463] transition">Horaris</a></li>
+                <li><a href="#espais" className="hover:text-[#C19463] transition">Localitzacions</a></li>
+                <li><a href="#faq" className="hover:text-[#C19463] transition">Preguntes Freqüents</a></li>
+                <li><a href="#organitzacio" className="hover:text-[#C19463] transition">2LB Produccions</a></li>
               </ul>
             </div>
 
@@ -166,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               href="https://kimografico.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#B0814D] hover:text-white transition font-medium"
+              className="text-[#C19463] hover:text-white transition font-medium"
             >
               kimografico.com
             </a>

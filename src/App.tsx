@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Language } from './data/content';
 import { Navbar } from './components/Navbar';
 import { HeroCarousel } from './components/HeroCarousel';
@@ -13,8 +13,14 @@ import { PartnersCarousel } from './components/PartnersCarousel';
 import { FaqSection } from './components/FaqSection';
 import { TwoLBSection } from './components/TwoLBSection';
 import { Footer } from './components/Footer';
-import { WorkshopDetailPage } from './components/WorkshopDetailPage';
-import { SpeakerDetailPage } from './components/SpeakerDetailPage';
+
+// Code-splitting for detail pages to optimize initial bundle size
+const WorkshopDetailPage = lazy(() =>
+  import('./components/WorkshopDetailPage').then((m) => ({ default: m.WorkshopDetailPage }))
+);
+const SpeakerDetailPage = lazy(() =>
+  import('./components/SpeakerDetailPage').then((m) => ({ default: m.SpeakerDetailPage }))
+);
 
 type ViewMode = 'home' | 'workshop-detail' | 'speaker-detail';
 
@@ -74,10 +80,20 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#EFEEE0] text-[#181816] selection:bg-[#0C478D] selection:text-white relative overflow-x-clip">
       
+      {/* Skip to main content link for keyboard & screen reader accessibility (WCAG 2.4.1) */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0C478D] focus:text-white focus:rounded-xl focus:shadow-xl focus:font-bold focus:text-sm focus:outline-none focus:ring-2 focus:ring-[#88643B]"
+      >
+        {lang === 'ca' ? 'Saltar al contingut principal' : 'Saltar al contenido principal'}
+      </a>
+
       {/* Frosted ambient background soft illumination in corporate palette */}
-      <div className="fixed top-0 right-0 w-[550px] h-[550px] bg-[#0C478D]/8 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="fixed top-1/3 left-0 w-[480px] h-[480px] bg-[#B0814D]/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="fixed bottom-10 right-10 w-[500px] h-[500px] bg-[#0C478D]/6 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div aria-hidden="true" className="pointer-events-none -z-10">
+        <div className="fixed top-0 right-0 w-[550px] h-[550px] bg-[#0C478D]/8 rounded-full blur-3xl" />
+        <div className="fixed top-1/3 left-0 w-[480px] h-[480px] bg-[#88643B]/10 rounded-full blur-3xl" />
+        <div className="fixed bottom-10 right-10 w-[500px] h-[500px] bg-[#0C478D]/6 rounded-full blur-3xl" />
+      </div>
 
       {/* Top Navbar */}
       <Navbar
@@ -87,21 +103,37 @@ export default function App() {
       />
 
       {/* Main Content View Switcher */}
-      <main className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow outline-none">
         {viewMode === 'workshop-detail' && selectedWorkshopId ? (
-          <WorkshopDetailPage
-            workshopId={selectedWorkshopId}
-            lang={lang}
-            onBack={handleNavigateHome}
-            onSelectWorkshop={handleSelectWorkshop}
-          />
+          <Suspense
+            fallback={
+              <div className="min-h-[60vh] flex items-center justify-center py-20 text-[#88643B]">
+                <div className="w-10 h-10 rounded-full border-3 border-[#0C478D] border-t-transparent animate-spin" />
+              </div>
+            }
+          >
+            <WorkshopDetailPage
+              workshopId={selectedWorkshopId}
+              lang={lang}
+              onBack={handleNavigateHome}
+              onSelectWorkshop={handleSelectWorkshop}
+            />
+          </Suspense>
         ) : viewMode === 'speaker-detail' && selectedSpeakerId ? (
-          <SpeakerDetailPage
-            speakerId={selectedSpeakerId}
-            lang={lang}
-            onBack={handleNavigateHome}
-            onSelectSpeaker={handleSelectSpeaker}
-          />
+          <Suspense
+            fallback={
+              <div className="min-h-[60vh] flex items-center justify-center py-20 text-[#88643B]">
+                <div className="w-10 h-10 rounded-full border-3 border-[#0C478D] border-t-transparent animate-spin" />
+              </div>
+            }
+          >
+            <SpeakerDetailPage
+              speakerId={selectedSpeakerId}
+              lang={lang}
+              onBack={handleNavigateHome}
+              onSelectSpeaker={handleSelectSpeaker}
+            />
+          </Suspense>
         ) : (
           <>
             {/* 1. Full-width Image Carousel */}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
@@ -103,14 +103,47 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isInView, setIsInView] = useState(true);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  // Pause carousel when user scrolls past it (IntersectionObserver)
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Pause carousel when browser tab is inactive
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        setIsInView(false);
+      } else if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        setIsInView(rect.bottom > 0 && rect.top < window.innerHeight);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || !isInView) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 5500);
     return () => clearInterval(interval);
-  }, [isPaused, slides.length]);
+  }, [isPaused, isInView, slides.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -122,6 +155,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
 
   return (
     <section 
+      ref={sectionRef}
       aria-label="Galeria del festival" 
       className="w-full relative overflow-hidden bg-slate-950 group"
       onMouseEnter={() => setIsPaused(true)}
@@ -144,6 +178,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
                 loading={idx === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchPriority={idx === 0 ? 'high' : 'auto'}
               />
               
               {/* Soft gradient overlay for high contrast text readability */}
@@ -156,9 +192,9 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
                     {slide.tag[lang]}
                   </span>
                   
-                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-sm">
+                  <p className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-sm">
                     {slide.title[lang]}
-                  </h2>
+                  </p>
                   
                   <p className="text-sm sm:text-base text-slate-200 line-clamp-2 max-w-xl font-normal drop-shadow-sm">
                     {slide.desc[lang]}

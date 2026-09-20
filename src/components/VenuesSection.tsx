@@ -23,7 +23,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="espais" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
+    <section id="espais" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
@@ -41,7 +41,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
           {VENUES_DATA.map((venue) => (
             <div
               key={venue.id}
-              className="p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
+              className="p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
             >
               <div className="space-y-4">
                 
@@ -54,7 +54,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
                     {venue.type[lang]}
                   </div>
                   <p className="text-xs text-[#66665D] flex items-center gap-1.5 font-medium pt-1">
-                    <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
                     <span>{venue.address}</span>
                   </p>
                 </div>
@@ -65,8 +65,8 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
                 </p>
 
                 {/* Activities list */}
-                <div className="space-y-2 pt-2 border-t border-[#B0814D]/20">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#B0814D]">
+                <div className="space-y-2 pt-2 border-t border-[#88643B]/20">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#88643B]">
                     {t.activitiesTitle}
                   </div>
                   <div className="space-y-1.5">
@@ -82,18 +82,18 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
               </div>
 
               {/* Direct Google Maps Link */}
-              <div className="pt-4 border-t border-[#B0814D]/20">
+              <div className="pt-4 border-t border-[#88643B]/20">
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                     `${venue.name}, ${venue.address}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
+                  className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
                 >
                   <Navigation className="w-4 h-4 text-[#0C478D]" />
                   <span>{t.openInMaps}</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#B0814D]" />
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
                 </a>
               </div>
 

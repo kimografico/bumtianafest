@@ -43,11 +43,16 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
   return (
     <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 relative">
+      {/* Screen-reader canonical H1 (WCAG 2.4.6) */}
+      <h1 className="sr-only">
+        {t.title} {t.year} - {t.subtitle}
+      </h1>
+
       {/* Mobile Title (visible first on mobile only) */}
-      <div className="block lg:hidden mb-6 text-center sm:text-left">
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
-          {t.title} <span className="text-[#B0814D]">{t.year}</span>
-        </h1>
+      <div aria-hidden="true" className="block lg:hidden mb-6 text-center sm:text-left">
+        <p className="text-4xl sm:text-6xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
+          {t.title} <span className="text-[#88643B]">{t.year}</span>
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
@@ -56,9 +61,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 sm:space-y-8">
           <div className="space-y-4">
             {/* Desktop Title (hidden on mobile) */}
-            <h1 className="hidden lg:block text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
-              {t.title} <span className="text-[#B0814D]">{t.year}</span>
-            </h1>
+            <div aria-hidden="true" className="hidden lg:block">
+              <p className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0C478D] tracking-tight leading-none font-display">
+                {t.title} <span className="text-[#88643B]">{t.year}</span>
+              </p>
+            </div>
             <p className="text-lg sm:text-2xl text-[#181816] font-medium leading-relaxed max-w-2xl text-center sm:text-left">
               {t.subtitle}
             </p>
@@ -81,14 +88,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
             <a
               href="#programa"
-              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-[#B0814D] hover:bg-[#91683A] text-white text-sm font-bold shadow-md shadow-[#B0814D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-[#88643B] hover:bg-[#6E502F] text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
               {t.ctaProgram}
             </a>
 
             <a
               href="#espais"
-              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white/80 hover:bg-white text-[#181816] border border-[#B0814D]/30 text-sm font-bold shadow-2xs active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white/80 hover:bg-white text-[#181816] border border-[#88643B]/30 text-sm font-bold shadow-2xs active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
               {t.ctaVenues}
             </a>
@@ -99,12 +106,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative group w-full max-w-xs sm:max-w-md lg:max-w-none flex items-center justify-center">
             {/* Subtle warm glow background behind the wooden family */}
-            <div className="absolute inset-0 bg-[#B0814D]/15 rounded-full blur-3xl -z-10 scale-90" />
+            <div className="absolute inset-0 bg-[#88643B]/15 rounded-full blur-3xl -z-10 scale-90" />
             <img
               src={FESTIVAL_IMAGES.familiaMadera}
               alt="BUM Tiana FEST - Família de Fusta"
               className="w-full h-auto max-h-[300px] sm:max-h-[420px] object-contain drop-shadow-xl select-none transition-transform duration-300 group-hover:scale-[1.02]"
               referrerPolicy="no-referrer"
+              loading="eager"
+              decoding="async"
             />
           </div>
         </div>
