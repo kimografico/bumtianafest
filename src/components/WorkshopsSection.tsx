@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   MapPin, 
   ArrowRight
@@ -15,13 +15,6 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   lang,
   onSelectWorkshop,
 }) => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
-
-  const filteredWorkshops = WORKSHOPS_DATA.filter((w) => {
-    if (activeFilter === 'all') return true;
-    return w.id === activeFilter;
-  });
-
   const getWorkshopImage = (id: string) => {
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
@@ -35,66 +28,36 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
     ca: {
       title: 'Programació de Tallers',
       subtitle: 'Espais pràctics i creatius durant el matí (10:00h a 12:00h) dedicats a la primera infància i les seves famílies.',
-      filterAll: 'Tots els tallers (3)',
-      filterJardineria: 'Jardineria & Natura',
-      filterVestuari: 'Vestuari Reutilitzat',
-      filterTeatre: 'Teatre & Expressió',
       viewDetails: 'Més detalls',
     },
     es: {
       title: 'Programación de Talleres',
       subtitle: 'Espacios prácticos y creativos durante la mañana (10:00h a 12:00h) dedicados a la primera infancia y sus familias.',
-      filterAll: 'Todos los talleres (3)',
-      filterJardineria: 'Jardinería & Naturaleza',
-      filterVestuari: 'Vestuario Reutilizado',
-      filterTeatre: 'Teatro & Expresión',
       viewDetails: 'Más detalles',
     },
   }[lang];
 
   return (
-    <section id="tallers" className="py-20 sm:py-28 bg-transparent border-b border-slate-200/60 relative">
+    <section id="tallers" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
-        <div className="max-w-3xl mb-10 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-blue-950 tracking-tight">
+        <div className="max-w-3xl mb-12 space-y-3">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
             {t.subtitle}
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2 sm:gap-3 mb-12">
-          {[
-            { id: 'all', label: t.filterAll },
-            { id: 'jardineria', label: t.filterJardineria },
-            { id: 'vestuari', label: t.filterVestuari },
-            { id: 'teatre-expressio', label: t.filterTeatre },
-          ].map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
-                activeFilter === filter.id
-                  ? 'bg-blue-900 text-white shadow-md shadow-blue-900/20'
-                  : 'bg-white/70 hover:bg-white text-slate-700 border border-white'
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Workshops Cards in 2 Columns grid - WITHOUT hover translation (-translate-y) */}
+        {/* Workshops Cards in 2 Columns grid */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {filteredWorkshops.map((workshop) => (
+          {WORKSHOPS_DATA.map((workshop) => (
             <div
               key={workshop.id}
               onClick={() => onSelectWorkshop(workshop.id)}
-              className="rounded-[36px] bg-white/70 backdrop-blur-xl border border-white hover:border-blue-300 transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
+              className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
             >
               {/* Left Column: Workshop Image */}
               <div className="sm:w-2/5 min-h-[200px] sm:min-h-full relative overflow-hidden shrink-0">
@@ -112,23 +75,23 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                 <div className="space-y-3">
                   
                   {/* Instructor */}
-                  <div className="text-xs text-slate-500 font-medium">
+                  <div className="text-xs text-[#B0814D] font-bold">
                     {workshop.instructor}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-blue-700 transition leading-snug">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#181816] group-hover:text-[#0C478D] transition leading-snug">
                     {workshop.title[lang]}
                   </h3>
 
                   {/* Short description */}
-                  <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#4A4A43] line-clamp-3 leading-relaxed font-normal">
                     {workshop.shortDesc[lang]}
                   </p>
 
                   {/* Location */}
-                  <div className="pt-2 border-t border-slate-200/60 flex items-center gap-1.5 text-xs text-slate-500">
-                    <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                  <div className="pt-2 border-t border-[#B0814D]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
+                    <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
                     <span className="truncate">{workshop.location}</span>
                   </div>
 
@@ -136,7 +99,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
 
                 {/* Action Button */}
                 <div className="pt-2">
-                  <button className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-blue-900 text-slate-800 group-hover:text-white border border-slate-200/80 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
+                  <button className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#B0814D]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
                     <span>{t.viewDetails}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>

@@ -23,15 +23,15 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="espais" className="py-20 sm:py-28 bg-transparent border-b border-slate-200/60 relative">
+    <section id="espais" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-blue-950 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
             {t.subtitle}
           </p>
         </div>
@@ -41,38 +41,38 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
           {VENUES_DATA.map((venue) => (
             <div
               key={venue.id}
-              className="p-8 rounded-[36px] bg-white/70 backdrop-blur-xl border border-white hover:border-blue-200 transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
+              className="p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
             >
               <div className="space-y-4">
                 
                 {/* Venue Name & sub-tag directly under the name */}
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-extrabold text-slate-900 leading-tight">
+                  <h3 className="text-2xl font-extrabold text-[#181816] leading-tight">
                     {venue.name}
                   </h3>
-                  <div className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold uppercase tracking-wider">
+                  <div className="inline-block px-3 py-1 rounded-full bg-[#0C478D]/10 text-[#0C478D] border border-[#0C478D]/20 text-xs font-bold uppercase tracking-wider">
                     {venue.type[lang]}
                   </div>
-                  <p className="text-xs text-slate-500 flex items-center gap-1.5 font-medium pt-1">
-                    <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                  <p className="text-xs text-[#66665D] flex items-center gap-1.5 font-medium pt-1">
+                    <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
                     <span>{venue.address}</span>
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-sm text-[#4A4A43] leading-relaxed font-normal">
                   {venue.description[lang]}
                 </p>
 
                 {/* Activities list */}
-                <div className="space-y-2 pt-2 border-t border-slate-200/60">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-teal-800">
+                <div className="space-y-2 pt-2 border-t border-[#B0814D]/20">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#B0814D]">
                     {t.activitiesTitle}
                   </div>
                   <div className="space-y-1.5">
                     {venue.activities[lang].map((act, i) => (
-                      <div key={i} className="text-xs text-slate-700 font-medium flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
+                      <div key={i} className="text-xs text-[#181816] font-medium flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0C478D] shrink-0" />
                         <span>{act}</span>
                       </div>
                     ))}
@@ -82,18 +82,18 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
               </div>
 
               {/* Direct Google Maps Link */}
-              <div className="pt-4 border-t border-slate-200/60">
+              <div className="pt-4 border-t border-[#B0814D]/20">
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                     `${venue.name}, ${venue.address}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
+                  className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
                 >
-                  <Navigation className="w-4 h-4 text-blue-600" />
+                  <Navigation className="w-4 h-4 text-[#0C478D]" />
                   <span>{t.openInMaps}</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#B0814D]" />
                 </a>
               </div>
 

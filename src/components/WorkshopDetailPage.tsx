@@ -92,15 +92,15 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white/70 hover:bg-white text-slate-700 hover:text-slate-900 border border-white text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#B0814D]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
           <span>{t.back}</span>
         </button>
       </div>
 
       {/* Main Detail Header Card */}
-      <div className="rounded-[36px] bg-white/60 backdrop-blur-xl border border-white shadow-xl overflow-hidden mb-12">
+      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 shadow-xl overflow-hidden mb-12">
         
         {/* Banner image */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
@@ -113,47 +113,47 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
           
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
-            <div className="inline-block px-3 py-1 rounded-full bg-blue-600/90 text-white text-[11px] font-bold uppercase tracking-wider mb-3">
+            <div className="inline-block px-3 py-1 rounded-full bg-[#0C478D] text-white text-[11px] font-bold uppercase tracking-wider mb-3 shadow-xs">
               {workshop.category === 'compartit' ? 'Familiar Compartit' : workshop.category}
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-display">
               {workshop.title[lang]}
             </h1>
           </div>
         </div>
 
         {/* Quick specs grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-slate-200/60 bg-white/40">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#B0814D]/25 bg-white">
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-blue-600" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
+              <Users className="w-3.5 h-3.5 text-[#B0814D]" />
               <span>{t.age}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-slate-900">{workshop.ageRange}</p>
+            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.ageRange}</p>
           </div>
 
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-blue-600" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#B0814D]" />
               <span>{t.duration}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-slate-900">{workshop.duration}</p>
+            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.duration}</p>
           </div>
 
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-blue-600" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
               <span>{t.location}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-slate-900">{workshop.location}</p>
+            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.location}</p>
           </div>
 
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#B0814D]" />
               <span>{t.instructor}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-slate-900">{workshop.instructor}</p>
+            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.instructor}</p>
           </div>
         </div>
 
@@ -162,20 +162,20 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           
           {/* Full description */}
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-slate-900">{t.about}</h2>
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+            <h2 className="text-xl font-bold text-[#181816]">{t.about}</h2>
+            <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
               {workshop.fullDesc[lang]}
             </p>
           </div>
 
           {/* Pedagogical values */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-slate-900">{t.values}</h3>
+            <h3 className="text-lg font-bold text-[#181816]">{t.values}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {workshop.pedagogicalValues[lang].map((val, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/70 border border-white shadow-2xs">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-semibold text-slate-800">{val}</span>
+                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-[#B0814D]/20 shadow-2xs">
+                  <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#181816]">{val}</span>
                 </div>
               ))}
             </div>
@@ -183,24 +183,24 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           {/* Materials */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-slate-900">{t.materials}</h3>
-            <div className="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 flex items-start gap-3">
-              <Package className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <h3 className="text-lg font-bold text-[#181816]">{t.materials}</h3>
+            <div className="p-4 rounded-2xl bg-white border border-[#B0814D]/20 flex items-start gap-3 shadow-2xs">
+              <Package className="w-5 h-5 text-[#0C478D] shrink-0 mt-0.5" />
+              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed">
                 {workshop.materials[lang]}
               </p>
             </div>
           </div>
 
           {/* Location & Google Maps Card */}
-          <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-4 shadow-lg border border-white/20">
+          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#B0814D]/30">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="space-y-1">
-                <span className="text-[11px] font-bold text-teal-300 uppercase tracking-wider">{t.venueCard}</span>
-                <h4 className="text-xl font-bold">{venue.name}</h4>
-                <p className="text-xs text-slate-300 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-blue-400" />
-                  <span>{venue.address}</span>
+                <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
+                <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
+                <p className="text-xs text-white/90 flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-[#B0814D]" />
+                  <span className="text-white">{venue.address}</span>
                 </p>
               </div>
 
@@ -210,23 +210,23 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
               >
-                <Navigation className="w-4 h-4 text-blue-600" />
+                <Navigation className="w-4 h-4 text-[#0C478D]" />
                 <span>{t.openMaps}</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#B0814D]" />
               </a>
             </div>
             
-            <p className="text-xs text-slate-300 border-t border-white/10 pt-3">
+            <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
               {venue.description[lang]}
             </p>
           </div>
 
           {/* How to participate note */}
-          <div className="p-5 rounded-2xl bg-white/80 border border-slate-200/80 space-y-1.5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">{t.participate}</h4>
-            <p className="text-xs sm:text-sm text-slate-600">{t.participateDesc}</p>
+          <div className="p-5 rounded-2xl bg-white border border-[#B0814D]/25 space-y-1.5 shadow-2xs">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0C478D]">{t.participate}</h4>
+            <p className="text-xs sm:text-sm text-[#4A4A43]">{t.participateDesc}</p>
           </div>
 
         </div>
@@ -234,20 +234,20 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
       {/* Other Workshops Recommendations */}
       <div className="space-y-4">
-        <h3 className="text-xl font-extrabold text-slate-900">{t.otherTitle}</h3>
+        <h3 className="text-xl font-extrabold text-[#181816] font-display">{t.otherTitle}</h3>
         <div className="grid sm:grid-cols-3 gap-4">
           {otherWorkshops.map((other) => (
             <div
               key={other.id}
               onClick={() => onSelectWorkshop(other.id)}
-              className="p-5 rounded-3xl bg-white/60 backdrop-blur-xl border border-white hover:border-blue-300 transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+              className="p-5 rounded-3xl bg-[#FAF9F3] border border-[#B0814D]/30 hover:border-[#B0814D] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
-              <div className="text-[11px] font-bold text-blue-700 uppercase">{other.ageRange}</div>
-              <h4 className="font-bold text-base text-slate-900 group-hover:text-blue-700 transition">
+              <div className="text-[11px] font-bold text-[#B0814D] uppercase">{other.ageRange}</div>
+              <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
                 {other.title[lang]}
               </h4>
-              <p className="text-xs text-slate-600 line-clamp-2">{other.shortDesc[lang]}</p>
-              <div className="text-xs font-bold text-blue-600 pt-1">Veure taller →</div>
+              <p className="text-xs text-[#4A4A43] line-clamp-2">{other.shortDesc[lang]}</p>
+              <div className="text-xs font-bold text-[#0C478D] pt-1">Veure taller →</div>
             </div>
           ))}
         </div>

@@ -570,7 +570,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Ticket menú BUM Tiana FEST con fideuá, opción vegetariana y postres caseros.'
     },
     address: 'Av. Isaac Albéniz, 12',
-    websiteUrl: 'https://www.google.com/search?q=El+Casal+de+Tiana+restaurant'
+    websiteUrl: 'https://www.instagram.com/elcasaldetiana/'
   },
   {
     id: 'barbar',
@@ -581,7 +581,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Combo vermut artesanal + tapa de proximidad + bebida infantil.'
     },
     address: 'Plaça de la Vila',
-    websiteUrl: 'https://www.google.com/search?q=Barbar+Tiana+restaurant'
+    websiteUrl: 'https://www.instagram.com/sombarbarstiana/'
   },
   {
     id: 'casino',
@@ -592,7 +592,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Bocadillos calientes especiales BUM, tapas para compartir y helados artesanos.'
     },
     address: 'Carrer de Sant Valentí',
-    websiteUrl: 'https://www.google.com/search?q=El+Casino+de+Tiana+restaurant'
+    websiteUrl: 'https://casinodetiana.com/'
   },
   {
     id: 'tiriti',
@@ -603,7 +603,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Pizzas familiares con ingredientes locales y raciones infantiles.'
     },
     address: 'Carrer d\'Edith Llaurador',
-    websiteUrl: 'https://www.google.com/search?q=Tiriti+Bar+Restaurant+Tiana'
+    websiteUrl: 'https://tiriti.es/'
   },
   {
     id: 'aviMingo',
@@ -614,7 +614,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Platos combinados familiares y carnes a la brasa.'
     },
     address: 'Carrer de Matas',
-    websiteUrl: 'https://www.google.com/search?q=Avi+Mingo+Tiana+restaurant'
+    websiteUrl: 'https://www.avimingo.com/'
   },
   {
     id: 'verdEsBo',
@@ -625,7 +625,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUM Tiana FEST.'
     },
     address: 'Carrer de Lola Anglada, Tiana',
-    websiteUrl: 'https://www.google.com/search?q=Floristeria+Verd+Es+Bo+Tiana'
+    websiteUrl: 'https://floristeriastop.com/floristeria-verd-es-bo-tiana/'
   },
   {
     id: 'espaiEco',
@@ -636,7 +636,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Snacks saludables, fruta ecológica de temporada y productos locales para las familias.'
     },
     address: 'Carrer de Sant Valentí, Tiana',
-    websiteUrl: 'https://www.google.com/search?q=Espai+Ecologic+Tiana'
+    websiteUrl: 'https://espaiecologic.com/'
   }
 ];
 

@@ -27,21 +27,21 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent border-b border-slate-200/60 relative">
+    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent border-b border-[#B0814D]/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-blue-950 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
             {t.subtitle}
           </p>
         </div>
 
         {/* Highlight Vision Card with Interspersed Image */}
-        <div className="rounded-[36px] bg-white/60 backdrop-blur-xl border border-white shadow-xl overflow-hidden mb-12">
+        <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 shadow-xl overflow-hidden mb-12">
           <div className="grid lg:grid-cols-12 gap-0 items-center">
             
             {/* Left Image */}
@@ -57,15 +57,15 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
 
             {/* Right Text Content */}
             <div className="lg:col-span-7 p-8 sm:p-12 space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#181816]">
                 {t.missionTitle}
               </h3>
 
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
                 {t.missionDesc}
               </p>
 
-              <blockquote className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100 text-sm font-semibold text-blue-950 italic">
+              <blockquote className="text-sm sm:text-base font-semibold text-[#0C478D] italic pt-1">
                 {t.quote}
               </blockquote>
             </div>
@@ -78,11 +78,11 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
           {TEAM_DATA.map((member, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-[36px] bg-white/60 backdrop-blur-xl border border-white hover:border-blue-200 transition-all space-y-6 shadow-md flex flex-col justify-between"
+              className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#B0814D]/30 hover:border-[#B0814D] transition-all space-y-6 shadow-md flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-5">
-                  <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-blue-400/40 shadow-md shrink-0 bg-slate-100 ring-2 ring-blue-500/20">
+                  <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#B0814D]/50 shadow-md shrink-0 bg-[#EFEEE0] ring-2 ring-[#0C478D]/20">
                     <img
                       src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
                       alt={member.name}
@@ -91,19 +91,19 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                     />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-2xl text-slate-900">
+                    <h3 className="font-extrabold text-2xl text-[#181816]">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+                    <p className="text-xs font-bold text-[#B0814D] uppercase tracking-wider">
                       {member.role[lang]}
                     </p>
-                    <span className="text-[11px] font-semibold text-slate-500">
+                    <span className="text-[11px] font-semibold text-[#66665D]">
                       2LB Produccions · Tiana
                     </span>
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#4A4A43] leading-relaxed">
                   {member.bio[lang]}
                 </p>
               </div>

@@ -68,6 +68,8 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         return FESTIVAL_LOGOS.casino;
       case 'tiriti':
         return FESTIVAL_LOGOS.tirati;
+      case 'aviMingo':
+        return FESTIVAL_LOGOS.aviMingo;
       case 'espaiEco':
         return FESTIVAL_LOGOS.espaiEco;
       case 'verdEsBo':
@@ -78,53 +80,48 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
   };
 
   return (
-    <section id="gastronomia" className="py-20 sm:py-28 bg-blue-950 text-white relative overflow-hidden border-b border-blue-900/60">
-      
-      {/* Ambient background glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="gastronomia" className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#B0814D]/25">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-blue-100/80 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
             {t.subtitle}
           </p>
         </div>
 
         {/* Informative Card: How tickets work + DJ accompaniment */}
-        <div className="p-8 sm:p-10 rounded-[36px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 shadow-2xl mb-14 space-y-6">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-blue-800/70">
+        <div className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#B0814D]/30 shadow-sm mb-14 space-y-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#B0814D]/20">
             <div className="flex items-start sm:items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-blue-800/60 border border-blue-700/80 text-teal-300 flex items-center justify-center shrink-0 shadow-inner">
+              <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-[#0C478D]/10 border border-[#0C478D]/20 text-[#0C478D] items-center justify-center shrink-0 shadow-inner">
                 <Ticket className="w-7 h-7" />
               </div>
               <div className="space-y-1">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0C478D]">
                   {t.ticketsTitle}
                 </h3>
-                <p className="text-xs sm:text-sm text-blue-200/80 font-normal">
+                <p className="text-xs sm:text-sm text-[#4A4A43] font-normal">
                   {t.ticketsDesc}
                 </p>
               </div>
             </div>
 
             {/* Ambient Music Pill */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-blue-950/80 border border-blue-700/80 text-white text-xs font-bold shrink-0 shadow-inner">
-              <Music className="w-4 h-4 text-teal-300 shrink-0" />
+            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#B0814D] text-white text-xs font-bold shrink-0 shadow-md">
+              <Music className="w-4 h-4 text-white shrink-0" />
               <span>DJ Vermut amb Xavi Vinyasa (14:00h - 16:00h)</span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 pt-2">
             {t.ticketPoints.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-blue-950/60 border border-blue-800/60">
-                <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed font-normal">
+              <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#B0814D]/25">
+                <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-[#3A3A34] leading-relaxed font-normal">
                   {point}
                 </p>
               </div>
@@ -132,11 +129,11 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
           </div>
         </div>
 
-        {/* Restaurants Grid with the same horizontal card format as Workshops */}
+        {/* Restaurants Grid with horizontal card format */}
         <div className="space-y-6">
           <div className="flex items-center gap-2.5">
-            <Store className="w-5 h-5 text-teal-400" />
-            <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+            <Store className="w-5 h-5 text-[#B0814D]" />
+            <h3 className="text-xl sm:text-2xl font-extrabold text-[#0C478D] tracking-tight font-display">
               {t.restaurantsTitle}
             </h3>
           </div>
@@ -145,7 +142,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
             {RESTAURANTS_DATA.map((resto, idx) => (
               <div
                 key={idx}
-                className="rounded-[36px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 hover:border-teal-500/50 transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
+                className="rounded-[36px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 hover:border-[#B0814D] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
               >
                 {/* Left Column: Restaurant Photo */}
                 <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0">
@@ -163,31 +160,34 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h4 className="text-lg sm:text-xl font-extrabold text-white group-hover:text-teal-300 transition leading-snug">
+                        <h4 className="text-lg sm:text-xl font-extrabold text-[#181816] group-hover:text-[#0C478D] transition leading-snug">
                           {resto.name}
                         </h4>
-                        <span className="text-xs font-bold text-teal-400">
+                        <span className="text-xs font-bold text-[#B0814D]">
                           {resto.type}
                         </span>
                       </div>
                       {getRestaurantLogo(resto.id) && (
-                        <div className="w-10 h-10 rounded-xl bg-blue-950/90 border border-blue-700/60 p-1.5 shrink-0 flex items-center justify-center shadow-inner">
+                        <div className="w-20 sm:w-24 h-9 sm:h-11 aspect-[2/1] shrink-0 flex items-center justify-end">
                           <img
                             src={getRestaurantLogo(resto.id)!}
                             alt={resto.name}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain object-right"
+                            style={{
+                              filter: 'brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(1837%) hue-rotate(200deg) brightness(90%) contrast(98%)',
+                            }}
                             referrerPolicy="no-referrer"
                           />
                         </div>
                       )}
                     </div>
 
-                    <p className="text-xs sm:text-sm text-blue-100/85 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">
                       {resto.specialOffer[lang]}
                     </p>
 
-                    <div className="pt-2 border-t border-blue-800/60 flex items-center gap-1.5 text-xs text-blue-200/70">
-                      <MapPin className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                    <div className="pt-2 border-t border-[#B0814D]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
+                      <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
                       <span className="truncate">{resto.address}, Tiana</span>
                     </div>
                   </div>
@@ -198,7 +198,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                       href={resto.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(`${resto.name} Tiana`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-2.5 px-4 rounded-2xl bg-blue-950/80 hover:bg-teal-500 hover:text-blue-950 text-white border border-blue-700/80 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-inner active:scale-95 cursor-pointer"
+                      className="w-full py-2.5 px-4 rounded-2xl bg-white hover:bg-[#0C478D] hover:text-white text-[#181816] border border-[#B0814D]/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
                     >
                       <span>{t.visitWebsite}</span>
                       <ExternalLink className="w-3.5 h-3.5" />

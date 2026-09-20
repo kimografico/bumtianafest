@@ -13,20 +13,20 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
       tagline: 'Festival d’Arts, Tallers i Comunitat Familiar a Tiana (Maresme).',
       location: 'Tiana, Barcelona',
       linksTitle: 'Navegació',
-      organizers: 'Organitzen 2LB Produccions juntament amb l\'Ajuntament de Tiana',
+      organizers: 'Organitzen 2LB Produccions + l\'Ajuntament de Tiana amb la col·laboració de la Diputació de Barcelona',
       rights: '© 2026 BUM Tiana FEST · Tots els drets reservats.',
     },
     es: {
       tagline: 'Festival de Artes, Talleres y Comunidad Familiar en Tiana (Maresme).',
       location: 'Tiana, Barcelona',
       linksTitle: 'Navegación',
-      organizers: 'Organizan 2LB Produccions junto con el Ayuntamiento de Tiana',
+      organizers: 'Organizan 2LB Produccions + el Ayuntamiento de Tiana con la colaboración de la Diputación de Barcelona',
       rights: '© 2026 BUM Tiana FEST · Todos los derechos reservados.',
     },
   }[lang];
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-white/10 relative">
+    <footer className="bg-[#082850] text-[#EFEEE0]/80 pt-16 pb-12 border-t border-[#B0814D]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Main Footer Grid with 2 columns */}
@@ -34,56 +34,82 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           
           {/* Left Column: Brand, Tagline, Location, Organization note and Escut */}
           <div className="md:col-span-7 lg:col-span-8 space-y-5">
-            <div className="flex items-baseline gap-2">
-              <span className="font-extrabold text-2xl text-white tracking-tight">
-                BUM Tiana FEST
-              </span>
-              <span className="text-xs font-bold text-blue-400">
-                2026
-              </span>
+            <div className="flex items-center gap-3">
+              <img
+                src={FESTIVAL_LOGOS.bumFest}
+                alt="BUM Tiana FEST"
+                className="h-9 sm:h-11 w-auto object-contain brightness-0 invert"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm text-[#EFEEE0]/75 leading-relaxed max-w-md">
               {t.tagline}
             </p>
 
-            <div className="text-xs text-slate-300 flex items-center gap-1.5 font-medium">
-              <MapPin className="w-4 h-4 text-blue-400" />
+            <div className="text-xs text-[#EFEEE0]/90 flex items-center gap-1.5 font-medium">
+              <MapPin className="w-4 h-4 text-[#B0814D]" />
               <span>{t.location}</span>
             </div>
 
-            {/* Organization text (appears only once) */}
-            <div className="pt-2 space-y-3">
-              <p className="text-sm text-teal-300 font-semibold">
+            {/* Unified Organization & Collaboration */}
+            <div className="pt-2 space-y-4">
+              <p className="text-xs sm:text-sm text-[#B0814D] font-bold max-w-xl leading-relaxed">
                 {t.organizers}
               </p>
 
-              {/* Escut de Tiana & 2LB Produccions side by side */}
-              <div className="flex items-center gap-8 sm:gap-10 pt-1">
+              {/* Three logos with '+' and thin vertical separator for Diputació */}
+              <div className="flex items-center flex-wrap gap-8 sm:gap-10 md:gap-12 pt-2">
+                {/* 1. Ajuntament de Tiana */}
                 <a
                   href="https://tiana.cat/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block group"
+                  className="inline-block group shrink-0"
                   title="Ajuntament de Tiana"
                 >
                   <img
                     src={FESTIVAL_LOGOS.tiana}
                     alt="Escut de l'Ajuntament de Tiana"
-                    className="h-16 sm:h-20 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
+                    className="h-14 sm:h-16 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
                     referrerPolicy="no-referrer"
                   />
                 </a>
 
+                {/* Plus sign divider */}
+                <span className="text-xl sm:text-2xl font-bold text-[#B0814D] select-none -mx-2 sm:-mx-3" aria-hidden="true">
+                  +
+                </span>
+
+                {/* 2. 2LB Produccions */}
                 <a
                   href="#organitzacio"
-                  className="inline-block group"
+                  className="inline-block group shrink-0"
                   title="2LB Produccions"
                 >
                   <img
                     src={FESTIVAL_LOGOS.twoLb}
                     alt="2LB Produccions"
-                    className="h-9 sm:h-11 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
+                    className="h-8 sm:h-10 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+
+                {/* Thin vertical separator */}
+                <div className="h-8 sm:h-10 w-px bg-white/20 self-center shrink-0" aria-hidden="true" />
+
+                {/* 3. Diputació de Barcelona */}
+                <a
+                  href="https://www.diba.cat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block group shrink-0"
+                  title="Diputació de Barcelona"
+                >
+                  <img
+                    src={FESTIVAL_LOGOS.diputacio}
+                    alt="Diputació de Barcelona"
+                    className="h-8 sm:h-9 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
                     referrerPolicy="no-referrer"
                   />
                 </a>
@@ -91,34 +117,56 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </div>
           </div>
 
-          {/* Right Column: Quick Links Navigation */}
-          <div className="md:col-span-5 lg:col-span-4 space-y-3 md:pl-6 lg:pl-12">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              {t.linksTitle}
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><a href="#concepte" className="hover:text-white transition">El Concepte</a></li>
-              <li><a href="#tallers" className="hover:text-white transition">Tallers Didàctics</a></li>
-              <li><a href="#xerrades" className="hover:text-white transition">Xerrades de Criança</a></li>
-              <li><a href="#programa" className="hover:text-white transition">Horaris</a></li>
-              <li><a href="#espais" className="hover:text-white transition">Localitzacions</a></li>
-              <li><a href="#tarifes" className="hover:text-white transition">Tarifes</a></li>
-              <li><a href="#faq" className="hover:text-white transition">Preguntes Freqüents</a></li>
-              <li><a href="#organitzacio" className="hover:text-white transition">2LB Produccions</a></li>
-            </ul>
+          {/* Right Column: Quick Links Navigation & Espai Families */}
+          <div className="md:col-span-5 lg:col-span-4 space-y-6 md:pl-6 lg:pl-12">
+            
+            {/* Espai Famílies logo (Mobile only: appears before Navegació) */}
+            <div className="block md:hidden pb-1">
+              <img
+                src={FESTIVAL_LOGOS.espaiFamilies}
+                alt="Espai Famílies"
+                className="h-7 w-auto object-contain opacity-90"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
+            <div className="space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+                {t.linksTitle}
+              </h4>
+              <ul className="space-y-2.5 text-xs text-[#EFEEE0]/70">
+                <li><a href="#concepte" className="hover:text-[#B0814D] transition">El Concepte</a></li>
+                <li><a href="#tallers" className="hover:text-[#B0814D] transition">Tallers Didàctics</a></li>
+                <li><a href="#xerrades" className="hover:text-[#B0814D] transition">Xerrades de Criança</a></li>
+                <li><a href="#programa" className="hover:text-[#B0814D] transition">Horaris</a></li>
+                <li><a href="#espais" className="hover:text-[#B0814D] transition">Localitzacions</a></li>
+                <li><a href="#faq" className="hover:text-[#B0814D] transition">Preguntes Freqüents</a></li>
+                <li><a href="#organitzacio" className="hover:text-[#B0814D] transition">2LB Produccions</a></li>
+              </ul>
+            </div>
+
+            {/* Espai Famílies logo (Desktop only: appears after Navegació) */}
+            <div className="hidden md:block pt-8 mt-5 border-t border-white/10">
+              <img
+                src={FESTIVAL_LOGOS.espaiFamilies}
+                alt="Espai Famílies"
+                className="h-7 sm:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-200"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </div>
 
         </div>
 
         {/* Bottom copyright statement */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFEEE0]/60">
           <div>
             © 2026 BUM Tiana FEST · {lang === 'ca' ? 'Tots els drets reservats.' : 'Todos los derechos reservados.'} · {lang === 'ca' ? 'Disseny web: ' : 'Diseño web: '}
             <a
               href="https://kimografico.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-300 hover:text-white transition font-medium"
+              className="text-[#B0814D] hover:text-white transition font-medium"
             >
               kimografico.com
             </a>

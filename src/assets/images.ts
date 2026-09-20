@@ -30,8 +30,9 @@ import restoAviMingoImg from './images/gastronomy/avi-mingo.jpg';
 import restoVerdEsBoImg from './images/gastronomy/verd-es-bo.jpg';
 import restoEspaiEcoImg from './images/gastronomy/espai-eco.jpg';
 
-// Partner and Institutional SVG Logos
-import logoBumFest from './images/logos/BUMFEST.svg';
+// Partner and Institutional SVG Logos & Corporate Assets
+import logoBumFest from './images/logos/BUMFEST26.svg';
+import familiaMaderaImg from './images/logos/FamiliaMadera.png';
 import logoTiana from './images/logos/TIANA.svg';
 import logo2lb from './images/logos/2LB.svg';
 import logoAcist from './images/logos/ACIST.svg';
@@ -41,11 +42,16 @@ import logoCasino from './images/logos/CASINO.svg';
 import logoEspaiEco from './images/logos/ESPAIECO.svg';
 import logoVerdesbo from './images/logos/VERDESBO.svg';
 import logoTirati from './images/logos/TIRATI.svg';
+import logoAvimingo from './images/logos/AVIMINGO.svg';
+import logoDiputacio from './images/logos/DIPUTACIOBCN.svg';
+import logoEspaiFamilies from './images/logos/ESPAIFAMILIES.svg';
 
 export const FESTIVAL_LOGOS = {
   bumFest: logoBumFest,
   tiana: logoTiana,
   twoLb: logo2lb,
+  diputacio: logoDiputacio,
+  espaiFamilies: logoEspaiFamilies,
   acist: logoAcist,
   barbar: logoBarbar,
   casal: logoCasal,
@@ -53,9 +59,13 @@ export const FESTIVAL_LOGOS = {
   espaiEco: logoEspaiEco,
   verdEsBo: logoVerdesbo,
   tirati: logoTirati,
+  aviMingo: logoAvimingo,
+  familiaMadera: familiaMaderaImg,
 };
 
 export const FESTIVAL_IMAGES = {
+  // Corporate asset
+  familiaMadera: familiaMaderaImg,
   // 6 Carousel Photos from carrusel folder
   carouselSlide1: carrusel1,
   carouselSlide2: carrusel2,

@@ -36,7 +36,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="concepte" className="py-20 sm:py-28 bg-blue-950 text-white relative overflow-hidden">
+    <section id="concepte" className="py-20 sm:py-28 bg-[#0C478D] text-white relative overflow-hidden">
       
       {/* Translucent background overlay image of Tiana */}
       <div 
@@ -44,71 +44,77 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
         style={{ backgroundImage: `url(${FESTIVAL_IMAGES.village})` }}
       />
       
-      {/* Soft ambient background glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
+      {/* Soft ambient background glow in secondary corporate color */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B0814D]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#083266]/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Section Header without tag */}
+        {/* Section Header */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-blue-100/80 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
             {t.subtitle}
           </p>
         </div>
 
-        {/* 4 Cards Grid with top-aligned text and consistent title heights */}
+        {/* 4 Cards Grid with crisp readable background for original logo clarity */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           
-          {/* Card 1: Por que el nombre BUM (BUMFEST SVG Logo) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 flex flex-col justify-start shadow-lg hover:border-blue-700/80 transition">
+          {/* Card 1: Por que el nombre BUM (BUMFEST26 SVG Logo in true colors) */}
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
               <img 
                 src={FESTIVAL_LOGOS.bumFest} 
                 alt="BUM Tiana FEST" 
-                className="h-10 w-auto max-w-[120px] object-contain"
+                className="h-9 w-auto max-w-[150px] object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-white">{t.cardNameTitle}</h3>
-              <p className="text-xs sm:text-sm text-blue-100/75 leading-relaxed font-normal">{t.cardNameDesc}</p>
+              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.cardNameTitle}</h3>
+              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.cardNameDesc}</p>
             </div>
           </div>
 
-          {/* Card 2: A quien va dirigido (Target icon in white) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 flex flex-col justify-start shadow-lg hover:border-blue-700/80 transition">
+          {/* Card 2: A quien va dirigido */}
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
-              <Target className="w-10 h-10 text-white" strokeWidth={1.8} />
+              <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
+                <Target className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />
+              </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-white">{t.cardTargetTitle}</h3>
-              <p className="text-xs sm:text-sm text-blue-100/75 leading-relaxed font-normal">{t.cardTargetDesc}</p>
+              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.cardTargetTitle}</h3>
+              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.cardTargetDesc}</p>
             </div>
           </div>
 
-          {/* Card 3: Aprenentatge Compartit (Users icon in white) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 flex flex-col justify-start shadow-lg hover:border-blue-700/80 transition">
+          {/* Card 3: Aprenentatge Compartit */}
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
-              <Users className="w-10 h-10 text-white" strokeWidth={1.8} />
+              <div className="w-11 h-11 rounded-2xl bg-[#B0814D]/15 flex items-center justify-center">
+                <Users className="w-6 h-6 text-[#B0814D]" strokeWidth={2.2} />
+              </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-white">{t.card1Title}</h3>
-              <p className="text-xs sm:text-sm text-blue-100/75 leading-relaxed font-normal">{t.card1Desc}</p>
+              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.card1Title}</h3>
+              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.card1Desc}</p>
             </div>
           </div>
 
-          {/* Card 4: Tiana com a gran espai comunitari (Heart icon in white) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-blue-900/40 backdrop-blur-xl border border-blue-800/80 flex flex-col justify-start shadow-lg hover:border-blue-700/80 transition">
+          {/* Card 4: Tiana com a gran espai comunitari */}
+          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#B0814D]/30 flex flex-col justify-start shadow-xl hover:border-[#B0814D] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
-              <Heart className="w-10 h-10 text-white" strokeWidth={1.8} />
+              <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
+                <Heart className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />
+              </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-white">{t.card2Title}</h3>
-              <p className="text-xs sm:text-sm text-blue-100/75 leading-relaxed font-normal">{t.card2Desc}</p>
+              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.card2Title}</h3>
+              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.card2Desc}</p>
             </div>
           </div>
 

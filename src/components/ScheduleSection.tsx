@@ -34,15 +34,19 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="programa" className="py-20 sm:py-28 bg-transparent border-b border-slate-200/60 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="programa" className="py-20 sm:py-28 bg-[#0C478D] text-white relative overflow-hidden border-b border-[#B0814D]/30">
+      {/* Ambient glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B0814D]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#083266]/50 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Section Header without tag */}
+        {/* Section Header */}
         <div className="max-w-3xl mb-10 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-blue-950 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
             {t.subtitle}
           </p>
         </div>
@@ -55,8 +59,8 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-blue-900 text-white shadow-md shadow-blue-900/20'
-                  : 'bg-white/70 hover:bg-white text-slate-700 border border-white'
+                  ? 'bg-white text-[#0C478D] shadow-md shadow-black/10'
+                  : 'bg-white/10 hover:bg-white/20 text-[#EFEEE0] border border-white/20 backdrop-blur-md'
               }`}
             >
               {cat.label[lang]}
@@ -67,8 +71,8 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
         {/* Clean Vertical Timeline with exact centered dots */}
         <div className="relative max-w-4xl pl-8 sm:pl-10 space-y-10">
           
-          {/* Continuous vertical line moved 1px to the left */}
-          <div className="absolute left-[6px] sm:left-[7px] top-3 bottom-3 w-0.5 bg-blue-200" />
+          {/* Continuous vertical line */}
+          <div className="absolute left-[6px] sm:left-[7px] top-3 bottom-3 w-0.5 bg-[#B0814D]/60" />
 
           {filteredSchedule.map((item, idx) => (
             <div
@@ -76,35 +80,35 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
               className="relative group"
             >
               {/* Timeline dot positioned on the line */}
-              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-xs group-hover:border-blue-800 group-hover:scale-125 transition" />
+              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-[#0C478D] border-4 border-[#B0814D] shadow-xs group-hover:border-white group-hover:scale-125 transition" />
 
               <div className="space-y-2">
                 {/* Time & Badges Row */}
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="font-mono text-xs font-bold text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 shadow-2xs">
+                  <span className="font-mono text-xs font-bold text-white bg-white/15 px-3 py-1 rounded-full border border-white/25 shadow-2xs">
                     {item.time}
                   </span>
 
                   {item.badge && (
-                    <span className="text-xs font-bold text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-100 shadow-2xs">
+                    <span className="text-xs font-bold text-white bg-[#B0814D] px-3 py-1 rounded-full shadow-2xs">
                       {item.badge[lang]}
                     </span>
                   )}
                 </div>
 
                 {/* Event Title */}
-                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-blue-700 transition">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-[#EFEEE0] transition">
                   {item.title[lang]}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-slate-600 leading-relaxed max-w-2xl font-normal">
+                <p className="text-sm text-[#EFEEE0]/85 leading-relaxed max-w-2xl font-normal">
                   {item.description[lang]}
                 </p>
 
                 {/* Location pin */}
-                <div className="flex items-center gap-1.5 text-xs text-slate-500 font-medium pt-1">
-                  <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                <div className="flex items-center gap-1.5 text-xs text-[#EFEEE0]/75 font-medium pt-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#B0814D] shrink-0" />
                   <span>{item.location}</span>
                 </div>
               </div>

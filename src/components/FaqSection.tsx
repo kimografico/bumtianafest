@@ -21,15 +21,15 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section className="py-16 sm:py-24 bg-transparent border-b border-slate-200/60 relative">
+    <section className="py-16 sm:py-24 bg-transparent border-b border-[#B0814D]/25 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
         <div className="text-center space-y-3 mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0C478D] tracking-tight font-display">
             {t.title}
           </h2>
-          <p className="text-base text-slate-600">
+          <p className="text-base text-[#4A4A43]">
             {t.subtitle}
           </p>
         </div>
@@ -41,27 +41,27 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
             return (
               <div
                 key={idx}
-                className={`rounded-3xl bg-white/60 backdrop-blur-xl border overflow-hidden transition-all shadow-sm ${
-                  isOpen ? 'border-blue-300 ring-2 ring-blue-500/10' : 'border-white hover:border-blue-200'
+                className={`rounded-3xl bg-[#FAF9F3]/90 backdrop-blur-xl border overflow-hidden transition-all shadow-sm ${
+                  isOpen ? 'border-[#0C478D] ring-2 ring-[#0C478D]/15' : 'border-[#B0814D]/30 hover:border-[#B0814D]'
                 }`}
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-900 hover:text-blue-700 transition cursor-pointer"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#181816] hover:text-[#0C478D] transition cursor-pointer"
                 >
                   <span className="flex items-center gap-3">
-                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0 shadow-2xs" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#0C478D] shrink-0 shadow-2xs" />
                     <span>{faq.q[lang]}</span>
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-blue-600' : ''
+                    className={`w-5 h-5 text-[#66665D] shrink-0 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-[#0C478D]' : ''
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 bg-white/40">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#4A4A43] leading-relaxed border-t border-[#B0814D]/20 bg-white/40">
                     {faq.a[lang]}
                   </div>
                 )}

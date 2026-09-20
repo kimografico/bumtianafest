@@ -9,7 +9,6 @@ import { SpeakersSection } from './components/SpeakersSection';
 import { ScheduleSection } from './components/ScheduleSection';
 import { VenuesSection } from './components/VenuesSection';
 import { GastronomySection } from './components/GastronomySection';
-import { PricingSection } from './components/PricingSection';
 import { PartnersCarousel } from './components/PartnersCarousel';
 import { FaqSection } from './components/FaqSection';
 import { TwoLBSection } from './components/TwoLBSection';
@@ -73,12 +72,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white relative overflow-x-clip">
+    <div className="min-h-screen flex flex-col bg-[#EFEEE0] text-[#181816] selection:bg-[#0C478D] selection:text-white relative overflow-x-clip">
       
-      {/* Frosted ambient background soft illumination */}
-      <div className="fixed top-0 right-0 w-[550px] h-[550px] bg-blue-200/35 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="fixed top-1/3 left-0 w-[480px] h-[480px] bg-teal-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="fixed bottom-10 right-10 w-[500px] h-[500px] bg-indigo-100/35 rounded-full blur-3xl pointer-events-none -z-10" />
+      {/* Frosted ambient background soft illumination in corporate palette */}
+      <div className="fixed top-0 right-0 w-[550px] h-[550px] bg-[#0C478D]/8 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="fixed top-1/3 left-0 w-[480px] h-[480px] bg-[#B0814D]/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="fixed bottom-10 right-10 w-[500px] h-[500px] bg-[#0C478D]/6 rounded-full blur-3xl pointer-events-none -z-10" />
 
       {/* Top Navbar */}
       <Navbar
@@ -108,10 +107,10 @@ export default function App() {
             {/* 1. Full-width Image Carousel */}
             <HeroCarousel lang={lang} />
 
-            {/* 2. Clean Hero Section */}
+            {/* 2. Clean Hero Section with Corporate Image FamiliaMadera */}
             <Hero lang={lang} />
 
-            {/* 3. Concepte & Objectius (Fons Blau Corporatiu Fosc) */}
+            {/* 3. Concepte & Objectius */}
             <ConceptSection lang={lang} />
 
             {/* 4. Catàleg de Tallers Didàctics (2 columnes, imatge esquerra) */}
@@ -135,16 +134,13 @@ export default function App() {
             {/* 8. Gastronomia Local & DJ Vermut */}
             <GastronomySection lang={lang} />
 
-            {/* 9. Tarifes & Model Popular */}
-            <PricingSection lang={lang} />
-
-            {/* 10. Carrusel d'Entitats Col·laboradores */}
+            {/* 9. Carrusel d'Entitats Col·laboradores */}
             <PartnersCarousel lang={lang} />
 
-            {/* 11. Dubtes & Preguntes Freqüents (FAQ) */}
+            {/* 10. Dubtes & Preguntes Freqüents (FAQ) */}
             <FaqSection lang={lang} />
 
-            {/* 12. Apartat Organitzadors: 2LB Produccions (al final, després dels dubtes) */}
+            {/* 11. Apartat Organitzadors: 2LB Produccions */}
             <TwoLBSection lang={lang} />
           </>
         )}

@@ -150,7 +150,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
               
               {/* Caption Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 md:p-14 max-w-7xl mx-auto flex flex-col justify-end">
+              <div className="absolute bottom-0 left-0 right-0 p-5 pb-12 sm:p-10 sm:pb-12 md:p-14 max-w-7xl mx-auto flex flex-col justify-end">
                 <div className="max-w-2xl space-y-2 sm:space-y-3">
                   <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider border border-white/30">
                     {slide.tag[lang]}
@@ -169,11 +169,11 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
           );
         })}
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows (Desktop only, hidden on mobile) */}
         <button
           onClick={handlePrev}
           aria-label="Anterior imatge"
-          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all opacity-80 hover:opacity-100 active:scale-95 cursor-pointer"
+          className="hidden sm:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md border border-white/20 items-center justify-center transition-all opacity-80 hover:opacity-100 active:scale-95 cursor-pointer"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
@@ -181,13 +181,13 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
         <button
           onClick={handleNext}
           aria-label="Següent imatge"
-          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all opacity-80 hover:opacity-100 active:scale-95 cursor-pointer"
+          className="hidden sm:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md border border-white/20 items-center justify-center transition-all opacity-80 hover:opacity-100 active:scale-95 cursor-pointer"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
-        {/* Dots indicator */}
-        <div className="absolute bottom-5 right-6 sm:right-10 z-20 flex items-center gap-2">
+        {/* Dots indicator: centered and below text on mobile, right-aligned on desktop */}
+        <div className="absolute bottom-3.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-20 flex items-center justify-center gap-2">
           {slides.map((_, dotIdx) => (
             <button
               key={dotIdx}
