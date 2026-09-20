@@ -40,6 +40,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
       
       {/* Translucent background overlay image of Tiana */}
       <div 
+        aria-hidden="true"
         className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-10 mix-blend-luminosity scale-105"
         style={{ backgroundImage: `url(${FESTIVAL_IMAGES.village})` }}
       />
@@ -69,6 +70,8 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
               <img 
                 src={FESTIVAL_LOGOS.bumFest} 
                 alt="BUM Tiana FEST" 
+                width={150}
+                height={36}
                 className="h-9 w-auto max-w-[150px] object-contain"
                 referrerPolicy="no-referrer"
               />

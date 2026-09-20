@@ -59,6 +59,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       venueCard: 'Com arribar a aquest espai',
       openMaps: 'Obrir a Google Maps',
       otherTitle: 'Altres tallers del BUM Tiana FEST',
+      viewWorkshop: 'Veure taller →',
       participate: 'Com participar?',
       participateDesc: 'Els tallers formen part del Bono Tallers Matí (30€) o Bono Complet (60€). L’accés per a l’acompanyant adult és gratuït.',
     },
@@ -74,6 +75,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       venueCard: 'Cómo llegar a este espacio',
       openMaps: 'Abrir en Google Maps',
       otherTitle: 'Otros talleres de BUM Tiana FEST',
+      viewWorkshop: 'Ver taller →',
       participate: '¿Cómo participar?',
       participateDesc: 'Los talleres están incluidos en el Bono Talleres Mañana (30€) o Bono Completo (60€). El acompañante adulto accede gratis.',
     },
@@ -107,6 +109,8 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           <img
             src={getWorkshopImage(workshop.id)}
             alt={workshop.title[lang]}
+            width={960}
+            height={384}
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -238,18 +242,18 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         <h3 className="text-xl font-extrabold text-[#181816] font-display">{t.otherTitle}</h3>
         <div className="grid sm:grid-cols-3 gap-4">
           {otherWorkshops.map((other) => (
-            <div
+            <button
               key={other.id}
               onClick={() => onSelectWorkshop(other.id)}
-              className="p-5 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+              className="w-full text-left p-5 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
               <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.ageRange}</div>
               <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
                 {other.title[lang]}
               </h4>
               <p className="text-xs text-[#4A4A43] line-clamp-2">{other.shortDesc[lang]}</p>
-              <div className="text-xs font-bold text-[#0C478D] pt-1">Veure taller →</div>
-            </div>
+              <div className="text-xs font-bold text-[#0C478D] pt-1">{t.viewWorkshop}</div>
+            </button>
           ))}
         </div>
       </div>

@@ -53,10 +53,10 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
         {/* Speakers Grid with Round Portrait Frame (2 Speakers) */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
           {SPEAKERS_DATA.map((speaker) => (
-            <div
+            <button
               key={speaker.id}
               onClick={() => onSelectSpeaker(speaker.id)}
-              className="p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group"
+              className="w-full text-left p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group"
             >
               <div className="space-y-5">
                 
@@ -66,6 +66,8 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                     <img
                       src={getSpeakerImage(speaker.id)}
                       alt={speaker.name}
+                      width={64}
+                      height={64}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                       loading="lazy"
@@ -108,13 +110,13 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
 
               {/* Action Button */}
               <div className="pt-4 border-t border-[#88643B]/20">
-                <button className="w-full py-2.5 px-4 rounded-2xl bg-white/80 group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
+                <span className="w-full py-2.5 px-4 rounded-2xl bg-white/80 group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
                   <span>{t.viewDetails}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </span>
               </div>
 
-            </div>
+            </button>
           ))}
         </div>
 

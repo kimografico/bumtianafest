@@ -47,6 +47,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       venueCard: 'Com arribar a l’espai de la xerrada',
       openMaps: 'Obrir a Google Maps',
       otherTitle: 'Altres xerrades de criança i família',
+      viewTalk: 'Veure ponència →',
       accessNote: 'Accés inclòs amb qualsevol dels Bonos del BUM Tiana FEST. Aforament limitat per ordre d’arribada.',
     },
     es: {
@@ -61,6 +62,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       venueCard: 'Cómo llegar al espacio de la charla',
       openMaps: 'Abrir en Google Maps',
       otherTitle: 'Otras charlas de crianza y familia',
+      viewTalk: 'Ver ponencia →',
       accessNote: 'Acceso incluido con cualquiera de los Bonos de BUM Tiana FEST. Aforo limitado por orden de llegada.',
     },
   }[lang];
@@ -100,6 +102,8 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                     : FESTIVAL_IMAGES.laiaFerrer
                 }
                 alt={speaker.name}
+                width={96}
+                height={96}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -231,18 +235,18 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           <h3 className="text-xl font-extrabold text-[#181816] font-display">{t.otherTitle}</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {otherSpeakers.map((other) => (
-              <div
+              <button
                 key={other.id}
                 onClick={() => onSelectSpeaker(other.id)}
-                className="p-6 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+                className="w-full text-left p-6 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
               >
                 <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.role[lang]}</div>
                 <h4 className="font-bold text-lg text-[#181816] group-hover:text-[#0C478D] transition">
                   {other.name}
                 </h4>
                 <p className="text-xs text-[#4A4A43] line-clamp-2">{other.talkTitle[lang]}</p>
-                <div className="text-xs font-bold text-[#0C478D] pt-1">Veure ponència →</div>
-              </div>
+                <div className="text-xs font-bold text-[#0C478D] pt-1">{t.viewTalk}</div>
+              </button>
             ))}
           </div>
         </div>

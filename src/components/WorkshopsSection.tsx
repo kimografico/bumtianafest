@@ -54,17 +54,19 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
         {/* Workshops Cards in 2 Columns grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {WORKSHOPS_DATA.map((workshop) => (
-            <div
+            <button
               key={workshop.id}
               onClick={() => onSelectWorkshop(workshop.id)}
-              className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
+              className="w-full text-left rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
             >
               {/* Left Column: Workshop Image */}
               <div className="sm:w-2/5 min-h-[200px] sm:min-h-full relative overflow-hidden shrink-0">
-                <img
-                  src={getWorkshopImage(workshop.id)}
-                  alt={workshop.title[lang]}
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  <img
+                    src={getWorkshopImage(workshop.id)}
+                    alt={workshop.title[lang]}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
@@ -100,15 +102,15 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
 
                 {/* Action Button */}
                 <div className="pt-2">
-                  <button className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md cursor-pointer">
+                  <span className="w-full py-2.5 px-4 rounded-2xl bg-white group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
                     <span>{t.viewDetails}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </span>
                 </div>
 
               </div>
 
-            </div>
+            </button>
           ))}
         </div>
 

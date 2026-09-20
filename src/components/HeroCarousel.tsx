@@ -175,6 +175,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
               <img
                 src={slide.image}
                 alt={slide.title[lang]}
+                width={1920}
+                height={1080}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
                 loading={idx === 0 ? 'eager' : 'lazy'}

@@ -49,8 +49,11 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
               <img
                 src={FESTIVAL_IMAGES.twoLbVision}
                 alt="2LB Produccions a Tiana"
+                width={540}
+                height={360}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 lg:from-transparent to-transparent" />
             </div>
@@ -86,6 +89,8 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                     <img
                       src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
                       alt={member.name}
+                      width={80}
+                      height={80}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                       loading="lazy"

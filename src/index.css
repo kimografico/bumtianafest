@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #0C478D;
   --color-primary-dark: #083266;
+  --color-primary-darker: #082850;
   --color-primary-light: #185EAC;
   --color-secondary: #88643B;
   --color-secondary-dark: #6E502F;
@@ -37,6 +38,25 @@
 html {
   scroll-behavior: smooth;
   background-color: #EFEEE0;
+}
+
+/* Global focus-visible ring for keyboard navigation (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid #0C478D;
+  outline-offset: 2px;
+}
+
+/* Respect user motion preferences (WCAG 2.2.2 / 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
 }
 
 /* Custom scrollbars */

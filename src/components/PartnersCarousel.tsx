@@ -52,9 +52,9 @@ export const PartnersCarousel: React.FC<PartnersCarouselProps> = ({ lang }) => {
       
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 text-center sm:text-left">
-        <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#EFEEE0]/90">
+        <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#EFEEE0]/90">
           {title}
-        </h3>
+        </h2>
       </div>
 
       {/* Simplified Infinite Logo Stream */}
@@ -74,6 +74,8 @@ export const PartnersCarousel: React.FC<PartnersCarouselProps> = ({ lang }) => {
               <img
                 src={item.logo}
                 alt={item.name}
+                width={200}
+                height={80}
                 className="h-14 sm:h-20 md:h-24 w-auto max-w-[200px] sm:max-w-[280px] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm brightness-105"
                 referrerPolicy="no-referrer"
                 loading="lazy"

@@ -57,6 +57,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
+              aria-pressed={activeCategory === cat.id}
               className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? 'bg-white text-[#0C478D] shadow-md shadow-black/10'

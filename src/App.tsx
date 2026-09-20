@@ -29,6 +29,11 @@ export default function App() {
   const [selectedWorkshopId, setSelectedWorkshopId] = useState<string | null>(null);
   const [selectedSpeakerId, setSelectedSpeakerId] = useState<string | null>(null);
 
+  // Sync html lang attribute for screen readers (WCAG 3.1.1)
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   // Handle URL query parameters for direct links & browser history
   useEffect(() => {
     const handleUrlChange = () => {
@@ -101,8 +106,15 @@ export default function App() {
         onNavigateHome={handleNavigateHome}
       />
 
+      {/* Live region for screen reader announcements on view changes */}
+      <div aria-live="polite" className="sr-only">
+        {viewMode === 'home' && (lang === 'ca' ? 'Pàgina principal' : 'Página principal')}
+        {viewMode === 'workshop-detail' && (lang === 'ca' ? 'Detalls del taller' : 'Detalles del taller')}
+        {viewMode === 'speaker-detail' && (lang === 'ca' ? 'Detalls de la xerrada' : 'Detalles de la charla')}
+      </div>
+
       {/* Main Content View Switcher */}
-      <main id="main-content" tabIndex={-1} className="flex-grow outline-none">
+      <main id="main-content" tabIndex={-1} className="flex-grow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C478D] focus-visible:ring-offset-2">
         {viewMode === 'workshop-detail' && selectedWorkshopId ? (
           <Suspense
             fallback={

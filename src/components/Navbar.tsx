@@ -46,13 +46,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             <img
               src={FESTIVAL_LOGOS.bumFest}
               alt="BUM Tiana FEST"
+              width={160}
+              height={32}
               className="h-8 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </button>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+          <nav aria-label={lang === 'ca' ? 'Navegació principal' : 'Navegación principal'} className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map((link, idx) => (
               <a
                 key={idx}
@@ -71,7 +73,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center p-1 rounded-2xl bg-[#FAF9F3] border border-[#88643B]/30 text-xs font-bold shadow-2xs">
               <button
                 onClick={() => setLang('ca')}
-                className={`px-2.5 py-1 rounded-xl transition cursor-pointer ${
+                aria-pressed={lang === 'ca'}
+                className={`min-w-[44px] min-h-[44px] flex items-center justify-center px-2.5 py-1 rounded-xl transition cursor-pointer ${
                   lang === 'ca'
                     ? 'bg-[#0C478D] text-white shadow-2xs'
                     : 'text-[#181816] hover:text-[#0C478D]'
@@ -81,7 +84,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
               <button
                 onClick={() => setLang('es')}
-                className={`px-2.5 py-1 rounded-xl transition cursor-pointer ${
+                aria-pressed={lang === 'es'}
+                className={`min-w-[44px] min-h-[44px] flex items-center justify-center px-2.5 py-1 rounded-xl transition cursor-pointer ${
                   lang === 'es'
                     ? 'bg-[#0C478D] text-white shadow-2xs'
                     : 'text-[#181816] hover:text-[#0C478D]'

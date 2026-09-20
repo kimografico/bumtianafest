@@ -27,14 +27,16 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   className = '',
 }) => {
   return (
-    <div
+    <button
       onClick={onClick}
-      className={`rounded-[32px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-lg overflow-hidden group ${className}`}
+      className={`w-full text-left rounded-[32px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-lg overflow-hidden group ${className}`}
     >
       <div className="relative h-48 w-full overflow-hidden bg-[#EFEEE0]">
         <img
           src={image}
           alt={title}
+          width={400}
+          height={192}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
           referrerPolicy="no-referrer"
         />
@@ -70,6 +72,6 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
           </span>
         </div>
       </div>
-    </div>
+    </button>
   );
 };

@@ -21,7 +21,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section className="py-16 sm:py-24 bg-transparent border-b border-[#88643B]/25 relative">
+    <section id="faq" className="py-16 sm:py-24 bg-transparent border-b border-[#88643B]/25 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}

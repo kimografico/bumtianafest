@@ -29,9 +29,9 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
       year: '2026',
       subtitle: 'Un día entero en Tiana para compartir aprendizajes, talleres didácticos, charlas de crianza y música en familia.',
       welcomeText: [
-        'Benvingudes i benvinguts al BUM Tiana FEST 2026',
+        'Bienvenidas y bienvenidos al BUM Tiana FEST 2026',
         'Un festival didáctico para las familias de Tiana y alrededores.',
-        'Unas jornadas diferentes donde las familias de Tiana y los alrededores podrán',
+        'Unas jornadas diferentes donde las familias de Tiana y alrededores podrán',
         'disfrutar de un día lleno de actividades donde destacan, talleres,',
         'charlas y música, todo enfocado al público familiar.'
       ],
@@ -53,6 +53,8 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         <img
           src={FESTIVAL_LOGOS.bumFest}
           alt={t.title + ' ' + t.year}
+          width={400}
+          height={80}
           className="w-full h-auto object-contain"
           referrerPolicy="no-referrer"
         />
@@ -68,6 +70,8 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               <img
                 src={FESTIVAL_LOGOS.bumFest}
                 alt={t.title + ' ' + t.year}
+                width={400}
+                height={80}
                 className="h-20 xl:h-24 w-auto object-contain"
                 referrerPolicy="no-referrer"
               />
@@ -116,6 +120,8 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             <img
               src={FESTIVAL_IMAGES.familiaMadera}
               alt="BUM Tiana FEST - Família de Fusta"
+              width={500}
+              height={410}
               className="w-full h-auto max-h-[300px] sm:max-h-[420px] object-contain drop-shadow-xl select-none transition-transform duration-300 group-hover:scale-[1.02]"
               referrerPolicy="no-referrer"
               loading="eager"

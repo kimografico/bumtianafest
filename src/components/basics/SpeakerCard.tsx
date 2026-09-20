@@ -27,9 +27,9 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
   className = '',
 }) => {
   return (
-    <div
+    <button
       onClick={onClick}
-      className={`p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group ${className}`}
+      className={`w-full text-left p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group ${className}`}
     >
       <div className="space-y-5">
         <div className="flex items-center gap-4">
@@ -37,6 +37,8 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
             <img
               src={image}
               alt={name}
+              width={64}
+              height={64}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -74,6 +76,6 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
         <span>{ctaText}</span>
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </div>
-    </div>
+    </button>
   );
 };
