@@ -89,6 +89,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${t.openInMaps}: ${venue.name} (${venue.address})`}
                   className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
                 >
                   <Navigation className="w-4 h-4 text-[#0C478D]" />

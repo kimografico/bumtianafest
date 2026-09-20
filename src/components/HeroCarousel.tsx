@@ -223,18 +223,23 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
         </button>
 
         {/* Dots indicator: centered and below text on mobile, right-aligned on desktop */}
-        <div className="absolute bottom-3.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-20 flex items-center justify-center gap-2">
+        <div className="absolute bottom-2.5 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 z-20 flex items-center justify-center gap-0.5">
           {slides.map((_, dotIdx) => (
             <button
               key={dotIdx}
               onClick={() => setCurrentIndex(dotIdx)}
-              aria-label={`Veure diapositiva ${dotIdx + 1}`}
-              className={`h-2 rounded-full transition-all cursor-pointer ${
-                dotIdx === currentIndex
-                  ? 'w-7 bg-white'
-                  : 'w-2 bg-white/40 hover:bg-white/70'
-              }`}
-            />
+              aria-label={`${lang === 'ca' ? 'Veure diapositiva' : 'Ver diapositiva'} ${dotIdx + 1}: ${slides[dotIdx].title[lang]}`}
+              aria-current={dotIdx === currentIndex ? 'true' : undefined}
+              className="min-w-[40px] min-h-[40px] flex items-center justify-center p-2 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            >
+              <span
+                className={`h-2 rounded-full transition-all block ${
+                  dotIdx === currentIndex
+                    ? 'w-7 bg-white'
+                    : 'w-2 bg-white/40 hover:bg-white/70'
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

@@ -210,6 +210,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
               >
                 <Navigation className="w-4 h-4 text-[#0C478D]" />

@@ -201,6 +201,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                       href={resto.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(`${resto.name} Tiana`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${t.visitWebsite}: ${resto.name}`}
                       className="w-full py-2.5 px-4 rounded-2xl bg-white hover:bg-[#0C478D] hover:text-white text-[#181816] border border-[#88643B]/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
                     >
                       <span>{t.visitWebsite}</span>
