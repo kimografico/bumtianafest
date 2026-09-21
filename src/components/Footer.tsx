@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <footer className="bg-primary text-[#EFEEE0]/80 pt-16 pb-12 border-t border-[#88643B]/30 relative">
+    <footer className="bg-primary text-[#EFEEE0] pt-16 pb-12 border-t border-[#88643B]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Main Footer Grid with 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
