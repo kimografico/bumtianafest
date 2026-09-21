@@ -9,6 +9,8 @@ import carrusel6 from './images/carrusel/TIANA6.jpg';
 // Real Guests / Speakers Portraits
 import armandoBastidaImg from './images/guests/armando-bastida.jpg';
 import laiaFerrerImg from './images/guests/laia-ferrer.jpg';
+import armandoBastidaLarge from './images/guests/ARMANDO.png';
+import laiaFerrerLarge from './images/guests/LAIA.png';
 import oriolRocaImg from './images/guests/oriol-roca.jpg';
 import piMcCarthyImg from './images/guests/pi-mccarthy.jpg';
 
@@ -87,6 +89,8 @@ export const FESTIVAL_IMAGES = {
   // Real Speaker & Guest portraits
   armandoBastida: armandoBastidaImg,
   laiaFerrer: laiaFerrerImg,
+  armandoBastidaLarge: armandoBastidaLarge,
+  laiaFerrerLarge: laiaFerrerLarge,
   luleSoler: laiaFerrerImg, // fallback alias
   nutritionTeam: nutritionTeamImg,
 

@@ -28,14 +28,14 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
     },
   }[lang];
 
-  const getSpeakerImage = (id: string) => {
+  const getSpeakerLargeImage = (id: string) => {
     switch (id) {
       case 'armando-bastida':
-        return FESTIVAL_IMAGES.armandoBastida;
+        return FESTIVAL_IMAGES.armandoBastidaLarge;
       case 'laia-ferrer':
-        return FESTIVAL_IMAGES.laiaFerrer;
+        return FESTIVAL_IMAGES.laiaFerrerLarge;
       default:
-        return FESTIVAL_IMAGES.laiaFerrer;
+        return FESTIVAL_IMAGES.laiaFerrerLarge;
     }
   };
 
@@ -53,39 +53,37 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
           </p>
         </div>
 
-        {/* Speakers Grid with Round Portrait Frame (2 Speakers) */}
+        {/* Speakers Grid with Large Portrait Above Card */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
           {SPEAKERS_DATA.map((speaker) => (
-            <button
-              key={speaker.id}
-              onClick={() => onSelectSpeaker(speaker.id)}
-              className="w-full text-left p-8 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group"
-            >
+            <div key={speaker.id} className="relative group">
+              {/* Large speaker image positioned behind the card */}
+              <div className="flex justify-center relative z-0 -mb-1">
+                <img
+                  src={getSpeakerLargeImage(speaker.id)}
+                  alt={speaker.name}
+                  className={`w-auto max-w-full drop-shadow-lg transition-transform duration-300 ease-out ${
+                    speaker.id === 'laia-ferrer'
+                      ? 'group-hover:scale-105 group-hover:-rotate-2'
+                      : 'group-hover:scale-105 group-hover:rotate-2'
+                  }`}
+                />
+              </div>
+
+              <button
+                onClick={() => onSelectSpeaker(speaker.id)}
+                className="w-full text-left p-8 pt-12 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group relative z-10"
+              >
               <div className="space-y-5">
                 
-                {/* Speaker profile header with round photo frame */}
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#88643B]/40 shadow-md shrink-0 bg-[#EFEEE0] group-hover:border-[#0C478D] group-hover:scale-105 transition">
-                    <img
-                      src={getSpeakerImage(speaker.id)}
-                      alt={speaker.name}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
-                      loading="eager"
-                      fetchPriority="low"
-                      decoding="async"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-extralight text-3xl uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition">
-                      {speaker.name}
-                    </h3>
-                    <p className="text-xs font-bold text-[#88643B]">
-                      {speaker.role[lang]}
-                    </p>
-                  </div>
+                {/* Speaker name & role (no avatar) */}
+                <div>
+                  <h3 className="font-extralight text-3xl uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition">
+                    {speaker.name}
+                  </h3>
+                  <p className="text-xs font-bold text-[#88643B]">
+                    {speaker.role[lang]}
+                  </p>
                 </div>
 
                 {/* Talk title & description */}
@@ -129,7 +127,8 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                 </a>
               </div>
 
-            </button>
+              </button>
+            </div>
           ))}
         </div>
 
