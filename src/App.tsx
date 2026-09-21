@@ -169,22 +169,22 @@ export default function App() {
             {/* 6. Horaris i Cronograma (Timeline Vertical) */}
             <ScheduleSection lang={lang} />
 
-            {/* 7. Localitzacions del Festival a Tiana (amb Google Maps) */}
-            <VenuesSection lang={lang} />
-
-            {/* 8. Gastronomia Local & DJ Vermut */}
+            {/* 7. Gastronomia Local & DJ Vermut */}
             <GastronomySection lang={lang} />
 
-            {/* 9. Cloenda: Concert de Sedajazz Young Band */}
+            {/* 8. Cloenda: Concert de Sedajazz Young Band */}
             <ClosingConcertSection lang={lang} />
 
-            {/* 10. Carrusel d'Entitats Col·laboradores */}
+            {/* 9. Carrusel d'Entitats Col·laboradores */}
             <PartnersCarousel lang={lang} />
 
             {/* 10. Dubtes & Preguntes Freqüents (FAQ) */}
             <FaqSection lang={lang} />
 
-            {/* 11. Apartat Organitzadors: 2LB Produccions */}
+            {/* 11. Localitzacions del Festival a Tiana (amb Google Maps) */}
+            <VenuesSection lang={lang} />
+
+            {/* 12. Apartat Organitzadors: 2LB Produccions */}
             <TwoLBSection lang={lang} />
           </>
         )}
