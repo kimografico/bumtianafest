@@ -2,14 +2,9 @@
 
 @theme {
   --color-primary: #0C478D;
-  --color-primary-dark: #083266;
-  --color-primary-darker: #082850;
-  --color-primary-light: #185EAC;
   --color-secondary: #88643B;
-  --color-secondary-dark: #6E502F;
-  --color-secondary-light: #C19463;
   --color-festbg: #EFEEE0;
-  --color-festcard: #F8F7EE;
+  --color-festcard: #FAF9F3;
   --color-festtext: #181816;
   --color-festmuted: #4A4A43;
 }

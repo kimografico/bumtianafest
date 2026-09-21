@@ -34,11 +34,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
   }[lang];
 
   return (
-    <section id="programa" className="py-20 sm:py-28 bg-[#0C478D] text-white relative overflow-hidden border-b border-[#88643B]/30">
-      {/* Ambient glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#88643B]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#083266]/50 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="programa" className="py-20 sm:py-28 bg-[#0C478D] text-white relative border-b border-[#88643B]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}

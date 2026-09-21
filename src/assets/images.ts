@@ -22,6 +22,9 @@ import wsPercussion from './images/workshops/percusio.jpg';
 import twoLbVisionImg from './images/team/two-lb-vision.jpg';
 import nutritionTeamImg from './images/team/nutrition-team.jpg';
 
+// Cloenda / Concert
+import sedajazzImg from './images/sedajazz.jpg';
+
 // Local Gastronomy & Commerce in Tiana
 import restoCasalImg from './images/gastronomy/casal.jpg';
 import restoBarbarImg from './images/gastronomy/barbar.jpg';
@@ -86,6 +89,9 @@ export const FESTIVAL_IMAGES = {
   laiaFerrer: laiaFerrerImg,
   luleSoler: laiaFerrerImg, // fallback alias
   nutritionTeam: nutritionTeamImg,
+
+  // Cloenda / Concert
+  sedajazz: sedajazzImg,
 
   // Real 2LB Team portraits & vision
   piMcCarthy: piMcCarthyImg,

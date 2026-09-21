@@ -120,12 +120,12 @@ export const WORKSHOPS_DATA: Workshop[] = [
   {
     id: 'jardineria',
     title: {
-      ca: 'Taller de Jardineria & Cura de la Natura: Repoblació de la Serralada de Marina',
-      es: 'Taller de Jardinería & Cuidado de la Naturaleza: Repoblación de la Serralada de Marina'
+      ca: 'Taller Natura: Jardineria & Cura de la Terra',
+      es: 'Taller Naturaleza: Jardinería & Cuidado de la Tierra'
     },
     category: 'compartit',
-    instructor: 'Arnau & Albert (Educadors Ambientals)',
-    location: 'Garden Tiana / Can Riera',
+    instructor: 'Albert SantaMaria & Arnau Calvet',
+    location: 'Plaça de la Vila',
     shortDesc: {
       ca: 'Plantació de plançons i creació de bombes de llavors per recuperar el Parc de la Serralada de Marina després de l\'incendi.',
       es: 'Plantación de plantones y bombas de semillas para recuperar el Parc de la Serralada de Marina tras el incendio.'
@@ -155,8 +155,8 @@ export const WORKSHOPS_DATA: Workshop[] = [
       es: 'Taller de Percusión'
     },
     category: 'compartit',
-    instructor: 'xxxxxxxxx',
-    location: 'xxxxxxxxx',
+    instructor: 'Marc Vila',
+    location: 'Doctor Mascaró',
     shortDesc: {
       ca: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!',
       es: 'El balafón, el djembé, la darbuka, el agogô… ¿Conocéis estos instrumentos? ¡Venid a descubrir sus sonidos y creemos música juntos!'
@@ -165,8 +165,8 @@ export const WORKSHOPS_DATA: Workshop[] = [
       ca: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!',
       es: 'El balafón, el djembé, la darbuka, el agogô… ¿Conocéis estos instrumentos?\n\n¡Venid a descubrir sus sonidos y los de muchos otros! Juntos formaremos una orquesta de percusión y compondremos e interpretaremos piezas musicales inéditas al momento. ¡En familia disfrutaremos creando música juntos!'
     },
-    ageRange: 'xxxxxxxxx',
-    duration: 'xxxxxxxxx',
+    ageRange: 'Famílies i primera infància (totes les edats)',
+    duration: '10:00 - 12:00 (2 hores)',
     materials: {
       ca: 'Balafons, djembés, darbukes, agogôs i instruments de percussió del món facilitats per l\'organització.',
       es: 'Balafones, djembés, darbukas, agogôs e instrumentos de percusión del mundo facilitados por la organización.'
@@ -194,8 +194,8 @@ export const WORKSHOPS_DATA: Workshop[] = [
       es: 'Taller de Teatro & Expresión Corporal para la Primera Infancia'
     },
     category: 'compartit',
-    instructor: 'Joan Arqué & Equip Artístic 2LB',
-    location: 'Sala Albéniz (Escenari Municipal)',
+    instructor: 'Christian Olivé & Marc Costa',
+    location: 'Sala Albéniz',
     shortDesc: {
       ca: 'Jocs d\'improvisació, dinàmiques de moviment, contes vivencials i expressió teatral per a la primera infància.',
       es: 'Juegos de improvisación, dinámicas de movimiento, cuentos vivenciales y expresión teatral para la primera infancia.'
@@ -312,8 +312,8 @@ export const VENUES_DATA: Venue[] = [
       es: 'Punto central de acogida de familias, recogida de pulseras e itinerarios, espacio de encuentro y juegos populares tradicionales.'
     },
     activities: {
-      ca: ['Acollida i Entrega de Polseres (09:30h)', 'Jocs Populars Tradicionals (11:00h - 14:00h)', 'Punt d\'Informació Oficial'],
-      es: ['Acogida y Entrega de Pulseras (09:30h)', 'Juegos Populares Tradicionales (11:00h - 14:00h)', 'Punto de Información Oficial']
+      ca: ['Acollida i Entrega de Polseres (09:30h)', 'Taller Natura: Jardineria & Cura de la Terra (10:00h - 12:00h)', 'Jocs Populars Tradicionals (11:00h - 14:00h)', 'Punt d\'Informació Oficial'],
+      es: ['Acogida y Entrega de Pulseras (09:30h)', 'Taller Naturaleza: Jardinería & Cuidado de la Tierra (10:00h - 12:00h)', 'Juegos Populares Tradicionales (11:00h - 14:00h)', 'Punto de Información Oficial']
     },
     walkingFromCenter: '0 min (Punt Central)',
     coordinates: { lat: 41.4827, lng: 2.2701 }
@@ -327,12 +327,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Carrer de Sant Domènec, 1, 08391 Tiana',
     description: {
-      ca: 'Emblemàtic teatre municipal on tindrà lloc el taller de teatre i expressió matinal i el gran espectacle familiar de cloenda.',
-      es: 'Emblemático teatro municipal donde tendrá lugar el taller de teatro matinal y el gran espectáculo familiar de clausura.'
+      ca: 'Emblemàtic teatre municipal on tindrà lloc el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.',
+      es: 'Emblemático teatro municipal donde tendrá lugar el taller de teatro matinal y el gran concierto familiar de clausura con la Sedajazz Young Band.'
     },
     activities: {
-      ca: ['Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)', 'Espectacle Familiar de Cloenda (19:00h)'],
-      es: ['Taller Teatro & Expresión Primera Infancia (10:00h - 12:00h)', 'Espectáculo Familiar de Clausura (19:00h)']
+      ca: ['Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)', 'Concert de Cloenda: Sedajazz Young Band (19:00h - 20:00h)'],
+      es: ['Taller Teatro & Expresión Primera Infancia (10:00h - 12:00h)', 'Concierto de Clausura: Sedajazz Young Band (19:00h - 20:00h)']
     },
     walkingFromCenter: '1 min a peu (Plaça de la Vila)',
     coordinates: { lat: 41.4828, lng: 2.2701 }
@@ -357,23 +357,23 @@ export const VENUES_DATA: Venue[] = [
     coordinates: { lat: 41.4822, lng: 2.2694 }
   },
   {
-    id: 'can-riera',
-    name: 'Can Riera',
+    id: 'doctor-mascaro',
+    name: 'Doctor Mascaró',
     type: {
-      ca: 'Centre Cívic & Espais Educatius',
-      es: 'Centro Cívico & Espacios Educativos'
+      ca: 'Espai Cultural & Carrer Emblemàtic',
+      es: 'Espacio Cultural & Calle Emblemática'
     },
-    address: 'Carrer Can Riera, 4, 08391 Tiana',
+    address: 'Carrer del Doctor Mascaró, 08391 Tiana',
     description: {
-      ca: 'Espai dedicat al taller matinal de Jardineria & Repoblació de la Serralada de Marina i activitats familiars.',
-      es: 'Espacio dedicado al taller matinal de Jardinería & Repoblación de la Serralada de Marina y actividades familiares.'
+      ca: 'Espai emblemàtic a l\'aire lliure acollidor per a la creació sonora i el gran taller matinal de percussió en família.',
+      es: 'Espacio emblemático al aire libre acogedor para la creación sonora y el gran taller matinal de percusión en familia.'
     },
     activities: {
-      ca: ['Taller de Jardineria & Repoblació (10:00h - 12:00h)'],
-      es: ['Taller de Jardinería & Repoblación (10:00h - 12:00h)']
+      ca: ['Taller de Percussió en Família (10:00h - 12:00h)'],
+      es: ['Taller de Percusión en Familia (10:00h - 12:00h)']
     },
-    walkingFromCenter: '3 min a peu',
-    coordinates: { lat: 41.4835, lng: 2.2685 }
+    walkingFromCenter: '1 min a peu (Plaça de la Vila)',
+    coordinates: { lat: 41.4824, lng: 2.2698 }
   },
   {
     id: 'lescorxador',
@@ -432,11 +432,11 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
   {
     time: '10:00 - 12:00',
     title: {
-      ca: 'Taller de Jardineria & Repoblació de la Serralada de Marina',
-      es: 'Taller de Jardinería & Repoblación de la Serralada de Marina'
+      ca: 'Taller Natura: Jardineria & Cura de la Terra',
+      es: 'Taller Naturaleza: Jardinería & Cuidado de la Tierra'
     },
     category: 'tallers',
-    location: 'Garden Tiana / Can Riera',
+    location: 'Plaça de la Vila',
     description: {
       ca: 'Creació de bombes de llavors i plantació per a la recuperació ambiental del parc després de l\'incendi.',
       es: 'Creación de bombas de semillas y plantación para la recuperación ambiental del parque tras el incendio.'
@@ -447,13 +447,13 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     }
   },
   {
-    time: 'xxxxxxxxx',
+    time: '10:00 - 12:00',
     title: {
       ca: 'Taller de Percussió',
       es: 'Taller de Percusión'
     },
     category: 'tallers',
-    location: 'xxxxxxxxx',
+    location: 'Doctor Mascaró',
     description: {
       ca: 'El balafó, el djembé, la darbuka, l’ago-go... Creació d\'una orquestra de percussió en família.',
       es: 'El balafón, el djembé, la darbuka, el agogô... Creación de una orquesta de percusión en familia.'
@@ -556,14 +556,18 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
   {
     time: '19:00 - 20:00',
     title: {
-      ca: 'Espectacle Teatral Infantil & Familiar de Cloenda',
-      es: 'Espectáculo Teatral Infantil & Familiar de Clausura'
+      ca: 'Concert de Cloenda: Sedajazz Young Band',
+      es: 'Concierto de Clausura: Sedajazz Young Band'
     },
     category: 'espectacle',
     location: 'Sala Albéniz',
     description: {
-      ca: 'Gran espectacle escènic familiar per tancar una jornada inoblidable plena d\'art, rialles i comunitat.',
-      es: 'Gran espectáculo escénico familiar para cerrar una jornada inolvidable llena de arte, risas y comunidad.'
+      ca: 'Gran concert de cloenda amb la Sedajazz Young Band: música creativa, improvisació i repertori festiu per a petits i grans.',
+      es: 'Gran concierto de clausura con la Sedajazz Young Band: música creativa, improvisación y repertorio festivo para pequeños y grandes.'
+    },
+    badge: {
+      ca: 'Cloenda',
+      es: 'Clausura'
     }
   }
 ];
@@ -754,8 +758,8 @@ export const FAQ_DATA = [
       es: '¿Los espacios están adaptados para carritos y movilidad reducida?'
     },
     a: {
-      ca: 'Sí, tots els espais municipals seleccionats (Plaça de la Vila, Sala Albéniz, El Casal, Can Riera, etc.) disposen d\'accessos adaptats i zones d\'aparcament de cotxets.',
-      es: 'Sí, todos los recintos municipales cuentan con accesibilidad adaptada y zonas habilitadas para carritos.'
+      ca: 'Sí, tots els espais municipals seleccionats (Plaça de la Vila, Sala Albéniz, El Casal, Doctor Mascaró, etc.) disposen d\'accessos adaptats i zones d\'aparcament de cotxets.',
+      es: 'Sí, todos los recintos municipales (Plaça de la Vila, Sala Albéniz, El Casal, Doctor Mascaró, etc.) cuentan con accesibilidad adaptada y zonas habilitadas para carritos.'
     }
   }
 ];

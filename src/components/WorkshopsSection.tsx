@@ -28,12 +28,12 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   const t = {
     ca: {
       title: 'Programació de Tallers',
-      subtitle: 'Espais pràctics i creatius durant el matí (10:00h a 12:00h) dedicats a la primera infància i les seves famílies.',
+      subtitle: 'Espais pràctics i creatius durant el matí (10:00h a 12:00h) dedicats a la primera infància i les seves famílies. L\'acollida a les famílies serà a les 9:30h a la Plaça de la Vila.',
       viewDetails: 'Més detalls',
     },
     es: {
       title: 'Programación de Talleres',
-      subtitle: 'Espacios prácticos y creativos durante la mañana (10:00h a 12:00h) dedicados a la primera infancia y sus familias.',
+      subtitle: 'Espacios prácticos y creativos durante la mañana (10:00h a 12:00h) dedicados a la primera infancia y sus familias. La acogida a las familias será a las 9:30h en la Plaça de la Vila.',
       viewDetails: 'Más detalles',
     },
   }[lang];

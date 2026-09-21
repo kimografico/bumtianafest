@@ -8,6 +8,7 @@ import { SpeakersSection } from './components/SpeakersSection';
 import { ScheduleSection } from './components/ScheduleSection';
 import { VenuesSection } from './components/VenuesSection';
 import { GastronomySection } from './components/GastronomySection';
+import { ClosingConcertSection } from './components/ClosingConcertSection';
 import { PartnersCarousel } from './components/PartnersCarousel';
 import { FaqSection } from './components/FaqSection';
 import { TwoLBSection } from './components/TwoLBSection';
@@ -174,7 +175,10 @@ export default function App() {
             {/* 8. Gastronomia Local & DJ Vermut */}
             <GastronomySection lang={lang} />
 
-            {/* 9. Carrusel d'Entitats Col·laboradores */}
+            {/* 9. Cloenda: Concert de Sedajazz Young Band */}
+            <ClosingConcertSection lang={lang} />
+
+            {/* 10. Carrusel d'Entitats Col·laboradores */}
             <PartnersCarousel lang={lang} />
 
             {/* 10. Dubtes & Preguntes Freqüents (FAQ) */}

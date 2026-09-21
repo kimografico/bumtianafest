@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full">
             <a
               href="#tallers"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#0C478D] hover:bg-[#083266] text-white text-sm font-bold shadow-lg shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2 text-center"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#0C478D] hover:opacity-90 text-white text-sm font-bold shadow-lg shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2 text-center"
             >
               <span>{t.ctaWorkshops}</span>
               <ArrowRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
             <a
               href="#programa"
-              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-[#88643B] hover:bg-[#6E502F] text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-[#88643B] hover:opacity-90 text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
               {t.ctaProgram}
             </a>

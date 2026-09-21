@@ -21,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { name: { ca: 'Xerrades', es: 'Charlas' }, href: '#xerrades' },
     { name: { ca: 'Horaris', es: 'Horarios' }, href: '#programa' },
     { name: { ca: 'Localitzacions', es: 'Localizaciones' }, href: '#espais' },
+    { name: { ca: 'Cloenda', es: 'Clausura' }, href: '#cloenda' },
     { name: { ca: '2LB', es: '2LB' }, href: '#organitzacio' },
   ];
 

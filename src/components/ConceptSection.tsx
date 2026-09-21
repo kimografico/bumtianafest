@@ -45,9 +45,9 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
         style={{ backgroundImage: `url(${FESTIVAL_IMAGES.village})` }}
       />
       
-      {/* Soft ambient background glow in secondary corporate color */}
+      {/* Soft ambient background glow in corporate colors */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#88643B]/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#083266]/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0C478D]/25 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         

@@ -220,11 +220,11 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">
-                  {lang === 'ca' ? 'Espai pendent de confirmar (xxxxxxxxx)' : 'Espacio pendiente de confirmar (xxxxxxxxx)'}
+                  {lang === 'ca' ? 'Espai pendent de confirmar' : 'Espacio pendiente de confirmar'}
                 </h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
-                  <span className="text-white">xxxxxxxxx</span>
+                  <span className="text-white">{workshop.location}</span>
                 </p>
               </div>
               <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
