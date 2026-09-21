@@ -70,7 +70,8 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                       height={64}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
-                      loading="lazy"
+                      loading="eager"
+                      fetchPriority="low"
                       decoding="async"
                     />
                   </div>

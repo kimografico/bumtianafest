@@ -3,11 +3,9 @@ import {
   ArrowLeft, 
   Clock, 
   MapPin, 
-  Users, 
   Sparkles, 
   CheckCircle2, 
   Package, 
-  Calendar,
   ExternalLink,
   Navigation
 } from 'lucide-react';
@@ -27,19 +25,23 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
   onBack,
   onSelectWorkshop,
 }) => {
-  const workshop = WORKSHOPS_DATA.find((w) => w.id === workshopId) || WORKSHOPS_DATA[0];
+  const workshop = WORKSHOPS_DATA.find((w) => w.id === workshopId) || 
+    (workshopId === 'vestuari' ? WORKSHOPS_DATA.find((w) => w.id === 'percussio') : undefined) ||
+    WORKSHOPS_DATA[0];
   
   // Find matching venue
-  const venue = VENUES_DATA.find((v) => 
+  const isLocationPending = workshop.location === 'xxxxxxxxx';
+  const venue = !isLocationPending ? (VENUES_DATA.find((v) => 
     workshop.location.toLowerCase().includes(v.name.toLowerCase()) || 
     v.activities[lang].some(act => act.toLowerCase().includes(workshop.title[lang].toLowerCase().slice(0, 8)))
-  ) || VENUES_DATA[0];
+  ) || VENUES_DATA[0]) : undefined;
 
   const otherWorkshops = WORKSHOPS_DATA.filter((w) => w.id !== workshop.id).slice(0, 3);
 
   const getWorkshopImage = (id: string) => {
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
+      case 'percussio': return FESTIVAL_IMAGES.percussion;
       case 'vestuari': return FESTIVAL_IMAGES.costumes;
       case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
       default: return FESTIVAL_IMAGES.workshop;
@@ -49,7 +51,6 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
   const t = {
     ca: {
       back: 'Tornar a la programació',
-      age: 'Edat recomanada',
       duration: 'Horari i durada',
       location: 'Espai a Tiana',
       instructor: 'Formador / Especialista',
@@ -60,12 +61,9 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       openMaps: 'Obrir a Google Maps',
       otherTitle: 'Altres tallers del BUM Tiana FEST',
       viewWorkshop: 'Veure taller →',
-      participate: 'Com participar?',
-      participateDesc: 'Els tallers formen part del Bono Tallers Matí (30€) o Bono Complet (60€). L’accés per a l’acompanyant adult és gratuït.',
     },
     es: {
       back: 'Volver a la programación',
-      age: 'Edad recomendada',
       duration: 'Horario y duración',
       location: 'Espacio en Tiana',
       instructor: 'Formador / Especialista',
@@ -76,8 +74,6 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       openMaps: 'Abrir en Google Maps',
       otherTitle: 'Otros talleres de BUM Tiana FEST',
       viewWorkshop: 'Ver taller →',
-      participate: '¿Cómo participar?',
-      participateDesc: 'Los talleres están incluidos en el Bono Talleres Mañana (30€) o Bono Completo (60€). El acompañante adulto accede gratis.',
     },
   }[lang];
 
@@ -111,15 +107,14 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             alt={workshop.title[lang]}
             width={960}
             height={384}
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
           
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
-            <div className="inline-block px-3 py-1 rounded-full bg-[#0C478D] text-white text-[11px] font-bold uppercase tracking-wider mb-3 shadow-xs">
-              {workshop.category === 'compartit' ? 'Familiar Compartit' : workshop.category}
-            </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-display">
               {workshop.title[lang]}
             </h1>
@@ -127,15 +122,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         </div>
 
         {/* Quick specs grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
-          <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Users className="w-3.5 h-3.5 text-[#88643B]" />
-              <span>{t.age}</span>
-            </div>
-            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.ageRange}</p>
-          </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-[#88643B]" />
@@ -197,42 +184,56 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           </div>
 
           {/* Location & Google Maps Card */}
-          <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
-            <div className="flex flex-wrap items-center justify-between gap-4">
+          {venue ? (
+            <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
+                  <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
+                  <p className="text-xs text-white/90 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+                    <span className="text-white">{venue.address}</span>
+                  </p>
+                </div>
+
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    `${venue.name}, ${venue.address}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
+                >
+                  <Navigation className="w-4 h-4 text-[#0C478D]" />
+                  <span>{t.openMaps}</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
+                </a>
+              </div>
+              
+              <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
+                {venue.description[lang]}
+              </p>
+            </div>
+          ) : (
+            <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
-                <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
+                <h4 className="text-xl font-bold font-display text-white">
+                  {lang === 'ca' ? 'Espai pendent de confirmar (xxxxxxxxx)' : 'Espacio pendiente de confirmar (xxxxxxxxx)'}
+                </h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
-                  <span className="text-white">{venue.address}</span>
+                  <span className="text-white">xxxxxxxxx</span>
                 </p>
               </div>
-
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${venue.name}, ${venue.address}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
-              >
-                <Navigation className="w-4 h-4 text-[#0C478D]" />
-                <span>{t.openMaps}</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
-              </a>
+              <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
+                {lang === 'ca'
+                  ? 'L\'espai definitiu a Tiana s\'anunciarà properament.'
+                  : 'El espacio definitivo en Tiana se anunciará próximamente.'}
+              </p>
             </div>
-            
-            <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
-              {venue.description[lang]}
-            </p>
-          </div>
-
-          {/* How to participate note */}
-          <div className="p-5 rounded-2xl bg-white border border-[#88643B]/25 space-y-1.5 shadow-2xs">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0C478D]">{t.participate}</h4>
-            <p className="text-xs sm:text-sm text-[#4A4A43]">{t.participateDesc}</p>
-          </div>
+          )}
 
         </div>
       </div>
@@ -247,7 +248,6 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               onClick={() => onSelectWorkshop(other.id)}
               className="w-full text-left p-5 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
-              <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.ageRange}</div>
               <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
                 {other.title[lang]}
               </h4>

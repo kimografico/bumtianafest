@@ -67,13 +67,15 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
           {/* Card 1: Por que el nombre BUM (BUMFEST26 SVG Logo in true colors) */}
           <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="h-12 flex items-center justify-start mb-6">
-              <img 
-                src={FESTIVAL_LOGOS.bumFest} 
-                alt="BUM Tiana FEST" 
-                width={150}
-                height={36}
+              <img
+                src={FESTIVAL_LOGOS.bumFest}
+                alt="BUM Tiana FEST"
+                width={459}
+                height={102}
                 className="h-9 w-auto max-w-[150px] object-contain"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="space-y-2">

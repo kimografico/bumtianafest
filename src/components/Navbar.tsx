@@ -46,10 +46,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             <img
               src={FESTIVAL_LOGOS.bumFest}
               alt="BUM Tiana FEST"
-              width={160}
-              height={32}
+              width={459}
+              height={102}
               className="h-8 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              decoding="async"
             />
           </button>
 

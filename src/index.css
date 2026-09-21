@@ -59,6 +59,10 @@ html {
   }
 }
 
+.animate-marquee {
+  will-change: transform;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 8px;

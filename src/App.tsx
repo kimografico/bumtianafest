@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import { Language } from './data/content';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -59,27 +59,27 @@ export default function App() {
     return () => window.removeEventListener('popstate', handleUrlChange);
   }, []);
 
-  const handleSelectWorkshop = (id: string) => {
+  const handleSelectWorkshop = useCallback((id: string) => {
     setSelectedWorkshopId(id);
     setViewMode('workshop-detail');
     window.history.pushState({}, '', `?taller=${id}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
-  const handleSelectSpeaker = (id: string) => {
+  const handleSelectSpeaker = useCallback((id: string) => {
     setSelectedSpeakerId(id);
     setViewMode('speaker-detail');
     window.history.pushState({}, '', `?xerrada=${id}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
-  const handleNavigateHome = () => {
+  const handleNavigateHome = useCallback(() => {
     setViewMode('home');
     setSelectedWorkshopId(null);
     setSelectedSpeakerId(null);
     window.history.pushState({}, '', window.location.pathname);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#EFEEE0] text-[#181816] selection:bg-[#0C478D] selection:text-white relative overflow-x-clip">

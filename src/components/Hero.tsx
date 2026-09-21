@@ -53,8 +53,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         <img
           src={FESTIVAL_LOGOS.bumFest}
           alt={t.title + ' ' + t.year}
-          width={400}
-          height={80}
+          width={459}
+          height={102}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           className="w-full h-auto object-contain"
           referrerPolicy="no-referrer"
         />
@@ -70,8 +73,10 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               <img
                 src={FESTIVAL_LOGOS.bumFest}
                 alt={t.title + ' ' + t.year}
-                width={400}
-                height={80}
+                width={459}
+                height={102}
+                loading="eager"
+                decoding="async"
                 className="h-20 xl:h-24 w-auto object-contain"
                 referrerPolicy="no-referrer"
               />
@@ -122,6 +127,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               alt="BUM Tiana FEST - Família de Fusta"
               width={500}
               height={410}
+              fetchPriority="high"
               className="w-full h-auto max-h-[300px] sm:max-h-[420px] object-contain drop-shadow-xl select-none transition-transform duration-300 group-hover:scale-[1.02]"
               referrerPolicy="no-referrer"
               loading="eager"

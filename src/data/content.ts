@@ -149,34 +149,42 @@ export const WORKSHOPS_DATA: Workshop[] = [
     featured: true
   },
   {
-    id: 'vestuari',
+    id: 'percussio',
     title: {
-      ca: 'Taller de Vestuari Sostenible & Reutilització Creativa',
-      es: 'Taller de Vestuario Sostenible & Reutilización Creativa'
+      ca: 'Taller de Percussió',
+      es: 'Taller de Percusión'
     },
     category: 'compartit',
-    instructor: 'Aina & Roseta',
-    location: 'Can Riera',
+    instructor: 'xxxxxxxxx',
+    location: 'xxxxxxxxx',
     shortDesc: {
-      ca: 'Creació de disfresses enginyoses a partir de capses de cartró, retalls de roba usada i materials quotidians reciclats.',
-      es: 'Creación de disfraces ingeniosos a partir de cajas de cartón, retales de tela usada y materiales cotidianos reciclados.'
+      ca: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!',
+      es: 'El balafón, el djembé, la darbuka, el agogô… ¿Conocéis estos instrumentos? ¡Venid a descubrir sus sonidos y creemos música juntos!'
     },
     fullDesc: {
-      ca: 'Un espai de joc i manualitat basat en la reutilització sense necessitat de disfresses sofisticades ni consumistes. Amb caixes de cartró, tubs de paper, retalls de teles usades i elements quotidians, transformarem allò que tenim a l\'abast en ales, barrets, màscares i complements sorprenents per despertar la imaginació pura dels més petits.',
-      es: 'Un espacio de juego y manualidad basado en la reutilización sin necesidad de disfraces sofisticados ni consumistas. Con cajas de cartón, tubos de papel, retales de telas usadas y elementos cotidianos, transformaremos lo que tenemos a mano en alas, sombreros, máscaras y complementos sorprendentes para despertar la imaginación pura.'
+      ca: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!',
+      es: 'El balafón, el djembé, la darbuka, el agogô… ¿Conocéis estos instrumentos?\n\n¡Venid a descubrir sus sonidos y los de muchos otros! Juntos formaremos una orquesta de percusión y compondremos e interpretaremos piezas musicales inéditas al momento. ¡En familia disfrutaremos creando música juntos!'
     },
-    ageRange: 'Primera infància i famílies (2 a 8 anys)',
-    duration: '10:00 - 12:00 (2 hores)',
+    ageRange: 'xxxxxxxxx',
+    duration: 'xxxxxxxxx',
     materials: {
-      ca: 'Cartró reciclat, retalls tèxtils reutilitzats, coles naturals no tòxiques i pintures a l\'aigua.',
-      es: 'Cartón reciclado, retales textiles reutilizados, colas naturales no tóxicas y pinturas al agua.'
+      ca: 'Balafons, djembés, darbukes, agogôs i instruments de percussió del món facilitats per l\'organització.',
+      es: 'Balafones, djembés, darbukas, agogôs e instrumentos de percusión del mundo facilitados por la organización.'
     },
     pedagogicalValues: {
-      ca: ['Consum conscient i sostenibilitat', 'Joc simbòlic sense artificis', 'Imaginació lliure'],
-      es: ['Consumo consciente y sostenibilidad', 'Juego simbólico sin artificios', 'Imaginación libre']
+      ca: [
+        'Exploració sonora i instruments tradicionals d\'arreu del món',
+        'Sentit del ritme, polirítmies i escolta activa en grup',
+        'Composició i expressió espontània compartida en família'
+      ],
+      es: [
+        'Exploración sonora e instrumentos tradicionales del mundo',
+        'Sentido del ritmo, polirritmias y escucha activa en grupo',
+        'Composición y expresión espontánea compartida en familia'
+      ]
     },
-    tag: 'Reutilització & Creació',
-    iconName: 'Shirt',
+    tag: 'Música & Ritme',
+    iconName: 'Music',
     featured: true
   },
   {
@@ -357,12 +365,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Carrer Can Riera, 4, 08391 Tiana',
     description: {
-      ca: 'Espai dedicat als tallers matinals de Jardineria & Repoblació de la Serralada de Marina i Vestuari Sostenible & Reutilització.',
-      es: 'Espacio dedicado a los talleres matinales de Jardinería & Repoblación de la Serralada de Marina y Vestuario Sostenible & Reutilización.'
+      ca: 'Espai dedicat al taller matinal de Jardineria & Repoblació de la Serralada de Marina i activitats familiars.',
+      es: 'Espacio dedicado al taller matinal de Jardinería & Repoblación de la Serralada de Marina y actividades familiares.'
     },
     activities: {
-      ca: ['Taller de Jardineria & Repoblació (10:00h - 12:00h)', 'Taller de Vestuari Reutilitzat (10:00h - 12:00h)'],
-      es: ['Taller de Jardinería & Repoblación (10:00h - 12:00h)', 'Taller de Vestuario Reutilizado (10:00h - 12:00h)']
+      ca: ['Taller de Jardineria & Repoblació (10:00h - 12:00h)'],
+      es: ['Taller de Jardinería & Repoblación (10:00h - 12:00h)']
     },
     walkingFromCenter: '3 min a peu',
     coordinates: { lat: 41.4835, lng: 2.2685 }
@@ -439,16 +447,16 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     }
   },
   {
-    time: '10:00 - 12:00',
+    time: 'xxxxxxxxx',
     title: {
-      ca: 'Taller de Vestuari Sostenible & Reutilització Creativa',
-      es: 'Taller de Vestuario Sostenible & Reutilización Creativa'
+      ca: 'Taller de Percussió',
+      es: 'Taller de Percusión'
     },
     category: 'tallers',
-    location: 'Can Riera',
+    location: 'xxxxxxxxx',
     description: {
-      ca: 'Disfresses enginyoses amb caixes de cartró, retalls de roba i elements reciclats.',
-      es: 'Disfraces ingeniosos con cajas de cartón, retales de tela y elementos reciclados.'
+      ca: 'El balafó, el djembé, la darbuka, l’ago-go... Creació d\'una orquestra de percussió en família.',
+      es: 'El balafón, el djembé, la darbuka, el agogô... Creación de una orquesta de percusión en familia.'
     },
     badge: {
       ca: 'Taller',
@@ -642,98 +650,70 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
 
 export const PRICING_DATA = {
   ca: {
-    title: 'Tarifes & Accés Popular',
-    subtitle: 'Preus assequibles gràcies al cofinançament de l\'Ajuntament de Tiana per fer del BUM Tiana FEST una festa accessible a tothom.',
+    title: 'Accés 100% Gratuït',
+    subtitle: 'Totes les activitats, tallers, xerrades i espectacles del BUM Tiana FEST són d\'accés obert i gratuït gràcies a l\'Ajuntament de Tiana.',
     packs: [
       {
-        name: 'Bono Tallers Matí',
-        price: '30€',
-        period: 'per infant (primera infància) + acompanyant adult',
-        description: 'Accés lliure als tallers didàctics matinals escollits i a la zona de jocs populars.',
+        name: 'Tallers Didàctics Matinals',
+        price: 'Gratuït',
+        period: 'Entrada lliure per a infants i famílies',
+        description: 'Accés lliure a tots els tallers didàctics matinals i a la zona de jocs populars tradicionals.',
         features: [
           'Material complet inclòs per als tallers',
-          'Tallers compartits amb adult sense cost extra',
-          'Jardineria & Repoblació, Vestuari Reutilitzat i Teatre',
-          'Dret a espai de jocs populars tradicionals'
+          'Activitats familiars obertes a tothom',
+          'Jardineria & Repoblació, Percussió i Teatre',
+          'Espai de jocs populars tradicionals'
         ],
         highlighted: false
       },
       {
-        name: 'Bono Complet (Tallers + Xerrades + Espectacle)',
-        price: '60€',
-        period: 'Pack integral de dia complet per a tota la família',
-        description: 'L\'experiència sencera del BUM Tiana FEST per viure el poble des del matí fins a la cloenda.',
+        name: 'Xerrades de Criança & Espectacle',
+        price: 'Gratuït',
+        period: 'Aforament limitat per ordre d’arribada',
+        description: 'Ponències de Laia Ferrer i Armando Bastida a El Casal i el gran Espectacle Familiar a la Sala Albéniz.',
         features: [
-          'Tots els tallers didàctics matinals (10 a 12h)',
           'Xerrades magistrals de Laia Ferrer i Armando Bastida',
-          'Entrada a l\'Espectacle Teatral Familiar (Sala Albéniz)',
-          'Espai DJ Vermut i jocs tradicionals',
-          'Descompte en tiquets gastronòmics del poble'
+          'Espectacle Teatral Familiar a la Sala Albéniz',
+          'Espai DJ Vermut i dinamització al carrer'
         ],
         highlighted: true,
-        tag: 'Més recomanat'
-      },
-      {
-        name: 'Bono Xerrades & Espectacle',
-        price: '20€ / 25€',
-        period: '1 sessió (20€) · Totes les sessions de tarda (25€)',
-        description: 'Per a qui vulgui gaudir de les ponències de criança a El Casal i l\'espectacle escènic.',
-        features: [
-          'Entrada a les xerrades de Laia Ferrer i Armando Bastida',
-          'Entrada numerada a l\'Espectacle de Cloenda a la Sala Albéniz',
-          'Accés a la zona vermut i dinamització de carrer'
-        ],
-        highlighted: false
+        tag: 'Accés Lliure'
       }
     ],
-    subsidyNote: 'El BUM Tiana FEST compta amb el suport de l\'Ajuntament de Tiana i la Generalitat de Catalunya, cobrint la gran majoria de la producció artística per afavorir les tarifes comunitàries.'
+    subsidyNote: 'El BUM Tiana FEST és una iniciativa cultural comunitària amb el suport de l\'Ajuntament de Tiana.'
   },
   es: {
-    title: 'Tarifas & Acceso Popular',
-    subtitle: 'Precios asequibles gracias a la cofinanciación del Ajuntament de Tiana para hacer de BUM Tiana FEST un festival accesible a todas las familias.',
+    title: 'Acceso 100% Gratuito',
+    subtitle: 'Todas las actividades, talleres, charlas y espectáculos de BUM Tiana FEST son de acceso libre y gratuito gracias al Ajuntament de Tiana.',
     packs: [
       {
-        name: 'Bono Talleres Mañana',
-        price: '30€',
-        period: 'por peque (primera infancia) + acompañante adulto',
-        description: 'Acceso libre a los talleres didácticos de la mañana y a la zona de juegos populares.',
+        name: 'Talleres Didácticos Mañana',
+        price: 'Gratuito',
+        period: 'Entrada libre para familias',
+        description: 'Acceso libre a todos los talleres didácticos matinales y a la zona de juegos populares tradicionales.',
         features: [
           'Material completo incluido para los talleres',
-          'Talleres compartidos con adulto sin coste extra',
-          'Jardinería & Repoblación, Vestuario Reutilizado y Teatro',
-          'Zona de juegos populares tradicionales'
+          'Actividades familiares abiertas a todos',
+          'Jardinería & Repoblación, Percusión y Teatro',
+          'Espacio de juegos populares tradicionales'
         ],
         highlighted: false
       },
       {
-        name: 'Bono Completo (Talleres + Charlas + Espectáculo)',
-        price: '60€',
-        period: 'Pack integral de día completo para toda la familia',
-        description: 'La experiencia completa de BUM Tiana FEST para disfrutar de Tiana de la mañana a la noche.',
+        name: 'Charlas de Crianza & Espectáculo',
+        price: 'Gratuito',
+        period: 'Aforo limitado por orden de llegada',
+        description: 'Ponencias de Laia Ferrer y Armando Bastida en El Casal y el gran Espectáculo Familiar en la Sala Albéniz.',
         features: [
-          'Todos los talleres didácticos matinales (10 a 12h)',
           'Charlas magistrales de Laia Ferrer y Armando Bastida',
-          'Entrada al Espectáculo Teatral Familiar (Sala Albéniz)',
-          'Espacio DJ Vermut y juegos tradicionales',
-          'Descuentos en tickets gastronómicos locales'
+          'Espectáculo Teatral Familiar en la Sala Albéniz',
+          'Espacio DJ Vermut y dinamización en la calle'
         ],
         highlighted: true,
-        tag: 'Más recomendado'
-      },
-      {
-        name: 'Bono Charlas & Espectáculo',
-        price: '20€ / 25€',
-        period: '1 sesión (20€) · Todas las sesiones de tarde (25€)',
-        description: 'Para quienes deseen asistir a las ponencias de crianza en El Casal y al espectáculo escénico.',
-        features: [
-          'Entrada a las charlas de Laia Ferrer y Armando Bastida',
-          'Entrada numerada al Espectáculo de Clausura en la Sala Albéniz',
-          'Acceso a la zona vermut y dinamización de calle'
-        ],
-        highlighted: false
+        tag: 'Acceso Libre'
       }
     ],
-    subsidyNote: 'BUM Tiana FEST cuenta con financiación pública del Ajuntament de Tiana para garantizar una cultura y educación accesible.'
+    subsidyNote: 'BUM Tiana FEST es una iniciativa cultural comunitaria con el apoyo del Ajuntament de Tiana.'
   }
 };
 
@@ -764,8 +744,8 @@ export const FAQ_DATA = [
       es: '¿Se requiere reserva previa para las charlas de crianza?'
     },
     a: {
-      ca: 'L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la comoditat i proximitat de la sessió amb Laia Ferrer i Armando Bastida. Els assistents amb Bono del BUM Tiana FEST tindran accés per ordre d\'arribada.',
-      es: 'El aforo de la Sala Petita de El Casal es limitado para asegurar cercanía con Laia Ferrer y Armando Bastida. Los asistentes con Bono de BUM Tiana FEST tendrán acceso por orden de llegada.'
+      ca: 'L\'accés a totes les xerrades i activitats del BUM Tiana FEST és 100% gratuït. L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l\'entrada serà per estricte ordre d\'arribada.',
+      es: 'El acceso a todas las charlas y actividades de BUM Tiana FEST es 100% gratuito. El aforo de la Sala Petita de El Casal es limitado para garantizar cercanía con Laia Ferrer y Armando Bastida, y la entrada será por estricto orden de llegada.'
     }
   },
   {

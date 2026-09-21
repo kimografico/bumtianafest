@@ -41,6 +41,8 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
               height={64}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div>

@@ -54,6 +54,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 lg:from-transparent to-transparent" />
             </div>

@@ -4,8 +4,8 @@ import { MapPin, ArrowRight } from 'lucide-react';
 export interface WorkshopCardProps {
   title: string;
   facilitator: string;
-  category: string;
-  ageRange: string;
+  category?: string;
+  ageRange?: string;
   description: string;
   location: string;
   image: string;
@@ -26,6 +26,8 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   onClick,
   className = '',
 }) => {
+  const showCategory = category && !category.toLowerCase().includes('compartit');
+
   return (
     <button
       onClick={onClick}
@@ -39,13 +41,19 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
           height={192}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
           referrerPolicy="no-referrer"
+          loading="lazy"
+          decoding="async"
         />
-        <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#0C478D] text-white text-[11px] font-bold backdrop-blur-md shadow-xs">
-          {category}
-        </div>
-        <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FAF9F3] text-[#181816] text-[11px] font-bold backdrop-blur-md border border-[#88643B]/30 shadow-xs">
-          {ageRange}
-        </div>
+        {showCategory && (
+          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#0C478D] text-white text-[11px] font-bold backdrop-blur-md shadow-xs">
+            {category}
+          </div>
+        )}
+        {ageRange && (
+          <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FAF9F3] text-[#181816] text-[11px] font-bold backdrop-blur-md border border-[#88643B]/30 shadow-xs">
+            {ageRange}
+          </div>
+        )}
       </div>
 
       <div className="p-6 space-y-4">

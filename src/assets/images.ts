@@ -16,6 +16,7 @@ import piMcCarthyImg from './images/guests/pi-mccarthy.jpg';
 import wsGardening from './images/workshops/gardening.jpg';
 import wsTheater from './images/workshops/theater.jpg';
 import wsCostumes from './images/workshops/costumes.jpg';
+import wsPercussion from './images/workshops/percusio.jpg';
 
 // Team & Vision
 import twoLbVisionImg from './images/team/two-lb-vision.jpg';
@@ -78,6 +79,7 @@ export const FESTIVAL_IMAGES = {
   gardening: wsGardening,
   theater: wsTheater,
   costumes: wsCostumes,
+  percussion: wsPercussion,
   
   // Real Speaker & Guest portraits
   armandoBastida: armandoBastidaImg,

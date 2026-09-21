@@ -48,7 +48,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       openMaps: 'Obrir a Google Maps',
       otherTitle: 'Altres xerrades de criança i família',
       viewTalk: 'Veure ponència →',
-      accessNote: 'Accés inclòs amb qualsevol dels Bonos del BUM Tiana FEST. Aforament limitat per ordre d’arribada.',
+      accessNote: 'Activitat 100% gratuïta. Aforament limitat per estricte ordre d’arribada.',
     },
     es: {
       back: 'Volver a la programación',
@@ -63,7 +63,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       openMaps: 'Abrir en Google Maps',
       otherTitle: 'Otras charlas de crianza y familia',
       viewTalk: 'Ver ponencia →',
-      accessNote: 'Acceso incluido con cualquiera de los Bonos de BUM Tiana FEST. Aforo limitado por orden de llegada.',
+      accessNote: 'Actividad 100% gratuita. Aforo limitado por estricto orden de llegada.',
     },
   }[lang];
 
@@ -104,6 +104,8 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                 alt={speaker.name}
                 width={96}
                 height={96}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

@@ -52,10 +52,12 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               <img
                 src={FESTIVAL_LOGOS.bumFest}
                 alt="BUM Tiana FEST"
-                width={160}
-                height={36}
+                width={459}
+                height={102}
                 className="h-9 sm:h-11 w-auto object-contain brightness-0 invert"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -91,6 +93,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                     height={100}
                     className="h-14 sm:h-16 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
 
@@ -115,6 +119,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                     height={40}
                     className="h-8 sm:h-10 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
 
@@ -139,6 +145,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                     height={60}
                     className="h-8 sm:h-9 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </div>
@@ -156,6 +164,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 height={28}
                 className="h-7 w-auto object-contain opacity-90"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -163,7 +173,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               <p
                 className="text-xs font-bold uppercase tracking-wider text-white"
                 role="heading"
-                aria-level="2"
+                aria-level={2}
               >
                 {t.linksTitle}
               </p>
@@ -215,6 +225,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 height={32}
                 className="h-7 sm:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-200"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

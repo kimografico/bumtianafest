@@ -18,6 +18,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
   const getWorkshopImage = (id: string) => {
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
+      case 'percussio': return FESTIVAL_IMAGES.percussion;
       case 'vestuari': return FESTIVAL_IMAGES.costumes;
       case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
       default: return FESTIVAL_IMAGES.workshop;
@@ -60,15 +61,16 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
               className="w-full text-left rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer overflow-hidden shadow-sm hover:shadow-lg group flex flex-col sm:flex-row"
             >
               {/* Left Column: Workshop Image */}
-              <div className="sm:w-2/5 min-h-[200px] sm:min-h-full relative overflow-hidden shrink-0">
-                  <img
-                    src={getWorkshopImage(workshop.id)}
-                    alt={workshop.title[lang]}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <div className="sm:w-2/5 min-h-[200px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
+                <img
+                  src={getWorkshopImage(workshop.id)}
+                  alt={workshop.title[lang]}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                   referrerPolicy="no-referrer"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="low"
                   decoding="async"
                 />
               </div>
