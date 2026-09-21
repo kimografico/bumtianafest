@@ -1,7 +1,8 @@
 import React from 'react';
-import { Store, Music, MapPin, ExternalLink, Ticket, CheckCircle2 } from 'lucide-react';
+import { Music, MapPin, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { Language, RESTAURANTS_DATA } from '../data/content';
 import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
+import { LINKS } from '../data/links';
 
 interface GastronomySectionProps {
   lang: Language;
@@ -85,7 +86,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
@@ -94,24 +95,19 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         </div>
 
         {/* Informative Card: How tickets work + DJ accompaniment */}
-        <div className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14 space-y-6">
+        <div className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14 space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#88643B]/20">
-            <div className="flex items-start sm:items-center gap-4">
-              <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-[#0C478D]/10 border border-[#0C478D]/20 text-[#0C478D] items-center justify-center shrink-0 shadow-inner">
-                <Ticket className="w-7 h-7" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0C478D]">
+            <div className="space-y-1">
+                <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-[#0C478D]">
                   {t.ticketsTitle}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#4A4A43] font-normal">
                   {t.ticketsDesc}
                 </p>
               </div>
-            </div>
 
             {/* Ambient Music Pill */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#88643B] text-white text-xs font-bold shrink-0 shadow-md">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded bg-[#88643B] text-white text-xs font-bold shrink-0 shadow-md">
               <Music className="w-4 h-4 text-white shrink-0" />
               <span>DJ Vermut amb Xavi Vinyasa (14:00h - 16:00h)</span>
             </div>
@@ -119,7 +115,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
 
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 pt-2">
             {t.ticketPoints.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#88643B]/25">
+              <div key={idx} className="flex items-start gap-3 p-4 rounded bg-white border border-[#88643B]/25">
                 <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-[#3A3A34] leading-relaxed font-normal">
                   {point}
@@ -130,19 +126,16 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
         </div>
 
         {/* Restaurants Grid with horizontal card format */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2.5">
-            <Store className="w-5 h-5 text-[#88643B]" />
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <div className="space-y-6">
+            <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
               {t.restaurantsTitle}
             </h3>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {RESTAURANTS_DATA.map((resto, idx) => (
               <div
                 key={idx}
-                className="rounded-[36px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
+                className="rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
               >
                 {/* Left Column: Restaurant Photo */}
                 <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
@@ -164,7 +157,7 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h4 className="text-lg sm:text-xl font-extrabold text-[#181816] group-hover:text-[#0C478D] transition leading-snug">
+                        <h4 className="text-lg sm:text-xl font-extralight uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition leading-snug">
                           {resto.name}
                         </h4>
                         <span className="text-xs font-bold text-[#88643B]">
@@ -204,11 +197,11 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                   {/* Button */}
                   <div className="pt-1">
                     <a
-                      href={resto.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(`${resto.name} Tiana`)}`}
+                      href={resto.websiteUrl || LINKS.google.searchRestaurant(resto.name)}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${t.visitWebsite}: ${resto.name}`}
-                      className="w-full py-2.5 px-4 rounded-2xl bg-white hover:bg-[#0C478D] hover:text-white text-[#181816] border border-[#88643B]/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
+                      className="w-full py-2.5 px-4 rounded bg-white hover:bg-[#0C478D] hover:text-white text-[#181816] border border-[#88643B]/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
                     >
                       <span>{t.visitWebsite}</span>
                       <ExternalLink className="w-3.5 h-3.5" />

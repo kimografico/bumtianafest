@@ -1,3 +1,5 @@
+import { LINKS } from './links';
+
 export type Language = 'ca' | 'es';
 
 export interface Workshop {
@@ -64,6 +66,7 @@ export interface Speaker {
   };
   organization?: string;
   website?: string;
+  instagram?: string;
   bio: {
     ca: string;
     es: string;
@@ -120,19 +123,19 @@ export const WORKSHOPS_DATA: Workshop[] = [
   {
     id: 'jardineria',
     title: {
-      ca: 'Taller Natura: Jardineria & Cura de la Terra',
-      es: 'Taller Naturaleza: Jardinería & Cuidado de la Tierra'
+      ca: 'Taller de Natura',
+      es: 'Taller de Naturaleza'
     },
     category: 'compartit',
     instructor: 'Albert SantaMaria & Arnau Calvet',
     location: 'Plaça de la Vila',
     shortDesc: {
-      ca: 'Plantació de plançons i creació de bombes de llavors per recuperar el Parc de la Serralada de Marina després de l\'incendi.',
-      es: 'Plantación de plantones y bombas de semillas para recuperar el Parc de la Serralada de Marina tras el incendio.'
+      ca: 'Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.',
+      es: 'Taller de reforestación ciudadana y jardinería. Crearemos bombas de semillas y las espararemos por zonas degradadas del pueblo.'
     },
     fullDesc: {
-      ca: 'Activitat lúdica i de consciència ecològica centrada en la repoblació activa del Parc de la Serralada de Marina de Tiana després d\'un incendi anterior. Els infants i les seves famílies aprendran a elaborar bombes de llavors d\'espècies autòctones mediterrànies (pins, alzines, romaní) i trasplantaran petits plançons que ajudaran a regenerar la massa forestal del nostre entorn natural.',
-      es: 'Actividad lúdica y de conciencia ecológica centrada en la repoblación activa del Parc de la Serralada de Marina de Tiana tras un incendio anterior. Los peques y sus familias aprenderán a elaborar bombas de semillas de especies autóctonas mediterráneas (pinos, encinas, romero) y trasplantarán pequeños plantones que ayudarán a regenerar la masa forestal de nuestro entorno.'
+      ca: 'Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.',
+      es: 'Taller de reforestación ciudadana y jardinería. Crearemos bombas de semillas y las espararemos por zonas degradadas del pueblo.'
     },
     ageRange: 'Primera infància i famílies (2 a 8 anys)',
     duration: '10:00 - 12:00 (2 hores)',
@@ -190,19 +193,19 @@ export const WORKSHOPS_DATA: Workshop[] = [
   {
     id: 'teatre-expressio',
     title: {
-      ca: 'Taller de Teatre & Expressió Corporal per a la Primera Infància',
-      es: 'Taller de Teatro & Expresión Corporal para la Primera Infancia'
+      ca: 'Taller de Teatre',
+      es: 'Taller de Teatro'
     },
     category: 'compartit',
     instructor: 'Christian Olivé & Marc Costa',
     location: 'Sala Albéniz',
     shortDesc: {
-      ca: 'Jocs d\'improvisació, dinàmiques de moviment, contes vivencials i expressió teatral per a la primera infància.',
-      es: 'Juegos de improvisación, dinámicas de movimiento, cuentos vivenciales y expresión teatral para la primera infancia.'
+      ca: 'Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.',
+      es: 'Trabajaremos el juego teatral a partir de las artes plásticas y las improvisaciones. ¿Cómo nos inventamos un personaje? ¿Cómo lo movemos? ¿Cómo lo vestimos?... Ven a descubrir cuatro pinceladas teatrales a partir del mundo del papel.'
     },
     fullDesc: {
-      ca: 'Adaptat exclusivament per als més petits i els seus acompanyants, aquest taller proposa jocs motrius, contes vivencials i exploració de l\'espai escènic per expressar emocions, desinhibir-se i gaudir del teatre en família en un entorn càlid i segur.',
-      es: 'Adaptado exclusivamente para los más pequeños y sus acompañantes, este taller propone juegos motrices, cuentos vivenciales y exploración del espacio escénico para expresar emociones, desinhibirse y disfrutar del teatro en familia en un entorno cálido y seguro.'
+      ca: 'Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.',
+      es: 'Trabajaremos el juego teatral a partir de las artes plásticas y las improvisaciones. ¿Cómo nos inventamos un personaje? ¿Cómo lo movemos? ¿Cómo lo vestimos?... Ven a descubrir cuatro pinceladas teatrales a partir del mundo del papel.'
     },
     ageRange: 'Primera infància (2 a 8 anys + acompanyant)',
     duration: '10:00 - 12:00 (2 hores)',
@@ -221,44 +224,6 @@ export const WORKSHOPS_DATA: Workshop[] = [
 ];
 
 export const SPEAKERS_DATA: Speaker[] = [
-  {
-    id: 'armando-bastida',
-    name: 'Armando Bastida',
-    role: {
-      ca: 'Infermer Pediàtric, Escriptor & Divulgador',
-      es: 'Enfermero Pediátrico, Escritor & Divulgador'
-    },
-    organization: 'Criar con Sentido Común',
-    website: 'https://www.armandobastida.com/',
-    bio: {
-      ca: 'Referent internacional en criança respectuosa, infermer pediàtric amb més de dues dècades d\'experiència, autor de best-sellers com "Criar con el corazón" o "Educar sin miedo". Fundador de la comunitat "Crianza con Sentido Común" que acompanya milers de famílies.',
-      es: 'Referente internacional en crianza respetuosa, enfermero pediátrico con más de 20 años de experiencia, autor de éxitos como "Criar con el corazón" o "Educar sin miedo", y fundador de "Crianza con Sentido Común".'
-    },
-    talkTitle: {
-      ca: 'Criar amb sentit comú',
-      es: 'Criar con sentido común'
-    },
-    talkDescription: {
-      ca: 'Una trobada propera, pràctica i plena d\'empatia on Armando Bastida abordarà els reptes reals de la primera infància sota el lema "Crianza con sentido común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
-      es: 'Un encuentro cercano, práctico y lleno de empatía donde Armando Bastida abordará los desafíos reales de la primera infancia bajo el lema "Crianza con sentido común": desmontar mitos, reducir la culpa parental y reforzar la conexión familiar en el día a día.'
-    },
-    time: '17:00h - 18:30h',
-    location: 'Sala Petita d\'El Casal de Tiana',
-    highlights: {
-      ca: [
-        'Acompanyament emocional des de la primera infància',
-        'Com establir límits segurs sense recórrer al càstig ni a la culpa',
-        'Torn obert de preguntes directes amb Armando Bastida',
-        'Signatura de llibres en finalitzar la xerrada'
-      ],
-      es: [
-        'Acompañamiento emocional desde la primera infancia',
-        'Cómo establecer límites seguros sin recurrir al castigo ni a la culpa',
-        'Turno abierto de preguntas directas con Armando Bastida',
-        'Firma de libros al finalizar la charla'
-      ]
-    }
-  },
   {
     id: 'laia-ferrer',
     name: 'Laia Ferrer',
@@ -280,7 +245,7 @@ export const SPEAKERS_DATA: Speaker[] = [
       es: "¿Qué consecuencias tiene el uso o abuso de pantallas en la etapa de los 0 a los 3 años? A menudo solemos pensar que lo que hacemos con los más pequeños de casa no tendrá tanto impacto porque no se acordarán, pero es justamente al contrario. Los primeros años de vida son clave para el neurodesarrollo de los niños. Una detección precoz y una correcta estimulación psicomotora marcan la diferencia para el futuro de esa criatura."
     },
     time: '16:00h - 17:00h',
-    location: "Sala Petita d'El Casal de Tiana",
+    location: 'Sala Albéniz',
     highlights: {
       ca: [
         "Conseqüències de l'ús o abús de pantalles en l'etapa dels 0 als 3 anys",
@@ -293,6 +258,45 @@ export const SPEAKERS_DATA: Speaker[] = [
         "Los primeros años como clave fundamental para el neurodesarrollo infantil",
         "La importancia de una detección precoz y una correcta estimulación psicomotora",
         "Turno abierto de preguntas y recomendaciones prácticas para familias"
+      ]
+    }
+  },
+  {
+    id: 'armando-bastida',
+    name: 'Armando Bastida',
+    role: {
+      ca: 'Infermer Pediàtric, Escriptor & Divulgador',
+      es: 'Enfermero Pediátrico, Escritor & Divulgador'
+    },
+    organization: 'Criar con Sentido Común',
+    website: LINKS.speakers.armandoBastida,
+    instagram: LINKS.instagram.armandoBastida,
+    bio: {
+      ca: 'Referent internacional en criança respectuosa, infermer pediàtric amb més de dues dècades d\'experiència, autor de best-sellers com "Criar con el corazón" o "Educar sin miedo". Fundador de la comunitat "Crianza con Sentido Común" que acompanya milers de famílies. Divulgador amb més de 1,8 milions de seguidors a Instagram, on comparteix continguts pràctics i properos sobre salut infantil i educació.',
+      es: 'Referente internacional en crianza respetuosa, enfermero pediátrico con más de 20 años de experiencia, autor de éxitos como "Criar con el corazón" o "Educar sin miedo", y fundador de "Crianza con Sentido Común". Divulgador con más de 1,8 millones de seguidores en Instagram, donde comparte contenidos prácticos y cercanos sobre salud infantil y educación.'
+    },
+    talkTitle: {
+      ca: 'Criar amb sentit comú',
+      es: 'Criar con sentido común'
+    },
+    talkDescription: {
+      ca: 'Una trobada propera, pràctica i plena d\'empatia on Armando Bastida abordarà els reptes reals de la primera infància sota el lema "Crianza con sentido común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
+      es: 'Un encuentro cercano, práctico y lleno de empatía donde Armando Bastida abordará los desafíos reales de la primera infancia bajo el lema "Crianza con sentido común": desmontar mitos, reducir la culpa parental y reforzar la conexión familiar en el día a día.'
+    },
+    time: '17:00h - 18:30h',
+    location: 'Sala Albéniz',
+    highlights: {
+      ca: [
+        'Acompanyament emocional des de la primera infància',
+        'Com establir límits segurs sense recórrer al càstig ni a la culpa',
+        'Torn obert de preguntes directes amb Armando Bastida',
+        'Signatura de llibres en finalitzar la xerrada'
+      ],
+      es: [
+        'Acompañamiento emocional desde la primera infancia',
+        'Cómo establecer límites seguros sin recurrir al castigo ni a la culpa',
+        'Turno abierto de preguntas directas con Armando Bastida',
+        'Firma de libros al finalizar la charla'
       ]
     }
   }
@@ -327,12 +331,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Carrer de Sant Domènec, 1, 08391 Tiana',
     description: {
-      ca: 'Emblemàtic teatre municipal on tindrà lloc el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.',
-      es: 'Emblemático teatro municipal donde tendrá lugar el taller de teatro matinal y el gran concierto familiar de clausura con la Sedajazz Young Band.'
+      ca: 'Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.',
+      es: 'Emblemático teatro municipal donde tendrán lugar las charlas de crianza, el taller de teatro matinal y el gran concierto familiar de clausura con la Sedajazz Young Band.'
     },
     activities: {
-      ca: ['Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)', 'Concert de Cloenda: Sedajazz Young Band (19:00h - 20:00h)'],
-      es: ['Taller Teatro & Expresión Primera Infancia (10:00h - 12:00h)', 'Concierto de Clausura: Sedajazz Young Band (19:00h - 20:00h)']
+      ca: ['Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)', 'Xerrada Armando Bastida: Criança amb Sentit Comú (17:00h)', 'Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)', 'Concert de Cloenda: Sedajazz Young Band (19:00h - 20:00h)'],
+      es: ['Charla Laia Ferrer: Neurodesarrollo, lenguaje y pantallas (16:00h)', 'Charla Armando Bastida: Crianza con Sentido Común (17:00h)', 'Taller Teatro & Expresión Primera Infancia (10:00h - 12:00h)', 'Concierto de Clausura: Sedajazz Young Band (19:00h - 20:00h)']
     },
     walkingFromCenter: '1 min a peu (Plaça de la Vila)',
     coordinates: { lat: 41.4828, lng: 2.2701 }
@@ -346,12 +350,12 @@ export const VENUES_DATA: Venue[] = [
     },
     address: 'Avinguda Isaac Albéniz, 12, 08391 Tiana',
     description: {
-      ca: 'Cor de les xerrades magistrals de criança: ponències de Laia Ferrer (16:00h) i d\'Armando Bastida (17:00h) a la Sala Petita.',
-      es: 'Corazón de las charlas magistrales de crianza: ponencias de Laia Ferrer (16:00h) y de Armando Bastida (17:00h) en la Sala Petita.'
+      ca: 'Espai de trobada i acollida del festival, seu de l\'Associació de Comerciants de Tiana (ACIST).',
+      es: 'Espacio de encuentro y acogida del festival, sede de la Asociación de Comerciantes de Tiana (ACIST).'
     },
     activities: {
-      ca: ['Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)', 'Xerrada Armando Bastida: Criança amb Sentit Comú (17:00h)'],
-      es: ['Charla Laia Ferrer: Neurodesarrollo, lenguaje y pantallas (16:00h)', 'Charla Armando Bastida: Crianza con Sentido Común (17:00h)']
+      ca: [],
+      es: []
     },
     walkingFromCenter: '2 min a peu',
     coordinates: { lat: 41.4822, lng: 2.2694 }
@@ -526,7 +530,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
       es: 'Charla: Laia Ferrer - "Neurodesarrollo, lenguaje y pantallas"'
     },
     category: 'xerrades',
-    location: "Sala Petita d'El Casal de Tiana",
+    location: 'Sala Albéniz',
     description: {
       ca: "Impacte de l'ús i abús de pantalles en l'etapa dels 0 als 3 anys, claus del neurodesenvolupament infantil i estimulació psico-motora.",
       es: "Impacto del uso y abuso de pantallas en la etapa de 0 a 3 años, claves del neurodesarrollo infantil y estimulación psicomotora."
@@ -543,7 +547,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
       es: 'Charla: Armando Bastida - "Criar con sentido común"'
     },
     category: 'xerrades',
-    location: 'Sala Petita d\'El Casal de Tiana',
+    location: 'Sala Albéniz',
     description: {
       ca: 'Claus de la criança respectuosa, desmuntar mites i reduir la culpa per gaudir de la infància amb sentit comú.',
       es: 'Claves de la crianza respetuosa, desmontar mitos y reducir la culpa para disfrutar de la infancia con sentido común.'
@@ -582,7 +586,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Ticket menú BUMFEST con fideuá, opción vegetariana y postres caseros.'
     },
     address: 'Av. Isaac Albéniz, 12',
-    websiteUrl: 'https://www.instagram.com/elcasaldetiana/'
+    websiteUrl: LINKS.restaurants.casal
   },
   {
     id: 'barbar',
@@ -593,7 +597,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Combo vermut artesanal + tapa de proximidad + bebida infantil.'
     },
     address: 'Plaça de la Vila',
-    websiteUrl: 'https://www.instagram.com/sombarbarstiana/'
+    websiteUrl: LINKS.restaurants.barbar
   },
   {
     id: 'casino',
@@ -604,7 +608,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Bocadillos calientes especiales BUM, tapas para compartir y helados artesanos.'
     },
     address: 'Carrer de Sant Valentí',
-    websiteUrl: 'https://casinodetiana.com/'
+    websiteUrl: LINKS.restaurants.casino
   },
   {
     id: 'tiriti',
@@ -615,7 +619,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Pizzas familiares con ingredientes locales y raciones infantiles.'
     },
     address: 'Carrer d\'Edith Llaurador',
-    websiteUrl: 'https://tiriti.es/'
+    websiteUrl: LINKS.restaurants.tiriti
   },
   {
     id: 'aviMingo',
@@ -626,7 +630,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Platos combinados familiares y carnes a la brasa.'
     },
     address: 'Carrer de Matas',
-    websiteUrl: 'https://www.avimingo.com/'
+    websiteUrl: LINKS.restaurants.aviMingo
   },
   {
     id: 'verdEsBo',
@@ -637,7 +641,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUMFEST.'
     },
     address: 'Carrer de Lola Anglada, Tiana',
-    websiteUrl: 'https://floristeriastop.com/floristeria-verd-es-bo-tiana/'
+    websiteUrl: LINKS.restaurants.verdEsBo
   },
   {
     id: 'espaiEco',
@@ -648,7 +652,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
       es: 'Snacks saludables, fruta ecológica de temporada y productos locales para las familias.'
     },
     address: 'Carrer de Sant Valentí, Tiana',
-    websiteUrl: 'https://espaiecologic.com/'
+    websiteUrl: LINKS.restaurants.espaiEco
   }
 ];
 
@@ -748,8 +752,8 @@ export const FAQ_DATA = [
       es: '¿Se requiere reserva previa para las charlas de crianza?'
     },
     a: {
-      ca: 'L\'accés a totes les xerrades i activitats del BUMFEST és 100% gratuït. L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l\'entrada serà per estricte ordre d\'arribada.',
-      es: 'El acceso a todas las charlas y actividades de BUMFEST es 100% gratuito. El aforo de la Sala Petita de El Casal es limitado para garantizar cercanía con Laia Ferrer y Armando Bastida, y la entrada será por estricto orden de llegada.'
+      ca: 'L\'accés a totes les xerrades i activitats del BUMFEST és 100% gratuït. L\'aforament de la Sala Albéniz és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l\'entrada serà per estricte ordre d\'arribada.',
+      es: 'El acceso a todas las charlas y actividades de BUMFEST es 100% gratuito. El aforo de la Sala Albéniz es limitado para garantir cercanía con Laia Ferrer y Armando Bastida, y la entrada será por estricto orden de llegada.'
     }
   },
   {

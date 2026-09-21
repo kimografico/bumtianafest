@@ -2,6 +2,7 @@ import React from 'react';
 import { Clock, MapPin, ArrowRight } from 'lucide-react';
 import { Language, SPEAKERS_DATA } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
+import { LINKS } from '../data/links';
 
 interface SpeakersSectionProps {
   lang: Language;
@@ -14,14 +15,16 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
 }) => {
   const t = {
     ca: {
-      title: 'Cicle de Ponències i Família',
+      title: 'Xerrades',
       subtitle: 'Espais de reflexió, benestar i acompanyament en les diferents etapes del creixement.',
       viewDetails: 'Veure detalls de la xerrada',
+      reservar: 'Reservar plaça',
     },
     es: {
-      title: 'Ciclo de Ponencias y Familia',
+      title: 'Charlas',
       subtitle: 'Espacios de reflexión, bienestar y acompañamiento en las distintas etapas del crecimiento.',
       viewDetails: 'Ver detalles de la charla',
+      reservar: 'Reservar plaza',
     },
   }[lang];
 
@@ -42,7 +45,7 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
@@ -56,7 +59,7 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
             <button
               key={speaker.id}
               onClick={() => onSelectSpeaker(speaker.id)}
-              className="w-full text-left p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group"
+              className="w-full text-left p-8 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group"
             >
               <div className="space-y-5">
                 
@@ -76,7 +79,7 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                     />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-xl text-[#181816] group-hover:text-[#0C478D] transition">
+                    <h3 className="font-extralight text-3xl uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition">
                       {speaker.name}
                     </h3>
                     <p className="text-xs font-bold text-[#88643B]">
@@ -109,12 +112,21 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
 
               </div>
 
-              {/* Action Button */}
-              <div className="pt-4 border-t border-[#88643B]/20">
-                <span className="w-full py-2.5 px-4 rounded-2xl bg-white/80 group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
+              {/* Action Buttons */}
+              <div className="pt-4 border-t border-[#88643B]/20 flex flex-col gap-2">
+                <span className="w-full py-2.5 px-4 rounded bg-white/80 group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
                   <span>{t.viewDetails}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
+                <a
+                  href={LINKS.forms.reservarPlaca}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="w-full py-2.5 px-4 rounded bg-[#88643B] hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs active:scale-95"
+                >
+                  {t.reservar}
+                </a>
               </div>
 
             </button>

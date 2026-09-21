@@ -20,7 +20,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-3xl bg-white/60 backdrop-blur-xl border overflow-hidden transition-all shadow-xs ${
+      className={`rounded bg-white/60 backdrop-blur-xl border overflow-hidden transition-all shadow-xs ${
         isOpen
           ? 'border-blue-300 ring-2 ring-blue-500/10'
           : 'border-white hover:border-blue-200'
@@ -33,7 +33,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       >
         <span className="flex items-center gap-3">
           {indexBadge ? (
-            <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 text-xs font-black flex items-center justify-center shrink-0">
+            <span className="w-6 h-6 rounded bg-blue-100 text-blue-800 text-xs font-black flex items-center justify-center shrink-0">
               {indexBadge}
             </span>
           ) : (

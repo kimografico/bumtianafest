@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 key={idx}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="px-3.5 py-2 rounded-xl text-xs font-bold text-[#181816] hover:text-[#0C478D] hover:bg-[#88643B]/10 transition whitespace-nowrap"
+                className="px-3.5 py-2 rounded text-xs font-bold text-[#181816] hover:text-[#0C478D] hover:bg-[#88643B]/10 transition whitespace-nowrap"
               >
                 {link.name[lang]}
               </a>
@@ -72,11 +72,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Actions: Language Switcher & Mobile Menu */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Language Switcher Pill */}
-            <div className="flex items-center p-1 rounded-2xl bg-[#FAF9F3] border border-[#88643B]/30 text-xs font-bold shadow-2xs">
+            <div className="flex items-center p-0.5 rounded bg-[#FAF9F3] border border-[#88643B]/30 text-[10px] font-bold shadow-2xs">
               <button
                 onClick={() => setLang('ca')}
                 aria-pressed={lang === 'ca'}
-                className={`min-w-[44px] min-h-[44px] flex items-center justify-center px-2.5 py-1 rounded-xl transition cursor-pointer ${
+                className={`px-2 py-1 rounded transition cursor-pointer ${
                   lang === 'ca'
                     ? 'bg-[#0C478D] text-white shadow-2xs'
                     : 'text-[#181816] hover:text-[#0C478D]'
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 onClick={() => setLang('es')}
                 aria-pressed={lang === 'es'}
-                className={`min-w-[44px] min-h-[44px] flex items-center justify-center px-2.5 py-1 rounded-xl transition cursor-pointer ${
+                className={`px-2 py-1 rounded transition cursor-pointer ${
                   lang === 'es'
                     ? 'bg-[#0C478D] text-white shadow-2xs'
                     : 'text-[#181816] hover:text-[#0C478D]'
@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-2xl md:hidden text-[#181816] hover:bg-[#88643B]/15 border border-[#88643B]/30 transition cursor-pointer"
+              className="p-2 rounded md:hidden text-[#181816] hover:bg-[#88643B]/15 border border-[#88643B]/30 transition cursor-pointer"
               aria-label={lang === 'ca' ? 'Menú' : 'Menú'}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               key={idx}
               href={link.href}
               onClick={handleLinkClick}
-              className="block px-4 py-3 rounded-2xl text-sm font-bold text-[#181816] hover:bg-[#0C478D]/10 hover:text-[#0C478D] transition"
+              className="block px-4 py-3 rounded text-sm font-bold text-[#181816] hover:bg-[#0C478D]/10 hover:text-[#0C478D] transition"
             >
               {link.name[lang]}
             </a>

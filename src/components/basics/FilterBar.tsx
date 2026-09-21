@@ -28,7 +28,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             key={option.id}
             type="button"
             onClick={() => onSelect(option.id)}
-            className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+            className={`px-5 py-2.5 rounded text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
               isActive
                 ? 'bg-blue-900 text-white shadow-md shadow-blue-900/20'
                 : 'bg-white/70 hover:bg-white text-slate-700 border border-white hover:border-blue-200'
@@ -37,7 +37,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
             <span>{option.label}</span>
             {typeof option.count === 'number' && (
               <span
-                className={`px-2 py-0.5 rounded-full text-[10px] font-black ${
+                className={`px-2 py-0.5 rounded text-[10px] font-black ${
                   isActive ? 'bg-white/20 text-white' : 'bg-slate-200/80 text-slate-700'
                 }`}
               >

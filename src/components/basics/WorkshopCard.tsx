@@ -31,7 +31,7 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left rounded-[32px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-lg overflow-hidden group ${className}`}
+      className={`w-full text-left rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-lg overflow-hidden group ${className}`}
     >
       <div className="relative h-48 w-full overflow-hidden bg-[#EFEEE0]">
         <img
@@ -45,12 +45,12 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
           decoding="async"
         />
         {showCategory && (
-          <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#0C478D] text-white text-[11px] font-bold backdrop-blur-md shadow-xs">
+          <div className="absolute top-3 left-3 px-3 py-1 rounded bg-[#0C478D] text-white text-[11px] font-bold backdrop-blur-md shadow-xs">
             {category}
           </div>
         )}
         {ageRange && (
-          <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#FAF9F3] text-[#181816] text-[11px] font-bold backdrop-blur-md border border-[#88643B]/30 shadow-xs">
+          <div className="absolute top-3 right-3 px-3 py-1 rounded bg-[#FAF9F3] text-[#181816] text-[11px] font-bold backdrop-blur-md border border-[#88643B]/30 shadow-xs">
             {ageRange}
           </div>
         )}

@@ -2,6 +2,7 @@ import React from "react";
 import { MapPin } from "lucide-react";
 import { Language } from "../data/content";
 import { FESTIVAL_LOGOS } from "../assets/images";
+import { LINKS } from "../data/links";
 
 interface FooterProps {
   lang: Language;
@@ -82,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               <div className="flex items-center flex-wrap gap-8 sm:gap-10 md:gap-12 pt-2">
                 {/* 1. Ajuntament de Tiana */}
                 <a
-                  href="https://tiana.cat/"
+                  href={LINKS.institutional.ajuntamentTiana}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block group shrink-0"
@@ -134,7 +135,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
 
                 {/* 3. Diputació de Barcelona */}
                 <a
-                  href="https://www.diba.cat/"
+                  href={LINKS.institutional.diputacioBarcelona}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block group shrink-0"
@@ -246,7 +247,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             {lang === "ca" ? "Tots els drets reservats." : "Todos los derechos reservados."} ·{" "}
             {lang === "ca" ? "Disseny web: " : "Diseño web: "}
             <a
-              href="https://kimografico.com"
+              href={LINKS.credits.webDesign}
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:text-white transition font-medium"

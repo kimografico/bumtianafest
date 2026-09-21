@@ -40,7 +40,7 @@ export const Badge: React.FC<BadgeProps> = ({
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs shadow-2xs select-none ${variantClasses} ${className}`}
+      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs shadow-2xs select-none ${variantClasses} ${className}`}
     >
       {icon && <span className="shrink-0">{icon}</span>}
       <span>{children}</span>

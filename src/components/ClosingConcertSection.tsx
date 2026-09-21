@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigation } from 'lucide-react';
 import { Language } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
+import { LINKS } from '../data/links';
 
 interface ClosingConcertSectionProps {
   lang: Language;
@@ -60,7 +61,7 @@ export const ClosingConcertSection: React.FC<ClosingConcertSectionProps> = ({ la
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mb-12 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
@@ -69,7 +70,7 @@ export const ClosingConcertSection: React.FC<ClosingConcertSectionProps> = ({ la
         </div>
 
         {/* Main Content Card */}
-        <div className="rounded-[36px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row">
+        <div className="rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row">
           {/* Left Column: Cloenda Photo */}
           <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
             <img
@@ -98,7 +99,7 @@ export const ClosingConcertSection: React.FC<ClosingConcertSectionProps> = ({ la
                 {t.highlights.map((item, index) => (
                   <div
                     key={index}
-                    className="p-4 rounded-2xl bg-white/70 border border-[#88643B]/20 space-y-1.5"
+                    className="p-4 rounded bg-white/70 border border-[#88643B]/20 space-y-1.5"
                   >
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#0C478D]">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0C478D] shrink-0" />
@@ -115,10 +116,10 @@ export const ClosingConcertSection: React.FC<ClosingConcertSectionProps> = ({ la
             {/* Action Buttons */}
             <div className="pt-2">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Sala+Albéniz+Tiana"
+                href={LINKS.maps.salaAlbeniz}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-2xl bg-[#0C478D] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2"
+                className="px-6 py-3.5 rounded bg-[#0C478D] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4" />
                 <span>{t.openMap}</span>

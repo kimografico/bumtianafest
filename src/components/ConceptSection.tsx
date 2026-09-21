@@ -1,7 +1,6 @@
 import React from 'react';
-import { Users, Heart, Target } from 'lucide-react';
 import { Language } from '../data/content';
-import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
+import { FESTIVAL_IMAGES } from '../assets/images';
 
 interface ConceptSectionProps {
   lang: Language;
@@ -53,7 +52,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
@@ -64,61 +63,34 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
         {/* 4 Cards Grid with crisp readable background for original logo clarity */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           
-          {/* Card 1: Por que el nombre BUM (BUMFEST26 SVG Logo in true colors) */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
-            <div className="h-12 flex items-center justify-start mb-6">
-              <img
-                src={FESTIVAL_LOGOS.bumFest}
-                alt="BUMFEST"
-                width={459}
-                height={102}
-                className="h-9 w-auto max-w-[150px] object-contain"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          {/* Card 1: Por que el nombre BUM */}
+          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.cardNameTitle}</h3>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{t.cardNameTitle}</h3>
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.cardNameDesc}</p>
             </div>
           </div>
 
           {/* Card 2: A quien va dirigido */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
-            <div className="h-12 flex items-center justify-start mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
-                <Target className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />
-              </div>
-            </div>
+          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.cardTargetTitle}</h3>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{t.cardTargetTitle}</h3>
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.cardTargetDesc}</p>
             </div>
           </div>
 
           {/* Card 3: Aprenentatge Compartit */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
-            <div className="h-12 flex items-center justify-start mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-[#88643B]/15 flex items-center justify-center">
-                <Users className="w-6 h-6 text-[#88643B]" strokeWidth={2.2} />
-              </div>
-            </div>
+          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.card1Title}</h3>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{t.card1Title}</h3>
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.card1Desc}</p>
             </div>
           </div>
 
           {/* Card 4: Tiana com a gran espai comunitari */}
-          <div className="p-7 sm:p-8 rounded-[32px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
-            <div className="h-12 flex items-center justify-start mb-6">
-              <div className="w-11 h-11 rounded-2xl bg-[#0C478D]/10 flex items-center justify-center">
-                <Heart className="w-6 h-6 text-[#0C478D]" strokeWidth={2.2} />
-              </div>
-            </div>
+          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extrabold text-[#0C478D]">{t.card2Title}</h3>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{t.card2Title}</h3>
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{t.card2Desc}</p>
             </div>
           </div>

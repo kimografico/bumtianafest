@@ -26,7 +26,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
         
         {/* Section Header without tag */}
         <div className="text-center space-y-3 mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base text-[#4A4A43]">
@@ -41,7 +41,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
             return (
               <div
                 key={idx}
-                className={`rounded-3xl bg-[#FAF9F3]/90 backdrop-blur-xl border overflow-hidden transition-all shadow-sm ${
+                className={`rounded bg-[#FAF9F3]/90 backdrop-blur-xl border overflow-hidden transition-all shadow-sm ${
                   isOpen ? 'border-[#0C478D] ring-2 ring-[#0C478D]/15' : 'border-[#88643B]/30 hover:border-[#88643B]'
                 }`}
               >

@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 import { Language, VENUES_DATA } from '../data/content';
+import { LINKS } from '../data/links';
 
 interface VenuesSectionProps {
   lang: Language;
@@ -28,7 +29,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
@@ -41,16 +42,16 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
           {VENUES_DATA.map((venue) => (
             <div
               key={venue.id}
-              className="p-8 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
+              className="p-8 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
             >
               <div className="space-y-4">
                 
                 {/* Venue Name & sub-tag directly under the name */}
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-extrabold text-[#181816] leading-tight">
+                  <h3 className="text-2xl font-extralight uppercase tracking-wider text-[#181816] leading-tight">
                     {venue.name}
                   </h3>
-                  <div className="inline-block px-3 py-1 rounded-full bg-[#0C478D]/10 text-[#0C478D] border border-[#0C478D]/20 text-xs font-bold uppercase tracking-wider">
+                  <div className="inline-block px-3 py-1 rounded bg-[#0C478D]/10 text-[#0C478D] border border-[#0C478D]/20 text-xs font-bold uppercase tracking-wider">
                     {venue.type[lang]}
                   </div>
                   <p className="text-xs text-[#66665D] flex items-center gap-1.5 font-medium pt-1">
@@ -84,13 +85,11 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
               {/* Direct Google Maps Link */}
               <div className="pt-4 border-t border-[#88643B]/20">
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    `${venue.name}, ${venue.address}`
-                  )}`}
+                  href={LINKS.maps.venue(venue.name, venue.address)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t.openInMaps}: ${venue.name} (${venue.address})`}
-                  className="w-full py-3 px-4 rounded-2xl bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
+                  className="w-full py-3 px-4 rounded bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
                 >
                   <Navigation className="w-4 h-4 text-[#0C478D]" />
                   <span>{t.openInMaps}</span>

@@ -24,8 +24,8 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const sizeClasses = {
-    sm: 'px-3.5 py-1.5 text-xs rounded-xl font-bold',
-    md: 'px-5 py-2.5 text-xs sm:text-sm rounded-2xl font-bold',
+    sm: 'px-3.5 py-1.5 text-xs rounded font-bold',
+    md: 'px-5 py-2.5 text-xs sm:text-sm rounded font-bold',
     lg: 'px-7 py-3.5 text-sm sm:text-base rounded-full font-black',
   }[size];
 
@@ -50,7 +50,7 @@ export const Button: React.FC<ButtonProps> = ({
       break;
     case 'back':
       variantClasses =
-        'inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white/80 hover:bg-white text-slate-700 hover:text-blue-900 border border-slate-200 shadow-xs transition cursor-pointer font-bold text-xs';
+        'inline-flex items-center gap-2 px-4 py-2 rounded bg-white/80 hover:bg-white text-slate-700 hover:text-blue-900 border border-slate-200 shadow-xs transition cursor-pointer font-bold text-xs';
       break;
     case 'filter':
       variantClasses = isActive

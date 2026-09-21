@@ -39,7 +39,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-10 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
@@ -54,7 +54,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               aria-pressed={activeCategory === cat.id}
-              className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? 'bg-white text-[#0C478D] shadow-md shadow-black/10'
                   : 'bg-white/10 hover:bg-white/20 text-[#EFEEE0] border border-white/20 backdrop-blur-md'
@@ -82,19 +82,19 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
               <div className="space-y-2">
                 {/* Time & Badges Row */}
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="font-mono text-xs font-bold text-white bg-white/15 px-3 py-1 rounded-full border border-white/25 shadow-2xs">
+                  <span className="font-mono text-xs font-bold text-white bg-white/15 px-3 py-1 rounded border border-white/25 shadow-2xs">
                     {item.time}
                   </span>
 
                   {item.badge && (
-                    <span className="text-xs font-bold text-white bg-[#88643B] px-3 py-1 rounded-full shadow-2xs">
+                    <span className="text-xs font-bold text-white bg-[#88643B] px-3 py-1 rounded shadow-2xs">
                       {item.badge[lang]}
                     </span>
                   )}
                 </div>
 
                 {/* Event Title */}
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white group-hover:text-[#EFEEE0] transition">
+                <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-white group-hover:text-[#EFEEE0] transition">
                   {item.title[lang]}
                 </h3>
 

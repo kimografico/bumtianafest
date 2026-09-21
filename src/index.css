@@ -8,6 +8,7 @@
   --color-festtext: #181816;
   --color-festmuted: #4A4A43;
   --color-accent: #E2B580;
+  --radius: 2px;
 }
 
 @layer base {

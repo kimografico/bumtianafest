@@ -33,12 +33,12 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       <div className="space-y-2">
         {/* Time & Badge */}
         <div className="flex flex-wrap items-center gap-2.5">
-          <span className="font-mono text-xs font-bold text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 shadow-2xs">
+          <span className="font-mono text-xs font-bold text-blue-900 bg-blue-50 px-3 py-1 rounded border border-blue-100 shadow-2xs">
             {time}
           </span>
 
           {badge && (
-            <span className="text-xs font-bold text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-100 shadow-2xs">
+            <span className="text-xs font-bold text-teal-800 bg-teal-50 px-3 py-1 rounded border border-teal-100 shadow-2xs">
               {badge}
             </span>
           )}

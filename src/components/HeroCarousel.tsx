@@ -190,7 +190,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
               {/* Caption Content */}
               <div className="absolute bottom-0 left-0 right-0 p-5 pb-12 sm:p-10 sm:pb-12 md:p-14 max-w-7xl mx-auto flex flex-col justify-end">
                 <div className="max-w-2xl space-y-2 sm:space-y-3">
-                  <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider border border-white/30">
+                   <span className="inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider border border-white/30">
                     {slide.tag[lang]}
                   </span>
                   

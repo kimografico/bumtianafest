@@ -32,7 +32,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0C478D] tracking-tight font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
@@ -41,7 +41,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
         </div>
 
         {/* Highlight Vision Card with Interspersed Image */}
-        <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
+        <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
           <div className="grid lg:grid-cols-12 gap-0 items-center">
             
             {/* Left Image */}
@@ -61,7 +61,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
 
             {/* Right Text Content */}
             <div className="lg:col-span-7 p-8 sm:p-12 space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#181816]">
+              <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
                 {t.missionTitle}
               </h3>
 
@@ -82,7 +82,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
           {TEAM_DATA.map((member, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all space-y-6 shadow-md flex flex-col justify-between"
+              className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all space-y-6 shadow-md flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-5">
@@ -99,7 +99,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                     />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-2xl text-[#181816]">
+                    <h3 className="font-extralight text-2xl uppercase tracking-wider text-[#181816]">
                       {member.name}
                     </h3>
                     <p className="text-xs font-bold text-[#88643B] uppercase tracking-wider">

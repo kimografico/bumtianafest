@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Language, Workshop, WORKSHOPS_DATA, VENUES_DATA } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
+import { LINKS } from '../data/links';
 
 interface WorkshopDetailPageProps {
   workshopId: string;
@@ -90,7 +91,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
           <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
           <span>{t.back}</span>
@@ -98,7 +99,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       </div>
 
       {/* Main Detail Header Card */}
-      <div className="rounded-[36px] bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
+      <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
         
         {/* Banner image */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
@@ -115,7 +116,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
           
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-display">
+            <h1 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
               {workshop.title[lang]}
             </h1>
           </div>
@@ -164,7 +165,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             <h3 className="text-lg font-bold text-[#181816]">{t.values}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {workshop.pedagogicalValues[lang].map((val, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-[#88643B]/20 shadow-2xs">
+                <div key={idx} className="flex items-start gap-3 p-3.5 rounded bg-white border border-[#88643B]/20 shadow-2xs">
                   <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-[#181816]">{val}</span>
                 </div>
@@ -175,7 +176,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           {/* Materials */}
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-[#181816]">{t.materials}</h3>
-            <div className="p-4 rounded-2xl bg-white border border-[#88643B]/20 flex items-start gap-3 shadow-2xs">
+            <div className="p-4 rounded bg-white border border-[#88643B]/20 flex items-start gap-3 shadow-2xs">
               <Package className="w-5 h-5 text-[#0C478D] shrink-0 mt-0.5" />
               <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed">
                 {workshop.materials[lang]}
@@ -185,7 +186,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           {/* Location & Google Maps Card */}
           {venue ? (
-            <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+            <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="space-y-1">
                   <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
@@ -197,13 +198,11 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
                 </div>
 
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    `${venue.name}, ${venue.address}`
-                  )}`}
+                  href={LINKS.maps.venue(venue.name, venue.address)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
                 >
                   <Navigation className="w-4 h-4 text-[#0C478D]" />
                   <span>{t.openMaps}</span>
@@ -216,7 +215,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               </p>
             </div>
           ) : (
-            <div className="p-6 rounded-3xl bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+            <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">
@@ -235,6 +234,16 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             </div>
           )}
 
+          {/* Reservar Plaza Button */}
+          <a
+            href={LINKS.forms.reservarPlaca}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
+          >
+            {lang === 'ca' ? 'Reservar plaça' : 'Reservar plaza'}
+          </a>
+
         </div>
       </div>
 
@@ -246,7 +255,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             <button
               key={other.id}
               onClick={() => onSelectWorkshop(other.id)}
-              className="w-full text-left p-5 rounded-3xl bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+              className="w-full text-left p-5 rounded bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
               <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
                 {other.title[lang]}
