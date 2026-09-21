@@ -7,6 +7,7 @@
   --color-festcard: #FAF9F3;
   --color-festtext: #181816;
   --color-festmuted: #4A4A43;
+  --color-accent: #E2B580;
 }
 
 @layer base {

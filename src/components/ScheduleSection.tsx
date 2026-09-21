@@ -69,7 +69,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
         <div className="relative max-w-4xl pl-8 sm:pl-10 space-y-10">
           
           {/* Continuous vertical line in light brown */}
-          <div className="absolute left-[6px] sm:left-[7px] top-3 bottom-3 w-0.5 bg-[#C19463]" />
+          <div className="absolute left-[6px] sm:left-[7px] top-3 bottom-3 w-0.5 bg-accent" />
 
           {filteredSchedule.map((item, idx) => (
             <div
@@ -77,7 +77,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
               className="relative group"
             >
               {/* Timeline dot positioned on the line */}
-              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-[#0C478D] border-4 border-[#C19463] shadow-xs group-hover:border-white group-hover:scale-125 transition" />
+              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-[#0C478D] border-4 border-accent shadow-xs group-hover:border-white group-hover:scale-125 transition" />
 
               <div className="space-y-2">
                 {/* Time & Badges Row */}
@@ -105,7 +105,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
 
                 {/* Location pin in light brown */}
                 <div className="flex items-center gap-1.5 text-xs text-[#EFEEE0]/75 font-medium pt-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#C19463] shrink-0" />
+                  <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
                   <span>{item.location}</span>
                 </div>
               </div>

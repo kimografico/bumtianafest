@@ -68,13 +68,13 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </p>
 
             <div className="text-xs text-[#EFEEE0]/90 flex items-center gap-1.5 font-medium">
-              <MapPin className="w-4 h-4 text-[#C19463]" />
+              <MapPin className="w-4 h-4 text-accent" />
               <span>{t.location}</span>
             </div>
 
             {/* Unified Organization & Collaboration */}
             <div className="pt-2 space-y-4">
-              <p className="text-xs sm:text-sm text-[#C19463] font-bold max-w-xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-accent font-bold max-w-xl leading-relaxed">
                 {t.organizers}
               </p>
 
@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
 
                 {/* Plus sign divider */}
                 <span
-                  className="text-xl sm:text-2xl font-bold text-[#C19463] select-none -mx-2 sm:-mx-3"
+                  className="text-xl sm:text-2xl font-bold text-accent select-none -mx-2 sm:-mx-3"
                   aria-hidden="true"
                 >
                   +
@@ -181,42 +181,42 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               </p>
               <ul className="space-y-2.5 text-xs text-[#EFEEE0]/70">
                 <li>
-                  <a href="#concepte" className="hover:text-[#C19463] transition">
+                  <a href="#concepte" className="hover:text-accent transition">
                     {t.linkConcepte}
                   </a>
                 </li>
                 <li>
-                  <a href="#tallers" className="hover:text-[#C19463] transition">
+                  <a href="#tallers" className="hover:text-accent transition">
                     {t.linkTallers}
                   </a>
                 </li>
                 <li>
-                  <a href="#xerrades" className="hover:text-[#C19463] transition">
+                  <a href="#xerrades" className="hover:text-accent transition">
                     {t.linkXerrades}
                   </a>
                 </li>
                 <li>
-                  <a href="#programa" className="hover:text-[#C19463] transition">
+                  <a href="#programa" className="hover:text-accent transition">
                     {t.linkHoraris}
                   </a>
                 </li>
                 <li>
-                  <a href="#espais" className="hover:text-[#C19463] transition">
+                  <a href="#espais" className="hover:text-accent transition">
                     {t.linkEspais}
                   </a>
                 </li>
                 <li>
-                  <a href="#cloenda" className="hover:text-[#C19463] transition">
+                  <a href="#cloenda" className="hover:text-accent transition">
                     {t.linkCloenda}
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-[#C19463] transition">
+                  <a href="#faq" className="hover:text-accent transition">
                     {t.linkFaq}
                   </a>
                 </li>
                 <li>
-                  <a href="#organitzacio" className="hover:text-[#C19463] transition">
+                  <a href="#organitzacio" className="hover:text-accent transition">
                     {t.link2lb}
                   </a>
                 </li>
@@ -249,7 +249,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               href="https://kimografico.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#C19463] hover:text-white transition font-medium"
+              className="text-accent hover:text-white transition font-medium"
             >
               kimografico.com
             </a>
