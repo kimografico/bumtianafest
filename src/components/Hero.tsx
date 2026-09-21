@@ -10,11 +10,11 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ lang }) => {
   const t = {
     ca: {
-      title: 'BUM Tiana FEST',
+      title: 'BUMFEST TIANA',
       year: '2026',
       subtitle: 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.',
       welcomeText: [
-        'Benvingudes i benvinguts al BUM Tiana FEST 2026',
+        'Benvingudes i benvinguts al BUMFEST TIANA 2026',
         'Un festival didàctic per a les famílies de Tiana i dels voltants.',
         'Unes jornades diferents on les famílies de Tiana i dels voltants podran',
         'gaudir d’un dia ple d’activitats on destaquen, tallers,',
@@ -25,11 +25,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
       ctaVenues: 'Localitzacions',
     },
     es: {
-      title: 'BUM Tiana FEST',
+      title: 'BUMFEST TIANA',
       year: '2026',
       subtitle: 'Un día entero en Tiana para compartir aprendizajes, talleres didácticos, charlas de crianza y música en familia.',
       welcomeText: [
-        'Bienvenidas y bienvenidos al BUM Tiana FEST 2026',
+        'Bienvenidas y bienvenidos a BUMFEST TIANA 2026',
         'Un festival didáctico para las familias de Tiana y alrededores.',
         'Unas jornadas diferentes donde las familias de Tiana y alrededores podrán',
         'disfrutar de un día lleno de actividades donde destacan, talleres,',
@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             <div className="absolute inset-0 bg-[#88643B]/15 rounded-full blur-3xl -z-10 scale-90" />
             <img
               src={FESTIVAL_IMAGES.familiaMadera}
-              alt="BUM Tiana FEST - Família de Fusta"
+              alt="BUMFEST - Família de Fusta"
               width={500}
               height={410}
               fetchPriority="high"

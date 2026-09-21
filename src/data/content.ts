@@ -425,8 +425,8 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     category: 'tot-el-dia',
     location: 'Plaça de la Vila',
     description: {
-      ca: 'Recollida de polseres, mapa d\'itineraris i benvinguda al BUM Tiana FEST.',
-      es: 'Recogida de pulseras, mapa de itinerarios y bienvenida a BUM Tiana FEST.'
+      ca: 'Recollida de polseres, mapa d\'itineraris i benvinguda al BUMFEST TIANA 2026.',
+      es: 'Recogida de pulseras, mapa de itinerarios y bienvenida a BUMFEST TIANA 2026.'
     }
   },
   {
@@ -574,8 +574,8 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: 'El Casal de Tiana',
     type: 'Cuina tradicional i menú familiar',
     specialOffer: {
-      ca: 'Tiquet menú BUM Tiana FEST amb fideuà, opció vegetariana i postres casolanes.',
-      es: 'Ticket menú BUM Tiana FEST con fideuá, opción vegetariana y postres caseros.'
+      ca: 'Tiquet menú BUMFEST amb fideuà, opció vegetariana i postres casolanes.',
+      es: 'Ticket menú BUMFEST con fideuá, opción vegetariana y postres caseros.'
     },
     address: 'Av. Isaac Albéniz, 12',
     websiteUrl: 'https://www.instagram.com/elcasaldetiana/'
@@ -629,8 +629,8 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: 'Floristeria Verd És Bo',
     type: 'Plantes, flors & decoració botànica',
     specialOffer: {
-      ca: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUM Tiana FEST.',
-      es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUM Tiana FEST.'
+      ca: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUMFEST.',
+      es: 'Descuentos especiales en macetas, plantas autóctonas y cuidado botánico durante el BUMFEST.'
     },
     address: 'Carrer de Lola Anglada, Tiana',
     websiteUrl: 'https://floristeriastop.com/floristeria-verd-es-bo-tiana/'
@@ -651,7 +651,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
 export const PRICING_DATA = {
   ca: {
     title: 'Accés 100% Gratuït',
-    subtitle: 'Totes les activitats, tallers, xerrades i espectacles del BUM Tiana FEST són d\'accés obert i gratuït gràcies a l\'Ajuntament de Tiana.',
+    subtitle: 'Totes les activitats, tallers, xerrades i espectacles del BUMFEST són d\'accés obert i gratuït gràcies a l\'Ajuntament de Tiana.',
     packs: [
       {
         name: 'Tallers Didàctics Matinals',
@@ -680,11 +680,11 @@ export const PRICING_DATA = {
         tag: 'Accés Lliure'
       }
     ],
-    subsidyNote: 'El BUM Tiana FEST és una iniciativa cultural comunitària amb el suport de l\'Ajuntament de Tiana.'
+    subsidyNote: 'El BUMFEST és una iniciativa cultural comunitària amb el suport de l\'Ajuntament de Tiana.'
   },
   es: {
     title: 'Acceso 100% Gratuito',
-    subtitle: 'Todas las actividades, talleres, charlas y espectáculos de BUM Tiana FEST son de acceso libre y gratuito gracias al Ajuntament de Tiana.',
+    subtitle: 'Todas las actividades, talleres, charlas y espectáculos de BUMFEST son de acceso libre y gratuito gracias al Ajuntament de Tiana.',
     packs: [
       {
         name: 'Talleres Didácticos Mañana',
@@ -713,7 +713,7 @@ export const PRICING_DATA = {
         tag: 'Acceso Libre'
       }
     ],
-    subsidyNote: 'BUM Tiana FEST es una iniciativa cultural comunitaria con el apoyo del Ajuntament de Tiana.'
+    subsidyNote: 'BUMFEST es una iniciativa cultural comunitaria con el apoyo del Ajuntament de Tiana.'
   }
 };
 
@@ -724,8 +724,8 @@ export const FAQ_DATA = [
       es: '¿Cómo funcionan los talleres? ¿Deben quedarse los padres?'
     },
     a: {
-      ca: 'Sí! L\'essència del BUM Tiana FEST és precisament l\'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
-      es: '¡Sí! La esencia de BUM Tiana FEST es el aprendizaje compartido en la primera infancia: cada peque participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
+      ca: 'Sí! L\'essència del BUMFEST és precisament l\'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l\'avi, l\'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.',
+      es: '¡Sí! La esencia de BUMFEST es el aprendizaje compartido en la primera infancia: cada peque participa junto con su padre, madre, abuelos o acompañante adulto. No es un servicio de guardería, sino un espacio para crear recuerdos juntos.'
     }
   },
   {
@@ -744,8 +744,8 @@ export const FAQ_DATA = [
       es: '¿Se requiere reserva previa para las charlas de crianza?'
     },
     a: {
-      ca: 'L\'accés a totes les xerrades i activitats del BUM Tiana FEST és 100% gratuït. L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l\'entrada serà per estricte ordre d\'arribada.',
-      es: 'El acceso a todas las charlas y actividades de BUM Tiana FEST es 100% gratuito. El aforo de la Sala Petita de El Casal es limitado para garantizar cercanía con Laia Ferrer y Armando Bastida, y la entrada será por estricto orden de llegada.'
+      ca: 'L\'accés a totes les xerrades i activitats del BUMFEST és 100% gratuït. L\'aforament de la Sala Petita d\'El Casal és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l\'entrada serà per estricte ordre d\'arribada.',
+      es: 'El acceso a todas las charlas y actividades de BUMFEST es 100% gratuito. El aforo de la Sala Petita de El Casal es limitado para garantizar cercanía con Laia Ferrer y Armando Bastida, y la entrada será por estricto orden de llegada.'
     }
   },
   {

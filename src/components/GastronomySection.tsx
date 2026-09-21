@@ -145,15 +145,16 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                 className="rounded-[36px] bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
               >
                 {/* Left Column: Restaurant Photo */}
-                <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0">
-                    <img
-                      src={getRestaurantImage(resto.id)}
-                      alt={resto.name[lang]}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
+                  <img
+                    src={getRestaurantImage(resto.id)}
+                    alt={resto.name[lang]}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                     referrerPolicy="no-referrer"
-                    loading="lazy"
+                    loading="eager"
+                    fetchPriority="low"
                     decoding="async"
                   />
                 </div>
@@ -182,7 +183,8 @@ export const GastronomySection: React.FC<GastronomySectionProps> = ({ lang }) =>
                               filter: 'brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(1837%) hue-rotate(200deg) brightness(90%) contrast(98%)',
                             }}
                             referrerPolicy="no-referrer"
-                            loading="lazy"
+                            loading="eager"
+                            fetchPriority="low"
                             decoding="async"
                           />
                         </div>

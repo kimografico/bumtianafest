@@ -10,7 +10,7 @@ interface ConceptSectionProps {
 export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
   const t = {
     ca: {
-      title: 'Per què neix el BUM Tiana FEST?',
+      title: 'Per què neix el BUMFEST?',
       subtitle: 'Una jornada pensada per viure la cultura de tu a tu, sense presses i compartint temps de qualitat.',
       cardNameTitle: 'Per què "BUM"?',
       cardNameDesc: 'Un esclat d\'energia creativa i expressió artística que neix a Tiana. És el batec de la música, el ritme dels instruments i l\'impuls per descobrir passions noves en família.',
@@ -22,7 +22,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
       card2Desc: 'Els carrers, places, teatres i ateneus de Tiana s’omplen de vida cultural per gaudir i enfortir els vincles comunitaris.',
     },
     es: {
-      title: '¿Por qué nace BUM Tiana FEST?',
+      title: '¿Por qué nace BUMFEST?',
       subtitle: 'Una jornada pensada para vivir la cultura de tú a tú, sin prisas y compartiendo tiempo de calidad.',
       cardNameTitle: '¿Por qué "BUM"?',
       cardNameDesc: 'Una explosión de energía creativa y expresión artística que nace en Tiana. Es el latido de la música, el ritmo de los instrumentos y el impulso para descubrir nuevas pasiones en familia.',
@@ -69,7 +69,7 @@ export const ConceptSection: React.FC<ConceptSectionProps> = ({ lang }) => {
             <div className="h-12 flex items-center justify-start mb-6">
               <img
                 src={FESTIVAL_LOGOS.bumFest}
-                alt="BUM Tiana FEST"
+                alt="BUMFEST"
                 width={459}
                 height={102}
                 className="h-9 w-auto max-w-[150px] object-contain"

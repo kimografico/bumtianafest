@@ -41,11 +41,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className="flex items-center gap-2.5 text-left cursor-pointer group py-1"
-            title="BUM Tiana FEST 2026"
+            title="BUMFEST TIANA 2026"
           >
             <img
               src={FESTIVAL_LOGOS.bumFest}
-              alt="BUM Tiana FEST"
+              alt="BUMFEST"
               width={459}
               height={102}
               className="h-8 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"

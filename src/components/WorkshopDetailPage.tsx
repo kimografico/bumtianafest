@@ -59,7 +59,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       materials: 'Materials i recursos inclosos',
       venueCard: 'Com arribar a aquest espai',
       openMaps: 'Obrir a Google Maps',
-      otherTitle: 'Altres tallers del BUM Tiana FEST',
+      otherTitle: 'Altres tallers del BUMFEST',
       viewWorkshop: 'Veure taller →',
     },
     es: {
@@ -72,7 +72,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
       materials: 'Materiales y recursos incluidos',
       venueCard: 'Cómo llegar a este espacio',
       openMaps: 'Abrir en Google Maps',
-      otherTitle: 'Otros talleres de BUM Tiana FEST',
+      otherTitle: 'Otros talleres de BUMFEST',
       viewWorkshop: 'Ver taller →',
     },
   }[lang];
