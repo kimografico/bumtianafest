@@ -200,16 +200,6 @@ export const VENUES_DATA: Venue[] = [
     coordinates: { lat: 41.4828, lng: 2.2701 }
   },
   {
-    id: 'el-casal',
-    name: 'El Casal de Tiana',
-    type: 'Ateneu & Centre Cívic Cultural',
-    address: 'Avinguda Isaac Albéniz, 12, 08391 Tiana',
-    description: "Espai de trobada i acollida del festival, seu de l'Associació de Comerciants de Tiana (ACIST).",
-    activities: [],
-    walkingFromCenter: '2 min a peu',
-    coordinates: { lat: 41.4822, lng: 2.2694 }
-  },
-  {
     id: 'doctor-mascaro',
     name: 'Doctor Mascaró',
     type: 'Espai Cultural & Carrer Emblemàtic',
@@ -347,14 +337,6 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     websiteUrl: LINKS.restaurants.barbar
   },
   {
-    id: 'casino',
-    name: 'El Casino de Tiana',
-    type: 'Clàssic ateneu gastronòmic',
-    specialOffer: 'Entrepans calents especials BUM, tapes per compartir i gelats artesans.',
-    address: 'Carrer de Sant Valentí',
-    websiteUrl: LINKS.restaurants.casino
-  },
-  {
     id: 'tiriti',
     name: 'Tiriti Bar Restaurant Pizzeria',
     type: 'Pizzes al forn de llenya & pasta',
@@ -370,22 +352,6 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     address: 'Carrer de Matas',
     websiteUrl: LINKS.restaurants.aviMingo
   },
-  {
-    id: 'verdEsBo',
-    name: 'Floristeria Verd És Bo',
-    type: 'Plantes, flors & decoració botànica',
-    specialOffer: 'Descomptes especials en testos, plantes autòctones i tallers de cura botànica durant el BUMFEST.',
-    address: 'Carrer de Lola Anglada, Tiana',
-    websiteUrl: LINKS.restaurants.verdEsBo
-  },
-  {
-    id: 'espaiEco',
-    name: 'Espai Ecològic',
-    type: 'Alimentació bio, artesanal & proximitat',
-    specialOffer: 'Snacks saludables, fruita ecològica de temporada i productes locals per a les famílies.',
-    address: 'Carrer de Sant Valentí, Tiana',
-    websiteUrl: LINKS.restaurants.espaiEco
-  }
 ];
 
 export const PRICING_DATA = {

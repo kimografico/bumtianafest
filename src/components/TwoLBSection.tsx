@@ -1,14 +1,14 @@
 import React from 'react';
 import { TEAM_DATA } from '../data/content';
-import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
+import { FESTIVAL_IMAGES } from '../assets/images';
 
 export const TwoLBSection: React.FC = () => {
   const t = {
-    title: 'Qui som?',
-    subtitle: 'La visió darrera del BUMFEST: passió per la música, pedagogia infantil i compromís comunitari amb Tiana.',
-    missionTitle: '2LB Produccions',
-    missionDesc: '2LB és la productora artística i tècnica de Tiana que impulsa el BUMFEST juntament amb l’Ajuntament de Tiana. Neix de la passió compartida per crear espais on infants i adults puguin descobrir la música, la dansa i el teatre des d’un enfocament lúdic, respectuós i d’alta qualitat artística.',
-    quote: '«Creiem que les millors experiències culturals de la infància són aquelles que es comparteixen en família i deixen una empremta que dura tota la vida.»',
+    title: '2LB Produccions',
+    subtitle: 'Creació artística, producció musical i compromís amb la comunitat de Tiana.',
+    missionTitle: 'La nostra visió',
+    missionDesc: 'A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió de on naix BUMFEST.',
+    quote: '"Natura, poble, art, criança i comunitat. Construim en familia i al carrer"',
   };
 
   return (
@@ -25,44 +25,33 @@ export const TwoLBSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 2LB Feature Box with 2LB.png */}
-        <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-lg overflow-hidden mb-12">
-          <div className="grid lg:grid-cols-12 items-center">
-            
-            {/* Left Brand Column */}
-            <div className="lg:col-span-5 p-8 sm:p-12 bg-white/70 border-b lg:border-b-0 lg:border-r border-[#88643B]/20 flex flex-col items-center justify-center text-center space-y-4">
-              <div className="p-4 rounded-xl bg-white shadow-2xs border border-[#88643B]/20 w-full max-w-xs flex items-center justify-center">
-                <img
-                  src={FESTIVAL_LOGOS.twoLb}
-                  alt="2LB Produccions"
-                  width={280}
-                  height={120}
-                  className="w-48 sm:w-56 h-auto object-contain"
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <p className="text-xs font-semibold text-[#88643B] uppercase tracking-wider">
-                Producció Artística & Direcció Tècnica
-              </p>
-            </div>
+        {/* 2LB Feature: PARDALS image + text */}
+        <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
+          
+          {/* Left: PARDALS image */}
+          <div className="lg:col-span-5">
+            <img
+              src={FESTIVAL_IMAGES.pardals}
+              alt="Pardals"
+              className="w-full h-auto object-cover rounded"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
 
-            {/* Right Text Content */}
-            <div className="lg:col-span-7 p-8 sm:p-12 space-y-6">
-              <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
-                {t.missionTitle}
-              </h3>
+          {/* Right Text Content */}
+          <div className="lg:col-span-7 space-y-6">
+            <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
+              {t.missionTitle}
+            </h3>
 
-              <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
-                {t.missionDesc}
-              </p>
+            <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+              {t.missionDesc}
+            </p>
 
-              <blockquote className="text-sm sm:text-base font-semibold text-[#0C478D] italic pt-1">
-                {t.quote}
-              </blockquote>
-            </div>
-
+            <blockquote className="text-sm sm:text-base font-semibold text-[#0C478D] italic pt-1">
+              {t.quote}
+            </blockquote>
           </div>
         </div>
 

@@ -37,11 +37,8 @@ export const LINKS = {
   restaurants: {
     casal: 'https://www.instagram.com/elcasaldetiana/',
     barbar: 'https://www.instagram.com/sombarbarstiana/',
-    casino: 'https://casinodetiana.com/',
     tiriti: 'https://tiriti.es/',
     aviMingo: 'https://www.avimingo.com/',
-    verdEsBo: 'https://floristeriastop.com/floristeria-verd-es-bo-tiana/',
-    espaiEco: 'https://espaiecologic.com/',
   },
 
   // ── Institutional / Colophon ───────────────────────────────────────

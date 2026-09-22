@@ -23,16 +23,10 @@ export const GastronomySection: React.FC = () => {
         return FESTIVAL_IMAGES.restoCasal;
       case 'barbar':
         return FESTIVAL_IMAGES.restoBarbar;
-      case 'casino':
-        return FESTIVAL_IMAGES.restoCasino;
       case 'tiriti':
         return FESTIVAL_IMAGES.restoTiriti;
       case 'aviMingo':
         return FESTIVAL_IMAGES.restoAviMingo;
-      case 'verdEsBo':
-        return FESTIVAL_IMAGES.restoVerdEsBo;
-      case 'espaiEco':
-        return FESTIVAL_IMAGES.restoEspaiEco;
       default:
         return FESTIVAL_IMAGES.restoCasal;
     }
@@ -44,16 +38,10 @@ export const GastronomySection: React.FC = () => {
         return FESTIVAL_LOGOS.casal;
       case 'barbar':
         return FESTIVAL_LOGOS.barbar;
-      case 'casino':
-        return FESTIVAL_LOGOS.casino;
       case 'tiriti':
         return FESTIVAL_LOGOS.tirati;
       case 'aviMingo':
         return FESTIVAL_LOGOS.aviMingo;
-      case 'espaiEco':
-        return FESTIVAL_LOGOS.espaiEco;
-      case 'verdEsBo':
-        return FESTIVAL_LOGOS.verdEsBo;
       default:
         return null;
     }

@@ -49,38 +49,44 @@ export const PartnersCarousel: React.FC = () => {
       </div>
 
       {/* Simplified Infinite Logo Stream */}
-      <div className="relative w-full overflow-hidden flex">
-        {/* Left gradient fade overlay */}
-        <div 
-          aria-hidden="true" 
-          className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#0C478D] to-transparent z-10 pointer-events-none" 
-        />
+      <div className="relative w-full overflow-hidden py-6 sm:py-8">
+        
+        {/* Soft edge gradient masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-r from-[#0C478D] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-l from-[#0C478D] to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-marquee gap-8 sm:gap-12 md:gap-16 items-center shrink-0 py-2">
+        <div className="flex w-max animate-marquee items-center gap-16 sm:gap-24 md:gap-28 hover:[animation-play-state:paused]">
           {repeatedPartners.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center shrink-0 w-28 sm:w-36 h-14 sm:h-16 px-3 rounded bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-xs transition-colors duration-200"
+              className="flex items-center justify-center shrink-0 group transition-transform duration-300 hover:scale-110"
+              title={item.name}
             >
               <img
                 src={item.logo}
                 alt={`Logotip col·laborador ${item.name}`}
-                width={120}
-                height={50}
-                className="max-h-9 sm:max-h-11 max-w-[90%] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-200 brightness-0 invert"
-                loading="lazy"
+                width={200}
+                height={80}
+                className="h-14 sm:h-20 md:h-24 w-auto max-w-[200px] sm:max-w-[280px] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm brightness-105"
+                referrerPolicy="no-referrer"
+                loading="eager"
+                fetchPriority="low"
                 decoding="async"
               />
             </div>
           ))}
         </div>
-
-        {/* Right gradient fade overlay */}
-        <div 
-          aria-hidden="true" 
-          className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#0C478D] to-transparent z-10 pointer-events-none" 
-        />
       </div>
+
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.333333%); }
+        }
+        .animate-marquee {
+          animation: marquee 36s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
