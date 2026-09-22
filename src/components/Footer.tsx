@@ -1,48 +1,25 @@
 import React from "react";
 import { MapPin } from "lucide-react";
-import { Language } from "../data/content";
 import { FESTIVAL_LOGOS } from "../assets/images";
 import { LINKS } from "../data/links";
 
-interface FooterProps {
-  lang: Language;
-}
-
-export const Footer: React.FC<FooterProps> = ({ lang }) => {
+export const Footer: React.FC = () => {
   const t = {
-    ca: {
-      tagline: "Festival d'Arts, Tallers i Comunitat Familiar a Tiana (Maresme).",
-      location: "Tiana, Barcelona",
-      linksTitle: "Navegació",
-      linkConcepte: "El Concepte",
-      linkTallers: "Tallers Didàctics",
-      linkXerrades: "Xerrades de Criança",
-      linkHoraris: "Horaris",
-      linkEspais: "Localitzacions",
-      linkCloenda: "Concert de Cloenda",
-      linkFaq: "Preguntes Freqüents",
-      link2lb: "2LB Produccions",
-      organizers:
-        "Organitzen 2LB Produccions + l'Ajuntament de Tiana amb la col·laboració de la Diputació de Barcelona",
-      rights: "© 2026 BUMFEST TIANA · Tots els drets reservats.",
-    },
-    es: {
-      tagline: "Festival de Artes, Talleres y Comunidad Familiar en Tiana (Maresme).",
-      location: "Tiana, Barcelona",
-      linksTitle: "Navegación",
-      linkConcepte: "El Concepto",
-      linkTallers: "Talleres Didácticos",
-      linkXerrades: "Charlas de Crianza",
-      linkHoraris: "Horarios",
-      linkEspais: "Localizaciones",
-      linkCloenda: "Concierto de Clausura",
-      linkFaq: "Preguntas Frecuentes",
-      link2lb: "2LB Producciones",
-      organizers:
-        "Organizan 2LB Produccions + el Ayuntamiento de Tiana con la colaboración de la Diputación de Barcelona",
-      rights: "© 2026 BUMFEST TIANA · Todos los derechos reservados.",
-    },
-  }[lang];
+    tagline: "Festival d'Arts, Tallers i Comunitat Familiar a Tiana (Maresme).",
+    location: "Tiana, Barcelona",
+    linksTitle: "Navegació",
+    linkConcepte: "El Concepte",
+    linkTallers: "Tallers Didàctics",
+    linkXerrades: "Xerrades de Criança",
+    linkHoraris: "Horaris",
+    linkEspais: "Localitzacions",
+    linkCloenda: "Concert de Cloenda",
+    linkFaq: "Preguntes Freqüents",
+    link2lb: "2LB Produccions",
+    organizers:
+      "Organitzen 2LB Produccions + l'Ajuntament de Tiana amb la col·laboració de la Diputació de Barcelona",
+    rights: "© 2026 BUMFEST TIANA · Tots els drets reservats.",
+  };
 
   return (
     <footer className="bg-primary text-[#EFEEE0] pt-16 pb-12 border-t border-[#88643B]/30 relative">
@@ -243,9 +220,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         {/* Bottom copyright statement */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFEEE0]/60">
           <div>
-            © 2026 BUMFEST TIANA ·{" "}
-            {lang === "ca" ? "Tots els drets reservats." : "Todos los derechos reservados."} ·{" "}
-            {lang === "ca" ? "Disseny web: " : "Diseño web: "}
+            © 2026 BUMFEST TIANA · Tots els drets reservats. · Disseny web:{" "}
             <a
               href={LINKS.credits.webDesign}
               target="_blank"

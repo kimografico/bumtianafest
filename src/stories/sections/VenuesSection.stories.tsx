@@ -8,22 +8,9 @@ const meta: Meta<typeof VenuesSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof VenuesSection>;
 
-export const Localizaciones: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const Localizaciones: Story = {};

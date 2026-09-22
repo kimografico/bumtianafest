@@ -8,22 +8,9 @@ const meta: Meta<typeof TwoLBSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof TwoLBSection>;
 
-export const Fundacion: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const Fundacion: Story = {};

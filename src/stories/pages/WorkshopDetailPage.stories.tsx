@@ -10,15 +10,9 @@ const meta: Meta<typeof WorkshopDetailPage> = {
   },
   tags: ['autodocs'],
   args: {
-    lang: 'es',
     workshopId: 'jardineria',
   },
   argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-      description: 'Idioma del festival',
-    },
     workshopId: {
       control: 'select',
       options: WORKSHOPS_DATA.map((w) => w.id),
@@ -32,23 +26,20 @@ const meta: Meta<typeof WorkshopDetailPage> = {
 export default meta;
 type Story = StoryObj<typeof WorkshopDetailPage>;
 
-export const TallerHuertoUrbano: Story = {
+export const TallerNatura: Story = {
   args: {
     workshopId: 'jardineria',
-    lang: 'es',
   },
 };
 
-export const TallerProduccionDJ: Story = {
+export const TallerPercussio: Story = {
   args: {
-    workshopId: 'beats-dj',
-    lang: 'es',
+    workshopId: 'percussio',
   },
 };
 
-export const TallerVideoclipsConIA: Story = {
+export const TallerTeatre: Story = {
   args: {
-    workshopId: 'videoclips-ia',
-    lang: 'es',
+    workshopId: 'teatre-expressio',
   },
 };

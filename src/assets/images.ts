@@ -40,6 +40,7 @@ import restoEspaiEcoImg from './images/gastronomy/espai-eco.jpg';
 import logoBumFest from './images/logos/BUMFEST26.svg';
 import familiaMaderaImg from './images/logos/FamiliaMadera.png';
 import logoTiana from './images/logos/TIANA.svg';
+import logoTianaBlue from './images/logos/TIANA_BLUE.svg';
 import logo2lb from './images/logos/2LB.svg';
 import logoAcist from './images/logos/ACIST.svg';
 import logoBarbar from './images/logos/BARBAR.svg';
@@ -55,6 +56,7 @@ import logoEspaiFamilies from './images/logos/ESPAIFAMILIES.svg';
 export const FESTIVAL_LOGOS = {
   bumFest: logoBumFest,
   tiana: logoTiana,
+  tianaBlue: logoTianaBlue,
   twoLb: logo2lb,
   diputacio: logoDiputacio,
   espaiFamilies: logoEspaiFamilies,

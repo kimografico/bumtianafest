@@ -22,7 +22,7 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
   time,
   location,
   image,
-  ctaText = 'Ver detalles de la charla',
+  ctaText = 'Veure detalls de la xerrada',
   onClick,
   className = '',
 }) => {

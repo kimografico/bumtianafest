@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback, lazy, Suspense } from 'react';
-import { Language } from './data/content';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ConceptSection } from './components/ConceptSection';
@@ -25,15 +24,14 @@ const SpeakerDetailPage = lazy(() =>
 type ViewMode = 'home' | 'workshop-detail' | 'speaker-detail';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('ca');
   const [viewMode, setViewMode] = useState<ViewMode>('home');
   const [selectedWorkshopId, setSelectedWorkshopId] = useState<string | null>(null);
   const [selectedSpeakerId, setSelectedSpeakerId] = useState<string | null>(null);
 
   // Sync html lang attribute for screen readers (WCAG 3.1.1)
   useEffect(() => {
-    document.documentElement.lang = lang;
-  }, [lang]);
+    document.documentElement.lang = 'ca';
+  }, []);
 
   // Handle URL query parameters for direct links & browser history
   useEffect(() => {
@@ -90,7 +88,7 @@ export default function App() {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0C478D] focus:text-white focus:rounded-xl focus:shadow-xl focus:font-bold focus:text-sm focus:outline-none focus:ring-2 focus:ring-[#88643B]"
       >
-        {lang === 'ca' ? 'Saltar al contingut principal' : 'Saltar al contenido principal'}
+        Saltar al contingut principal
       </a>
 
       {/* Frosted ambient background soft illumination in corporate palette */}
@@ -101,17 +99,13 @@ export default function App() {
       </div>
 
       {/* Top Navbar */}
-      <Navbar
-        lang={lang}
-        setLang={setLang}
-        onNavigateHome={handleNavigateHome}
-      />
+      <Navbar onNavigateHome={handleNavigateHome} />
 
       {/* Live region for screen reader announcements on view changes */}
       <div aria-live="polite" className="sr-only">
-        {viewMode === 'home' && (lang === 'ca' ? 'Pàgina principal' : 'Página principal')}
-        {viewMode === 'workshop-detail' && (lang === 'ca' ? 'Detalls del taller' : 'Detalles del taller')}
-        {viewMode === 'speaker-detail' && (lang === 'ca' ? 'Detalls de la xerrada' : 'Detalles de la charla')}
+        {viewMode === 'home' && 'Pàgina principal'}
+        {viewMode === 'workshop-detail' && 'Detalls del taller'}
+        {viewMode === 'speaker-detail' && 'Detalls de la xerrada'}
       </div>
 
       {/* Main Content View Switcher */}
@@ -126,7 +120,6 @@ export default function App() {
           >
             <WorkshopDetailPage
               workshopId={selectedWorkshopId}
-              lang={lang}
               onBack={handleNavigateHome}
               onSelectWorkshop={handleSelectWorkshop}
             />
@@ -141,7 +134,6 @@ export default function App() {
           >
             <SpeakerDetailPage
               speakerId={selectedSpeakerId}
-              lang={lang}
               onBack={handleNavigateHome}
               onSelectSpeaker={handleSelectSpeaker}
             />
@@ -149,49 +141,43 @@ export default function App() {
         ) : (
           <>
             {/* 1. Clean Hero Section with Corporate Image FamiliaMadera */}
-            <Hero lang={lang} />
+            <Hero />
 
-            {/* 3. Concepte & Objectius */}
-            <ConceptSection lang={lang} />
+            {/* 2. Concepte & Objectius */}
+            <ConceptSection />
 
-            {/* 4. Catàleg de Tallers Didàctics (2 columnes, imatge esquerra) */}
-            <WorkshopsSection
-              lang={lang}
-              onSelectWorkshop={handleSelectWorkshop}
-            />
+            {/* 3. Catàleg de Tallers Didàctics (2 columnes, imatge esquerra) */}
+            <WorkshopsSection onSelectWorkshop={handleSelectWorkshop} />
 
-            {/* 5. Cicle de Xerrades & Ponències */}
-            <SpeakersSection
-              lang={lang}
-              onSelectSpeaker={handleSelectSpeaker}
-            />
+            {/* 4. Cicle de Xerrades & Ponències */}
+            <SpeakersSection onSelectSpeaker={handleSelectSpeaker} />
 
-            {/* 6. Horaris i Cronograma (Timeline Vertical) */}
-            <ScheduleSection lang={lang} />
+            {/* 5. Horaris i Cronograma (Timeline Vertical) */}
+            <ScheduleSection />
 
-            {/* 7. Gastronomia Local & DJ Vermut */}
-            <GastronomySection lang={lang} />
+            {/* 6. Gastronomia Local & DJ Vermut */}
+            <GastronomySection />
 
-            {/* 8. Cloenda: Concert de Sedajazz Young Band */}
-            <ClosingConcertSection lang={lang} />
+            {/* 7. Cloenda: Concert de Sedajazz Young Band */}
+            <ClosingConcertSection />
 
-            {/* 9. Carrusel d'Entitats Col·laboradores */}
-            <PartnersCarousel lang={lang} />
+            {/* 8. Carrusel d'Entitats Col·laboradores */}
+            <PartnersCarousel />
 
-            {/* 10. Dubtes & Preguntes Freqüents (FAQ) */}
-            <FaqSection lang={lang} />
+            {/* 9. Dubtes & Preguntes Freqüents (FAQ) */}
+            <FaqSection />
 
-            {/* 11. Localitzacions del Festival a Tiana (amb Google Maps) */}
-            <VenuesSection lang={lang} />
+            {/* 10. Localitzacions del Festival a Tiana (amb Google Maps) */}
+            <VenuesSection />
 
-            {/* 12. Apartat Organitzadors: 2LB Produccions */}
-            <TwoLBSection lang={lang} />
+            {/* 11. Apartat Organitzadors: 2LB Produccions */}
+            <TwoLBSection />
           </>
         )}
       </main>
 
       {/* Footer */}
-      <Footer lang={lang} />
+      <Footer />
     </div>
   );
 }

@@ -8,14 +8,7 @@ const meta: Meta<typeof SpeakersSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
   argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
     onSelectSpeaker: { action: 'onSelectSpeaker' },
   },
 };
@@ -23,8 +16,4 @@ const meta: Meta<typeof SpeakersSection> = {
 export default meta;
 type Story = StoryObj<typeof SpeakersSection>;
 
-export const CuadriculaPonentes: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const CuadriculaPonentes: Story = {};

@@ -8,16 +8,7 @@ const meta: Meta<typeof Navbar> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
   argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-      description: 'Idioma actual del festival',
-    },
-    setLang: { action: 'setLang' },
     onNavigateHome: { action: 'onNavigateHome' },
   },
 };
@@ -25,8 +16,4 @@ const meta: Meta<typeof Navbar> = {
 export default meta;
 type Story = StoryObj<typeof Navbar>;
 
-export const Principal: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const Principal: Story = {};

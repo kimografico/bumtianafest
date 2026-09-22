@@ -1,24 +1,12 @@
 import React, { useState } from 'react';
-import { Language, FAQ_DATA } from '../data/content';
+import { FAQ_DATA } from '../data/content';
 import { ChevronDown } from 'lucide-react';
 
-interface FaqSectionProps {
-  lang: Language;
-}
-
-export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
+export const FaqSection: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-  const t = {
-    ca: {
-      title: 'Dubtes habituals sobre el festival',
-      subtitle: 'Tot el que necessites saber per gaudir al màxim de la teva jornada a Tiana.'
-    },
-    es: {
-      title: 'Dudas habituales sobre el festival',
-      subtitle: 'Todo lo que necesitas saber para exprimir al máximo tu jornada en Tiana.'
-    }
-  }[lang];
+  const title = 'Dubtes habituals sobre el festival';
+  const subtitle = 'Tot el que necessites saber per gaudir al màxim de la teva jornada a Tiana.';
 
   return (
     <section id="faq" className="py-16 sm:py-24 bg-transparent border-b border-[#88643B]/25 relative">
@@ -27,10 +15,10 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
         {/* Section Header without tag */}
         <div className="text-center space-y-3 mb-12">
           <h2 className="text-3xl sm:text-4xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
-            {t.title}
+            {title}
           </h2>
           <p className="text-base text-[#4A4A43]">
-            {t.subtitle}
+            {subtitle}
           </p>
         </div>
 
@@ -54,7 +42,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
                 >
                   <span className="flex items-center gap-3">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#0C478D] shrink-0 shadow-2xs" />
-                    <span>{faq.q[lang]}</span>
+                    <span>{faq.q}</span>
                   </span>
                   <ChevronDown
                     className={`w-5 h-5 text-[#66665D] shrink-0 transition-transform duration-200 ${
@@ -70,7 +58,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
                     aria-labelledby={`faq-question-${idx}`}
                     className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#4A4A43] leading-relaxed border-t border-[#88643B]/20 bg-white/40"
                   >
-                    {faq.a[lang]}
+                    {faq.a}
                   </div>
                 )}
               </div>

@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Language } from '../data/content';
 import { FESTIVAL_LOGOS } from '../assets/images';
+import { LINKS } from '../data/links';
 
 interface NavbarProps {
-  lang: Language;
-  setLang: (lang: Language) => void;
   onNavigateHome?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({
-  lang,
-  setLang,
-  onNavigateHome,
-}) => {
+export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: { ca: 'Tallers', es: 'Talleres' }, href: '#tallers' },
-    { name: { ca: 'Xerrades', es: 'Charlas' }, href: '#xerrades' },
-    { name: { ca: 'Horaris', es: 'Horarios' }, href: '#programa' },
-    { name: { ca: 'Localitzacions', es: 'Localizaciones' }, href: '#espais' },
-    { name: { ca: 'Cloenda', es: 'Clausura' }, href: '#cloenda' },
-    { name: { ca: '2LB', es: '2LB' }, href: '#organitzacio' },
+    { name: 'Tallers', href: '#tallers' },
+    { name: 'Xerrades', href: '#xerrades' },
+    { name: 'Horaris', href: '#programa' },
+    { name: 'Localitzacions', href: '#espais' },
+    { name: 'Cloenda', href: '#cloenda' },
+    { name: '2LB', href: '#organitzacio' },
   ];
 
   const handleLinkClick = () => {
@@ -56,7 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           {/* Desktop Nav Links */}
-          <nav aria-label={lang === 'ca' ? 'Navegació principal' : 'Navegación principal'} className="hidden md:flex items-center gap-1 lg:gap-2">
+          <nav aria-label="Navegació principal" className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map((link, idx) => (
               <a
                 key={idx}
@@ -64,44 +58,39 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={handleLinkClick}
                 className="px-3.5 py-2 rounded text-xs font-bold text-[#181816] hover:text-[#0C478D] hover:bg-[#88643B]/10 transition whitespace-nowrap"
               >
-                {link.name[lang]}
+                {link.name}
               </a>
             ))}
           </nav>
 
-          {/* Actions: Language Switcher & Mobile Menu */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Switcher Pill */}
-            <div className="flex items-center p-0.5 rounded bg-[#FAF9F3] border border-[#88643B]/30 text-[10px] font-bold shadow-2xs">
-              <button
-                onClick={() => setLang('ca')}
-                aria-pressed={lang === 'ca'}
-                className={`px-2 py-1 rounded transition cursor-pointer ${
-                  lang === 'ca'
-                    ? 'bg-[#0C478D] text-white shadow-2xs'
-                    : 'text-[#181816] hover:text-[#0C478D]'
-                }`}
-              >
-                CA
-              </button>
-              <button
-                onClick={() => setLang('es')}
-                aria-pressed={lang === 'es'}
-                className={`px-2 py-1 rounded transition cursor-pointer ${
-                  lang === 'es'
-                    ? 'bg-[#0C478D] text-white shadow-2xs'
-                    : 'text-[#181816] hover:text-[#0C478D]'
-                }`}
-              >
-                ES
-              </button>
-            </div>
+          {/* Actions: Ajuntament de Tiana Logo (Corporate Blue) & Mobile Menu */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Logo del Ajuntament de Tiana en blau corporatiu */}
+            <a
+              href={LINKS.institutional.ajuntamentTiana}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center p-1 rounded hover:opacity-85 transition group"
+              title="Ajuntament de Tiana"
+              aria-label="Ajuntament de Tiana"
+            >
+              <img
+                src={FESTIVAL_LOGOS.tianaBlue}
+                alt="Ajuntament de Tiana"
+                width={26}
+                height={38}
+                className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+                loading="eager"
+                decoding="async"
+              />
+            </a>
 
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded md:hidden text-[#181816] hover:bg-[#88643B]/15 border border-[#88643B]/30 transition cursor-pointer"
-              aria-label={lang === 'ca' ? 'Menú' : 'Menú'}
+              aria-label="Menú"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
             >
@@ -116,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {mobileMenuOpen && (
         <nav
           id="mobile-navigation"
-          aria-label={lang === 'ca' ? 'Navegació mòbil' : 'Navegación móvil'}
+          aria-label="Navegació mòbil"
           className="md:hidden border-t border-[#88643B]/25 bg-[#FAF9F3]/98 backdrop-blur-2xl px-4 py-6 space-y-2 shadow-xl animate-in slide-in-from-top-2"
         >
           {navLinks.map((link, idx) => (
@@ -126,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={handleLinkClick}
               className="block px-4 py-3 rounded text-sm font-bold text-[#181816] hover:bg-[#0C478D]/10 hover:text-[#0C478D] transition"
             >
-              {link.name[lang]}
+              {link.name}
             </a>
           ))}
         </nav>

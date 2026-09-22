@@ -1,62 +1,51 @@
 import React from 'react';
-import { Language, TEAM_DATA } from '../data/content';
-import { FESTIVAL_IMAGES } from '../assets/images';
+import { TEAM_DATA } from '../data/content';
+import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 
-interface TwoLBSectionProps {
-  lang: Language;
-}
-
-export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
+export const TwoLBSection: React.FC = () => {
   const t = {
-    ca: {
-      title: '2LB Produccions',
-      subtitle: 'Creació artística, producció musical i compromís amb la comunitat de Tiana.',
-      missionTitle: 'La nostra visió',
-      missionDesc: 'A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana, i creem el BUMFEST com un espai on les famílies comparteixen cultura de primer nivell, des de la proximitat i sense filtres.',
-      experiencePill: 'Estudi de gravació i producció a Tiana (Maresme)',
-      quote: '“La cultura i la creativitat es construeixen en família i al carrer.”',
-    },
-    es: {
-      title: '2LB Produccions',
-      subtitle: 'Creación artística, producción musical y compromiso con la comunidad de Tiana.',
-      missionTitle: 'Nuestra visión',
-      missionDesc: 'En 2LB Produccions unimos trayectoria profesional en la industria musical y escénica con la pasión por la pedagogía viva. Vivimos y trabajamos en Tiana, creando BUMFEST como un espacio donde las familias comparten cultura de primer nivel desde la cercanía.',
-      experiencePill: 'Estudio de grabación y producción en Tiana (Maresme)',
-      quote: '“La cultura y la creatividad se construyen en familia y en la calle.”',
-    },
-  }[lang];
+    title: 'Qui som?',
+    subtitle: 'La visió darrera del BUMFEST: passió per la música, pedagogia infantil i compromís comunitari amb Tiana.',
+    missionTitle: '2LB Produccions',
+    missionDesc: '2LB és la productora artística i tècnica de Tiana que impulsa el BUMFEST juntament amb l’Ajuntament de Tiana. Neix de la passió compartida per crear espais on infants i adults puguin descobrir la música, la dansa i el teatre des d’un enfocament lúdic, respectuós i d’alta qualitat artística.',
+    quote: '«Creiem que les millors experiències culturals de la infància són aquelles que es comparteixen en família i deixen una empremta que dura tota la vida.»',
+  };
 
   return (
-    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Section Header without tag */}
+        {/* Section Header */}
         <div className="max-w-3xl mb-14 space-y-3">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
             {t.subtitle}
           </p>
         </div>
 
-        {/* Highlight Vision Card with Interspersed Image */}
-        <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
-          <div className="grid lg:grid-cols-12 gap-0 items-center">
+        {/* 2LB Feature Box with 2LB.png */}
+        <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-lg overflow-hidden mb-12">
+          <div className="grid lg:grid-cols-12 items-center">
             
-            {/* Left Image */}
-            <div className="lg:col-span-5 h-72 sm:h-96 lg:h-full relative overflow-hidden">
-              <img
-                src={FESTIVAL_IMAGES.twoLbVision}
-                alt="2LB Produccions a Tiana"
-                width={540}
-                height={360}
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 lg:from-transparent to-transparent" />
+            {/* Left Brand Column */}
+            <div className="lg:col-span-5 p-8 sm:p-12 bg-white/70 border-b lg:border-b-0 lg:border-r border-[#88643B]/20 flex flex-col items-center justify-center text-center space-y-4">
+              <div className="p-4 rounded-xl bg-white shadow-2xs border border-[#88643B]/20 w-full max-w-xs flex items-center justify-center">
+                <img
+                  src={FESTIVAL_LOGOS.twoLb}
+                  alt="2LB Produccions"
+                  width={280}
+                  height={120}
+                  className="w-48 sm:w-56 h-auto object-contain"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p className="text-xs font-semibold text-[#88643B] uppercase tracking-wider">
+                Producció Artística & Direcció Tècnica
+              </p>
             </div>
 
             {/* Right Text Content */}
@@ -103,7 +92,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                       {member.name}
                     </h3>
                     <p className="text-xs font-bold text-[#88643B] uppercase tracking-wider">
-                      {member.role[lang]}
+                      {member.role}
                     </p>
                     <span className="text-[11px] font-semibold text-[#66665D]">
                       2LB Produccions · Tiana
@@ -112,7 +101,7 @@ export const TwoLBSection: React.FC<TwoLBSectionProps> = ({ lang }) => {
                 </div>
 
                 <p className="text-sm text-[#4A4A43] leading-relaxed">
-                  {member.bio[lang]}
+                  {member.bio}
                 </p>
               </div>
             </div>

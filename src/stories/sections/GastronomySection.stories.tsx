@@ -8,22 +8,9 @@ const meta: Meta<typeof GastronomySection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof GastronomySection>;
 
-export const GastronomiaLocal: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const GastronomiaLocal: Story = {};

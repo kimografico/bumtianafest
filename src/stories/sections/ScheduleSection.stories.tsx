@@ -8,22 +8,9 @@ const meta: Meta<typeof ScheduleSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof ScheduleSection>;
 
-export const CronogramaCompleto: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const CronogramaCompleto: Story = {};

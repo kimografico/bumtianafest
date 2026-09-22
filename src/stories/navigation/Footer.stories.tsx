@@ -8,22 +8,9 @@ const meta: Meta<typeof Footer> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Footer>;
 
-export const Principal: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const Principal: Story = {};

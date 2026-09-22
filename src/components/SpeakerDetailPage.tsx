@@ -3,27 +3,24 @@ import {
   ArrowLeft, 
   Clock, 
   MapPin, 
-  Sparkles, 
   CheckCircle2, 
   Globe, 
-  ExternalLink,
-  Navigation,
-  Instagram
+  ExternalLink, 
+  Navigation, 
+  Instagram 
 } from 'lucide-react';
-import { Language, Speaker, SPEAKERS_DATA, VENUES_DATA } from '../data/content';
+import { SPEAKERS_DATA, VENUES_DATA } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
 import { LINKS } from '../data/links';
 
 interface SpeakerDetailPageProps {
   speakerId: string;
-  lang: Language;
   onBack: () => void;
   onSelectSpeaker: (id: string) => void;
 }
 
 export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
   speakerId,
-  lang,
   onBack,
   onSelectSpeaker,
 }) => {
@@ -37,42 +34,22 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
   const otherSpeakers = SPEAKERS_DATA.filter((s) => s.id !== speaker.id);
 
   const t = {
-    ca: {
-      back: 'Tornar a la programació',
-      talkTitle: 'Xerrada / Ponència',
-      schedule: 'Horari',
-      location: 'Espai',
-      bioTitle: 'Sobre el ponent / especialista',
-      synopsisTitle: 'Contingut de la sessió',
-      highlightsTitle: 'Aspectes clau que s’abordaran',
-      website: 'Web oficial',
-      venueCard: 'Com arribar a l’espai de la xerrada',
-      openMaps: 'Obrir a Google Maps',
-      otherTitle: 'Altres xerrades de criança i família',
-      viewTalk: 'Veure ponència →',
-      accessNote: 'Activitat 100% gratuïta. Aforament limitat per estricte ordre d’arribada.',
-    },
-    es: {
-      back: 'Volver a la programación',
-      talkTitle: 'Charla / Ponencia',
-      schedule: 'Horario',
-      location: 'Espacio',
-      bioTitle: 'Sobre el ponente / especialista',
-      synopsisTitle: 'Contenido de la sesión',
-      highlightsTitle: 'Aspectos clave que se abordarán',
-      website: 'Web oficial',
-      venueCard: 'Cómo llegar al espacio de la charla',
-      openMaps: 'Abrir en Google Maps',
-      otherTitle: 'Otras charlas de crianza y familia',
-      viewTalk: 'Ver ponencia →',
-      accessNote: 'Actividad 100% gratuita. Aforo limitado por estricto orden de llegada.',
-    },
-  }[lang];
+    back: 'Tornar a la programació',
+    talkTitle: 'Xerrada / Ponència',
+    bioTitle: 'Sobre el ponent / especialista',
+    highlightsTitle: 'Aspectes clau que s’abordaran',
+    website: 'Web oficial',
+    venueCard: 'Com arribar a l’espai de la xerrada',
+    openMaps: 'Obrir a Google Maps',
+    otherTitle: 'Altres xerrades de criança i família',
+    viewTalk: 'Veure ponència →',
+    accessNote: 'Activitat 100% gratuïta. Aforament limitat per estricte ordre d’arribada.',
+  };
 
   return (
     <div className="min-h-screen pt-8 pb-20 max-w-5xl mx-auto px-4 sm:px-6">
       
-      {/* Back Button */}
+      {/* Top Back Navigation Bar */}
       <div className="mb-8">
         <button
           onClick={() => {
@@ -115,7 +92,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
 
             <div className="space-y-1.5 flex-grow">
               <div className="inline-block px-3 py-1 rounded bg-[#88643B] text-white text-[11px] font-bold uppercase tracking-wider shadow-xs">
-                {speaker.role[lang]}
+                {speaker.role}
               </div>
               <h1 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
                 {speaker.name}
@@ -176,11 +153,11 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             </div>
 
             <h2 className="text-xl sm:text-2xl font-extrabold text-[#181816] leading-snug">
-              {speaker.talkTitle[lang]}
+              {speaker.talkTitle}
             </h2>
             
             <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
-              {speaker.talkDescription[lang]}
+              {speaker.talkDescription}
             </p>
           </div>
 
@@ -188,7 +165,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-[#181816]">{t.highlightsTitle}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
-              {speaker.highlights[lang].map((highlight, idx) => (
+              {speaker.highlights.map((highlight, idx) => (
                 <div key={idx} className="flex items-start gap-3 p-4 rounded bg-white border border-[#88643B]/20 shadow-2xs">
                   <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-[#181816]">{highlight}</span>
@@ -201,7 +178,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-[#181816]">{t.bioTitle}</h3>
             <div className="p-6 rounded bg-white border border-[#88643B]/20 shadow-2xs text-sm sm:text-base text-[#3A3A34] leading-relaxed">
-              {speaker.bio[lang]}
+              {speaker.bio}
             </div>
           </div>
 
@@ -231,7 +208,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             </div>
             
             <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
-              {venue.description[lang]}
+              {venue.description}
             </p>
           </div>
 
@@ -247,7 +224,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             rel="noopener noreferrer"
             className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
           >
-            {lang === 'ca' ? 'Reservar plaça' : 'Reservar plaza'}
+            Reservar plaça
           </a>
 
         </div>
@@ -264,11 +241,11 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                 onClick={() => onSelectSpeaker(other.id)}
                 className="w-full text-left p-6 rounded bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
               >
-                <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.role[lang]}</div>
+                <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.role}</div>
                 <h4 className="font-bold text-lg text-[#181816] group-hover:text-[#0C478D] transition">
                   {other.name}
                 </h4>
-                <p className="text-xs text-[#4A4A43] line-clamp-2">{other.talkTitle[lang]}</p>
+                <p className="text-xs text-[#4A4A43] line-clamp-2">{other.talkTitle}</p>
                 <div className="text-xs font-bold text-[#0C478D] pt-1">{t.viewTalk}</div>
               </button>
             ))}

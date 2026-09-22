@@ -8,22 +8,9 @@ const meta: Meta<typeof FaqSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof FaqSection>;
 
-export const PreguntasFrecuentes: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const PreguntasFrecuentes: Story = {};

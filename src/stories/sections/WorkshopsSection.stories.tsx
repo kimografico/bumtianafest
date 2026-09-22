@@ -8,14 +8,7 @@ const meta: Meta<typeof WorkshopsSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
   argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
     onSelectWorkshop: { action: 'onSelectWorkshop' },
   },
 };
@@ -23,8 +16,4 @@ const meta: Meta<typeof WorkshopsSection> = {
 export default meta;
 type Story = StoryObj<typeof WorkshopsSection>;
 
-export const CatalogoTalleres: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const CatalogoTalleres: Story = {};

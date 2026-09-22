@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
-import { Language, SCHEDULE_DATA } from '../data/content';
+import { SCHEDULE_DATA } from '../data/content';
 
-interface ScheduleSectionProps {
-  lang: Language;
-}
-
-export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
+export const ScheduleSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: { ca: 'Tot el dia', es: 'Todo el día' } },
-    { id: 'tallers', label: { ca: 'Tallers Matinals', es: 'Talleres Mañana' } },
-    { id: 'xerrades', label: { ca: 'Xerrades', es: 'Charlas' } },
-    { id: 'gastronomia', label: { ca: 'Gastronomia & Vermut', es: 'Gastronomía & Vermut' } },
-    { id: 'espectacle', label: { ca: 'Espectacles & Teatre', es: 'Espectáculos & Teatro' } },
+    { id: 'all', label: 'Tot el dia' },
+    { id: 'tallers', label: 'Tallers Matinals' },
+    { id: 'xerrades', label: 'Xerrades' },
+    { id: 'gastronomia', label: 'Gastronomia & Vermut' },
+    { id: 'espectacle', label: 'Espectacles & Teatre' },
   ];
 
   const filteredSchedule = SCHEDULE_DATA.filter((item) => {
@@ -22,16 +18,8 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
     return item.category === activeCategory;
   });
 
-  const t = {
-    ca: {
-      title: 'Horaris del Festival',
-      subtitle: 'Una jornada completa des de les 10:00h del matí fins a les 20:00h del vespre.',
-    },
-    es: {
-      title: 'Horarios del Festival',
-      subtitle: 'Una jornada completa desde las 10:00h de la mañana hasta las 20:00h de la tarde.',
-    },
-  }[lang];
+  const title = 'Horaris del Festival';
+  const subtitle = 'Una jornada completa des de les 10:00h del matí fins a les 20:00h del vespre.';
 
   return (
     <section id="programa" className="py-20 sm:py-28 bg-[#0C478D] text-white relative border-b border-[#88643B]/30">
@@ -40,10 +28,10 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
         {/* Section Header */}
         <div className="max-w-3xl mb-10 space-y-3">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
-            {t.title}
+            {title}
           </h2>
           <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
-            {t.subtitle}
+            {subtitle}
           </p>
         </div>
 
@@ -60,7 +48,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
                   : 'bg-white/10 hover:bg-white/20 text-[#EFEEE0] border border-white/20 backdrop-blur-md'
               }`}
             >
-              {cat.label[lang]}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -88,19 +76,19 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ lang }) => {
 
                   {item.badge && (
                     <span className="text-xs font-bold text-white bg-[#88643B] px-3 py-1 rounded shadow-2xs">
-                      {item.badge[lang]}
+                      {item.badge}
                     </span>
                   )}
                 </div>
 
                 {/* Event Title */}
                 <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-white group-hover:text-[#EFEEE0] transition">
-                  {item.title[lang]}
+                  {item.title}
                 </h3>
 
                 {/* Description */}
                 <p className="text-sm text-[#EFEEE0]/85 leading-relaxed max-w-2xl font-normal">
-                  {item.description[lang]}
+                  {item.description}
                 </p>
 
                 {/* Location pin in light brown */}

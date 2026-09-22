@@ -8,22 +8,9 @@ const meta: Meta<typeof ConceptSection> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  args: {
-    lang: 'es',
-  },
-  argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof ConceptSection>;
 
-export const PorDefecto: Story = {
-  args: {
-    lang: 'es',
-  },
-};
+export const PorDefecto: Story = {};

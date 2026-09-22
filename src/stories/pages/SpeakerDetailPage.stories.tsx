@@ -10,15 +10,9 @@ const meta: Meta<typeof SpeakerDetailPage> = {
   },
   tags: ['autodocs'],
   args: {
-    lang: 'es',
     speakerId: 'armando-bastida',
   },
   argTypes: {
-    lang: {
-      control: 'radio',
-      options: ['es', 'ca'],
-      description: 'Idioma del festival',
-    },
     speakerId: {
       control: 'select',
       options: SPEAKERS_DATA.map((s) => s.id),
@@ -35,20 +29,11 @@ type Story = StoryObj<typeof SpeakerDetailPage>;
 export const ArmandoBastida: Story = {
   args: {
     speakerId: 'armando-bastida',
-    lang: 'es',
   },
 };
 
 export const LaiaFerrer: Story = {
   args: {
     speakerId: 'laia-ferrer',
-    lang: 'ca',
-  },
-};
-
-export const NutricioInfantil: Story = {
-  args: {
-    speakerId: 'nutricio-infantil',
-    lang: 'es',
   },
 };

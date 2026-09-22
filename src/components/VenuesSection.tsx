@@ -1,27 +1,13 @@
 import React from 'react';
 import { MapPin, Navigation, ExternalLink } from 'lucide-react';
-import { Language, VENUES_DATA } from '../data/content';
+import { VENUES_DATA } from '../data/content';
 import { LINKS } from '../data/links';
 
-interface VenuesSectionProps {
-  lang: Language;
-}
-
-export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
-  const t = {
-    ca: {
-      title: 'Les Localitzacions del Festival',
-      subtitle: 'Tots els equipaments municipals i espais culturals on tindrà lloc el festival a Tiana.',
-      openInMaps: 'Obrir a Google Maps',
-      activitiesTitle: 'Activitats en aquesta localització',
-    },
-    es: {
-      title: 'Las Localizaciones del Festival',
-      subtitle: 'Todos los equipamientos municipales y espacios culturales donde tendrá lugar el festival en Tiana.',
-      openInMaps: 'Abrir en Google Maps',
-      activitiesTitle: 'Actividades en esta localización',
-    },
-  }[lang];
+export const VenuesSection: React.FC = () => {
+  const title = 'Les Localitzacions del Festival';
+  const subtitle = 'Tots els equipaments municipals i espais culturals on tindrà lloc el festival a Tiana.';
+  const openInMaps = 'Obrir a Google Maps';
+  const activitiesTitle = 'Activitats en aquesta localització';
 
   return (
     <section id="espais" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
@@ -30,10 +16,10 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
-            {t.title}
+            {title}
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
-            {t.subtitle}
+            {subtitle}
           </p>
         </div>
 
@@ -52,7 +38,7 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
                     {venue.name}
                   </h3>
                   <div className="inline-block px-3 py-1 rounded bg-[#0C478D]/10 text-[#0C478D] border border-[#0C478D]/20 text-xs font-bold uppercase tracking-wider">
-                    {venue.type[lang]}
+                    {venue.type}
                   </div>
                   <p className="text-xs text-[#66665D] flex items-center gap-1.5 font-medium pt-1">
                     <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
@@ -62,16 +48,16 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
 
                 {/* Description */}
                 <p className="text-sm text-[#4A4A43] leading-relaxed font-normal">
-                  {venue.description[lang]}
+                  {venue.description}
                 </p>
 
                 {/* Activities list */}
                 <div className="space-y-2 pt-2 border-t border-[#88643B]/20">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-[#88643B]">
-                    {t.activitiesTitle}
+                    {activitiesTitle}
                   </div>
                   <div className="space-y-1.5">
-                    {venue.activities[lang].map((act, i) => (
+                    {venue.activities.map((act, i) => (
                       <div key={i} className="text-xs text-[#181816] font-medium flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0C478D] shrink-0" />
                         <span>{act}</span>
@@ -88,11 +74,11 @@ export const VenuesSection: React.FC<VenuesSectionProps> = ({ lang }) => {
                   href={LINKS.maps.venue(venue.name, venue.address)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${t.openInMaps}: ${venue.name} (${venue.address})`}
+                  aria-label={`${openInMaps}: ${venue.name} (${venue.address})`}
                   className="w-full py-3 px-4 rounded bg-white hover:bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
                 >
                   <Navigation className="w-4 h-4 text-[#0C478D]" />
-                  <span>{t.openInMaps}</span>
+                  <span>{openInMaps}</span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
                 </a>
               </div>

@@ -1,60 +1,31 @@
 import React from 'react';
 import { Navigation } from 'lucide-react';
-import { Language } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
 import { LINKS } from '../data/links';
 
-interface ClosingConcertSectionProps {
-  lang: Language;
-}
-
-export const ClosingConcertSection: React.FC<ClosingConcertSectionProps> = ({ lang }) => {
+export const ClosingConcertSection: React.FC = () => {
   const t = {
-    ca: {
-      title: 'Concert de Cloenda: Sedajazz Young Band',
-      subtitle:
-        'El colofó d\u2019or del BUMFEST 2026: música creativa, ritme i improvisació per acomiadar una jornada inoblidable en família.',
-      description:
-        'Sedajazz Young Band és una formació que sorgeix com a resultat de l\u2019aposta que el col·lectiu de músics valencià Sedajazz porta dècades fent per integrar la música creativa i la improvisació en l\u2019educació musical dels nens i nenes des de ben petits. Oferiran un concert amb un repertori del que podran gaudir tant adults com els més menuts.',
-      highlights: [
-        {
-          title: 'Pedagogia Musical Viva',
-          desc: 'Joves intèrprets formats en la improvisació, l\u2019escolta col·lectiva i el llenguatge jazzístic.',
-        },
-        {
-          title: 'Repertori Intergeneracional',
-          desc: 'Composicions i arranjaments pensats perquè vibrin tant els infants com els adults a la sala.',
-        },
-        {
-          title: 'Escenari Emblemàtic',
-          desc: 'La Sala Albéniz de Tiana ofereix una acústica càlida i una comoditat ideal per a tota la família.',
-        },
-      ],
-      openMap: 'Com arribar a la Sala Albéniz',
-    },
-    es: {
-      title: 'Concierto de Clausura: Sedajazz Young Band',
-      subtitle:
-        'El broche de oro de BUMFEST 2026: música creativa, ritmo e improvisación para despedir una jornada inolvidable en familia.',
-      description:
-        'Sedajazz Young Band es una formación que surge como resultado de la apuesta que el colectivo de músicos valenciano Sedajazz lleva décadas haciendo para integrar la música creativa y la improvisación en la educación musical de niños y niñas desde muy pequeños. Ofrecerán un concierto con un repertorio del que podrán disfrutar tanto adultos como los más pequeños.',
-      highlights: [
-        {
-          title: 'Pedagogía Musical Viva',
-          desc: 'Jóvenes intérpretes formados en la improvisación, la escucha colectiva y el lenguaje jazzístico.',
-        },
-        {
-          title: 'Repertorio Intergeneracional',
-          desc: 'Composiciones y arreglos pensados para que vibren tanto los peques como los adultos en la sala.',
-        },
-        {
-          title: 'Escenario Emblemático',
-          desc: 'La Sala Albéniz de Tiana ofrece una acústica cálida y un confort ideal para toda la familia.',
-        },
-      ],
-      openMap: 'Cómo llegar a la Sala Albéniz',
-    },
-  }[lang];
+    title: 'Concert de Cloenda: Sedajazz Young Band',
+    subtitle:
+      'El colofó d\u2019or del BUMFEST 2026: música creativa, ritme i improvisació per acomiadar una jornada inoblidable en família.',
+    description:
+      'Sedajazz Young Band és una formació que sorgeix com a resultat de l\u2019aposta que el col·lectiu de músics valencià Sedajazz porta dècades fent per integrar la música creativa i la improvisació en l\u2019educació musical dels nens i nenes des de ben petits. Oferiran un concert amb un repertori del que podran gaudir tant adults com els més menuts.',
+    highlights: [
+      {
+        title: 'Pedagogia Musical Viva',
+        desc: 'Joves intèrprets formats en la improvisació, l\u2019escolta col·lectiva i el llenguatge jazzístic.',
+      },
+      {
+        title: 'Repertori Intergeneracional',
+        desc: 'Composicions i arranjaments pensats perquè vibrin tant els infants com els adults a la sala.',
+      },
+      {
+        title: 'Escenari Emblemàtic',
+        desc: 'La Sala Albéniz de Tiana ofereix una acústica càlida i una comoditat ideal per a tota la família.',
+      },
+    ],
+    openMap: 'Com arribar a la Sala Albéniz',
+  };
 
   return (
     <section id="cloenda" className="py-20 sm:py-28 bg-[#EFEEE0] border-b border-[#88643B]/25 relative overflow-hidden">

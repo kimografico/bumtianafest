@@ -1,56 +1,33 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Language } from '../data/content';
 import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 
-interface HeroProps {
-  lang: Language;
-}
-
-export const Hero: React.FC<HeroProps> = ({ lang }) => {
-  const t = {
-    ca: {
-      title: 'BUMFEST TIANA',
-      year: '2026',
-      subtitle: 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.',
-      welcomeText: [
-        'Benvingudes i benvinguts al BUMFEST TIANA 2026',
-        'Un festival didàctic per a les famílies de Tiana i dels voltants.',
-        'Unes jornades diferents on les famílies podran gaudir d\u2019un dia ple d\u2019activitats',
-        'on destaquen tallers, xerrades i música, tot enfocat al públic familiar.'
-      ],
-      ctaWorkshops: 'Explorar Tallers',
-      ctaProgram: 'Veure Programa',
-      ctaVenues: 'Localitzacions',
-    },
-    es: {
-      title: 'BUMFEST TIANA',
-      year: '2026',
-      subtitle: 'Un día entero en Tiana para compartir aprendizajes, talleres didácticos, charlas de crianza y música en familia.',
-      welcomeText: [
-        'Bienvenidas y bienvenidos a BUMFEST TIANA 2026',
-        'Un festival didáctico para las familias de Tiana y alrededores.',
-        'Unas jornadas diferentes donde las familias podrán disfrutar de un día lleno de actividades',
-        'donde destacan talleres, charlas y música, todo enfocado al público familiar.'
-      ],
-      ctaWorkshops: 'Explorar Talleres',
-      ctaProgram: 'Ver Programa',
-      ctaVenues: 'Localizaciones',
-    },
-  }[lang];
+export const Hero: React.FC = () => {
+  const title = 'BUMFEST TIANA';
+  const year = '2026';
+  const subtitle = 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.';
+  const welcomeText = [
+    'Benvingudes i benvinguts al BUMFEST TIANA 2026',
+    'Un festival didàctic per a les famílies de Tiana i dels voltants.',
+    'Unes jornades diferents on les famílies podran gaudir d\u2019un dia ple d\u2019activitats',
+    'on destaquen tallers, xerrades i música, tot enfocat al públic familiar.'
+  ];
+  const ctaWorkshops = 'Explorar Tallers';
+  const ctaProgram = 'Veure Programa';
+  const ctaVenues = 'Localitzacions';
 
   return (
     <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Screen-reader canonical H1 (WCAG 2.4.6) */}
       <h1 className="sr-only">
-        {t.title} {t.year} - {t.subtitle}
+        {title} {year} - {subtitle}
       </h1>
 
       {/* Mobile Logo (visible first on mobile only) */}
       <div className="block lg:hidden mb-6">
         <img
           src={FESTIVAL_LOGOS.bumFest}
-          alt={t.title + ' ' + t.year}
+          alt={title + ' ' + year}
           width={459}
           height={102}
           fetchPriority="high"
@@ -70,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             <div className="hidden lg:block">
               <img
                 src={FESTIVAL_LOGOS.bumFest}
-                alt={t.title + ' ' + t.year}
+                alt={title + ' ' + year}
                 width={459}
                 height={102}
                 loading="eager"
@@ -80,10 +57,10 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               />
             </div>
             <p className="text-lg sm:text-2xl text-[#181816] font-medium leading-relaxed max-w-2xl text-left">
-              {t.subtitle}
+              {subtitle}
             </p>
             <div className="pt-2 text-sm sm:text-base text-[#3A3A34] leading-relaxed max-w-xl font-normal space-y-1 text-left">
-              {t.welcomeText.map((line, i) => (
+              {welcomeText.map((line, i) => (
                 <p key={i}>{line}</p>
               ))}
             </div>
@@ -95,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               href="#tallers"
               className="w-full sm:w-auto px-8 py-4 rounded bg-[#0C478D] hover:opacity-90 text-white text-sm font-bold shadow-lg shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2 text-center"
             >
-              <span>{t.ctaWorkshops}</span>
+              <span>{ctaWorkshops}</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
@@ -103,14 +80,14 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               href="#programa"
               className="w-full sm:w-auto px-7 py-4 rounded bg-[#88643B] hover:opacity-90 text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
-              {t.ctaProgram}
+              {ctaProgram}
             </a>
 
             <a
               href="#espais"
               className="w-full sm:w-auto px-7 py-4 rounded bg-white/80 hover:bg-white text-[#181816] border border-[#88643B]/30 text-sm font-bold shadow-2xs active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
-              {t.ctaVenues}
+              {ctaVenues}
             </a>
           </div>
         </div>

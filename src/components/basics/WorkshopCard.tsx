@@ -22,7 +22,7 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
   description,
   location,
   image,
-  ctaText = 'Más detalles',
+  ctaText = 'Més detalls',
   onClick,
   className = '',
 }) => {

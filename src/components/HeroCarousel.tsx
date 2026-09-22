@@ -1,103 +1,44 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Language } from '../data/content';
 import { FESTIVAL_IMAGES } from '../assets/images';
 
-interface HeroCarouselProps {
-  lang: Language;
-}
-
-export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
+export const HeroCarousel: React.FC = () => {
   const slides = [
     {
       image: FESTIVAL_IMAGES.hero,
-      tag: {
-        ca: 'Plaça de la Vila',
-        es: 'Plaça de la Vila',
-      },
-      title: {
-        ca: 'El cor obert del festival a Tiana',
-        es: 'El corazón abierto del festival en Tiana',
-      },
-      desc: {
-        ca: 'Terrasses, colors i ambient acollidor per trobar-se amb la família i amics.',
-        es: 'Terrazas, colores y ambiente acogedor para encontrarse en familia y con amigos.',
-      },
+      tag: 'Plaça de la Vila',
+      title: 'El cor obert del festival a Tiana',
+      desc: 'Terrasses, colors i ambient acollidor per trobar-se amb la família i amics.',
     },
     {
       image: FESTIVAL_IMAGES.workshop,
-      tag: {
-        ca: 'El Casal de Tiana',
-        es: 'El Casal de Tiana',
-      },
-      title: {
-        ca: 'Contacontes i espectacles familiars',
-        es: 'Cuentacuentos y espectáculos familiares',
-      },
-      desc: {
-        ca: 'Arts escèniques, narracions a l\'aire lliure i catifes de joc sota els arbres.',
-        es: 'Artes escénicas, narraciones al aire libre y alfombras de juego bajo los árboles.',
-      },
+      tag: 'El Casal de Tiana',
+      title: 'Contacontes i espectacles familiars',
+      desc: 'Arts escèniques, narracions a l\'aire lliure i catifes de joc sota els arbres.',
     },
     {
       image: FESTIVAL_IMAGES.music,
-      tag: {
-        ca: 'Nits d\'Estiu & Màgia',
-        es: 'Noches de Verano & Magia',
-      },
-      title: {
-        ca: 'Un sostre daurat de microbombetes a la vila',
-        es: 'Un techo dorado de microbombillas en el pueblo',
-      },
-      desc: {
-        ca: 'Il·luminació càlida, parades artesanes i vetllades inoblidables per a tothom.',
-        es: 'Iluminación cálida, paradas artesanas y veladas inolvidables para todos.',
-      },
+      tag: 'Nits d\'Estiu & Màgia',
+      title: 'Un sostre daurat de microbombetes a la vila',
+      desc: 'Il·luminació càlida, parades artesanes i vetllades inoblidables per a tothom.',
     },
     {
       image: FESTIVAL_IMAGES.cooking,
-      tag: {
-        ca: 'Gastronomia & Comunitat',
-        es: 'Gastronomía & Comunidad',
-      },
-      title: {
-        ca: 'El gran dinar popular de germanor',
-        es: 'La gran comida popular comunitaria',
-      },
-      desc: {
-        ca: 'Taula compartida a la plaça, paelles tradicionals i convivència entre generacions.',
-        es: 'Mesa compartida en la plaza, paellas tradicionales y convivencia entre generaciones.',
-      },
+      tag: 'Gastronomia & Comunitat',
+      title: 'El gran dinar popular de germanor',
+      desc: 'Taula compartida a la plaça, paelles tradicionals i convivència entre generacions.',
     },
     {
       image: FESTIVAL_IMAGES.village,
-      tag: {
-        ca: 'Patrimoni & Poble',
-        es: 'Patrimonio & Pueblo',
-      },
-      title: {
-        ca: 'Tiana: Vila de cultura, natura i convivència',
-        es: 'Tiana: Pueblo de cultura, naturaleza y convivencia',
-      },
-      desc: {
-        ca: 'L\'Ajuntament neoclàssic i la història dels nostres carrers al peu de la serralada.',
-        es: 'El Ayuntamiento neoclásico y la historia de nuestras calles al pie de la cordillera.',
-      },
+      tag: 'Patrimoni & Poble',
+      title: 'Tiana: Vila de cultura, natura i convivència',
+      desc: 'L\'Ajuntament neoclàssic i la història dels nostres carrers al peu de la serralada.',
     },
     {
       image: FESTIVAL_IMAGES.festival,
-      tag: {
-        ca: 'BUMFEST TIANA 2026',
-        es: 'BUMFEST TIANA 2026',
-      },
-      title: {
-        ca: 'Celebrant la infància i la comunitat',
-        es: 'Celebrando la infancia y la comunidad',
-      },
-      desc: {
-        ca: 'Un dia sencer d\'experiències, creativitat i espais de trobada per a tota la família.',
-        es: 'Un día entero de experiencias, creatividad y espacios de encuentro para toda la familia.',
-      },
+      tag: 'BUMFEST TIANA 2026',
+      title: 'Celebrant la infància i la comunitat',
+      desc: 'Un dia sencer d\'experiències, creativitat i espais de trobada per a tota la família.',
     },
   ];
 
@@ -174,7 +115,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
             >
               <img
                 src={slide.image}
-                alt={slide.title[lang]}
+                alt={slide.title}
                 width={1920}
                 height={1080}
                 className="w-full h-full object-cover"
@@ -191,15 +132,15 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
               <div className="absolute bottom-0 left-0 right-0 p-5 pb-12 sm:p-10 sm:pb-12 md:p-14 max-w-7xl mx-auto flex flex-col justify-end">
                 <div className="max-w-2xl space-y-2 sm:space-y-3">
                    <span className="inline-block px-3 py-1 rounded bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider border border-white/30">
-                    {slide.tag[lang]}
+                    {slide.tag}
                   </span>
                   
                   <p className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight drop-shadow-sm">
-                    {slide.title[lang]}
+                    {slide.title}
                   </p>
                   
                   <p className="text-sm sm:text-base text-slate-200 line-clamp-2 max-w-xl font-normal drop-shadow-sm">
-                    {slide.desc[lang]}
+                    {slide.desc}
                   </p>
                 </div>
               </div>
@@ -230,7 +171,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ lang }) => {
             <button
               key={dotIdx}
               onClick={() => setCurrentIndex(dotIdx)}
-              aria-label={`${lang === 'ca' ? 'Veure diapositiva' : 'Ver diapositiva'} ${dotIdx + 1}: ${slides[dotIdx].title[lang]}`}
+              aria-label={`Veure diapositiva ${dotIdx + 1}: ${slides[dotIdx].title}`}
               aria-current={dotIdx === currentIndex ? 'true' : undefined}
               className="min-w-[40px] min-h-[40px] flex items-center justify-center p-2 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
