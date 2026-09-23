@@ -139,7 +139,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     id: "espai-nadons",
     title: "Espai Nadons",
     category: "compartit",
-    instructor: "Eva",
+    instructor: "Eva Campmajor",
     location: "Parc Lola Anglada",
     shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
     fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
@@ -187,7 +187,7 @@ export const SPEAKERS_DATA: Speaker[] = [
     talkTitle: "Criar amb sentit comú",
     talkDescription:
       'Una trobada propera, pràctica i plena d\'empatia, on Armando Bastida abordarà els reptes reals de la primera infància, sota el lema "Criar con Sentido Común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
-    time: "17:15h - 18:30h",
+    time: "17:15h - 18:45h",
     location: "Sala Albéniz",
     highlights: [
       "Acompanyament emocional des de la primera infància",
@@ -378,7 +378,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     badge: "Xerrada",
   },
   {
-    time: "17:15 - 18:30",
+    time: "17:15 - 18:45",
     title: 'Xerrada: Armando Bastida - "Criar amb sentit comú"',
     category: "xerrades",
     location: "Sala Albéniz",

@@ -154,14 +154,14 @@ export default function App() {
             {/* 4. Cicle de Xerrades & Ponències */}
             <SpeakersSection onSelectSpeaker={handleSelectSpeaker} />
 
-            {/* 5. Horaris i Cronograma (Timeline Vertical) */}
+            {/* 5. Cloenda: Concert de Sedajazz Young Band */}
+            <ClosingConcertSection />
+
+            {/* 6. Horaris i Cronograma (Timeline Vertical) */}
             <ScheduleSection />
 
-            {/* 6. Gastronomia Local & DJ Vermut */}
+            {/* 7. Gastronomia Local */}
             <GastronomySection />
-
-            {/* 7. Cloenda: Concert de Sedajazz Young Band */}
-            <ClosingConcertSection />
 
             {/* 8. Carrusel d'Entitats Col·laboradores */}
             <PartnersCarousel />

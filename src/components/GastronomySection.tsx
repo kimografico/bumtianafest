@@ -1,11 +1,11 @@
 import React from 'react';
-import { Music, MapPin, ExternalLink } from 'lucide-react';
+import { MapPin, ExternalLink } from 'lucide-react';
 import { RESTAURANTS_DATA } from '../data/content';
 import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 import { LINKS } from '../data/links';
 
 export const GastronomySection: React.FC = () => {
-  const title = 'Dinar Familiar & DJ';
+  const title = 'Dinar Familiar';
   const subtitle = 'De 14:00h a 16:00h, el dinar és el moment central de convivència i trobada familiar als carrers, places i terrasses de Tiana.';
   const restaurantsTitle = 'Establiments Col·laboradors de Tiana';
   const visitWebsite = 'Veure lloc web / contacte';
@@ -54,23 +54,15 @@ export const GastronomySection: React.FC = () => {
           </p>
         </div>
 
-        {/* Informative Card: Tiquets + DJ */}
+        {/* Informative Card: Tiquets */}
         <div className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div className="space-y-1">
-              <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
-                Ensenya la teva polsera als següents establiments i allí trobaràs el teu menú BUMFEST.
-              </p>
-              <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
-                Hi hauran taules preparades a disposició de les famílies, al Parc Antic de Futbol, per a poder dinar tots junts.
-              </p>
-            </div>
-
-            {/* Ambient Music Pill */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded bg-[#88643B] text-white text-xs font-bold shrink-0 shadow-md">
-              <Music className="w-4 h-4 text-white shrink-0" />
-              <span>DJ VINAXA (12:00h - 14:00h)</span>
-            </div>
+          <div className="space-y-1">
+            <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+              Ensenya la teva polsera als següents establiments i allí trobaràs el teu menú BUMFEST.
+            </p>
+            <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+              Hi hauran taules preparades a disposició de les famílies, al Parc Antic de Futbol, per a poder dinar tots junts.
+            </p>
           </div>
         </div>
 

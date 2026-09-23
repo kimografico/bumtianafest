@@ -31,9 +31,11 @@ export const ClosingConcertSection: React.FC = () => {
     <section id="cloenda" className="py-20 sm:py-28 bg-[#EFEEE0] border-b border-[#88643B]/25 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mb-12 space-y-3">
+        <div className="mb-12 space-y-3">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
-            {t.title}
+            Concert de Cloenda:
+            <br />
+            <span className="text-xl sm:text-2xl font-bold text-[#88643B]">Sedajazz Young Band</span>
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
             {t.subtitle}
@@ -85,7 +87,7 @@ export const ClosingConcertSection: React.FC = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href={LINKS.maps.venue('Plaça de la Vila', 'Plaça de la Vila, Tiana')}
                 target="_blank"
@@ -95,6 +97,9 @@ export const ClosingConcertSection: React.FC = () => {
                 <Navigation className="w-4 h-4" />
                 <span>{t.openMap}</span>
               </a>
+              <span className="px-4 py-3.5 rounded bg-[#88643B]/15 text-[#88643B] text-xs sm:text-sm font-bold border border-[#88643B]/30">
+                19:00h - 20:00h
+              </span>
             </div>
           </div>
         </div>
