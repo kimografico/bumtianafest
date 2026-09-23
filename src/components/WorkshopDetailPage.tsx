@@ -87,7 +87,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
           <img
             src={getWorkshopImage(workshop.id)}
-            alt={workshop.title}
+            alt=""
             width={960}
             height={384}
             fetchPriority="high"

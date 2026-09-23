@@ -69,7 +69,7 @@ export const TwoLBSection: React.FC = () => {
                   <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#88643B]/50 shadow-md shrink-0 bg-[#EFEEE0] ring-2 ring-[#0C478D]/20">
                     <img
                       src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
-                      alt={member.name}
+                      alt=""
                       width={80}
                       height={80}
                       className="w-full h-full object-cover"

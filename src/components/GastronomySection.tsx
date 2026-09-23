@@ -90,7 +90,7 @@ export const GastronomySection: React.FC = () => {
                 <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
                   <img
                     src={getRestaurantImage(resto.id)}
-                    alt={`${resto.name} - ${resto.type} a Tiana`}
+                    alt=""
                     width={400}
                     height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -117,7 +117,7 @@ export const GastronomySection: React.FC = () => {
                         <div className="w-20 sm:w-24 h-9 sm:h-11 aspect-[2/1] shrink-0 flex items-center justify-end">
                           <img
                             src={getRestaurantLogo(resto.id)!}
-                            alt={`Logotip de ${resto.name}`}
+                            alt=""
                             width={96}
                             height={44}
                             className="w-full h-full object-contain object-right"

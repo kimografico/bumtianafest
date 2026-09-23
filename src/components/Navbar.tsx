@@ -72,11 +72,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
               rel="noopener noreferrer"
               className="flex items-center p-1 rounded hover:opacity-85 transition group"
               title="Ajuntament de Tiana"
-              aria-label="Ajuntament de Tiana"
             >
               <img
                 src={FESTIVAL_LOGOS.tianaBlue}
-                alt="Ajuntament de Tiana"
+                alt=""
                 width={26}
                 height={38}
                 className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"

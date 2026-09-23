@@ -36,7 +36,7 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
           <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#88643B]/40 shadow-md shrink-0 bg-[#EFEEE0] group-hover:border-[#0C478D] group-hover:scale-105 transition">
             <img
               src={image}
-              alt={name}
+              alt=""
               width={64}
               height={64}
               className="w-full h-full object-cover"

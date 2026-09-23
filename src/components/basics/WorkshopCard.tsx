@@ -28,15 +28,25 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
 }) => {
   const showCategory = category && !category.toLowerCase().includes('compartit');
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onClick?.();
+    }
+  };
+
   return (
-    <button
+    <div
+      role="button"
+      tabIndex={0}
       onClick={onClick}
+      onKeyDown={handleKeyDown}
       className={`w-full text-left rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between shadow-sm hover:shadow-lg overflow-hidden group ${className}`}
     >
       <div className="relative h-48 w-full overflow-hidden bg-[#EFEEE0]">
         <img
           src={image}
-          alt={title}
+          alt=""
           width={400}
           height={192}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -80,6 +90,6 @@ export const WorkshopCard: React.FC<WorkshopCardProps> = ({
           </span>
         </div>
       </div>
-    </button>
+    </div>
   );
 };

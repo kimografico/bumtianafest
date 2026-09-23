@@ -53,9 +53,9 @@ export const VenuesSection: React.FC = () => {
 
                 {/* Activities list */}
                 <div className="space-y-2 pt-2 border-t border-[#88643B]/20">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#88643B]">
+                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#88643B]">
                     {activitiesTitle}
-                  </div>
+                  </h4>
                   <div className="space-y-1.5">
                     {venue.activities.map((act, i) => (
                       <div key={i} className="text-xs text-[#181816] font-medium flex items-center gap-2">

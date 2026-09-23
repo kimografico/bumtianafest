@@ -139,7 +139,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     id: "espai-nadons",
     title: "Espai Nadons",
     category: "compartit",
-    instructor: "Per determinar",
+    instructor: "Eva",
     location: "Parc Lola Anglada",
     shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
     fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",

@@ -49,7 +49,7 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
               <div className="flex justify-center relative z-0 -mb-1">
                 <img
                   src={getSpeakerLargeImage(speaker.id)}
-                  alt={speaker.name}
+                  alt=""
                   className={`w-auto max-w-full drop-shadow-lg transition-transform duration-300 ease-out ${
                     speaker.id === 'laia-ferrer'
                       ? 'group-hover:scale-105 group-hover:-rotate-2'

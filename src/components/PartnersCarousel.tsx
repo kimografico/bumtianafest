@@ -64,7 +64,7 @@ export const PartnersCarousel: React.FC = () => {
             >
               <img
                 src={item.logo}
-                alt={`Logotip col·laborador ${item.name}`}
+                alt=""
                 width={200}
                 height={80}
                 className="h-14 sm:h-20 md:h-24 w-auto max-w-[200px] sm:max-w-[280px] object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm brightness-105"

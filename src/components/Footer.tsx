@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { FESTIVAL_LOGOS } from "../assets/images";
 import { LINKS } from "../data/links";
+import { AccessibilityModal } from "./AccessibilityModal";
 
 export const Footer: React.FC = () => {
+  const [showAccessibility, setShowAccessibility] = useState(false);
   const t = {
     tagline: "Festival de criança, tallers i comunitat a Tiana (Maresme).",
     location: "Tiana, Barcelona",
@@ -61,7 +63,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.tiana}
-                    alt="Escut de l'Ajuntament de Tiana"
+                    alt=""
                     width={100}
                     height={100}
                     className="h-14 sm:h-16 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
@@ -72,14 +74,13 @@ export const Footer: React.FC = () => {
                 </a>
 
                 {/* 2. 2LB Produccions */}
-                <a
-                  href="#organitzacio"
-                  className="inline-block group shrink-0"
+                <div
+                  className="inline-block shrink-0"
                   title="2LB Produccions"
                 >
                   <img
                     src={FESTIVAL_LOGOS.twoLb}
-                    alt="2LB Produccions"
+                    alt=""
                     width={100}
                     height={40}
                     className="h-8 sm:h-10 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
@@ -87,7 +88,7 @@ export const Footer: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                </a>
+                </div>
 
                 {/* Thin vertical separator */}
                 <div
@@ -103,7 +104,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.espaiFamilies}
-                    alt="Espai Famílies"
+                    alt=""
                     width={120}
                     height={32}
                     className="h-7 sm:h-8 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
@@ -129,7 +130,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.diputacio}
-                    alt="Diputació de Barcelona"
+                    alt=""
                     width={100}
                     height={60}
                     className="h-8 sm:h-9 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
@@ -145,13 +146,11 @@ export const Footer: React.FC = () => {
           {/* Right Column: Quick Links Navigation */}
           <div className="md:col-span-5 lg:col-span-4 space-y-6 md:pl-6 lg:pl-12">
             <div className="space-y-3">
-              <p
+              <h2
                 className="text-xs font-bold uppercase tracking-wider text-white"
-                role="heading"
-                aria-level={2}
               >
                 {t.linksTitle}
-              </p>
+              </h2>
               <ul className="space-y-2.5 text-xs text-[#EFEEE0]/70">
                 <li>
                   <a href="#concepte" className="hover:text-accent transition">
@@ -194,6 +193,16 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
               </ul>
+
+              {/* Separator */}
+              <div className="border-t border-white/10 pt-3 mt-3">
+                <button
+                  onClick={() => setShowAccessibility(true)}
+                  className="text-xs text-[#EFEEE0]/70 hover:text-accent transition cursor-pointer"
+                >
+                  Accessibilitat
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -213,6 +222,11 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <AccessibilityModal
+        isOpen={showAccessibility}
+        onClose={() => setShowAccessibility(false)}
+      />
     </footer>
   );
 };

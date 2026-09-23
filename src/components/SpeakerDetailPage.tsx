@@ -80,7 +80,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                     ? FESTIVAL_IMAGES.armandoBastida
                     : FESTIVAL_IMAGES.laiaFerrer
                 }
-                alt={speaker.name}
+                alt=""
                 width={96}
                 height={96}
                 fetchPriority="high"
