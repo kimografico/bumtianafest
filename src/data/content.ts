@@ -223,9 +223,9 @@ export const VENUES_DATA: Venue[] = [
     description:
       "Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.",
     activities: [
+      "Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)",
       "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)",
       "Xerrada Armando Bastida: Criança amb Sentit Comú (17:15h)",
-      "Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)",
       "Concert de Cloenda: Sedajazz Young Band (19:00h - 20:00h)",
     ],
     walkingFromCenter: "1 min a peu (Plaça de la Vila)",
@@ -273,6 +273,16 @@ export const VENUES_DATA: Venue[] = [
     coordinates: { lat: 0, lng: 0 },
   },
   {
+    id: "parc-antic-futbol",
+    name: "Parc Antic de Futbol",
+    type: "Parc & Espai a l'aire lliure",
+    address: "Parc Antic de Futbol, Tiana",
+    description: "Espai obert per a jocs populars, DJ i activitats familiars.",
+    activities: ["Jocs Populars Tradicionals (11:00h - 14:00h)", "DJ VINAXA (12:00h - 14:00h)"],
+    walkingFromCenter: "A determinar",
+    coordinates: { lat: 0, lng: 0 },
+  },
+  {
     id: "lescorxador",
     name: "L'Escorxador",
     type: "Espai Polivalent Municipal",
@@ -303,53 +313,52 @@ export const VENUES_DATA: Venue[] = [
 export const SCHEDULE_DATA: ScheduleItem[] = [
   {
     time: "09:30",
-    title: "Obertura de Portes & Acollida de Famílies",
+    title: "Acollida de Famílies",
     category: "tot-el-dia",
     location: "Plaça de la Vila",
     description: "Recollida de polseres, mapa d'itineraris i benvinguda al BUMFEST TIANA 2026.",
   },
   {
     time: "10:00 - 12:00",
-    title: "Taller Natura: Jardineria & Cura de la Terra",
+    title: "Taller de Natura",
     category: "tallers",
-    location: "Plaça de la Vila",
+    location: "Can Baratau",
     description:
-      "Creació de bombes de llavors i plantació per a la recuperació ambiental del parc després de l'incendi.",
+      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
     badge: "Taller",
   },
   {
     time: "10:00 - 12:00",
     title: "Taller de Percussió",
     category: "tallers",
-    location: "Doctor Mascaró",
+    location: "Plaça del Coro",
     description:
       "El balafó, el djembé, la darbuka, l’ago-go... Creació d'una orquestra de percussió en família.",
     badge: "Taller",
   },
   {
     time: "10:00 - 12:00",
-    title: "Taller de Teatre & Expressió Corporal per a la Primera Infància",
+    title: "Taller de Teatre",
     category: "tallers",
     location: "Sala Albéniz",
     description:
-      "Jocs de moviment, expressió d'emocions i contes escènics compartits amb les famílies.",
+      "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
     badge: "Taller",
   },
   {
     time: "11:00 - 14:00",
-    title: "Jocs Populars Tradicionals en Família",
+    title: "Jocs Populars Tradicionals",
     category: "tot-el-dia",
-    location: "Plaça de la Vila / Bàrbar & Parc dels Teletubbies",
+    location: "Parc Antic de Futbol",
     description:
-      "Jocs tradicionals de fusta, cooperació i carrer lliure dinamitzats per a la primera infància.",
+      "Jocs tradicionals, cooperació al aire lliure dinamitzats per a la primera infància.",
   },
   {
     time: "12:00 - 14:00",
-    title: "DJ Vermut Familiar en el Bàrbar & Parc dels Teletubbies",
+    title: "DJ VINAXA",
     category: "gastronomia",
-    location: "Bàrbar & Parc dels Teletubbies",
-    description:
-      "Música familiar, ritmes alegres i trobada vermutera a l'aire lliure als establiments locals de Tiana.",
+    location: "Parc Antic de Futbol",
+    description: "Música per a tota la família.",
   },
   {
     time: "14:00 - 16:00",
@@ -381,7 +390,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     time: "19:00 - 20:00",
     title: "Concert de Cloenda: Sedajazz Young Band",
     category: "espectacle",
-    location: "Sala Albéniz",
+    location: "Plaça de la Vila",
     description:
       "Gran concert de cloenda amb la Sedajazz Young Band: música creativa, improvisació i repertori festiu per a petits i grans.",
     badge: "Cloenda",
