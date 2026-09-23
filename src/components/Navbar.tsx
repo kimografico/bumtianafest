@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
             >
               <img
                 src={FESTIVAL_LOGOS.tianaBlue}
-                alt=""
+                alt="Ajuntament de Tiana"
                 width={26}
                 height={38}
                 className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"

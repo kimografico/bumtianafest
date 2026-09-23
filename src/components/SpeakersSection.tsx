@@ -104,15 +104,17 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                     <span>{viewDetails}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
-                  <a
-                    href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades] || LINKS.forms.reservarPlaca}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="w-full py-2.5 px-4 rounded bg-[#88643B] hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs active:scale-95"
-                  >
-                    {reservar}
-                  </a>
+                  {LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades] && (
+                    <a
+                      href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-full py-2.5 px-4 rounded bg-[#88643B] hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs active:scale-95"
+                    >
+                      {reservar}
+                    </a>
+                  )}
                 </div>
 
               </button>

@@ -218,14 +218,16 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
           </div>
 
           {/* Reservar Plaza Button */}
-          <a
-            href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades] || LINKS.forms.reservarPlaca}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
-          >
-            Reservar plaça
-          </a>
+          {LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades] && (
+            <a
+              href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
+            >
+              Reservar plaça
+            </a>
+          )}
 
         </div>
       </div>

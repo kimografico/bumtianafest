@@ -211,14 +211,16 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           )}
 
           {/* Reservar Plaza Button */}
-          <a
-            href={LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers] || LINKS.forms.reservarPlaca}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
-          >
-            Reservar plaça
-          </a>
+          {LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers] && (
+            <a
+              href={LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
+            >
+              Reservar plaça
+            </a>
+          )}
 
         </div>
       </div>
