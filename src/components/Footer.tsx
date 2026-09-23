@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.tiana}
-                    alt=""
+                    alt="Ajuntament de Tiana"
                     width={100}
                     height={100}
                     className="h-14 sm:h-16 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.twoLb}
-                    alt=""
+                    alt="2LB Produccions"
                     width={100}
                     height={40}
                     className="h-8 sm:h-10 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200 brightness-0 invert"
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.espaiFamilies}
-                    alt=""
+                    alt="Espai Famílies"
                     width={120}
                     height={32}
                     className="h-7 sm:h-8 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
@@ -130,7 +130,7 @@ export const Footer: React.FC = () => {
                 >
                   <img
                     src={FESTIVAL_LOGOS.diputacio}
-                    alt=""
+                    alt="Diputació de Barcelona"
                     width={100}
                     height={60}
                     className="h-8 sm:h-9 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
