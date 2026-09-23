@@ -51,6 +51,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
     duration: 'Horari i durada',
     location: 'Espai a Tiana',
     instructor: 'Formador / Especialista',
+    ageRange: 'Franja d\'edat',
     about: 'Descripció completa del taller',
     values: 'Valors pedagògics i aprenentatges',
     materials: 'Materials i recursos inclosos',
@@ -105,7 +106,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         </div>
 
         {/* Quick specs grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
           <div className="space-y-1">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-[#88643B]" />
@@ -129,6 +130,17 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
             </div>
             <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.instructor}</p>
           </div>
+
+          {workshop.ageRange && (
+            <div className="space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D]">
+                <span>{t.ageRange}</span>
+              </div>
+              <span className="inline-block px-2.5 py-0.5 rounded bg-[#FAF9F3] text-[#181816] text-[11px] font-bold border border-[#88643B]/30">
+                {workshop.ageRange}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Body content */}

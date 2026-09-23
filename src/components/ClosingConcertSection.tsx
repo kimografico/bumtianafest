@@ -35,7 +35,7 @@ export const ClosingConcertSection: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             Concert de Cloenda:
             <br />
-            <span className="text-xl sm:text-2xl font-bold text-[#88643B]">Sedajazz Young Band</span>
+            <span className="text-xl sm:text-2xl text-[#88643B]">Sedajazz Young Band</span>
           </h2>
           <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
             {t.subtitle}

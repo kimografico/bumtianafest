@@ -38,9 +38,11 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
-            {subtitle}
-          </p>
+          <div className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
+            <span className="block text-lg sm:text-xl text-[#88643B] uppercase">Natura, Art i Poble.</span>
+            <span className="block">De 10:00 a 12:00 del matí</span>
+            <span className="block">Acollida a les 9:30 a la Plaça de la Vila</span>
+          </div>
         </div>
 
         {/* Workshops Cards in 2 Columns grid */}
@@ -81,7 +83,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
               <div className="sm:w-3/5 p-6 sm:p-7 flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   
-                  {/* Instructor */}
+                  {/* Tags row */}
                   <div className="text-xs text-[#88643B] font-bold">
                     {workshop.instructor}
                   </div>
@@ -97,9 +99,16 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                   </p>
 
                   {/* Location */}
-                  <div className="pt-2 border-t border-[#88643B]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
-                    <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
-                    <span className="truncate">{workshop.location}</span>
+                  <div className="pt-2 border-t border-[#88643B]/20 flex items-center justify-between gap-1.5 text-xs text-[#66665D]">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
+                      <span className="truncate">{workshop.location}</span>
+                    </div>
+                    {workshop.ageRange && (
+                      <span className="px-2.5 py-0.5 rounded bg-[#FAF9F3] text-[#181816] text-[11px] font-bold border border-[#88643B]/30 shrink-0">
+                        {workshop.ageRange}
+                      </span>
+                    )}
                   </div>
 
                 </div>

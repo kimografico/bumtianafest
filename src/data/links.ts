@@ -21,7 +21,7 @@ export const LINKS = {
     tallers: {
       jardineria: 'https://portal.wetown.app/tiana/inscriptions/1240',
       percussio: 'https://portal.wetown.app/tiana/inscriptions/1241',
-      teatre: 'https://portal.wetown.app/tiana/inscriptions/1242',
+      'teatre-expressio': 'https://portal.wetown.app/tiana/inscriptions/1242',
       'espai-nadons': '',
     },
     xerrades: {

@@ -77,7 +77,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
     fullDesc:
       "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
-    ageRange: "Primera infància i famílies (2 a 8 anys)",
+    ageRange: "Per a totes les edats",
     duration: "10:00 - 12:00 (2 hores)",
     materials:
       "Terra vegetal ecològica, argila per a boles nendo dango, llavors autòctones del Maresme i plançons forestals.",
@@ -95,12 +95,12 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: "Taller de Percussió",
     category: "compartit",
     instructor: "Marc Vila",
-    location: "Plaça del coro",
+    location: "Plaça del Coro",
     shortDesc:
       "El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!",
     fullDesc:
       "El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!",
-    ageRange: "Famílies i primera infància (totes les edats)",
+    ageRange: "Per a totes les edats",
     duration: "10:00 - 12:00 (2 hores)",
     materials:
       "Balafons, djembés, darbukes, agogôs i instruments de percussió del món facilitats per l'organització.",
@@ -123,7 +123,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
     fullDesc:
       "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
-    ageRange: "Primera infància (2 a 8 anys + acompanyant)",
+    ageRange: "A partir de 5 anys",
     duration: "10:00 - 12:00 (2 hores)",
     materials: "Atrezzo i espai escènic adaptat.",
     pedagogicalValues: [
@@ -143,7 +143,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     location: "Parc Lola Anglada",
     shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
     fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
-    ageRange: "Primera infància (0 a 3 anys + acompanyant)",
+    ageRange: "",
     duration: "10:00 - 12:00 (2 hores)",
     materials: "Espai adaptat per a nadons i famílies.",
     pedagogicalValues: [
@@ -226,21 +226,9 @@ export const VENUES_DATA: Venue[] = [
       "Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)",
       "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)",
       "Xerrada Armando Bastida: Criança amb Sentit Comú (17:15h)",
-      "Concert de Cloenda: Sedajazz Young Band (19:00h - 20:00h)",
     ],
     walkingFromCenter: "1 min a peu (Plaça de la Vila)",
     coordinates: { lat: 41.4828, lng: 2.2701 },
-  },
-  {
-    id: "doctor-mascaro",
-    name: "Doctor Mascaró",
-    type: "Espai Cultural & Carrer Emblemàtic",
-    address: "Carrer del Doctor Mascaró, 08391 Tiana",
-    description:
-      "Espai emblemàtic a l'aire lliure acollidor per a la creació sonora i el gran taller matinal de percussió en família.",
-    activities: ["Taller de Percussió en Família (10:00h - 12:00h)"],
-    walkingFromCenter: "1 min a peu (Plaça de la Vila)",
-    coordinates: { lat: 41.4824, lng: 2.2698 },
   },
   {
     id: "can-baratau",
@@ -281,32 +269,6 @@ export const VENUES_DATA: Venue[] = [
     activities: ["Jocs Populars Tradicionals (11:00h - 14:00h)", "DJ VINAXA (12:00h - 14:00h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
-  },
-  {
-    id: "lescorxador",
-    name: "L'Escorxador",
-    type: "Espai Polivalent Municipal",
-    address: "Passeig de la Vilesa, s/n, 08391 Tiana",
-    description:
-      "Recinte històric municipal condicionat per a activitats familiars i espais d'ombra i descans.",
-    activities: ["Pati i Espai d'Ombra", "Zona d'Aparcament de Cotxets"],
-    walkingFromCenter: "4 min a peu",
-    coordinates: { lat: 41.4815, lng: 2.2712 },
-  },
-  {
-    id: "barbar-tubbies",
-    name: "Bàrbar & Parc dels Teletubbies",
-    type: "Terrassa, Parc Infantil & DJ Vermut",
-    address: "Plaça de la Vila & Parc dels Teletubbies, 08391 Tiana",
-    description:
-      "Espai a l'aire lliure que uneix la terrassa de Bàrbar amb el Parc dels Teletubbies: DJ Vermut familiar (12:00 - 14:00h) i jocs populars.",
-    activities: [
-      "Jocs Populars Tradicionals (11:00h - 14:00h)",
-      "DJ VINAXA (12:00h - 14:00h)",
-      "Dinar Popular (14:00h - 16:00h)",
-    ],
-    walkingFromCenter: "0 min (Centre del poble)",
-    coordinates: { lat: 41.4826, lng: 2.27 },
   },
 ];
 
@@ -351,7 +313,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     category: "tot-el-dia",
     location: "Parc Antic de Futbol",
     description:
-      "Jocs tradicionals, cooperació al aire lliure dinamitzats per a la primera infància.",
+      "Jocs tradicionals, cooperació al aire lliure dinamitzats pel CAU de Tiana.",
   },
   {
     time: "12:00 - 14:00",

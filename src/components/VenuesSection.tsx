@@ -32,14 +32,11 @@ export const VenuesSection: React.FC = () => {
             >
               <div className="space-y-4">
                 
-                {/* Venue Name & sub-tag directly under the name */}
+                {/* Venue Name */}
                 <div className="space-y-2">
                   <h3 className="text-2xl font-extralight uppercase tracking-wider text-[#181816] leading-tight">
                     {venue.name}
                   </h3>
-                  <div className="inline-block px-3 py-1 rounded bg-[#0C478D]/10 text-[#0C478D] border border-[#0C478D]/20 text-xs font-bold uppercase tracking-wider">
-                    {venue.type}
-                  </div>
                   <p className="text-xs text-[#66665D] flex items-center gap-1.5 font-medium pt-1">
                     <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
                     <span>{venue.address}</span>

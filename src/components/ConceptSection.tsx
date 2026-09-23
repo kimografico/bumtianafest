@@ -2,9 +2,7 @@ import React from 'react';
 import { FESTIVAL_IMAGES } from '../assets/images';
 
 export const ConceptSection: React.FC = () => {
-  const title = 'Per què neix el BUMFEST?';
-  const subtitle = 'Una jornada pensada per viure la cultura de tu a tu, sense presses i compartint temps de qualitat.';
-  const perQueBumTitle = 'Per què BUM Fest?';
+  const title = 'Per què BUM Fest?';
   const perQueBumDesc = [
     "BUM és el so d'allò que neix, creix i pren força. A Tiana, hi han moltes famílies amb noves vides, i amb elles neixen noves mirades, noves preguntes i noves maneres de criar i de créixer.",
     "BUM Fest neix d'aquesta energia: de la necessitat de trobar-nos, de fer tribu, de conèixer-nos i de fer poble. Un espai per compartir, aprendre, reflexionar i gaudir; per parlar de criança conscient, descobrir-nos com a comunitat i connectar amb la natura, la cultura i les persones que ens envolten.",
@@ -34,20 +32,10 @@ export const ConceptSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-14 space-y-3">
+        <div className="mb-14 space-y-4">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
-            {subtitle}
-          </p>
-        </div>
-
-        {/* Per què BUM Fest paragraph */}
-        <div className="mb-14 space-y-4">
-          <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-white font-display">
-            {perQueBumTitle}
-          </h3>
           <div className="space-y-4 text-sm sm:text-base text-[#EFEEE0]/90 leading-relaxed font-normal">
             {perQueBumDesc.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>

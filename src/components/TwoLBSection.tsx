@@ -5,7 +5,7 @@ import { FESTIVAL_IMAGES } from "../assets/images";
 export const TwoLBSection: React.FC = () => {
   const t = {
     title: "2LB Produccions",
-    subtitle: "Creació artística, producció musical i compromís amb la comunitat de Tiana.",
+    subtitle: "Creació artística, producció técnica i compromís amb la comunitat de Tiana.",
     missionTitle: "La nostra visió",
     missionDesc:
       "A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió de on naix BUMFEST.",
@@ -31,7 +31,7 @@ export const TwoLBSection: React.FC = () => {
         {/* 2LB Feature: PARDALS image + text */}
         <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
           {/* Left: PARDALS image */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-3">
             <img
               src={FESTIVAL_IMAGES.pardals}
               alt="Pardals"
