@@ -18,20 +18,11 @@ export const TwoLBSection: React.FC = () => {
       className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
-            {t.title}
-          </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
-            {t.subtitle}
-          </p>
-        </div>
 
         {/* 2LB Feature: PARDALS image + text */}
         <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
           {/* Left: PARDALS image */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <img
               src={FESTIVAL_IMAGES.pardals}
               alt="Pardals"
@@ -42,7 +33,16 @@ export const TwoLBSection: React.FC = () => {
           </div>
 
           {/* Right Text Content */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-8 space-y-6">
+            <div className="space-y-2">
+              <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
+                {t.title}
+              </h2>
+              <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+                {t.subtitle}
+              </p>
+            </div>
+
             <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
               {t.missionTitle}
             </h3>
