@@ -1,10 +1,9 @@
 import React from "react";
 import { TEAM_DATA } from "../data/content";
-import { FESTIVAL_IMAGES } from "../assets/images";
+import { FESTIVAL_LOGOS, FESTIVAL_IMAGES } from "../assets/images";
 
 export const TwoLBSection: React.FC = () => {
   const t = {
-    title: "2LB Produccions",
     subtitle: "Creació artística, producció técnica i compromís amb la comunitat de Tiana.",
     missionTitle: "La nostra visió",
     missionDesc:
@@ -19,14 +18,17 @@ export const TwoLBSection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
-        {/* 2LB Feature: PARDALS image + text */}
-        <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
-          {/* Left: PARDALS image */}
-          <div className="lg:col-span-4">
+        {/* 2LB Feature: Logo + text */}
+        <div className="grid lg:grid-cols-12 gap-8 items-start mb-12">
+          {/* Left: 2LB Logo */}
+          <div className="lg:col-span-4 flex justify-center items-start">
             <img
-              src={FESTIVAL_IMAGES.pardals}
-              alt="Pardals"
-              className="w-full h-auto object-cover rounded"
+              src={FESTIVAL_LOGOS.twoLb}
+              alt="2LB Produccions"
+              className="w-full max-w-[280px] h-auto object-contain"
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(5000%) hue-rotate(210deg) brightness(50%) contrast(100%)',
+              }}
               loading="lazy"
               decoding="async"
             />
@@ -34,14 +36,9 @@ export const TwoLBSection: React.FC = () => {
 
           {/* Right Text Content */}
           <div className="lg:col-span-8 space-y-6">
-            <div className="space-y-2">
-              <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
-                {t.title}
-              </h2>
-              <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
-                {t.subtitle}
-              </p>
-            </div>
+            <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+              {t.subtitle}
+            </p>
 
             <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
               {t.missionTitle}
