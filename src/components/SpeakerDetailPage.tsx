@@ -38,7 +38,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
     talkTitle: 'Xerrada / Ponència',
     bioTitle: 'Sobre el ponent / especialista',
     highlightsTitle: 'Aspectes clau que s’abordaran',
-    website: 'Web oficial',
+    website: 'Web',
     venueCard: 'Com arribar a l’espai de la xerrada',
     openMaps: 'Obrir a Google Maps',
     otherTitle: 'Altres xerrades de criança i família',
