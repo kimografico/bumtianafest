@@ -1,20 +1,23 @@
-import React from 'react';
-import { TEAM_DATA } from '../data/content';
-import { FESTIVAL_IMAGES } from '../assets/images';
+import React from "react";
+import { TEAM_DATA } from "../data/content";
+import { FESTIVAL_IMAGES } from "../assets/images";
 
 export const TwoLBSection: React.FC = () => {
   const t = {
-    title: '2LB Produccions',
-    subtitle: 'Creació artística, producció musical i compromís amb la comunitat de Tiana.',
-    missionTitle: 'La nostra visió',
-    missionDesc: 'A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió de on naix BUMFEST.',
+    title: "2LB Produccions",
+    subtitle: "Creació artística, producció musical i compromís amb la comunitat de Tiana.",
+    missionTitle: "La nostra visió",
+    missionDesc:
+      "A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió de on naix BUMFEST.",
     quote: '"Natura, poble, art, criança i comunitat. Construim en familia i al carrer"',
   };
 
   return (
-    <section id="organitzacio" className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25">
+    <section
+      id="organitzacio"
+      className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        
         {/* Section Header */}
         <div className="max-w-3xl mb-14 space-y-3">
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
@@ -27,7 +30,6 @@ export const TwoLBSection: React.FC = () => {
 
         {/* 2LB Feature: PARDALS image + text */}
         <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
-          
           {/* Left: PARDALS image */}
           <div className="lg:col-span-5">
             <img
@@ -89,14 +91,11 @@ export const TwoLBSection: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-sm text-[#4A4A43] leading-relaxed">
-                  {member.bio}
-                </p>
+                <p className="text-sm text-[#4A4A43] leading-relaxed">{member.bio}</p>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 export const FaqSection: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-  const title = 'Dubtes habituals sobre el festival';
+  const title = 'SOBRE EL BUMFEST';
   const subtitle = 'Tot el que necessites saber per gaudir al màxim de la teva jornada a Tiana.';
 
   return (

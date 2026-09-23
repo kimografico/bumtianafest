@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, MapPin, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { Music, MapPin, ExternalLink } from 'lucide-react';
 import { RESTAURANTS_DATA } from '../data/content';
 import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
 import { LINKS } from '../data/links';
@@ -7,13 +7,6 @@ import { LINKS } from '../data/links';
 export const GastronomySection: React.FC = () => {
   const title = 'Dinar Familiar & DJ';
   const subtitle = 'De 14:00h a 16:00h, el dinar és el moment central de convivència i trobada familiar als carrers, places i terrasses de Tiana.';
-  const ticketsTitle = 'Com funciona el sistema de tiquets i menús?';
-  const ticketsDesc = 'El festival promou el comerç de proximitat coordinat amb els establiments del poble perquè tothom mengi còmodament sense cues:';
-  const ticketPoints = [
-    'Tiquets de Menú Familiar: Disponibles anticipadament o als punts d’informació del festival amb preus populars per a infants i adults.',
-    'Opcions per a tothom: Menús tradicionals, fideuà, tapes de la terra, pizzes artesanes i alternatives vegetarianes / al·lèrgies.',
-    'DJ Vermut com a acompanyament: A la Plaça de la Vila, Xavi Vinyasa posarà música i ambient distès per acompanyar el vermut i la sobretaula en família.',
-  ];
   const restaurantsTitle = 'Establiments Col·laboradors de Tiana';
   const visitWebsite = 'Veure lloc web / contacte';
 
@@ -61,34 +54,23 @@ export const GastronomySection: React.FC = () => {
           </p>
         </div>
 
-        {/* Informative Card: How tickets work + DJ accompaniment */}
-        <div className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14 space-y-6">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#88643B]/20">
+        {/* Informative Card: Tiquets + DJ */}
+        <div className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-1">
-              <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-[#0C478D]">
-                {ticketsTitle}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A4A43] font-normal">
-                {ticketsDesc}
+              <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+                Ensenya la teva polsera als següents establiments i allí trobaràs el teu menú BUMFEST.
+              </p>
+              <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+                Hi hauran taules preparades a disposició de les famílies, al Parc Antic de Futbol, per a poder dinar tots junts.
               </p>
             </div>
 
             {/* Ambient Music Pill */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded bg-[#88643B] text-white text-xs font-bold shrink-0 shadow-md">
               <Music className="w-4 h-4 text-white shrink-0" />
-              <span>DJ Vermut amb Xavi Vinyasa (14:00h - 16:00h)</span>
+              <span>DJ VINAXA (12:00h - 14:00h)</span>
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 pt-2">
-            {ticketPoints.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded bg-white border border-[#88643B]/25">
-                <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-[#3A3A34] leading-relaxed font-normal">
-                  {point}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -150,10 +132,6 @@ export const GastronomySection: React.FC = () => {
                         </div>
                       )}
                     </div>
-
-                    <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">
-                      {resto.specialOffer}
-                    </p>
 
                     <div className="pt-2 border-t border-[#88643B]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
                       <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />

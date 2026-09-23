@@ -7,7 +7,7 @@ export const ClosingConcertSection: React.FC = () => {
   const t = {
     title: 'Concert de Cloenda: Sedajazz Young Band',
     subtitle:
-      'El colofó d\u2019or del BUMFEST 2026: música creativa, ritme i improvisació per acomiadar una jornada inoblidable en família.',
+      'Música creativa, ritme i improvisació per acomiadar una jornada inoblidable en família.',
     description:
       'Sedajazz Young Band és una formació que sorgeix com a resultat de l\u2019aposta que el col·lectiu de músics valencià Sedajazz porta dècades fent per integrar la música creativa i la improvisació en l\u2019educació musical dels nens i nenes des de ben petits. Oferiran un concert amb un repertori del que podran gaudir tant adults com els més menuts.',
     highlights: [
@@ -20,11 +20,11 @@ export const ClosingConcertSection: React.FC = () => {
         desc: 'Composicions i arranjaments pensats perquè vibrin tant els infants com els adults a la sala.',
       },
       {
-        title: 'Escenari Emblemàtic',
-        desc: 'La Sala Albéniz de Tiana ofereix una acústica càlida i una comoditat ideal per a tota la família.',
+        title: 'L\u2019Espai',
+        desc: 'La Plaça de la Vila de Tiana es convertirà en un gran escenari a l\u2019aire lliure per a tota la família.',
       },
     ],
-    openMap: 'Com arribar a la Sala Albéniz',
+    openMap: 'Com arribar a la Plaça de la Vila',
   };
 
   return (
@@ -87,7 +87,7 @@ export const ClosingConcertSection: React.FC = () => {
             {/* Action Buttons */}
             <div className="pt-2">
               <a
-                href={LINKS.maps.salaAlbeniz}
+                href={LINKS.maps.venue('Plaça de la Vila', 'Plaça de la Vila, Tiana')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded bg-[#0C478D] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2"

@@ -4,7 +4,7 @@ import { VENUES_DATA } from '../data/content';
 import { LINKS } from '../data/links';
 
 export const VenuesSection: React.FC = () => {
-  const title = 'Les Localitzacions del Festival';
+  const title = 'Les Localitzacions del BUMFEST';
   const subtitle = 'Tots els equipaments municipals i espais culturals on tindrà lloc el festival a Tiana.';
   const openInMaps = 'Obrir a Google Maps';
   const activitiesTitle = 'Activitats en aquesta localització';

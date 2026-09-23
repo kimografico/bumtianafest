@@ -5,7 +5,7 @@ import { LINKS } from "../data/links";
 
 export const Footer: React.FC = () => {
   const t = {
-    tagline: "Festival d'Arts, Tallers i Comunitat Familiar a Tiana (Maresme).",
+    tagline: "Festival de criança, tallers i comunitat a Tiana (Maresme).",
     location: "Tiana, Barcelona",
     linksTitle: "Navegació",
     linkConcepte: "El Concepte",
@@ -16,8 +16,6 @@ export const Footer: React.FC = () => {
     linkCloenda: "Concert de Cloenda",
     linkFaq: "Preguntes Freqüents",
     link2lb: "2LB Produccions",
-    organizers:
-      "Organitzen 2LB Produccions + l'Ajuntament de Tiana amb la col·laboració de la Diputació de Barcelona",
     rights: "© 2026 BUMFEST TIANA · Tots els drets reservats.",
   };
 
@@ -50,13 +48,8 @@ export const Footer: React.FC = () => {
               <span>{t.location}</span>
             </div>
 
-            {/* Unified Organization & Collaboration */}
-            <div className="pt-2 space-y-4">
-              <p className="text-xs sm:text-sm text-accent font-bold max-w-xl leading-relaxed">
-                {t.organizers}
-              </p>
-
-              {/* Three logos with '+' and thin vertical separator for Diputació */}
+            {/* Logos organitzadors */}
+            <div className="pt-2">
               <div className="flex items-center flex-wrap gap-8 sm:gap-10 md:gap-12 pt-2">
                 {/* 1. Ajuntament de Tiana */}
                 <a
@@ -77,14 +70,6 @@ export const Footer: React.FC = () => {
                     decoding="async"
                   />
                 </a>
-
-                {/* Plus sign divider */}
-                <span
-                  className="text-xl sm:text-2xl font-bold text-accent select-none -mx-2 sm:-mx-3"
-                  aria-hidden="true"
-                >
-                  +
-                </span>
 
                 {/* 2. 2LB Produccions */}
                 <a
@@ -110,7 +95,31 @@ export const Footer: React.FC = () => {
                   aria-hidden="true"
                 />
 
-                {/* 3. Diputació de Barcelona */}
+                {/* 3. Espai Famílies */}
+                <a
+                  href="#"
+                  className="inline-block group shrink-0"
+                  title="Espai Famílies"
+                >
+                  <img
+                    src={FESTIVAL_LOGOS.espaiFamilies}
+                    alt="Espai Famílies"
+                    width={120}
+                    height={32}
+                    className="h-7 sm:h-8 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200"
+                    referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+
+                {/* Thin vertical separator */}
+                <div
+                  className="h-8 sm:h-10 w-px bg-white/20 self-center shrink-0"
+                  aria-hidden="true"
+                />
+
+                {/* 4. Diputació de Barcelona */}
                 <a
                   href={LINKS.institutional.diputacioBarcelona}
                   target="_blank"
@@ -133,22 +142,8 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Quick Links Navigation & Espai Families */}
+          {/* Right Column: Quick Links Navigation */}
           <div className="md:col-span-5 lg:col-span-4 space-y-6 md:pl-6 lg:pl-12">
-            {/* Espai Famílies logo (Mobile only: appears before Navegació) */}
-            <div className="block md:hidden pb-1">
-              <img
-                src={FESTIVAL_LOGOS.espaiFamilies}
-                alt="Espai Famílies"
-                width={120}
-                height={28}
-                className="h-7 w-auto object-contain opacity-90"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
             <div className="space-y-3">
               <p
                 className="text-xs font-bold uppercase tracking-wider text-white"
@@ -199,20 +194,6 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
               </ul>
-            </div>
-
-            {/* Espai Famílies logo (Desktop only: appears after Navegació) */}
-            <div className="hidden md:block pt-8 mt-5 border-t border-white/10">
-              <img
-                src={FESTIVAL_LOGOS.espaiFamilies}
-                alt="Espai Famílies"
-                width={120}
-                height={32}
-                className="h-7 sm:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-200"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </div>
         </div>

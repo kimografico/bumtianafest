@@ -202,7 +202,7 @@ export const VENUES_DATA: Venue[] = [
   {
     id: "placa-vila",
     name: "Plaça de la Vila",
-    type: "Cor del Festival & Punt d'Acollida",
+    type: "Cor del BUMFEST & Punt d'Acollida",
     address: "Plaça de la Vila, 08391 Tiana",
     description:
       "Punt central d'acollida de famílies, recollida de polseres i itineraris, espai de trobada i jocs populars tradicionals.",
@@ -267,7 +267,7 @@ export const VENUES_DATA: Venue[] = [
     name: "Parc Lola Anglada",
     type: "Parc Infantil & Espai de Joc",
     address: "Parc Lola Anglada, Tiana",
-    description: "Parc infantil a l'aire lliure adaptat per a l'espai de nadons i famílies.",
+    description: "Un jardí petit però amb molta història.",
     activities: ["Espai Nadons (10:00h - 12:00h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
@@ -302,8 +302,8 @@ export const VENUES_DATA: Venue[] = [
       "Espai a l'aire lliure que uneix la terrassa de Bàrbar amb el Parc dels Teletubbies: DJ Vermut familiar (12:00 - 14:00h) i jocs populars.",
     activities: [
       "Jocs Populars Tradicionals (11:00h - 14:00h)",
-      "DJ Vermut Familiar (12:00h - 14:00h)",
-      "Espai Gastronòmic de Proximitat",
+      "DJ VINAXA (12:00h - 14:00h)",
+      "Dinar Popular (14:00h - 16:00h)",
     ],
     walkingFromCenter: "0 min (Centre del poble)",
     coordinates: { lat: 41.4826, lng: 2.27 },
@@ -401,8 +401,8 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
   {
     id: "casal",
     name: "El Casal de Tiana",
-    type: "Cuina tradicional i menú familiar",
-    specialOffer: "Tiquet menú BUMFEST amb fideuà, opció vegetariana i postres casolanes.",
+    type: "Cuina tradicional",
+    specialOffer: "",
     address: "Av. Isaac Albéniz, 12",
     websiteUrl: LINKS.restaurants.casal,
   },
@@ -410,7 +410,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     id: "barbar",
     name: "Bàrbar",
     type: "Tapes, platets creatius & vermut",
-    specialOffer: "Combo vermut artesanal + tapa de la terra + beguda infantil.",
+    specialOffer: "",
     address: "Plaça de la Vila",
     websiteUrl: LINKS.restaurants.barbar,
   },
@@ -418,7 +418,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     id: "tiriti",
     name: "Tiriti Bar Restaurant Pizzeria",
     type: "Pizzes al forn de llenya & pasta",
-    specialOffer: "Pizzes familiars amb ingredients de proximitat i porcions infantils.",
+    specialOffer: "",
     address: "Carrer d'Edith Llaurador",
     websiteUrl: LINKS.restaurants.tiriti,
   },
@@ -426,7 +426,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     id: "aviMingo",
     name: "Avi Mingo",
     type: "Cuina catalana de mercat",
-    specialOffer: "Plats combinats per a famílies i carns a la brasa.",
+    specialOffer: "",
     address: "Carrer de Matas",
     websiteUrl: LINKS.restaurants.aviMingo,
   },
@@ -473,7 +473,7 @@ export const PRICING_DATA = {
 export const FAQ_DATA = [
   {
     q: "Com s'han de fer els tallers? Cal que els pares es quedin?",
-    a: "Sí! L'essència del BUMFEST és precisament l'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l'avi, l'àvia o el seu acompanyant adult. No és una guarderia, és un espai de connexió i gaudi mutu.",
+    a: "Sí! L'essència del BUMFEST és precisament l'aprenentatge compartit en la primera infància: cada infant participa juntament amb el pare, la mare, l'avi, l'àvia o el seu acompanyant adult. És un espai de connexió i gaudi mutu.",
   },
   {
     q: "Com arribar a Tiana en transport públic?",
@@ -481,7 +481,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Cal reserva prèvia per a les xerrades de criança?",
-    a: "L'accés a totes les xerrades i activitats del BUMFEST és 100% gratuït. L'aforament de la Sala Albéniz és limitat per garantir la proximitat de la sessió amb Laia Ferrer i Armando Bastida, i l'entrada serà per estricte ordre d'arribada.",
+    a: "L'accés a totes les xerrades i activitats del BUMFEST és 100% gratuït. L'aforament de la Sala Albéniz és limitat, reserva la teva plaça omplint els formularis.",
   },
   {
     q: "Els espais estan adaptats per a cotxets i mobilitat reduïda?",
