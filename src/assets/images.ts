@@ -41,6 +41,8 @@ import logoTirati from './images/logos/TIRATI.svg';
 import logoAvimingo from './images/logos/AVIMINGO.svg';
 import logoDiputacio from './images/logos/DIPUTACIOBCN.svg';
 import logoEspaiFamilies from './images/logos/ESPAIFAMILIES.svg';
+import logoPetitParadis from './images/logos/PETITPARADIS.svg';
+import logoElMesPetit from './images/logos/ELMESPETITDETOTS.svg';
 
 export const FESTIVAL_LOGOS = {
   bumFest: logoBumFest,
@@ -56,6 +58,8 @@ export const FESTIVAL_LOGOS = {
   verdEsBo: logoVerdesbo,
   tirati: logoTirati,
   aviMingo: logoAvimingo,
+  petitParadis: logoPetitParadis,
+  elMesPetit: logoElMesPetit,
 };
 
 export const FESTIVAL_IMAGES = {

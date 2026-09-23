@@ -31,6 +31,14 @@ export const PartnersCarousel: React.FC = () => {
       name: "L'Avi Mingo",
       logo: FESTIVAL_LOGOS.aviMingo,
     },
+    {
+      name: 'Petit Paradís',
+      logo: FESTIVAL_LOGOS.petitParadis,
+    },
+    {
+      name: 'El Mes Petit de Tots',
+      logo: FESTIVAL_LOGOS.elMesPetit,
+    },
   ];
 
   // Duplicate list to create a seamless infinite marquee effect
