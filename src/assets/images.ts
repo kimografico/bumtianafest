@@ -14,7 +14,7 @@ import piMcCarthyImg from './images/guests/pi-mccarthy.jpg';
 // Workshop Photos
 import wsGardening from './images/workshops/gardening.jpg';
 import wsTheater from './images/workshops/theater.jpg';
-import wsCostumes from './images/workshops/costumes.jpg';
+import wsNadons from './images/workshops/nadons.jpg';
 import wsPercussion from './images/workshops/percusio.jpg';
 
 // Cloenda / Concert
@@ -71,7 +71,7 @@ export const FESTIVAL_IMAGES = {
   // Specific Workshop Images (Local Real Photos)
   gardening: wsGardening,
   theater: wsTheater,
-  costumes: wsCostumes,
+  nadons: wsNadons,
   percussion: wsPercussion,
 
   // Real Speaker & Guest portraits

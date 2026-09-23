@@ -24,14 +24,13 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
   onBack,
   onSelectWorkshop,
 }) => {
-  const workshop = WORKSHOPS_DATA.find((w) => w.id === workshopId) || 
-    (workshopId === 'vestuari' ? WORKSHOPS_DATA.find((w) => w.id === 'percussio') : undefined) ||
-    WORKSHOPS_DATA[0];
+  const workshop = WORKSHOPS_DATA.find((w) => w.id === workshopId) || WORKSHOPS_DATA[0];
   
-  // Find matching venue
+  // Find matching venue: exact name match first, then fuzzy activity match
   const isLocationPending = workshop.location === 'xxxxxxxxx';
   const venue = !isLocationPending ? (VENUES_DATA.find((v) => 
-    workshop.location.toLowerCase().includes(v.name.toLowerCase()) || 
+    v.name.toLowerCase() === workshop.location.toLowerCase()
+  ) || VENUES_DATA.find((v) => 
     v.activities.some(act => act.toLowerCase().includes(workshop.title.toLowerCase().slice(0, 8)))
   ) || VENUES_DATA[0]) : undefined;
 
@@ -41,8 +40,8 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
       case 'percussio': return FESTIVAL_IMAGES.percussion;
-      case 'vestuari': return FESTIVAL_IMAGES.costumes;
       case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
+      case 'espai-nadons': return FESTIVAL_IMAGES.nadons;
       default: return FESTIVAL_IMAGES.workshop;
     }
   };
@@ -192,10 +191,6 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
                   <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
                 </a>
               </div>
-              
-              <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
-                {venue.description}
-              </p>
             </div>
           ) : (
             <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
@@ -217,7 +212,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           {/* Reservar Plaza Button */}
           <a
-            href={LINKS.forms.reservarPlaca}
+            href={LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers] || LINKS.forms.reservarPlaca}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"

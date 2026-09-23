@@ -72,7 +72,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Taller de Natura',
     category: 'compartit',
     instructor: 'Albert SantaMaria & Arnau Calvet',
-    location: 'Plaça de la Vila',
+    location: 'Can Baratau',
     shortDesc: 'Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.',
     fullDesc: 'Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.',
     ageRange: 'Primera infància i famílies (2 a 8 anys)',
@@ -92,7 +92,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Taller de Percussió',
     category: 'compartit',
     instructor: 'Marc Vila',
-    location: 'Doctor Mascaró',
+    location: 'Plaça del coro',
     shortDesc: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!',
     fullDesc: 'El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!',
     ageRange: 'Famílies i primera infància (totes les edats)',
@@ -117,7 +117,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     fullDesc: 'Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.',
     ageRange: 'Primera infància (2 a 8 anys + acompanyant)',
     duration: '10:00 - 12:00 (2 hores)',
-    materials: 'Atrezzo suau, robes de colors i espai escènic adaptat.',
+    materials: 'Atrezzo i espai escènic adaptat.',
     pedagogicalValues: [
       'Expressió emocional',
       'Desinhibició i confiança',
@@ -126,6 +126,26 @@ export const WORKSHOPS_DATA: Workshop[] = [
     tag: 'Arts Escèniques',
     iconName: 'Theater',
     featured: true
+  },
+  {
+    id: 'espai-nadons',
+    title: 'Espai Nadons',
+    category: 'compartit',
+    instructor: 'Per determinar',
+    location: 'Parc Lola Anglada',
+    shortDesc: 'Un espai per a que els mes petits pugan gaudir tambe amb les seues families.',
+    fullDesc: 'Un espai per a que els mes petits pugan gaudir tambe amb les seues families.',
+    ageRange: 'Primera infància (0 a 3 anys + acompanyant)',
+    duration: '10:00 - 12:00 (2 hores)',
+    materials: 'Espai adaptat per a nadons i famílies.',
+    pedagogicalValues: [
+      'Joc lliure i exploració sensorial',
+      'Vincle afectiu en família',
+      'Espai segur i acollidor per als més petits'
+    ],
+    tag: 'Primera Infància',
+    iconName: 'Baby',
+    featured: false
   }
 ];
 
@@ -188,7 +208,7 @@ export const VENUES_DATA: Venue[] = [
     id: 'sala-albeniz',
     name: 'Sala Albéniz',
     type: 'Teatre & Espai Escènic Municipal',
-    address: 'Carrer de Sant Domènec, 1, 08391 Tiana',
+    address: 'Av. Isaac Albéniz, 12, Tiana',
     description: "Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.",
     activities: [
       'Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)',
@@ -210,6 +230,42 @@ export const VENUES_DATA: Venue[] = [
     ],
     walkingFromCenter: '1 min a peu (Plaça de la Vila)',
     coordinates: { lat: 41.4824, lng: 2.2698 }
+  },
+  {
+    id: 'can-baratau',
+    name: 'Can Baratau',
+    type: 'Espai Natural & Jardineria',
+    address: 'Can Baratau, Tiana',
+    description: 'Espai natural a l\'aire lliure per al taller de reforestació i jardineria.',
+    activities: [
+      'Taller de Natura: Jardineria & Repoblació (10:00h - 12:00h)'
+    ],
+    walkingFromCenter: 'A determinar',
+    coordinates: { lat: 0, lng: 0 }
+  },
+  {
+    id: 'placa-coro',
+    name: 'Plaça del Coro',
+    type: 'Espai a l\'aire lliure & Percussió',
+    address: 'Plaça del Coro de Tiana',
+    description: 'Espai obert per al taller de percussió en família.',
+    activities: [
+      'Taller de Percussió en Família (10:00h - 12:00h)'
+    ],
+    walkingFromCenter: 'A determinar',
+    coordinates: { lat: 0, lng: 0 }
+  },
+  {
+    id: 'parc-lola-anglada',
+    name: 'Parc Lola Anglada',
+    type: 'Parc Infantil & Espai de Joc',
+    address: 'Parc Lola Anglada, Tiana',
+    description: 'Parc infantil a l\'aire lliure adaptat per a l\'espai de nadons i famílies.',
+    activities: [
+      'Espai Nadons (10:00h - 12:00h)'
+    ],
+    walkingFromCenter: 'A determinar',
+    coordinates: { lat: 0, lng: 0 }
   },
   {
     id: 'lescorxador',

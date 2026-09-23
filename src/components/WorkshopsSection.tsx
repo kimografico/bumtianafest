@@ -18,14 +18,14 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
     switch (id) {
       case 'jardineria': return FESTIVAL_IMAGES.gardening;
       case 'percussio': return FESTIVAL_IMAGES.percussion;
-      case 'vestuari': return FESTIVAL_IMAGES.costumes;
       case 'teatre-expressio': return FESTIVAL_IMAGES.theater;
+      case 'espai-nadons': return FESTIVAL_IMAGES.nadons;
       default: return FESTIVAL_IMAGES.workshop;
     }
   };
 
-  const title = 'Programació de Tallers';
-  const subtitle = "Espais pràctics i creatius durant el matí (10:00h a 12:00h) dedicats a la primera infància i les seves famílies. L'acollida a les famílies serà a les 9:30h a la Plaça de la Vila.";
+  const title = 'Tallers';
+  const subtitle = 'Natura, Art i Poble. De 10:00 a 12:00 del matí (Acollida a les 9:30 a la Plaça de la Vila)';
   const viewDetails = 'Més detalls';
   const reservar = 'Reservar plaça';
 
@@ -100,7 +100,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                   <a
-                    href={LINKS.forms.reservarPlaca}
+                    href={LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers] || LINKS.forms.reservarPlaca}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}

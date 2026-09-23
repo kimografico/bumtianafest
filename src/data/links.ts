@@ -16,9 +16,19 @@ export const LINKS = {
       `https://www.google.com/search?q=${encodeURIComponent(`${name} Tiana`)}`,
   },
 
-  // ── Reservar plaça (placeholder – replace with real form URLs) ─────
+  // ── Reservar plaça (WeTown) ────────────────────────────────────────
   forms: {
     reservarPlaca: 'https://www.google.com',
+    tallers: {
+      jardineria: 'https://portal.wetown.app/tiana/inscriptions/1240',
+      percussio: 'https://portal.wetown.app/tiana/inscriptions/1241',
+      teatre: 'https://portal.wetown.app/tiana/inscriptions/1242',
+      'espai-nadons': '',
+    },
+    xerrades: {
+      laiaFerrer: 'https://portal.wetown.app/tiana/inscriptions/1244',
+      armandoBastida: 'https://portal.wetown.app/tiana/inscriptions/1245',
+    },
   },
 
   // ── Instagram ──────────────────────────────────────────────────────

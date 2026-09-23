@@ -29,7 +29,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
   // Find venue
   const venue = VENUES_DATA.find((v) => 
     speaker.location.toLowerCase().includes(v.name.toLowerCase())
-  ) || VENUES_DATA[1]; // default El Casal
+  ) || VENUES_DATA[1]; // default Sala Albéniz
 
   const otherSpeakers = SPEAKERS_DATA.filter((s) => s.id !== speaker.id);
 
@@ -219,7 +219,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
 
           {/* Reservar Plaza Button */}
           <a
-            href={LINKS.forms.reservarPlaca}
+            href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades] || LINKS.forms.reservarPlaca}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
