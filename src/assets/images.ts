@@ -41,7 +41,6 @@ import logoTirati from './images/logos/TIRATI.svg';
 import logoAvimingo from './images/logos/AVIMINGO.svg';
 import logoDiputacio from './images/logos/DIPUTACIOBCN.svg';
 import logoEspaiFamilies from './images/logos/ESPAIFAMILIES.svg';
-import pardalsImg from './images/PARDALS.png';
 
 export const FESTIVAL_LOGOS = {
   bumFest: logoBumFest,
@@ -86,7 +85,6 @@ export const FESTIVAL_IMAGES = {
   // Real 2LB Team portraits
   piMcCarthy: piMcCarthyImg,
   oriolRoca: oriolRocaImg,
-  pardals: pardalsImg,
 
   // Restaurants / Gastronomy / Commercial Partners in Tiana (Local Photos)
   restoCasal: restoCasalImg,
