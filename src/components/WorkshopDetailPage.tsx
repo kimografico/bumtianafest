@@ -74,15 +74,15 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-festcard hover:bg-white text-festtext border border-secondary/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
-          <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
+          <ArrowLeft className="w-4 h-4 text-primary" />
           <span>{t.back}</span>
         </button>
       </div>
 
       {/* Main Detail Header Card */}
-      <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
+      <div className="rounded bg-festcard/90 backdrop-blur-xl border border-secondary/30 shadow-xl overflow-hidden mb-12">
         
         {/* Banner image */}
         <div className="relative h-64 sm:h-80 md:h-96 w-full">
@@ -106,37 +106,37 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
         </div>
 
         {/* Quick specs grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-[#88643B]/25 bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-6 sm:p-8 border-b border-secondary/25 bg-white">
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#88643B]" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-festlabel flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-secondary" />
               <span>{t.duration}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.duration}</p>
+            <p className="text-xs sm:text-sm font-semibold text-festtext">{workshop.duration}</p>
           </div>
 
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-festlabel flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-secondary" />
               <span>{t.location}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.location}</p>
+            <p className="text-xs sm:text-sm font-semibold text-festtext">{workshop.location}</p>
           </div>
 
           <div className="space-y-1">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D] flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#88643B]" />
+            <div className="text-[11px] font-bold uppercase tracking-wider text-festlabel flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-secondary" />
               <span>{t.instructor}</span>
             </div>
-            <p className="text-xs sm:text-sm font-semibold text-[#181816]">{workshop.instructor}</p>
+            <p className="text-xs sm:text-sm font-semibold text-festtext">{workshop.instructor}</p>
           </div>
 
           {workshop.ageRange && (
             <div className="space-y-1">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[#66665D]">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-festlabel">
                 <span>{t.ageRange}</span>
               </div>
-              <span className="inline-block px-2.5 py-0.5 rounded bg-[#FAF9F3] text-[#181816] text-[11px] font-bold border border-[#88643B]/30">
+              <span className="inline-block px-2.5 py-0.5 rounded bg-festcard text-festtext text-[11px] font-bold border border-secondary/30">
                 {workshop.ageRange}
               </span>
             </div>
@@ -148,20 +148,20 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
           
           {/* Full description */}
           <div className="space-y-3">
-            <h2 className="text-xl font-bold text-[#181816]">{t.about}</h2>
-            <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
+            <h2 className="text-xl font-bold text-festtext">{t.about}</h2>
+            <p className="text-base sm:text-lg text-festmuted leading-relaxed font-normal">
               {workshop.fullDesc}
             </p>
           </div>
 
           {/* Pedagogical values */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-[#181816]">{t.values}</h3>
+            <h3 className="text-lg font-bold text-festtext">{t.values}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {workshop.pedagogicalValues.map((val, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded bg-white border border-[#88643B]/20 shadow-2xs">
-                  <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-semibold text-[#181816]">{val}</span>
+                <div key={idx} className="flex items-start gap-3 p-3.5 rounded bg-white border border-secondary/20 shadow-2xs">
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-festtext">{val}</span>
                 </div>
               ))}
             </div>
@@ -169,10 +169,10 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           {/* Materials */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-[#181816]">{t.materials}</h3>
-            <div className="p-4 rounded bg-white border border-[#88643B]/20 flex items-start gap-3 shadow-2xs">
-              <Package className="w-5 h-5 text-[#0C478D] shrink-0 mt-0.5" />
-              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed">
+            <h3 className="text-lg font-bold text-festtext">{t.materials}</h3>
+            <div className="p-4 rounded bg-white border border-secondary/20 flex items-start gap-3 shadow-2xs">
+              <Package className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <p className="text-xs sm:text-sm text-festmuted leading-relaxed">
                 {workshop.materials}
               </p>
             </div>
@@ -180,13 +180,13 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
           {/* Location & Google Maps Card */}
           {venue ? (
-            <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+            <div className="p-6 rounded bg-primary text-white space-y-4 shadow-lg border border-secondary/30">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="space-y-1">
                   <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                   <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
                   <p className="text-xs text-white/90 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+                    <MapPin className="w-3.5 h-3.5 text-secondary" />
                     <span className="text-white">{venue.address}</span>
                   </p>
                 </div>
@@ -196,23 +196,23 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded bg-white text-festtext hover:bg-festcard text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
                 >
-                  <Navigation className="w-4 h-4 text-[#0C478D]" />
+                  <Navigation className="w-4 h-4 text-primary" />
                   <span>{t.openMaps}</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60 text-secondary" />
                 </a>
               </div>
             </div>
           ) : (
-            <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+            <div className="p-6 rounded bg-primary text-white space-y-4 shadow-lg border border-secondary/30">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">
                   Espai pendent de confirmar
                 </h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+                  <MapPin className="w-3.5 h-3.5 text-secondary" />
                   <span className="text-white">{workshop.location}</span>
                 </p>
               </div>
@@ -228,7 +228,7 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
               href={LINKS.forms.tallers[workshop.id as keyof typeof LINKS.forms.tallers]}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
+              className="block w-full py-3.5 rounded bg-secondary hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
             >
               Reservar plaça
             </a>
@@ -239,19 +239,19 @@ export const WorkshopDetailPage: React.FC<WorkshopDetailPageProps> = ({
 
       {/* Other Workshops Recommendations */}
       <div className="space-y-4">
-        <h3 className="text-xl font-extrabold text-[#181816] font-display">{t.otherTitle}</h3>
+        <h3 className="text-xl font-extrabold text-festtext font-display">{t.otherTitle}</h3>
         <div className="grid sm:grid-cols-3 gap-4">
           {otherWorkshops.map((other) => (
             <button
               key={other.id}
               onClick={() => onSelectWorkshop(other.id)}
-              className="w-full text-left p-5 rounded bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+              className="w-full text-left p-5 rounded bg-festcard border border-secondary/30 hover:border-secondary transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
             >
-              <h4 className="font-bold text-base text-[#181816] group-hover:text-[#0C478D] transition">
+              <h4 className="font-bold text-base text-festtext group-hover:text-primary transition">
                 {other.title}
               </h4>
-              <p className="text-xs text-[#4A4A43] line-clamp-2">{other.shortDesc}</p>
-              <div className="text-xs font-bold text-[#0C478D] pt-1">{t.viewWorkshop}</div>
+              <p className="text-xs text-festmuted line-clamp-2">{other.shortDesc}</p>
+              <div className="text-xs font-bold text-primary pt-1">{t.viewWorkshop}</div>
             </button>
           ))}
         </div>

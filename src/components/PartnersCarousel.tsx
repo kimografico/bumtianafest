@@ -39,11 +39,11 @@ export const PartnersCarousel: React.FC = () => {
   const title = 'Amb el suport i la col·laboració de:';
 
   return (
-    <section className="py-12 bg-[#0C478D] border-y border-[#88643B]/30 overflow-hidden relative">
+    <section className="py-12 bg-primary border-y border-secondary/30 overflow-hidden relative">
       
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 text-center sm:text-left">
-        <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#EFEEE0]/90">
+        <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-festbg/90">
           {title}
         </h2>
       </div>
@@ -52,8 +52,8 @@ export const PartnersCarousel: React.FC = () => {
       <div className="relative w-full overflow-hidden py-6 sm:py-8">
         
         {/* Soft edge gradient masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-r from-[#0C478D] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-l from-[#0C478D] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-r from-primary to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-l from-primary to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-max animate-marquee items-center gap-16 sm:gap-24 md:gap-28 hover:[animation-play-state:paused]">
           {repeatedPartners.map((item, idx) => (

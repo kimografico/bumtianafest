@@ -14,7 +14,7 @@ export const TwoLBSection: React.FC = () => {
   return (
     <section
       id="organitzacio"
-      className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25"
+      className="py-20 sm:py-28 bg-transparent text-festtext relative overflow-hidden border-b border-secondary/25"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
@@ -25,10 +25,7 @@ export const TwoLBSection: React.FC = () => {
             <img
               src={FESTIVAL_LOGOS.twoLb}
               alt="2LB Produccions"
-              className="w-full max-w-[280px] h-auto object-contain"
-              style={{
-                filter: 'brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(5000%) hue-rotate(210deg) brightness(50%) contrast(100%)',
-              }}
+              className="w-full max-w-[200px] h-auto object-contain"
               loading="lazy"
               decoding="async"
             />
@@ -36,19 +33,19 @@ export const TwoLBSection: React.FC = () => {
 
           {/* Right Text Content */}
           <div className="lg:col-span-8 space-y-6">
-            <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-festmuted leading-relaxed font-normal">
               {t.subtitle}
             </p>
 
-            <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-[#181816]">
+            <h3 className="text-2xl sm:text-3xl font-extralight uppercase tracking-wider text-festtext">
               {t.missionTitle}
             </h3>
 
-            <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-festmuted leading-relaxed font-normal">
               {t.missionDesc}
             </p>
 
-            <blockquote className="text-sm sm:text-base font-semibold text-[#0C478D] italic pt-1">
+            <blockquote className="text-sm sm:text-base font-semibold text-primary italic pt-1">
               {t.quote}
             </blockquote>
           </div>
@@ -59,36 +56,41 @@ export const TwoLBSection: React.FC = () => {
           {TEAM_DATA.map((member, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all space-y-6 shadow-md flex flex-col justify-between"
+              className="rounded bg-festcard text-festtext border border-secondary/30 hover:border-secondary transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
             >
-              <div className="space-y-4">
-                <div className="flex items-center gap-5">
-                  <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#88643B]/50 shadow-md shrink-0 bg-[#EFEEE0] ring-2 ring-[#0C478D]/20">
-                    <img
-                      src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
-                      alt=""
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+              {/* Left Column: Photo */}
+              <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-festbg">
+                <img
+                  src={idx === 0 ? FESTIVAL_IMAGES.piMcCarthy : FESTIVAL_IMAGES.oriolRoca}
+                  alt=""
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              {/* Right Column: Details */}
+              <div className="sm:w-3/5 p-6 sm:p-7 flex flex-col justify-between space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <h3 className="font-extralight text-2xl uppercase tracking-wider text-[#181816]">
+                    <h3 className="text-lg sm:text-xl font-extralight uppercase tracking-wider text-festtext group-hover:text-primary transition leading-snug">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-bold text-[#88643B] uppercase tracking-wider">
+                    <span className="text-xs font-bold text-secondary">
                       {member.role}
-                    </p>
-                    <span className="text-[11px] font-semibold text-[#66665D]">
-                      2LB Produccions · Tiana
                     </span>
+                    <p className="text-[11px] font-semibold text-festlabel mt-0.5">
+                      2LB Produccions · Tiana
+                    </p>
                   </div>
-                </div>
 
-                <p className="text-sm text-[#4A4A43] leading-relaxed">{member.bio}</p>
+                  <p className="text-xs sm:text-sm text-festmuted leading-relaxed font-normal">
+                    {member.bio}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

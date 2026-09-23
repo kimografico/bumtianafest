@@ -26,24 +26,24 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
       />
 
       {/* Modal content */}
-      <div className="relative bg-[#FAF9F3] text-[#181816] rounded-lg shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 sm:p-10 space-y-5">
+      <div className="relative bg-festcard text-festtext rounded-lg shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 sm:p-10 space-y-5">
         <div className="flex items-center justify-between">
           <h2
             id="accesibilitat-title"
-            className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-[#0C478D] font-display"
+            className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-primary font-display"
           >
             Accessibilitat
           </h2>
           <button
             onClick={onClose}
-            className="p-2 rounded hover:bg-[#88643B]/10 transition cursor-pointer"
+            className="p-2 rounded hover:bg-secondary/10 transition cursor-pointer"
             aria-label="Tancar"
           >
-            <X className="w-5 h-5 text-[#66665D]" />
+            <X className="w-5 h-5 text-festlabel" />
           </button>
         </div>
 
-        <div className="text-sm sm:text-base text-[#4A4A43] leading-relaxed space-y-4">
+        <div className="text-sm sm:text-base text-festmuted leading-relaxed space-y-4">
           <p>
             Treballem per eliminar les barreres que dificulten l'accés a la
             informació i la comunicació.
@@ -63,11 +63,11 @@ export const AccessibilityModal: React.FC<AccessibilityModalProps> = ({
             entorns tecnològics o d'accés.
           </p>
 
-          <div className="pt-3 border-t border-[#88643B]/20 space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[#88643B]">
+          <div className="pt-3 border-t border-secondary/20 space-y-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-secondary">
               Legislació
             </h3>
-            <ul className="text-xs space-y-1 list-disc list-inside text-[#4A4A43]">
+            <ul className="text-xs space-y-1 list-disc list-inside text-festmuted">
               <li>Reial decret 1112/2018, de 7 de setembre</li>
               <li>Reial decret 1494/2007, de 12 de novembre</li>
               <li>Llei 13/2014, de 30 d'octubre</li>

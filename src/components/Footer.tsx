@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-primary text-[#EFEEE0] pt-16 pb-12 border-t border-[#88643B]/30 relative">
+    <footer className="bg-primary text-festbg pt-16 pb-12 border-t border-secondary/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Main Footer Grid with 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
@@ -41,11 +41,11 @@ export const Footer: React.FC = () => {
               />
             </div>
 
-            <p className="text-xs sm:text-sm text-[#EFEEE0]/75 leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm text-festbg/75 leading-relaxed max-w-md">
               {t.tagline}
             </p>
 
-            <div className="text-xs text-[#EFEEE0]/90 flex items-center gap-1.5 font-medium">
+            <div className="text-xs text-festbg/90 flex items-center gap-1.5 font-medium">
               <MapPin className="w-4 h-4 text-accent" />
               <span>{t.location}</span>
             </div>
@@ -151,7 +151,7 @@ export const Footer: React.FC = () => {
               >
                 {t.linksTitle}
               </h2>
-              <ul className="space-y-2.5 text-xs text-[#EFEEE0]/70">
+              <ul className="space-y-2.5 text-xs text-festbg/70">
                 <li>
                   <a href="#concepte" className="hover:text-accent transition">
                     {t.linkConcepte}
@@ -198,7 +198,7 @@ export const Footer: React.FC = () => {
               <div className="border-t border-white/10 pt-3 mt-3">
                 <button
                   onClick={() => setShowAccessibility(true)}
-                  className="text-xs text-[#EFEEE0]/70 hover:text-accent transition cursor-pointer"
+                  className="text-xs text-festbg/70 hover:text-accent transition cursor-pointer"
                 >
                   Accessibilitat
                 </button>
@@ -208,7 +208,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright statement */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFEEE0]/70">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-festbg/70">
           <div>
             © 2026 BUMFEST TIANA · Tots els drets reservats. · Disseny web:{" "}
             <a

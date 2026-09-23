@@ -22,7 +22,7 @@ export const ScheduleSection: React.FC = () => {
   const subtitle = 'Una jornada completa des de les 10:00h del matí fins a les 20:00h del vespre.';
 
   return (
-    <section id="programa" className="py-20 sm:py-28 bg-[#0C478D] text-white relative border-b border-[#88643B]/30">
+    <section id="programa" className="py-20 sm:py-28 bg-primary text-white relative border-b border-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
@@ -30,7 +30,7 @@ export const ScheduleSection: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-[#EFEEE0]/90 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-festbg/90 leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
@@ -44,8 +44,8 @@ export const ScheduleSection: React.FC = () => {
               aria-pressed={activeCategory === cat.id}
               className={`px-5 py-2.5 rounded text-xs font-bold transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-white text-[#0C478D] shadow-md shadow-black/10'
-                  : 'bg-white/10 hover:bg-white/20 text-[#EFEEE0] border border-white/20 backdrop-blur-md'
+                  ? 'bg-white text-primary shadow-md shadow-black/10'
+                  : 'bg-white/10 hover:bg-white/20 text-festbg border border-white/20 backdrop-blur-md'
               }`}
             >
               {cat.label}
@@ -65,7 +65,7 @@ export const ScheduleSection: React.FC = () => {
               className="relative group"
             >
               {/* Timeline dot positioned on the line */}
-              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-[#0C478D] border-4 border-accent shadow-xs group-hover:border-white group-hover:scale-125 transition" />
+              <div className="absolute -left-8 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-accent shadow-xs group-hover:border-white group-hover:scale-125 transition" />
 
               <div className="space-y-2">
                 {/* Time & Badges Row */}
@@ -75,24 +75,24 @@ export const ScheduleSection: React.FC = () => {
                   </span>
 
                   {item.badge && (
-                    <span className="text-xs font-bold text-white bg-[#88643B] px-3 py-1 rounded shadow-2xs">
+                    <span className="text-xs font-bold text-white bg-secondary px-3 py-1 rounded shadow-2xs">
                       {item.badge}
                     </span>
                   )}
                 </div>
 
                 {/* Event Title */}
-                <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-white group-hover:text-[#EFEEE0] transition">
+                <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-white group-hover:text-festbg transition">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#EFEEE0]/85 leading-relaxed max-w-2xl font-normal">
+                <p className="text-sm text-festbg/85 leading-relaxed max-w-2xl font-normal">
                   {item.description}
                 </p>
 
                 {/* Location pin in light brown */}
-                <div className="flex items-center gap-1.5 text-xs text-[#EFEEE0]/75 font-medium pt-1">
+                <div className="flex items-center gap-1.5 text-xs text-festbg/75 font-medium pt-1">
                   <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
                   <span>{item.location}</span>
                 </div>

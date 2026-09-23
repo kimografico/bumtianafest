@@ -56,10 +56,10 @@ export const Hero: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-lg sm:text-2xl text-[#181816] font-medium leading-relaxed max-w-2xl text-left">
+            <p className="text-lg sm:text-2xl text-festtext font-medium leading-relaxed max-w-2xl text-left">
               {subtitle}
             </p>
-            <div className="pt-2 text-sm sm:text-base text-[#3A3A34] leading-relaxed max-w-xl font-normal space-y-1 text-left">
+            <div className="pt-2 text-sm sm:text-base text-festdark leading-relaxed max-w-xl font-normal space-y-1 text-left">
               {welcomeText.map((line, i) => (
                 <p key={i}>{line}</p>
               ))}
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full">
             <a
               href="#tallers"
-              className="w-full sm:w-auto px-8 py-4 rounded bg-[#0C478D] hover:opacity-90 text-white text-sm font-bold shadow-lg shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2 text-center"
+              className="w-full sm:w-auto px-8 py-4 rounded bg-primary hover:opacity-90 text-white text-sm font-bold shadow-lg shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2 text-center"
             >
               <span>{ctaWorkshops}</span>
               <ArrowRight className="w-4 h-4" />
@@ -78,14 +78,14 @@ export const Hero: React.FC = () => {
 
             <a
               href="#programa"
-              className="w-full sm:w-auto px-7 py-4 rounded bg-[#88643B] hover:opacity-90 text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto px-7 py-4 rounded bg-secondary hover:opacity-90 text-white text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
               {ctaProgram}
             </a>
 
             <a
               href="#espais"
-              className="w-full sm:w-auto px-7 py-4 rounded bg-white/80 hover:bg-white text-[#181816] border border-[#88643B]/30 text-sm font-bold shadow-2xs active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
+              className="w-full sm:w-auto px-7 py-4 rounded bg-white/80 hover:bg-white text-festtext border border-secondary/30 text-sm font-bold shadow-2xs active:scale-95 transition cursor-pointer inline-flex items-center justify-center text-center"
             >
               {ctaVenues}
             </a>
@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
         <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative group w-full max-w-xs sm:max-w-md lg:max-w-none flex items-center justify-center">
             {/* Subtle warm glow background behind the wooden family */}
-            <div className="absolute inset-0 bg-[#88643B]/15 rounded-full blur-3xl -z-10 scale-90" />
+            <div className="absolute inset-0 bg-secondary/15 rounded-full blur-3xl -z-10 scale-90" />
             <img
               src={FESTIVAL_IMAGES.familiaMadera}
               alt="BUMFEST - Família de Fusta"

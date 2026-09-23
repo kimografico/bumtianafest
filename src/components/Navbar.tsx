@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#EFEEE0]/90 border-b border-[#88643B]/25 shadow-xs transition-all">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-festbg/90 border-b border-secondary/25 shadow-xs transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
           
@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
                 key={idx}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="px-3.5 py-2 rounded text-xs font-bold text-[#181816] hover:text-[#0C478D] hover:bg-[#88643B]/10 transition whitespace-nowrap"
+                className="px-3.5 py-2 rounded text-xs font-bold text-festtext hover:text-primary hover:bg-secondary/10 transition whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded md:hidden text-[#181816] hover:bg-[#88643B]/15 border border-[#88643B]/30 transition cursor-pointer"
+              className="p-2 rounded md:hidden text-festtext hover:bg-secondary/15 border border-secondary/30 transition cursor-pointer"
               aria-label="Menú"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
@@ -105,14 +105,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
         <nav
           id="mobile-navigation"
           aria-label="Navegació mòbil"
-          className="md:hidden border-t border-[#88643B]/25 bg-[#FAF9F3]/98 backdrop-blur-2xl px-4 py-6 space-y-2 shadow-xl animate-in slide-in-from-top-2"
+          className="md:hidden border-t border-secondary/25 bg-festcard/98 backdrop-blur-2xl px-4 py-6 space-y-2 shadow-xl animate-in slide-in-from-top-2"
         >
           {navLinks.map((link, idx) => (
             <a
               key={idx}
               href={link.href}
               onClick={handleLinkClick}
-              className="block px-4 py-3 rounded text-sm font-bold text-[#181816] hover:bg-[#0C478D]/10 hover:text-[#0C478D] transition"
+              className="block px-4 py-3 rounded text-sm font-bold text-festtext hover:bg-primary/10 hover:text-primary transition"
             >
               {link.name}
             </a>

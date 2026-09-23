@@ -8,8 +8,8 @@ import armandoBastidaImg from './images/guests/armando-bastida.jpg';
 import laiaFerrerImg from './images/guests/laia-ferrer.jpg';
 import armandoBastidaLarge from './images/guests/ARMANDO.png';
 import laiaFerrerLarge from './images/guests/LAIA.png';
-import oriolRocaImg from './images/guests/oriol-roca.jpg';
-import piMcCarthyImg from './images/guests/pi-mccarthy.jpg';
+import oriolRocaImg from './images/guests/2LB_ORIOL.jpg';
+import piMcCarthyImg from './images/guests/2LB_PI.jpg';
 
 // Workshop Photos
 import wsGardening from './images/workshops/gardening.jpg';

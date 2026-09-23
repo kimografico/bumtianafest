@@ -16,7 +16,7 @@ export const ConceptSection: React.FC = () => {
   const card2Desc = "Els carrers, places, teatres i espais de Tiana s'omplen de vida per gaudir i enfortir els vincles comunitaris.";
 
   return (
-    <section id="concepte" className="py-20 sm:py-28 bg-[#0C478D] text-white relative overflow-hidden">
+    <section id="concepte" className="py-20 sm:py-28 bg-primary text-white relative overflow-hidden">
       
       {/* Translucent background overlay image of Tiana */}
       <div 
@@ -26,8 +26,8 @@ export const ConceptSection: React.FC = () => {
       />
       
       {/* Soft ambient background glow in corporate colors */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#88643B]/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0C478D]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/25 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
@@ -36,7 +36,7 @@ export const ConceptSection: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
             {title}
           </h2>
-          <div className="space-y-4 text-sm sm:text-base text-[#EFEEE0]/90 leading-relaxed font-normal">
+          <div className="space-y-4 text-sm sm:text-base text-festbg/90 leading-relaxed font-normal">
             {perQueBumDesc.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
@@ -47,26 +47,26 @@ export const ConceptSection: React.FC = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           
           {/* Card 1: A qui va dirigit */}
-          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
+          <div className="p-7 sm:p-8 rounded bg-festcard text-festtext border border-secondary/30 flex flex-col justify-start shadow-xl hover:border-secondary transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{cardTargetTitle}</h3>
-              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{cardTargetDesc}</p>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-primary">{cardTargetTitle}</h3>
+              <p className="text-xs sm:text-sm text-festmuted leading-relaxed font-normal">{cardTargetDesc}</p>
             </div>
           </div>
 
           {/* Card 2: Aprenentatge Compartit */}
-          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
+          <div className="p-7 sm:p-8 rounded bg-festcard text-festtext border border-secondary/30 flex flex-col justify-start shadow-xl hover:border-secondary transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{card1Title}</h3>
-              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{card1Desc}</p>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-primary">{card1Title}</h3>
+              <p className="text-xs sm:text-sm text-festmuted leading-relaxed font-normal">{card1Desc}</p>
             </div>
           </div>
 
           {/* Card 3: Tiana com a gran espai comunitari */}
-          <div className="p-7 sm:p-8 rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 flex flex-col justify-start shadow-xl hover:border-[#88643B] transition group">
+          <div className="p-7 sm:p-8 rounded bg-festcard text-festtext border border-secondary/30 flex flex-col justify-start shadow-xl hover:border-secondary transition group">
             <div className="space-y-2">
-              <h3 className="text-xl font-extralight uppercase tracking-wider text-[#0C478D]">{card2Title}</h3>
-              <p className="text-xs sm:text-sm text-[#4A4A43] leading-relaxed font-normal">{card2Desc}</p>
+              <h3 className="text-xl font-extralight uppercase tracking-wider text-primary">{card2Title}</h3>
+              <p className="text-xs sm:text-sm text-festmuted leading-relaxed font-normal">{card2Desc}</p>
             </div>
           </div>
 

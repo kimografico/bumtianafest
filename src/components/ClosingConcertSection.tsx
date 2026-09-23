@@ -28,24 +28,24 @@ export const ClosingConcertSection: React.FC = () => {
   };
 
   return (
-    <section id="cloenda" className="py-20 sm:py-28 bg-[#EFEEE0] border-b border-[#88643B]/25 relative overflow-hidden">
+    <section id="cloenda" className="py-20 sm:py-28 bg-festbg border-b border-secondary/25 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="mb-12 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-primary font-display">
             Concert de Cloenda:
             <br />
-            <span className="text-xl sm:text-2xl text-[#88643B]">Sedajazz Young Band</span>
+            <span className="text-xl sm:text-2xl text-secondary">Sedajazz Young Band</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
+          <p className="text-base sm:text-lg text-festmuted leading-relaxed">
             {t.subtitle}
           </p>
         </div>
 
         {/* Main Content Card */}
-        <div className="rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row">
+        <div className="rounded bg-festcard text-festtext border border-secondary/30 hover:border-secondary transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row">
           {/* Left Column: Cloenda Photo */}
-          <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
+          <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-festbg">
             <img
               src={FESTIVAL_IMAGES.sedajazz}
               alt="Sedajazz Young Band en concert a BUMFEST"
@@ -63,7 +63,7 @@ export const ClosingConcertSection: React.FC = () => {
           <div className="sm:w-3/5 p-6 sm:p-7 flex flex-col justify-between space-y-4">
             <div className="space-y-3">
               {/* Main Editorial Text */}
-              <p className="text-sm sm:text-base text-[#181816] leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-festtext leading-relaxed font-normal">
                 {t.description}
               </p>
 
@@ -72,13 +72,13 @@ export const ClosingConcertSection: React.FC = () => {
                 {t.highlights.map((item, index) => (
                   <div
                     key={index}
-                    className="p-4 rounded bg-white/70 border border-[#88643B]/20 space-y-1.5"
+                    className="p-4 rounded bg-white/70 border border-secondary/20 space-y-1.5"
                   >
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#0C478D]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0C478D] shrink-0" />
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                       <span>{item.title}</span>
                     </div>
-                    <p className="text-xs text-[#4A4A43] leading-relaxed">
+                    <p className="text-xs text-festmuted leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -92,12 +92,12 @@ export const ClosingConcertSection: React.FC = () => {
                 href={LINKS.maps.venue('Plaça de la Vila', 'Plaça de la Vila, Tiana')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded bg-[#0C478D] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2"
+                className="px-6 py-3.5 rounded bg-primary hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#0C478D]/20 active:scale-95 transition cursor-pointer inline-flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4" />
                 <span>{t.openMap}</span>
               </a>
-              <span className="px-4 py-3.5 rounded bg-[#88643B]/15 text-[#88643B] text-xs sm:text-sm font-bold border border-[#88643B]/30">
+              <span className="px-4 py-3.5 rounded bg-secondary/15 text-secondary text-xs sm:text-sm font-bold border border-secondary/30">
                 19:00h - 20:00h
               </span>
             </div>

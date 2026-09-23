@@ -41,26 +41,26 @@ export const GastronomySection: React.FC = () => {
   };
 
   return (
-    <section id="gastronomia" className="py-20 sm:py-28 bg-transparent text-[#181816] relative overflow-hidden border-b border-[#88643B]/25">
+    <section id="gastronomia" className="py-20 sm:py-28 bg-transparent text-festtext relative overflow-hidden border-b border-secondary/25">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-primary font-display">
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-festmuted leading-relaxed font-normal">
             {subtitle}
           </p>
         </div>
 
         {/* Informative Card: Tiquets */}
-        <div className="p-8 sm:p-10 rounded bg-[#FAF9F3]/90 backdrop-blur-xl text-[#181816] border border-[#88643B]/30 shadow-sm mb-14">
+        <div className="p-8 sm:p-10 rounded bg-festcard/90 backdrop-blur-xl text-festtext border border-secondary/30 shadow-sm mb-14">
           <div className="space-y-1">
-            <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+            <p className="text-sm sm:text-base text-festmuted font-normal">
               Ensenya la teva polsera als següents establiments i allí trobaràs el teu menú BUMFEST.
             </p>
-            <p className="text-sm sm:text-base text-[#4A4A43] font-normal">
+            <p className="text-sm sm:text-base text-festmuted font-normal">
               Hi hauran taules preparades a disposició de les famílies, al Parc Antic de Futbol, per a poder dinar tots junts.
             </p>
           </div>
@@ -68,7 +68,7 @@ export const GastronomySection: React.FC = () => {
 
         {/* Restaurants Grid with horizontal card format */}
         <div className="space-y-6">
-          <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
+          <h3 className="text-xl sm:text-2xl font-extralight uppercase tracking-wider text-primary font-display">
             {restaurantsTitle}
           </h3>
 
@@ -76,10 +76,10 @@ export const GastronomySection: React.FC = () => {
             {RESTAURANTS_DATA.map((resto, idx) => (
               <div
                 key={idx}
-                className="rounded bg-[#FAF9F3] text-[#181816] border border-[#88643B]/30 hover:border-[#88643B] transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
+                className="rounded bg-festcard text-festtext border border-secondary/30 hover:border-secondary transition-all overflow-hidden shadow-lg hover:shadow-xl group flex flex-col sm:flex-row"
               >
                 {/* Left Column: Restaurant Photo */}
-                <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-[#EFEEE0]">
+                <div className="sm:w-2/5 min-h-[190px] sm:min-h-full relative overflow-hidden shrink-0 bg-festbg">
                   <img
                     src={getRestaurantImage(resto.id)}
                     alt=""
@@ -98,10 +98,10 @@ export const GastronomySection: React.FC = () => {
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h4 className="text-lg sm:text-xl font-extralight uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition leading-snug">
+                        <h4 className="text-lg sm:text-xl font-extralight uppercase tracking-wider text-festtext group-hover:text-primary transition leading-snug">
                           {resto.name}
                         </h4>
-                        <span className="text-xs font-bold text-[#88643B]">
+                        <span className="text-xs font-bold text-secondary">
                           {resto.type}
                         </span>
                       </div>
@@ -125,8 +125,8 @@ export const GastronomySection: React.FC = () => {
                       )}
                     </div>
 
-                    <div className="pt-2 border-t border-[#88643B]/20 flex items-center gap-1.5 text-xs text-[#66665D]">
-                      <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
+                    <div className="pt-2 border-t border-secondary/20 flex items-center gap-1.5 text-xs text-festlabel">
+                      <MapPin className="w-3.5 h-3.5 text-secondary shrink-0" />
                       <span className="truncate">{resto.address}, Tiana</span>
                     </div>
                   </div>
@@ -138,7 +138,7 @@ export const GastronomySection: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${visitWebsite}: ${resto.name}`}
-                      className="w-full py-2.5 px-4 rounded bg-white hover:bg-[#0C478D] hover:text-white text-[#181816] border border-[#88643B]/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
+                      className="w-full py-2.5 px-4 rounded bg-white hover:bg-primary hover:text-white text-festtext border border-secondary/30 hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs active:scale-95 cursor-pointer"
                     >
                       <span>{visitWebsite}</span>
                       <ExternalLink className="w-3.5 h-3.5" />

@@ -59,21 +59,21 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 60);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-[#FAF9F3] hover:bg-white text-[#181816] border border-[#88643B]/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-festcard hover:bg-white text-festtext border border-secondary/30 text-xs font-bold transition shadow-2xs active:scale-95 cursor-pointer backdrop-blur-md"
         >
-          <ArrowLeft className="w-4 h-4 text-[#0C478D]" />
+          <ArrowLeft className="w-4 h-4 text-primary" />
           <span>{t.back}</span>
         </button>
       </div>
 
       {/* Main Speaker Card */}
-      <div className="rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 shadow-xl overflow-hidden mb-12">
+      <div className="rounded bg-festcard/90 backdrop-blur-xl border border-secondary/30 shadow-xl overflow-hidden mb-12">
         
         {/* Header Profile Zone */}
-        <div className="p-6 sm:p-10 border-b border-[#88643B]/30 bg-[#0C478D] text-white">
+        <div className="p-6 sm:p-10 border-b border-secondary/30 bg-primary text-white">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-xl shrink-0 bg-[#EFEEE0] ring-4 ring-[#88643B]/30">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-xl shrink-0 bg-festbg ring-4 ring-[#88643B]/30">
               <img
                 src={
                   speaker.id === 'armando-bastida'
@@ -91,14 +91,14 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
             </div>
 
             <div className="space-y-1.5 flex-grow">
-              <div className="inline-block px-3 py-1 rounded bg-[#88643B] text-white text-[11px] font-bold uppercase tracking-wider shadow-xs">
+              <div className="inline-block px-3 py-1 rounded bg-secondary text-white text-[11px] font-bold uppercase tracking-wider shadow-xs">
                 {speaker.role}
               </div>
               <h1 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-white font-display">
                 {speaker.name}
               </h1>
               {speaker.organization && (
-                <p className="text-xs sm:text-sm text-[#EFEEE0]/90 font-medium">
+                <p className="text-xs sm:text-sm text-festbg/90 font-medium">
                   {speaker.organization}
                 </p>
               )}
@@ -135,40 +135,40 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
         <div className="p-6 sm:p-10 space-y-8">
           
           {/* Talk Title & Schedule Banner */}
-          <div className="p-6 rounded bg-white border border-[#88643B]/25 space-y-4 shadow-xs">
+          <div className="p-6 rounded bg-white border border-secondary/25 space-y-4 shadow-xs">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0C478D]">
+              <span className="text-xs font-bold uppercase tracking-wider text-primary">
                 {t.talkTitle}
               </span>
-              <div className="flex items-center gap-4 text-xs font-bold text-[#181816]">
-                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded border border-[#88643B]/20 shadow-2xs">
-                  <Clock className="w-3.5 h-3.5 text-[#88643B]" />
+              <div className="flex items-center gap-4 text-xs font-bold text-festtext">
+                <span className="flex items-center gap-1.5 bg-festcard px-3 py-1 rounded border border-secondary/20 shadow-2xs">
+                  <Clock className="w-3.5 h-3.5 text-secondary" />
                   {speaker.time}
                 </span>
-                <span className="flex items-center gap-1.5 bg-[#FAF9F3] px-3 py-1 rounded border border-[#88643B]/20 shadow-2xs">
-                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+                <span className="flex items-center gap-1.5 bg-festcard px-3 py-1 rounded border border-secondary/20 shadow-2xs">
+                  <MapPin className="w-3.5 h-3.5 text-secondary" />
                   {speaker.location}
                 </span>
               </div>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#181816] leading-snug">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-festtext leading-snug">
               {speaker.talkTitle}
             </h2>
             
-            <p className="text-sm sm:text-base text-[#4A4A43] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-festmuted leading-relaxed font-normal">
               {speaker.talkDescription}
             </p>
           </div>
 
           {/* Key highlights / takeaways */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-[#181816]">{t.highlightsTitle}</h3>
+            <h3 className="text-lg font-bold text-festtext">{t.highlightsTitle}</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {speaker.highlights.map((highlight, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-4 rounded bg-white border border-[#88643B]/20 shadow-2xs">
-                  <CheckCircle2 className="w-4 h-4 text-[#0C478D] shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-semibold text-[#181816]">{highlight}</span>
+                <div key={idx} className="flex items-start gap-3 p-4 rounded bg-white border border-secondary/20 shadow-2xs">
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-festtext">{highlight}</span>
                 </div>
               ))}
             </div>
@@ -176,20 +176,20 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
 
           {/* Speaker Biography */}
           <div className="space-y-3">
-            <h3 className="text-lg font-bold text-[#181816]">{t.bioTitle}</h3>
-            <div className="p-6 rounded bg-white border border-[#88643B]/20 shadow-2xs text-sm sm:text-base text-[#3A3A34] leading-relaxed">
+            <h3 className="text-lg font-bold text-festtext">{t.bioTitle}</h3>
+            <div className="p-6 rounded bg-white border border-secondary/20 shadow-2xs text-sm sm:text-base text-festdark leading-relaxed">
               {speaker.bio}
             </div>
           </div>
 
           {/* Location & Google Maps Card */}
-          <div className="p-6 rounded bg-[#0C478D] text-white space-y-4 shadow-lg border border-[#88643B]/30">
+          <div className="p-6 rounded bg-primary text-white space-y-4 shadow-lg border border-secondary/30">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold text-white uppercase tracking-wider">{t.venueCard}</span>
                 <h4 className="text-xl font-bold font-display text-white">{venue.name}</h4>
                 <p className="text-xs text-white/90 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#88643B]" />
+                  <MapPin className="w-3.5 h-3.5 text-secondary" />
                   <span className="text-white">{venue.address}</span>
                 </p>
               </div>
@@ -199,17 +199,17 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${t.openMaps}: ${venue.name} (${venue.address})`}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded bg-white text-[#181816] hover:bg-[#FAF9F3] text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded bg-white text-festtext hover:bg-festcard text-xs font-bold shadow-md transition active:scale-95 cursor-pointer"
               >
-                <Navigation className="w-4 h-4 text-[#0C478D]" />
+                <Navigation className="w-4 h-4 text-primary" />
                 <span>{t.openMaps}</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
+                <ExternalLink className="w-3.5 h-3.5 opacity-60 text-secondary" />
               </a>
             </div>
           </div>
 
           {/* Access Note */}
-          <div className="p-4 rounded bg-white border border-[#88643B]/20 text-xs text-[#4A4A43]">
+          <div className="p-4 rounded bg-white border border-secondary/20 text-xs text-festmuted">
             {t.accessNote}
           </div>
 
@@ -219,7 +219,7 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
               href={LINKS.forms.xerrades[speaker.id as keyof typeof LINKS.forms.xerrades]}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-3.5 rounded bg-[#88643B] hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
+              className="block w-full py-3.5 rounded bg-secondary hover:opacity-90 text-white text-xs sm:text-sm font-bold shadow-md shadow-[#88643B]/20 active:scale-95 transition text-center"
             >
               Reservar plaça
             </a>
@@ -231,20 +231,20 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
       {/* Other Talks */}
       {otherSpeakers.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-xl font-extrabold text-[#181816] font-display">{t.otherTitle}</h3>
+          <h3 className="text-xl font-extrabold text-festtext font-display">{t.otherTitle}</h3>
           <div className="grid sm:grid-cols-2 gap-4">
             {otherSpeakers.map((other) => (
               <button
                 key={other.id}
                 onClick={() => onSelectSpeaker(other.id)}
-                className="w-full text-left p-6 rounded bg-[#FAF9F3] border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
+                className="w-full text-left p-6 rounded bg-festcard border border-secondary/30 hover:border-secondary transition-all cursor-pointer space-y-3 shadow-2xs hover:shadow-md group"
               >
-                <div className="text-[11px] font-bold text-[#88643B] uppercase">{other.role}</div>
-                <h4 className="font-bold text-lg text-[#181816] group-hover:text-[#0C478D] transition">
+                <div className="text-[11px] font-bold text-secondary uppercase">{other.role}</div>
+                <h4 className="font-bold text-lg text-festtext group-hover:text-primary transition">
                   {other.name}
                 </h4>
-                <p className="text-xs text-[#4A4A43] line-clamp-2">{other.talkTitle}</p>
-                <div className="text-xs font-bold text-[#0C478D] pt-1">{t.viewTalk}</div>
+                <p className="text-xs text-festmuted line-clamp-2">{other.talkTitle}</p>
+                <div className="text-xs font-bold text-primary pt-1">{t.viewTalk}</div>
               </button>
             ))}
           </div>

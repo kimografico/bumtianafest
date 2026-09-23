@@ -28,15 +28,15 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
   };
 
   return (
-    <section id="xerrades" className="py-20 sm:py-28 bg-transparent border-b border-[#88643B]/25 relative">
+    <section id="xerrades" className="py-20 sm:py-28 bg-transparent border-b border-secondary/25 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header without tag */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display">
+          <h2 className="text-3xl sm:text-5xl font-extralight uppercase tracking-wider text-primary font-display">
             {title}
           </h2>
-          <p className="text-base sm:text-lg text-[#4A4A43] leading-relaxed">
+          <p className="text-base sm:text-lg text-festmuted leading-relaxed">
             {subtitle}
           </p>
         </div>
@@ -60,38 +60,38 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
 
               <button
                 onClick={() => onSelectSpeaker(speaker.id)}
-                className="w-full text-left p-8 pt-12 rounded bg-[#FAF9F3]/90 backdrop-blur-xl border border-[#88643B]/30 hover:border-[#88643B] transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group relative z-10"
+                className="w-full text-left p-8 pt-12 rounded bg-festcard/90 backdrop-blur-xl border border-secondary/30 hover:border-secondary transition-all cursor-pointer flex flex-col justify-between space-y-6 shadow-sm hover:shadow-lg group relative z-10"
               >
                 <div className="space-y-5">
                   
                   {/* Speaker name & role */}
                   <div>
-                    <h3 className="font-extralight text-3xl uppercase tracking-wider text-[#181816] group-hover:text-[#0C478D] transition">
+                    <h3 className="font-extralight text-3xl uppercase tracking-wider text-festtext group-hover:text-primary transition">
                       {speaker.name}
                     </h3>
-                    <p className="text-xs font-bold text-[#88643B]">
+                    <p className="text-xs font-bold text-secondary">
                       {speaker.role}
                     </p>
                   </div>
 
                   {/* Talk title & description */}
                   <div className="space-y-2">
-                    <h4 className="font-bold text-base text-[#181816] leading-snug">
+                    <h4 className="font-bold text-base text-festtext leading-snug">
                       {speaker.talkTitle}
                     </h4>
-                    <p className="text-xs sm:text-sm text-[#4A4A43] line-clamp-3 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-festmuted line-clamp-3 leading-relaxed font-normal">
                       {speaker.talkDescription}
                     </p>
                   </div>
 
                   {/* Schedule & Location */}
-                  <div className="flex flex-col gap-2 pt-2 border-t border-[#88643B]/20 text-xs text-[#66665D] font-medium">
+                  <div className="flex flex-col gap-2 pt-2 border-t border-secondary/20 text-xs text-festlabel font-medium">
                     <div className="flex items-center gap-2">
-                      <Clock className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
+                      <Clock className="w-3.5 h-3.5 text-secondary shrink-0" />
                       <span>{speaker.time}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#88643B] shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-secondary shrink-0" />
                       <span className="truncate">{speaker.location}</span>
                     </div>
                   </div>
@@ -99,8 +99,8 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                 </div>
 
                 {/* Action Buttons */}
-                <div className="pt-4 border-t border-[#88643B]/20 flex flex-col gap-2">
-                  <span className="w-full py-2.5 px-4 rounded bg-white/80 group-hover:bg-[#0C478D] text-[#181816] group-hover:text-white border border-[#88643B]/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
+                <div className="pt-4 border-t border-secondary/20 flex flex-col gap-2">
+                  <span className="w-full py-2.5 px-4 rounded bg-white/80 group-hover:bg-primary text-festtext group-hover:text-white border border-secondary/30 group-hover:border-transparent text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs group-hover:shadow-md">
                     <span>{viewDetails}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -110,7 +110,7 @@ export const SpeakersSection: React.FC<SpeakersSectionProps> = ({
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="w-full py-2.5 px-4 rounded bg-[#88643B] hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs active:scale-95"
+                      className="w-full py-2.5 px-4 rounded bg-secondary hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-2xs active:scale-95"
                     >
                       {reservar}
                     </a>
