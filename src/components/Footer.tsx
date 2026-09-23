@@ -199,7 +199,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright statement */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFEEE0]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFEEE0]/70">
           <div>
             © 2026 BUMFEST TIANA · Tots els drets reservats. · Disseny web:{" "}
             <a

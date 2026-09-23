@@ -185,7 +185,7 @@ export default function App() {
                 <p className="text-sm sm:text-base md:text-lg font-light leading-relaxed">
                   Desitgem que tingueu un dia de molta inspiració.
                 </p>
-                <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-wider pt-4">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-extralight uppercase tracking-wider text-[#0C478D] font-display pt-4">
                   Viu el BUMFEST!
                 </p>
               </div>
