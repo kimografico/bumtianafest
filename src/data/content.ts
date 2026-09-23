@@ -141,8 +141,8 @@ export const WORKSHOPS_DATA: Workshop[] = [
     category: "compartit",
     instructor: "Silvia Espinosa & Eva Campmajor",
     location: "Parc Lola Anglada",
-    shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
-    fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families.",
+    shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families. Amb Eva Campmajor i Silvia Espinosa, de Escola Bressol El més Petit i Petit Paradís.",
+    fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families. Amb Eva Campmajor i Silvia Espinosa, de Escola Bressol El més Petit i Petit Paradís.",
     ageRange: "",
     duration: "10:00 - 12:00 (2 hores)",
     materials: "Espai adaptat per a nadons i famílies.",
@@ -209,7 +209,6 @@ export const VENUES_DATA: Venue[] = [
     activities: [
       "Acollida i Entrega de Polseres (09:30h)",
       "Taller Natura: Jardineria & Cura de la Terra (10:00h - 12:00h)",
-      "Jocs Populars Tradicionals (11:00h - 14:00h)",
       "Punt d'Informació Oficial",
     ],
     walkingFromCenter: "0 min (Punt Central)",
