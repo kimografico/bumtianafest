@@ -206,10 +206,6 @@ export const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = ({
                 <ExternalLink className="w-3.5 h-3.5 opacity-60 text-[#88643B]" />
               </a>
             </div>
-            
-            <p className="text-xs text-white/90 border-t border-white/20 pt-3 leading-relaxed">
-              {venue.description}
-            </p>
           </div>
 
           {/* Access Note */}
