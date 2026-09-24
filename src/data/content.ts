@@ -383,15 +383,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     address: "Plaça de la Vila",
     websiteUrl: LINKS.restaurants.tiriti,
   },
-  {
-    id: "aviMingo",
-    name: "Avi Mingo",
-    type: "Cuina catalana de mercat",
-    specialOffer: "",
-    address: "Carrer Lola Anglada, 28",
-    websiteUrl: LINKS.restaurants.aviMingo,
-  },
-];
+  ];
 
 export const PRICING_DATA = {
   title: "Accés 100% Gratuït",

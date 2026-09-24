@@ -47,7 +47,6 @@ export const LINKS = {
     casal: 'https://www.instagram.com/elcasaldetiana/',
     barbar: 'https://www.instagram.com/sombarbarstiana/',
     tiriti: 'https://tiriti.es/',
-    aviMingo: 'https://www.avimingo.com/',
   },
 
   // ── Institutional / Colophon ───────────────────────────────────────

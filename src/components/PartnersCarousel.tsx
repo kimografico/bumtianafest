@@ -28,10 +28,6 @@ export const PartnersCarousel: React.FC = () => {
       logo: FESTIVAL_LOGOS.tirati,
     },
     {
-      name: "L'Avi Mingo",
-      logo: FESTIVAL_LOGOS.aviMingo,
-    },
-    {
       name: 'Petit Paradís',
       logo: FESTIVAL_LOGOS.petitParadis,
     },

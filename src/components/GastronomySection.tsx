@@ -19,8 +19,6 @@ export const GastronomySection: React.FC = () => {
         return FESTIVAL_IMAGES.restoBarbar;
       case 'tiriti':
         return FESTIVAL_IMAGES.restoTiriti;
-      case 'aviMingo':
-        return FESTIVAL_IMAGES.restoAviMingo;
       default:
         return FESTIVAL_IMAGES.restoCasal;
     }
@@ -34,8 +32,6 @@ export const GastronomySection: React.FC = () => {
         return FESTIVAL_LOGOS.barbar;
       case 'tiriti':
         return FESTIVAL_LOGOS.tirati;
-      case 'aviMingo':
-        return FESTIVAL_LOGOS.aviMingo;
       default:
         return null;
     }

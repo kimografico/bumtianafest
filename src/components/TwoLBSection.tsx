@@ -18,20 +18,20 @@ export const TwoLBSection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* 2LB Feature: Logo + text */}
-        <div className="grid lg:grid-cols-12 gap-8 items-start mb-12">
-          {/* Left: 2LB Logo */}
-          <div className="lg:col-span-4 flex justify-center items-start">
+        <div className="mb-12 space-y-8">
+          {/* Logo above text, left-aligned */}
+          <div className="flex justify-start">
             <img
               src={FESTIVAL_LOGOS.twoLb}
               alt="2LB Produccions"
-              className="w-full max-w-[200px] h-auto object-contain mb-8"
+              className="w-full max-w-[200px] h-auto object-contain"
               loading="lazy"
               decoding="async"
             />
           </div>
 
-          {/* Right Text Content */}
-          <div className="lg:col-span-8 space-y-6">
+          {/* Text Content */}
+          <div className="space-y-6">
             <p className="text-sm sm:text-base text-festmuted leading-relaxed font-normal">
               {t.subtitle}
             </p>

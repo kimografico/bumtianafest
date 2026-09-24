@@ -24,7 +24,6 @@ import sedajazzImg from './images/sedajazz.jpg';
 import restoCasalImg from './images/gastronomy/casal.jpg';
 import restoBarbarImg from './images/gastronomy/barbar.jpg';
 import restoTiritiImg from './images/gastronomy/tiriti.jpg';
-import restoAviMingoImg from './images/gastronomy/avi-mingo.jpg';
 
 // Partner and Institutional SVG Logos & Corporate Assets
 import logoBumFest from './images/logos/BUMFEST26.svg';
@@ -38,7 +37,6 @@ import logoCasal from './images/logos/CASAL.svg';
 import logoEspaiEco from './images/logos/ESPAIECO.svg';
 import logoVerdesbo from './images/logos/VERDESBO.svg';
 import logoTirati from './images/logos/TIRATI.svg';
-import logoAvimingo from './images/logos/AVIMINGO.svg';
 import logoDiputacio from './images/logos/DIPUTACIOBCN.svg';
 import logoEspaiFamilies from './images/logos/ESPAIFAMILIES.svg';
 import logoPetitParadis from './images/logos/PETITPARADIS.svg';
@@ -56,7 +54,6 @@ export const FESTIVAL_LOGOS = {
   espaiEco: logoEspaiEco,
   verdEsBo: logoVerdesbo,
   tirati: logoTirati,
-  aviMingo: logoAvimingo,
   petitParadis: logoPetitParadis,
   elMesPetit: logoElMesPetit,
 };
@@ -93,5 +90,4 @@ export const FESTIVAL_IMAGES = {
   restoCasal: restoCasalImg,
   restoBarbar: restoBarbarImg,
   restoTiriti: restoTiritiImg,
-  restoAviMingo: restoAviMingoImg,
 };
