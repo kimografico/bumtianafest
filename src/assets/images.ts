@@ -47,7 +47,6 @@ import logoElMesPetit from './images/logos/ELMESPETITDETOTS.svg';
 export const FESTIVAL_LOGOS = {
   bumFest: logoBumFest,
   tiana: logoTiana,
-  tianaBlue: logoTianaBlue,
   twoLb: logo2lb,
   diputacio: logoDiputacio,
   espaiFamilies: logoEspaiFamilies,

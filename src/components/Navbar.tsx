@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { FESTIVAL_LOGOS } from '../assets/images';
-import { LINKS } from '../data/links';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { FESTIVAL_LOGOS } from "../assets/images";
+import { LINKS } from "../data/links";
 
 interface NavbarProps {
   onNavigateHome?: () => void;
@@ -11,12 +11,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Tallers', href: '#tallers' },
-    { name: 'Xerrades', href: '#xerrades' },
-    { name: 'Horaris', href: '#programa' },
-    { name: 'Localitzacions', href: '#espais' },
-    { name: 'Cloenda', href: '#cloenda' },
-    { name: '2LB', href: '#organitzacio' },
+    { name: "Tallers", href: "#tallers" },
+    { name: "Xerrades", href: "#xerrades" },
+    { name: "Horaris", href: "#programa" },
+    { name: "Localitzacions", href: "#espais" },
+    { name: "Cloenda", href: "#cloenda" },
+    { name: "2LB", href: "#organitzacio" },
   ];
 
   const handleLinkClick = () => {
@@ -28,12 +28,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
     <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-festbg/90 border-b border-secondary/25 shadow-xs transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
-          
           {/* Brand Logo with BUMFEST26.svg */}
           <button
             onClick={() => {
               if (onNavigateHome) onNavigateHome();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className="flex items-center gap-2.5 text-left cursor-pointer group py-1"
             title="BUMFEST TIANA 2026"
@@ -50,7 +49,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
           </button>
 
           {/* Desktop Nav Links */}
-          <nav aria-label="Navegació principal" className="hidden md:flex items-center gap-1 lg:gap-2">
+          <nav
+            aria-label="Navegació principal"
+            className="hidden md:flex items-center gap-1 lg:gap-2"
+          >
             {navLinks.map((link, idx) => (
               <a
                 key={idx}
@@ -74,11 +76,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
               title="Ajuntament de Tiana"
             >
               <img
-                src={FESTIVAL_LOGOS.tianaBlue}
+                src={FESTIVAL_LOGOS.tiana}
                 alt="Ajuntament de Tiana"
                 width={26}
                 height={38}
-                className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-13 w-auto object-contain -my-2 transition-transform duration-200 group-hover:scale-105"
                 referrerPolicy="no-referrer"
                 loading="eager"
                 decoding="async"
@@ -93,10 +95,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ?
+                <X className="w-5 h-5" />
+              : <Menu className="w-5 h-5" />}
             </button>
           </div>
-
         </div>
       </div>
 
