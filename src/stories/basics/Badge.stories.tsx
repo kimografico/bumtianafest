@@ -33,7 +33,7 @@ export const Categoria: Story = {
 export const Horario: Story = {
   args: {
     variant: 'time',
-    children: '10:00h - 11:30h',
+    children: '10.00 h - 11.30 h',
     icon: <Clock className="w-3.5 h-3.5 text-blue-600" />,
   },
 };

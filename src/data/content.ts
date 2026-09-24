@@ -74,11 +74,11 @@ export const WORKSHOPS_DATA: Workshop[] = [
     instructor: "Albert SantaMaria & Arnau Calvet",
     location: "Can Baratau",
     shortDesc:
-      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
+      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llavors i les escamparem per zones del poble que volem recuperar i embellir.",
     fullDesc:
-      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
+      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llavors i les escamparem per zones del poble que volem recuperar i embellir.",
     ageRange: "Per a totes les edats",
-    duration: "10:00 - 12:00 (2 hores)",
+    duration: "10.00 h - 12.00 h (2 hores)",
     materials:
       "Terra vegetal ecològica, argila per a boles nendo dango, llavors autòctones del Maresme i plançons forestals.",
     pedagogicalValues: [
@@ -97,11 +97,11 @@ export const WORKSHOPS_DATA: Workshop[] = [
     instructor: "Marc Vila",
     location: "Plaça del Coro",
     shortDesc:
-      "El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!",
+      "El balafó, el djembé, la darbuka, l'ago-go… Coneixeu aquests instruments? Veniu a descobrir els seus sons i creem música plegats!",
     fullDesc:
-      "El balafó, el djembé, la darbuka, l’ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!",
+      "El balafó, el djembé, la darbuka, l'ago-go… Coneixeu aquests instruments?\n\nVeniu a descobrir els seus sons i els de molts altres! Junts formarem una orquestra de percussió i compondrem i interpretarem peces musicals inèdites al moment. En família gaudirem creant música plegats!",
     ageRange: "Per a totes les edats",
-    duration: "10:00 - 12:00 (2 hores)",
+    duration: "10.00 h - 12.00 h (2 hores)",
     materials:
       "Balafons, djembés, darbukes, agogôs i instruments de percussió del món facilitats per l'organització.",
     pedagogicalValues: [
@@ -124,7 +124,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     fullDesc:
       "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
     ageRange: "A partir de 5 anys",
-    duration: "10:00 - 12:00 (2 hores)",
+    duration: "10.00 h - 12.00 h (2 hores)",
     materials: "Atrezzo i espai escènic adaptat.",
     pedagogicalValues: [
       "Expressió emocional",
@@ -139,12 +139,12 @@ export const WORKSHOPS_DATA: Workshop[] = [
     id: "espai-nadons",
     title: "Espai Nadons",
     category: "compartit",
-    instructor: "Silvia Espinosa & Eva Campmajor",
-    location: "Parc Lola Anglada",
-    shortDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families. Amb Eva Campmajor i Silvia Espinosa, de Escola Bressol El més Petit i Petit Paradís.",
-    fullDesc: "Un espai per a que els mes petits pugan gaudir tambe amb les seues families. Amb Eva Campmajor i Silvia Espinosa, de Escola Bressol El més Petit i Petit Paradís.",
+    instructor: "Eva Campmajor & Sílvia Espinosa",
+    location: "Jardí Lola Anglada",
+    shortDesc: "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
+    fullDesc: "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
     ageRange: "",
-    duration: "10:00 - 12:00 (2 hores)",
+    duration: "10.00 h - 12.00 h (2 hores)",
     materials: "Espai adaptat per a nadons i famílies.",
     pedagogicalValues: [
       "Joc lliure i exploració sensorial",
@@ -166,13 +166,13 @@ export const SPEAKERS_DATA: Speaker[] = [
     bio: "Llicenciada en medicina i cirurgia per la Universitat Autònoma de Barcelona. Especialista en Pediatria. Actualment treballa en un Centre d'Atenció Primària.",
     talkTitle: "Neurodesenvolupament, llenguatge i pantalles",
     talkDescription:
-      "Quines conseqüències té l'ús o abús de pantalles en l'etapa dels 0 als 3 anys? Sovint podem pensar que allò que fem amb els més petits de casa no tindrà tant d'impacte perquè no se'n recordaran, però és justament al contrari. Els primers anys de vida són claus pel neurodesenvolupament dels infants. Una detecció precoç i una correcta estimulació psico-motora marquen la diferència pel futur d'aquella criatura.",
-    time: "16:00h - 17:00h",
+      "Quines conseqüències té l'ús o l'abús de les pantalles durant l'etapa dels 0 als 3 anys? Sovint podem pensar que allò que fem amb els més petits de casa no tindrà gaire impacte perquè no se'n recordaran, però és justament al contrari. Els primers anys de vida són clau per al neurodesenvolupament dels infants. Una detecció precoç i una correcta estimulació psicomotora poden marcar la diferència en el futur d'una criatura.",
+    time: "16.00 h - 17.00 h",
     location: "Sala Albéniz",
     highlights: [
-      "Conseqüències de l'ús o abús de pantalles en l'etapa dels 0 als 3 anys",
-      "Els primers anys com a clau fonamental pel neurodesenvolupament infantil",
-      "La importància d'una detecció precoç i una correcta estimulació psico-motora",
+      "Conseqüències de l'ús o l'abús de les pantalles en l'etapa dels 0 als 3 anys",
+      "Els primers anys com a clau fonamental per al neurodesenvolupament infantil",
+      "La importància d'una detecció precoç i una correcta estimulació psicomotora",
       "Torn obert de preguntes i recomanacions pràctiques per a famílies",
     ],
   },
@@ -187,7 +187,7 @@ export const SPEAKERS_DATA: Speaker[] = [
     talkTitle: "Criar amb sentit comú",
     talkDescription:
       'Una trobada propera, pràctica i plena d\'empatia, on Armando Bastida abordarà els reptes reals de la primera infància, sota el lema "Criar con Sentido Común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
-    time: "17:15h - 18:45h",
+    time: "17.15 h - 18.45 h",
     location: "Sala Albéniz",
     highlights: [
       "Acompanyament emocional des de la primera infància",
@@ -207,8 +207,8 @@ export const VENUES_DATA: Venue[] = [
     description:
       "Punt central d'acollida de famílies, recollida de polseres i itineraris, espai de trobada i jocs populars tradicionals.",
     activities: [
-      "Acollida i Entrega de Polseres (09:30h)",
-      "Taller Natura: Jardineria & Cura de la Terra (10:00h - 12:00h)",
+      "Acollida i Entrega de Polseres (09.30 h)",
+      "Taller Natura: Jardineria & Cura de la Terra (10.00 h - 12.00 h)",
       "Punt d'Informació Oficial",
     ],
     walkingFromCenter: "0 min (Punt Central)",
@@ -218,13 +218,13 @@ export const VENUES_DATA: Venue[] = [
     id: "sala-albeniz",
     name: "Sala Albéniz",
     type: "Teatre & Espai Escènic Municipal",
-    address: "Av. Isaac Albéniz, 12, Tiana",
+    address: "Av. Isaac Albéniz 8-10, Tiana",
     description:
       "Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.",
     activities: [
-      "Taller Teatre & Expressió Primera Infància (10:00h - 12:00h)",
-      "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16:00h)",
-      "Xerrada Armando Bastida: Criança amb Sentit Comú (17:15h)",
+      "Taller Teatre & Expressió Primera Infància (10.00 h - 12.00 h)",
+      "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16.00 h)",
+      "Xerrada Armando Bastida: Criança amb Sentit Comú (17.15 h)",
     ],
     walkingFromCenter: "1 min a peu (Plaça de la Vila)",
     coordinates: { lat: 41.4828, lng: 2.2701 },
@@ -235,7 +235,7 @@ export const VENUES_DATA: Venue[] = [
     type: "Espai Natural & Jardineria",
     address: "Can Baratau, Tiana",
     description: "Espai natural a l'aire lliure per al taller de reforestació i jardineria.",
-    activities: ["Taller de Natura: Jardineria & Repoblació (10:00h - 12:00h)"],
+    activities: ["Taller de Natura: Jardineria & Repoblació (10.00 h - 12.00 h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
   },
@@ -245,27 +245,27 @@ export const VENUES_DATA: Venue[] = [
     type: "Espai a l'aire lliure & Percussió",
     address: "Plaça del Coro de Tiana",
     description: "Espai obert per al taller de percussió en família.",
-    activities: ["Taller de Percussió en Família (10:00h - 12:00h)"],
+    activities: ["Taller de Percussió en Família (10.00 h - 12.00 h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
   },
   {
     id: "parc-lola-anglada",
-    name: "Parc Lola Anglada",
+    name: "Jardí Lola Anglada",
     type: "Parc Infantil & Espai de Joc",
-    address: "Parc Lola Anglada, Tiana",
-    description: "Un jardí petit però amb molta història.",
-    activities: ["Espai Nadons (10:00h - 12:00h)"],
+    address: "Jardí Lola Anglada, Tiana",
+    description: "El que va ser el jardí romàntic de la casa de la Lola Anglada i on va fer moltes de les seves creacions.",
+    activities: ["Espai Nadons (10.00 h - 12.00 h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
   },
   {
     id: "parc-antic-futbol",
-    name: "Parc Antic de Futbol",
+    name: "Parc de l'Antic Camp de Futbol",
     type: "Parc & Espai a l'aire lliure",
-    address: "Parc Antic de Futbol, Tiana",
+    address: "Parc de l'Antic Camp de Futbol, Tiana",
     description: "Espai obert per a jocs populars, DJ i activitats familiars.",
-    activities: ["Jocs Populars Tradicionals (11:00h - 14:00h)", "DJ VINAXA (12:00h - 14:00h)"],
+    activities: ["Jocs Populars Tradicionals (11.00 h - 14.00 h)", "DJ VINAXA (12.00 h - 14.00 h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
   },
@@ -273,32 +273,32 @@ export const VENUES_DATA: Venue[] = [
 
 export const SCHEDULE_DATA: ScheduleItem[] = [
   {
-    time: "09:30",
+    time: "09.30 h",
     title: "Acollida de Famílies",
     category: "tot-el-dia",
     location: "Plaça de la Vila",
     description: "Recollida de polseres, mapa d'itineraris i benvinguda al BUMFEST TIANA 2026.",
   },
   {
-    time: "10:00 - 12:00",
+    time: "10.00 h - 12.00 h",
     title: "Taller de Natura",
     category: "tallers",
     location: "Can Baratau",
     description:
-      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llevors i les escamparem per zones degradades del poble.",
+      "Taller de reforestació ciutadana i jardineria. Crearem bombes de llavors i les escamparem per zones del poble que volem recuperar i embellir.",
     badge: "Taller",
   },
   {
-    time: "10:00 - 12:00",
+    time: "10.00 h - 12.00 h",
     title: "Taller de Percussió",
     category: "tallers",
     location: "Plaça del Coro",
     description:
-      "El balafó, el djembé, la darbuka, l’ago-go... Creació d'una orquestra de percussió en família.",
+      "El balafó, el djembé, la darbuka, l'ago-go... Creació d'una orquestra de percussió en família.",
     badge: "Taller",
   },
   {
-    time: "10:00 - 12:00",
+    time: "10.00 h - 12.00 h",
     title: "Taller de Teatre",
     category: "tallers",
     location: "Sala Albéniz",
@@ -307,22 +307,22 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     badge: "Taller",
   },
   {
-    time: "11:00 - 14:00",
+    time: "11.00 h - 14.00 h",
     title: "Jocs Populars Tradicionals",
     category: "tot-el-dia",
-    location: "Parc Antic de Futbol",
+    location: "Parc de l'Antic Camp de Futbol",
     description:
       "Jocs tradicionals, cooperació al aire lliure dinamitzats pel CAU de Tiana.",
   },
   {
-    time: "12:00 - 14:00",
+    time: "12.00 h - 14.00 h",
     title: "DJ VINAXA",
     category: "gastronomia",
-    location: "Parc Antic de Futbol",
+    location: "Parc de l'Antic Camp de Futbol",
     description: "Música per a tota la família.",
   },
   {
-    time: "14:00 - 16:00",
+    time: "14.00 h - 16.00 h",
     title: "Descans & Dinar Popular de Proximitat",
     category: "gastronomia",
     location: "Xarxa de Restaurants i Terrasses de Tiana",
@@ -330,16 +330,16 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
       "Pausa per dinar i agafar forces a la xarxa d'establiments gastronòmics de Tiana amb menús especials.",
   },
   {
-    time: "16:00 - 17:00",
+    time: "16.00 h - 17.00 h",
     title: 'Xerrada: Laia Ferrer - "Neurodesenvolupament, llenguatge i pantalles"',
     category: "xerrades",
     location: "Sala Albéniz",
     description:
-      "Impacte de l'ús i abús de pantalles en l'etapa dels 0 als 3 anys, claus del neurodesenvolupament infantil i estimulació psico-motora.",
+      "Impacte de l'ús i abús de pantalles en l'etapa dels 0 als 3 anys, claus del neurodesenvolupament infantil i estimulació psicomotora.",
     badge: "Xerrada",
   },
   {
-    time: "17:15 - 18:45",
+    time: "17.15 h - 18.45 h",
     title: 'Xerrada: Armando Bastida - "Criar amb sentit comú"',
     category: "xerrades",
     location: "Sala Albéniz",
@@ -348,7 +348,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     badge: "Xerrada",
   },
   {
-    time: "19:00 - 20:00",
+    time: "19.00 h - 20.00 h",
     title: "Concert de Cloenda: Sedajazz Young Band",
     category: "espectacle",
     location: "Plaça de la Vila",
@@ -364,7 +364,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: "El Casal de Tiana",
     type: "Cuina tradicional",
     specialOffer: "",
-    address: "Av. Isaac Albéniz, 12",
+    address: "Av. Isaac Albéniz 8-10",
     websiteUrl: LINKS.restaurants.casal,
   },
   {
@@ -380,7 +380,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: "Tiriti Bar Restaurant Pizzeria",
     type: "Pizzes al forn de llenya & pasta",
     specialOffer: "",
-    address: "Carrer d'Edith Llaurador",
+    address: "Plaça de la Vila",
     websiteUrl: LINKS.restaurants.tiriti,
   },
   {
@@ -388,7 +388,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     name: "Avi Mingo",
     type: "Cuina catalana de mercat",
     specialOffer: "",
-    address: "Carrer de Matas",
+    address: "Carrer Lola Anglada, 28",
     websiteUrl: LINKS.restaurants.aviMingo,
   },
 ];
@@ -438,7 +438,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Com arribar a Tiana en transport públic?",
-    a: "Tiana està situada a tan sols 15 km de Barcelona. Pots arribar amb Rodalies R1 fins a l'estació de Montgat i allà enllaçar amb el bus directe B29 / B30 fins al centre del poble. També hi ha línia directa d'autobús exprés des de Barcelona (Ronda Sant Pere).",
+    a: "Tiana es troba a només 15 km de Barcelona i està molt ben connectada amb transport públic.\n\nPots arribar-hi amb la línia R1 de Rodalies fins a l'estació de Montgat i, des d'allà, enllaçar amb les línies d'autobús B29 o B32, que connecten amb el centre del poble.\n\nUna altra opció és arribar amb la línia 2 del metro fins a Pompeu Fabra, a Badalona, i enllaçar-hi amb la línia B29 fins a Tiana.",
   },
   {
     q: "Cal reserva prèvia per a les xerrades de criança?",
@@ -446,7 +446,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Els espais estan adaptats per a cotxets i mobilitat reduïda?",
-    a: "Sí, tots els espais municipals seleccionats (Plaça de la Vila, Sala Albéniz, El Casal, Doctor Mascaró, etc.) disposen d'accessos adaptats i zones d'aparcament de cotxets.",
+    a: "Sí, tots els espais municipals seleccionats (Plaça de la Vila, Sala Albéniz, Can Baratau, Plaça del Coro, Jardí Lola Anglada, Parc de l'Antic Camp de Futbol) disposen d'accessos adaptats i zones d'aparcament de cotxets.",
   },
 ];
 

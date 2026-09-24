@@ -17,7 +17,6 @@ export const TwoLBSection: React.FC = () => {
       className="py-20 sm:py-28 bg-transparent text-festtext relative overflow-hidden border-b border-secondary/25"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-
         {/* 2LB Feature: Logo + text */}
         <div className="grid lg:grid-cols-12 gap-8 items-start mb-12">
           {/* Left: 2LB Logo */}
@@ -25,7 +24,7 @@ export const TwoLBSection: React.FC = () => {
             <img
               src={FESTIVAL_LOGOS.twoLb}
               alt="2LB Produccions"
-              className="w-full max-w-[200px] h-auto object-contain"
+              className="w-full max-w-[200px] h-auto object-contain mb-8"
               loading="lazy"
               decoding="async"
             />
@@ -79,9 +78,7 @@ export const TwoLBSection: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-extralight uppercase tracking-wider text-festtext group-hover:text-primary transition leading-snug">
                       {member.name}
                     </h3>
-                    <span className="text-xs font-bold text-secondary">
-                      {member.role}
-                    </span>
+                    <span className="text-xs font-bold text-secondary">{member.role}</span>
                     <p className="text-[11px] font-semibold text-festlabel mt-0.5">
                       2LB Produccions · Tiana
                     </p>

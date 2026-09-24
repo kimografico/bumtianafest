@@ -17,7 +17,7 @@ export const ClosingConcertSection: React.FC = () => {
       },
       {
         title: 'Repertori Intergeneracional',
-        desc: 'Composicions i arranjaments pensats perquè vibrin tant els infants com els adults a la sala.',
+        desc: 'Composicions i arranjaments pensats perquè vibrin tant els infants com els adults.',
       },
       {
         title: 'L\u2019Espai',
@@ -98,7 +98,7 @@ export const ClosingConcertSection: React.FC = () => {
                 <span>{t.openMap}</span>
               </a>
               <span className="px-4 py-3.5 rounded bg-secondary/15 text-secondary text-xs sm:text-sm font-bold border border-secondary/30">
-                19:00h - 20:00h
+                19.00 h - 20.00 h
               </span>
             </div>
           </div>

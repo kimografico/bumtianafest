@@ -7,10 +7,10 @@ export const Hero: React.FC = () => {
   const year = '2026';
   const subtitle = 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.';
   const welcomeText = [
-    'Benvingudes i benvinguts al BUMFEST TIANA 2026',
-    'Un festival didàctic per a les famílies de Tiana i dels voltants.',
-    'Unes jornades diferents on les famílies podran gaudir d\u2019un dia ple d\u2019activitats',
-    'on destaquen tallers, xerrades i música, tot enfocat al públic familiar.'
+    'Benvingudes i benvinguts al BUMFEST TIANA 2026!',
+    'Un festival didàctic i familiar pensat per a les famílies.',
+    'Una jornada diferent, plena de propostes per compartir, aprendre i gaudir en família, amb tallers, xerrades, música i activitats pensades especialment per al públic familiar.',
+    'Un espai per descobrir, experimentar i passar-ho bé plegats. Us hi esperem!'
   ];
   const ctaWorkshops = 'Explorar Tallers';
   const ctaProgram = 'Veure Programa';

@@ -6,7 +6,7 @@ const meta: Meta<typeof TimelineItem> = {
   component: TimelineItem,
   tags: ['autodocs'],
   args: {
-    time: '10:00h - 13:00h',
+    time: '10.00 h - 13.00 h',
     badge: 'Talleres simultáneos',
     title: 'Talleres Prácticos y Espacio Infantil',
     description:
@@ -21,7 +21,7 @@ type Story = StoryObj<typeof TimelineItem>;
 
 export const Estandar: Story = {
   args: {
-    time: '10:00h - 13:00h',
+    time: '10.00 h - 13.00 h',
     badge: 'Mañana Creativa',
     title: 'Talleres Prácticos y Espacio Infantil',
     description:
@@ -33,7 +33,7 @@ export const Estandar: Story = {
 
 export const Destacado: Story = {
   args: {
-    time: '18:00h - 19:30h',
+    time: '18.00 h - 19.30 h',
     badge: 'Gran Cierre Musical',
     title: 'Concierto Familiar de Cierre: Xiula',
     description:

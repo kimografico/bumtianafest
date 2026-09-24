@@ -19,7 +19,7 @@ export const ScheduleSection: React.FC = () => {
   });
 
   const title = 'Horaris del Festival';
-  const subtitle = 'Una jornada completa des de les 10:00h del matí fins a les 20:00h del vespre.';
+  const subtitle = 'Una jornada completa des de les 10.00 h del matí fins a les 20.00 h del vespre.';
 
   return (
     <section id="programa" className="py-20 sm:py-28 bg-primary text-white relative border-b border-secondary/30">

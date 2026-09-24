@@ -9,11 +9,11 @@ export const ConceptSection: React.FC = () => {
     "Perquè quan ens trobem, passen coses. I quan fem comunitat, alguna cosa fa BUM.",
   ];
   const cardTargetTitle = 'A qui va dirigit?';
-  const cardTargetDesc = "A totes les famílies amb infants, avis, àvies i acompanyants de Tiana i pobles veïns que vulguin compartir temps de qualitat, reflexió i aprenentatge.";
+  const cardTargetDesc = "A totes les famílies amb infants, avis, àvies, tiets i tietes de Tiana i dels pobles veïns que vulguin compartir temps de qualitat, reflexió i aprenentatge.";
   const card1Title = 'Aprenentatge Compartit';
-  const card1Desc = "Un dia, un espai on infants i adults experimenten, creen i aprenen alhora.";
+  const card1Desc = "Un dia, un espai on infants i adults experimenten, creen i aprenen plegats.";
   const card2Title = 'Tiana com a Gran Espai Comunitari';
-  const card2Desc = "Els carrers, places, teatres i espais de Tiana s'omplen de vida per gaudir i enfortir els vincles comunitaris.";
+  const card2Desc = "Els carrers, les places, els parcs, el teatre i els diferents espais de Tiana s'omplen de vida per gaudir, compartir i enfortir els vincles comunitaris.";
 
   return (
     <section id="concepte" className="py-20 sm:py-28 bg-primary text-white relative overflow-hidden">

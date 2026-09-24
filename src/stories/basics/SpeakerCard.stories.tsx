@@ -12,7 +12,7 @@ const meta: Meta<typeof SpeakerCard> = {
     topicTitle: 'Criar con Sentido Común: Claves de la Crianza Respetuosa',
     topicDescription:
       'Una sesión interactiva para desmontar mitos, reducir la culpa parental y aprender pautas prácticas de convivencia diaria.',
-    time: '16:30h - 18:00h',
+    time: '16.30 h - 18.00 h',
     location: 'Sala Albéniz de Tiana',
     image: FESTIVAL_IMAGES.armandoBastida,
     ctaText: 'Ver detalles de la charla',
@@ -32,7 +32,7 @@ export const ArmandoBastida: Story = {
     topicTitle: 'Criar con Sentido Común: Claves de la Crianza Respetuosa',
     topicDescription:
       'Una sesión interactiva para desmontar mitos, reducir la culpa parental y aprender pautas prácticas de convivencia diaria.',
-    time: '16:30h - 18:00h',
+    time: '16.30 h - 18.00 h',
     location: 'Sala Albéniz de Tiana',
     image: FESTIVAL_IMAGES.armandoBastida,
   },
@@ -45,7 +45,7 @@ export const LaiaFerrer: Story = {
     topicTitle: 'Neurodesarrollo, lenguaje y pantallas',
     topicDescription:
       '¿Qué consecuencias tiene el uso o abuso de pantallas en la etapa de los 0 a los 3 años? Una detección precoz y una correcta estimulación psicomotora marcan la diferencia para el futuro de esa criatura.',
-    time: '16:00h - 17:00h',
+    time: '16.00 h - 17.00 h',
     location: "Sala Petita d'El Casal de Tiana",
     image: FESTIVAL_IMAGES.laiaFerrer,
   },
