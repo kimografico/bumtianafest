@@ -57,6 +57,9 @@ export const Hero: React.FC = () => {
               />
             </div>
             <p className="text-lg sm:text-2xl text-festtext font-medium leading-relaxed max-w-2xl text-left">
+              <span className="block text-2xl sm:text-4xl font-extrabold uppercase tracking-wide text-primary">
+                24 de Octubre
+              </span>
               {subtitle}
             </p>
             <div className="pt-2 text-sm sm:text-base text-festdark leading-relaxed max-w-xl font-normal space-y-1 text-left">
