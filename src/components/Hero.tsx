@@ -1,20 +1,21 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from '../assets/images';
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import { FESTIVAL_IMAGES, FESTIVAL_LOGOS } from "../assets/images";
 
 export const Hero: React.FC = () => {
-  const title = 'BUMFEST TIANA';
-  const year = '2026';
-  const subtitle = 'Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.';
+  const title = "BUMFEST TIANA";
+  const year = "2026";
+  const subtitle =
+    "Un dia sencer a Tiana per compartir aprenentatges, tallers didàctics, xerrades de criança i música en família.";
   const welcomeText = [
-    'Benvingudes i benvinguts al BUMFEST TIANA 2026!',
-    'Un festival didàctic i familiar pensat per a les famílies.',
-    'Una jornada diferent, plena de propostes per compartir, aprendre i gaudir en família, amb tallers, xerrades, música i activitats pensades especialment per al públic familiar.',
-    'Un espai per descobrir, experimentar i passar-ho bé plegats. Us hi esperem!'
+    "Benvingudes i benvinguts al BUMFEST TIANA 2026!",
+    "Un festival didàctic i familiar pensat per a les famílies.",
+    "Una jornada diferent, plena de propostes per compartir, aprendre i gaudir en família, amb tallers, xerrades, música i activitats pensades especialment per al públic familiar.",
+    "Un espai per descobrir, experimentar i passar-ho bé plegats. Us hi esperem!",
   ];
-  const ctaWorkshops = 'Explorar Tallers';
-  const ctaProgram = 'Veure Programa';
-  const ctaVenues = 'Localitzacions';
+  const ctaWorkshops = "Explorar Tallers";
+  const ctaProgram = "Veure Programa";
+  const ctaVenues = "Localitzacions";
 
   return (
     <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 relative">
@@ -27,7 +28,7 @@ export const Hero: React.FC = () => {
       <div className="block lg:hidden mb-6">
         <img
           src={FESTIVAL_LOGOS.bumFest}
-          alt={title + ' ' + year}
+          alt={title + " " + year}
           width={459}
           height={102}
           fetchPriority="high"
@@ -39,7 +40,6 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
-        
         {/* Text & 3 Action Buttons (order-2 on mobile, order-1 on desktop) */}
         <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 sm:space-y-8">
           <div className="space-y-4">
@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
             <div className="hidden lg:block">
               <img
                 src={FESTIVAL_LOGOS.bumFest}
-                alt={title + ' ' + year}
+                alt={title + " " + year}
                 width={459}
                 height={102}
                 loading="eager"
@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
             </div>
             <p className="text-lg sm:text-2xl text-festtext font-medium leading-relaxed max-w-2xl text-left">
               <span className="block text-2xl sm:text-4xl font-extrabold uppercase tracking-wide text-primary">
-                24 de Octubre
+                24 d'Octubre
               </span>
               {subtitle}
             </p>
@@ -113,7 +113,6 @@ export const Hero: React.FC = () => {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
