@@ -7,7 +7,7 @@ export const TwoLBSection: React.FC = () => {
     subtitle: "Creació artística, producció técnica i compromís amb la comunitat de Tiana.",
     missionTitle: "La nostra visió",
     missionDesc:
-      "A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió de on naix BUMFEST.",
+      "A 2LB Produccions unim trajectòria professional en la indústria musical i escènica amb la passió per la pedagogia viva. Vivim i treballem a Tiana. Compartir i fer tribu amb altres families, reflexionar, gaudir, i fer poble i comunitat es la pulsió d'on naix BUMFEST.",
     quote: '"Natura, poble, art, criança i comunitat. Construim en familia i al carrer"',
   };
 
