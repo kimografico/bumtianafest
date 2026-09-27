@@ -167,7 +167,7 @@ export const SPEAKERS_DATA: Speaker[] = [
     talkTitle: "Neurodesenvolupament, llenguatge i pantalles",
     talkDescription:
       "Quines conseqüències té l'ús o l'abús de les pantalles durant l'etapa dels 0 als 3 anys? Sovint podem pensar que allò que fem amb els més petits de casa no tindrà gaire impacte perquè no se'n recordaran, però és justament al contrari. Els primers anys de vida són clau per al neurodesenvolupament dels infants. Una detecció precoç i una correcta estimulació psicomotora poden marcar la diferència en el futur d'una criatura.",
-    time: "16.00 h - 17.00 h",
+    time: "16.00 h - 16.45 h",
     location: "Sala Albéniz",
     highlights: [
       "Conseqüències de l'ús o l'abús de les pantalles en l'etapa dels 0 als 3 anys",
@@ -187,7 +187,7 @@ export const SPEAKERS_DATA: Speaker[] = [
     talkTitle: "Criar amb sentit comú",
     talkDescription:
       'Una trobada propera, pràctica i plena d\'empatia, on Armando Bastida abordarà els reptes reals de la primera infància, sota el lema "Criar con Sentido Común": com desmuntar mites, reduir la culpa parental i reforçar la connexió familiar en el dia a dia.',
-    time: "17.15 h - 18.45 h",
+    time: "17.00 h - 18.30 h",
     location: "Sala Albéniz",
     highlights: [
       "Acompanyament emocional des de la primera infància",
@@ -224,7 +224,7 @@ export const VENUES_DATA: Venue[] = [
     activities: [
       "Taller Teatre & Expressió Primera Infància (10.00 h - 12.00 h)",
       "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16.00 h)",
-      "Xerrada Armando Bastida: Criança amb Sentit Comú (17.15 h)",
+      "Xerrada Armando Bastida: Criança amb Sentit Comú (17.00 h)",
     ],
     walkingFromCenter: "1 min a peu (Plaça de la Vila)",
     coordinates: { lat: 41.4828, lng: 2.2701 },
@@ -330,7 +330,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
       "Pausa per dinar i agafar forces a la xarxa d'establiments gastronòmics de Tiana amb menús especials.",
   },
   {
-    time: "16.00 h - 17.00 h",
+    time: "16.00 h - 16.45 h",
     title: 'Xerrada: Laia Ferrer - "Neurodesenvolupament, llenguatge i pantalles"',
     category: "xerrades",
     location: "Sala Albéniz",
@@ -339,7 +339,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     badge: "Xerrada",
   },
   {
-    time: "17.15 h - 18.45 h",
+    time: "17.00 h - 18.30 h",
     title: 'Xerrada: Armando Bastida - "Criar amb sentit comú"',
     category: "xerrades",
     location: "Sala Albéniz",
