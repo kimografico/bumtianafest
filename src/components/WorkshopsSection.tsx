@@ -48,7 +48,7 @@ export const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({ onSelectWork
             <span className="block">De 10:00 a 12:00 del matí</span>
             <span className="block">Acollida a les 9:30 a la Plaça de la Vila</span>
             <span className="block font-bold italic mt-3">
-              Cal triar 1 taller per infant + adult (Natura, Percussió, Teatre).
+              Cal triar 1 taller per infant + adult (Natura, Teatre & Arts Plàstiques, Percussió).
             </span>
             <span className="block font-bold italic">L'Espai Nadons és lliure.</span>
           </div>

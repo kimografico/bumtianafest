@@ -91,6 +91,28 @@ export const WORKSHOPS_DATA: Workshop[] = [
     featured: true,
   },
   {
+    id: "teatre-expressio",
+    title: "Taller de Teatre & Arts Plàstiques",
+    category: "compartit",
+    instructor: "Christian Olivé & Marc Costa",
+    location: "Sala Albéniz",
+    shortDesc:
+      "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
+    fullDesc:
+      "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
+    ageRange: "A partir de 5 anys",
+    duration: "10.00 h - 12.00 h (2 hores)",
+    materials: "Atrezzo i espai escènic adaptat.",
+    pedagogicalValues: [
+      "Expressió emocional",
+      "Desinhibició i confiança",
+      "Vincle afectiu a través del joc escènic",
+    ],
+    tag: "Arts Escèniques",
+    iconName: "Theater",
+    featured: true,
+  },
+  {
     id: "percussio",
     title: "Taller de Percussió",
     category: "compartit",
@@ -111,28 +133,6 @@ export const WORKSHOPS_DATA: Workshop[] = [
     ],
     tag: "Música & Ritme",
     iconName: "Music",
-    featured: true,
-  },
-  {
-    id: "teatre-expressio",
-    title: "Taller de Teatre",
-    category: "compartit",
-    instructor: "Christian Olivé & Marc Costa",
-    location: "Sala Albéniz",
-    shortDesc:
-      "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
-    fullDesc:
-      "Treballarem el joc teatral a partir de les arts plàstiques i les improvitzacions. Com ens inventem un personatge? Com el movem? Com el vestim?... Vine a descobrir quatre pinzellades teatrals a partir del món del paper.",
-    ageRange: "A partir de 5 anys",
-    duration: "10.00 h - 12.00 h (2 hores)",
-    materials: "Atrezzo i espai escènic adaptat.",
-    pedagogicalValues: [
-      "Expressió emocional",
-      "Desinhibició i confiança",
-      "Vincle afectiu a través del joc escènic",
-    ],
-    tag: "Arts Escèniques",
-    iconName: "Theater",
     featured: true,
   },
   {
@@ -220,9 +220,9 @@ export const VENUES_DATA: Venue[] = [
     type: "Teatre & Espai Escènic Municipal",
     address: "Av. Isaac Albéniz 8-10, Tiana",
     description:
-      "Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre i expressió matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.",
+      "Emblemàtic teatre municipal on tindrà lloc les xerrades de criança, el taller de teatre & arts plàstiques matinal i el gran concert familiar de cloenda amb la Sedajazz Young Band.",
     activities: [
-      "Taller Teatre & Expressió Primera Infància (10.00 h - 12.00 h)",
+      "Taller de Teatre & Arts Plàstiques (10.00 h - 12.00 h)",
       "Xerrada Laia Ferrer: Neurodesenvolupament, llenguatge i pantalles (16.00 h)",
       "Xerrada Armando Bastida: Criança amb Sentit Comú (17.00 h)",
     ],
@@ -299,7 +299,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
   },
   {
     time: "10.00 h - 12.00 h",
-    title: "Taller de Teatre",
+    title: "Taller de Teatre & Arts Plàstiques",
     category: "tallers",
     location: "Sala Albéniz",
     description:
@@ -399,7 +399,7 @@ export const PRICING_DATA = {
       features: [
         "Material complet inclòs per als tallers",
         "Activitats familiars obertes a tothom",
-        "Jardineria & Repoblació, Percussió i Teatre",
+        "Jardineria & Repoblació, Teatre & Arts Plàstiques i Percussió",
         "Espai de jocs populars tradicionals",
       ],
       highlighted: false,

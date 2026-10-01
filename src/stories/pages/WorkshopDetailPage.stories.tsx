@@ -32,14 +32,14 @@ export const TallerNatura: Story = {
   },
 };
 
-export const TallerPercussio: Story = {
+export const TallerTeatreArtsPlastiques: Story = {
   args: {
-    workshopId: 'percussio',
+    workshopId: 'teatre-expressio',
   },
 };
 
-export const TallerTeatre: Story = {
+export const TallerPercussio: Story = {
   args: {
-    workshopId: 'teatre-expressio',
+    workshopId: 'percussio',
   },
 };
