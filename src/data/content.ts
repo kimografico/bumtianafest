@@ -141,8 +141,10 @@ export const WORKSHOPS_DATA: Workshop[] = [
     category: "compartit",
     instructor: "Eva Campmajor & Sílvia Espinosa",
     location: "Jardí Lola Anglada",
-    shortDesc: "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
-    fullDesc: "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
+    shortDesc:
+      "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
+    fullDesc:
+      "Un espai perquè els més petits també en puguin gaudir amb les seves famílies. Amb Eva Campmajor i Sílvia Espinosa, de l'Escola Bressol El Més Petit de Tots i El Petit Paradís.",
     ageRange: "",
     duration: "10.00 h - 12.00 h (2 hores)",
     materials: "Espai adaptat per a nadons i famílies.",
@@ -254,7 +256,8 @@ export const VENUES_DATA: Venue[] = [
     name: "Jardí Lola Anglada",
     type: "Parc Infantil & Espai de Joc",
     address: "Jardí Lola Anglada, Tiana",
-    description: "El que va ser el jardí romàntic de la casa de la Lola Anglada i on va fer moltes de les seves creacions.",
+    description:
+      "El que va ser el jardí romàntic de la casa de la Lola Anglada i on va fer moltes de les seves creacions.",
     activities: ["Espai Nadons (10.00 h - 12.00 h)"],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
@@ -311,8 +314,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     title: "Jocs Populars Tradicionals",
     category: "tot-el-dia",
     location: "Parc de l'Antic Camp de Futbol",
-    description:
-      "Jocs tradicionals, cooperació al aire lliure dinamitzats pel CAU de Tiana.",
+    description: "Jocs tradicionals, cooperació a l'aire lliure dinamitzats pel CAU de Tiana.",
   },
   {
     time: "12.00 h - 14.00 h",
@@ -383,7 +385,7 @@ export const RESTAURANTS_DATA: RestaurantPartner[] = [
     address: "Plaça de la Vila",
     websiteUrl: LINKS.restaurants.tiriti,
   },
-  ];
+];
 
 export const PRICING_DATA = {
   title: "Accés 100% Gratuït",
