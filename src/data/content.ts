@@ -268,7 +268,10 @@ export const VENUES_DATA: Venue[] = [
     type: "Parc & Espai a l'aire lliure",
     address: "Parc de l'Antic Camp de Futbol, Tiana",
     description: "Espai obert per a jocs populars, DJ i activitats familiars.",
-    activities: ["Jocs Populars Tradicionals (11.00 h - 14.00 h)", "DJ VINAXA (12.00 h - 14.00 h)"],
+    activities: [
+      "Jocs Populars Tradicionals (11.00 h - 14.00 h)",
+      "DJ VINAIXA (12.00 h - 14.00 h)",
+    ],
     walkingFromCenter: "A determinar",
     coordinates: { lat: 0, lng: 0 },
   },
@@ -318,7 +321,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
   },
   {
     time: "12.00 h - 14.00 h",
-    title: "DJ VINAXA",
+    title: "DJ VINAIXA",
     category: "gastronomia",
     location: "Parc de l'Antic Camp de Futbol",
     description: "Música per a tota la família.",
